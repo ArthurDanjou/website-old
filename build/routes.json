@@ -1,0 +1,16 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "C:\\\\Users\\\\arthu\\\\Documents\\\\Workspace\\\\artsite\\\\src\\\\templates\\\\pages\\\\about.vue",
+    "chunkName": "templates/pages/about",
+    "_name": "_3829e6ee"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\arthu\\\\Documents\\\\Workspace\\\\artsite\\\\src\\\\templates\\\\pages\\\\index.vue",
+    "chunkName": "templates/pages/index",
+    "_name": "_57e1c1b3"
+  }
+]

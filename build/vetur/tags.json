@@ -1,0 +1,26 @@
+{
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "GoToTop": {
+    "description": "Auto imported from components/GoToTop.vue"
+  },
+  "LazyGoToTop": {
+    "description": "Auto imported from components/GoToTop.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "LangSwitcher": {
+    "description": "Auto imported from components/LangSwitcher.vue"
+  },
+  "LazyLangSwitcher": {
+    "description": "Auto imported from components/LangSwitcher.vue"
+  }
+}
