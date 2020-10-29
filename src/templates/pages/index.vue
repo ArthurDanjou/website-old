@@ -20,13 +20,13 @@
         </div>
         <div class="flex flex-col md:flex-row justify-around items-center">
           <nuxt-link class="mb-3 w-full text-center md:mb-0 md:w-auto" to="about">
-            <p class="about-btn rounded-full bg-red-400 hover:bg-red-700 duration-300 px-3 md:px-10 py-1 cursor-pointer">
+            <p class="arrow-btn font-semibold rounded-full bg-red-400 hover:bg-red-700 duration-300 px-3 md:px-10 py-1 cursor-pointer">
               En savoir plus
               <img class="inline arrow-img" src="@/assets/img/icons/arrow-down.svg" alt="Go Down" height="32" width="32" />
             </p>
           </nuxt-link>
           <nuxt-link class="mb-3 w-full text-center md:mb-0 md:w-auto" to="contact">
-            <p class="rounded-full hover:bg-gray-400 duration-300 px-12 py-1 bg-gray-300 cursor-pointer">
+            <p class="rounded-full font-semibold border-2 border-solid border-black hover:bg-black hover:text-white duration-300 px-12 py-1 cursor-pointer">
               Me contacter
             </p>
           </nuxt-link>
@@ -53,8 +53,9 @@
           <HomePost />
         </div>
         <div class="text-center">
-          <nuxt-link to="/blog" class="px-3 py-3 border-2 border-solid border-black rounded-full font-semibold hover:bg-black hover:text-white duration-300">
-            Retrouvez mes autres articles
+          <nuxt-link to="/blog" class="arrow-btn px-3 py-3 border-2 border-solid border-red-500 rounded-full font-semibold hover:bg-red-500 duration-300">
+            Voir plus d'articles
+            <img class="inline arrow-img" src="@/assets/img/icons/arrow-down.svg" alt="Go Down" height="32" width="32" />
           </nuxt-link>
         </div>
       </div>
@@ -106,7 +107,7 @@ export default Vue.extend({
     height: 30rem;
   }
 
-  .about-btn:hover .arrow-img {
+  .arrow-btn:hover .arrow-img {
     transform: translate(3px, 0);
   }
 
