@@ -1,7 +1,7 @@
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+    purgeLayersByDefault: false,
   },
   purge: [],
   target: 'relaxed',
@@ -9,6 +9,7 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    darkSelector: '.dark-mode',
     screens: {
       sm: '640px',
       md: '768px',
@@ -258,9 +259,10 @@ module.exports = {
     divideColor: theme => theme('borderColor'),
     divideOpacity: theme => theme('borderOpacity'),
     divideWidth: theme => theme('borderWidth'),
-    fill: {
+    fill: theme => ({
       current: 'currentColor',
-    },
+      ...theme('colors')
+    }),
     flex: {
       '1': '1 1 0%',
       auto: '1 1 auto',
@@ -275,7 +277,7 @@ module.exports = {
       '0': '0',
       default: '1',
     },
-    fontFamily: {
+    fontfontFamily: {
       sans: [
         'raleway',
         'system-ui',
@@ -324,10 +326,11 @@ module.exports = {
       full: '100%',
       screen: '100vh',
     }),
-    inset: {
+    inset: theme => ({
       '0': '0',
+      ...theme('spacing'),
       auto: 'auto',
-    },
+    }),
     letterSpacing: {
       tighter: '-0.05em',
       tight: '-0.025em',
@@ -712,7 +715,7 @@ module.exports = {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
     backgroundClip: ['responsive'],
-    backgroundColor: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'responsive'],
     backgroundImage: ['responsive'],
     gradientColorStops: ['responsive', 'hover', 'focus'],
     backgroundOpacity: ['responsive', 'hover', 'focus'],
@@ -720,7 +723,7 @@ module.exports = {
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'hover', 'focus'],
+    borderColor: ['dark', 'dark-focus', 'dark-focus-within', 'hover', 'responsive'],
     borderOpacity: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
@@ -783,7 +786,7 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['responsive', 'hover', 'focus'],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'responsive'],
     textOpacity: ['responsive', 'hover', 'focus'],
     textDecoration: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
@@ -818,8 +821,7 @@ module.exports = {
     transitionDelay: ['responsive'],
     animation: ['responsive'],
   },
-  corePlugins: {
-    container: false
-  },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-dark-mode')()
+  ],
 }

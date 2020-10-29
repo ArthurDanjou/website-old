@@ -1,4 +1,4 @@
-import { Axios, Head } from './config'
+import { Axios, Head, ColorMode } from './config'
 
 export default {
   head: Head,
@@ -19,16 +19,15 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
+    ['@nuxtjs/color-mode', ColorMode],
   ],
 
   modules: [
-    ['@nuxtjs/axios', Axios],
+    ['@nuxtjs/axios', Axios]
   ],
 
   buildDir: 'build',
-
   srcDir: 'src',
-
   dir: {
     assets: 'assets',
     layouts: 'templates/layouts',

@@ -7,6 +7,20 @@
     "_name": "_3829e6ee"
   },
   {
+    "name": "blog",
+    "path": "/blog",
+    "component": "C:\\\\Users\\\\arthu\\\\Documents\\\\Workspace\\\\artsite\\\\src\\\\templates\\\\pages\\\\blog.vue",
+    "chunkName": "templates/pages/blog",
+    "_name": "_35b3d65e"
+  },
+  {
+    "name": "dev",
+    "path": "/dev",
+    "component": "C:\\\\Users\\\\arthu\\\\Documents\\\\Workspace\\\\artsite\\\\src\\\\templates\\\\pages\\\\dev.vue",
+    "chunkName": "templates/pages/dev",
+    "_name": "_12f401b6"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\arthu\\\\Documents\\\\Workspace\\\\artsite\\\\src\\\\templates\\\\pages\\\\index.vue",

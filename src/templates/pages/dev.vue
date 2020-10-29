@@ -1,10 +1,13 @@
 <template>
-
+  <main>
+    Dev page
+  </main>
 </template>
 
 <script>
 export default {
-name: "GoToTop"
+  name: "dev",
+  layout: 'dev'
 }
 </script>
 

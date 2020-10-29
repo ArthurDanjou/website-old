@@ -1,54 +1,22 @@
 <template>
-  <footer class="footer w-full border-t border-gray-200 border-solid">
-    <div class="footer-top flex flex-col items-center justify-center">
-      <div>
-        <ul class="flex text-lg flex-row">
-          <nuxt-link to="/">
-            <li class="hover:bg-red-400 py-1 px-3 mx-4 cursor-pointer duration-500">
-              Accueil
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/about">
-            <li class="hover:bg-orange-400 py-1 px-3 mx-4 cursor-pointer duration-500">
-              A Propos
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/blog">
-            <li class="hover:bg-green-400 py-1 px-3 mx-4 cursor-pointer duration-500">
-              Blog
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/work">
-            <li class="hover:bg-blue-400 py-1 px-3 mx-4 cursor-pointer duration-500">
-              Travail
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/contact">
-            <li class="hover:bg-purple-400 py-1 px-3 mx-4 cursor-pointer duration-500">
-              Contact
-            </li>
-          </nuxt-link>
-        </ul>
-      </div>
-      <div class="flex flex-col justify-center my-4">
-        <div class="text-center">
-          <p class="text-lg">
-            Contactez moi par mail : <span class="text-red-400 hover:text-red-700 duration-300 cursor-pointer">contact@arthurdanjou.fr</span>
-          </p>
-          <div class="text-gray-600 text-xs text-right">
-            (Clique c'est gratuit ❤)
-          </div>
+  <footer class="footer w-full border-t border-gray-400 border-solid mb-20 md:mb-0">
+    <div>
+      <div class="flex flex-col items-center border-t border-solid border-gray-400 py-4 bg-gray-200 text-center ">
+        <div class="mb-3">
+          <p class="inline">Retrouvez moi sur :
+            <span><a href="https://twitch.com/ArthurDanjou" target="_blank">Twitch</a></span>,
+            <span><a href="https://github.com/ArthurDanjou" target="_blank">Github</a></span> &
+            <span><a href="https://twitter.com/ArthurDanj" target="_blank">Twitter</a></span> et par
+            <span><a href="mailto:contact@arthurdanjou.fr" target="_blank">Mail</a></span></p>
+          <span class="inline text-gray-600 text-xs">
+            (Clique c'est gratuit 🔗)
+          </span>
         </div>
-        <p class="text-mg text-center">
-          Retrouvez moi sur : <span>Twitter</span>, <span>Github</span> et <span>Twitch</span>
+        <p>
+          Développé et conçu avec ❤ en utilisant <span>NuxtJs</span> & <span>AdonisJs</span> par <span>Arthur DANJOU</span>
         </p>
+        <p>© Copyright {{date}} - Tous droits réservés</p>
       </div>
-    </div>
-    <div class="flex flex-col items-center border-t border-solid border-gray-400 py-4 bg-gray-200">
-      <p>
-        Développé et conçu avec ❤ en utilisant <span>NuxtJs</span> & <span>AdonisJs</span> par <span>Arthur DANJOU</span>
-      </p>
-      <p>© Copyright {{date}} - Tous droits réservés</p>
     </div>
   </footer>
 </template>

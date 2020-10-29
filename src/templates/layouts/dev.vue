@@ -2,15 +2,12 @@
   <div>
     <Header />
     <Nuxt class="pt-16 lg:pt-24"/>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header";
-import Footer from "~/components/Footer";
 export default {
-  components: {Footer, Header}
+name: "dev"
 }
 </script>
 
