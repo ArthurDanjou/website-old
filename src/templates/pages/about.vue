@@ -2,7 +2,7 @@
   <main class="about flex flex-col items-center mt-16 md:mt-32 px-5 xl:px-64">
     <h1 class="title font-bold text-4xl mr-2 inline mb-4">
       A Propos
-      <img class="inline about-img" src="@/assets/img/icons/profile.svg" height="40" width="40" alt="Blog Logo" />
+      <img class="inline about-img" src="@/assets/img/sections/profile.svg" height="40" width="40" alt="Blog Logo" />
     </h1>
     <div class="flex flex-col md:flex-row justify-around items-center py-8">
       <div>
@@ -29,7 +29,7 @@
     <div class="w-full mb-10 mt-4">
       <h3 class="font-bold text-2xl md:text-4xl">
         Compétences Techniques
-        <img class="inline skill-img" src="@/assets/img/icons/wrench.svg" alt="Skills logo" height="32" width="32"/>
+        <img class="inline skill-img" src="@/assets/img/about/wrench.svg" alt="Skills logo" height="32" width="32"/>
       </h3>
       <div>
         <!-- TODO -->
@@ -39,34 +39,34 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl">
         Intérêts
-        <img class="inline interest-img" src="@/assets/img/icons/fire.svg" alt="Interests logo" height="32" width="32"/>
+        <img class="inline interest-img" src="@/assets/img/about/fire.svg" alt="Interests logo" height="32" width="32"/>
       </h3>
       <div>
         <!-- TODO -->
         <ul class="text-xl">
           <li class="my-2">
             Technologies
-            <img class="inline" src="@/assets/img/icons/cpu.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/cpu.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             Développement
-            <img class="inline" src="@/assets/img/icons/code.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/code.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             DevOps
-            <img class="inline" src="@/assets/img/icons/infinite.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/infinite.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             Startups & Entreprises innovantes
-            <img class="inline" src="@/assets/img/icons/rocket.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/rocket.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             Voyage
-            <img class="inline" src="@/assets/img/icons/airplane.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/airplane.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             Moto
-            <img class="inline" src="@/assets/img/icons/motorbike.svg" alt="Dev icon" height="25" width="25" />
+            <img class="inline" src="@/assets/img/about/motorbike.svg" alt="Dev icon" height="25" width="25" />
           </li>
         </ul>
       </div>
@@ -74,7 +74,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl">
         Langues
-        <img class="inline interest-img" src="@/assets/img/icons/translation.svg" alt="Languages logo" height="32" width="32"/>
+        <img class="inline interest-img" src="@/assets/img/about/translation.svg" alt="Languages logo" height="32" width="32"/>
       </h3>
       <div>
         <table class="text-base text-xl">
@@ -92,7 +92,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl">
         Formation
-        <img class="inline formation-img" src="@/assets/img/icons/formation.svg" alt="Formations logo" height="32" width="32"/>
+        <img class="inline formation-img" src="@/assets/img/about/formation.svg" alt="Formations logo" height="32" width="32"/>
       </h3>
       <div>
         <!-- TODO -->
@@ -102,7 +102,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl">
         Expériences
-        <img class="inline experience-img" src="@/assets/img/icons/experience.svg" alt="Experience logo" height="32" width="32"/>
+        <img class="inline experience-img" src="@/assets/img/about/experience.svg" alt="Experience logo" height="32" width="32"/>
       </h3>
       <div>
         <!-- TODO -->
@@ -112,13 +112,13 @@
     <nuxt-link to="/cv">
       <div class="flex justify-center items-center font-bold py-4 px-6 bg-orange-300 hover:bg-orange-500 cursor-pointer duration-500 rounded-full">
         Télécharger mon CV
-        <img class="inline experience-img" src="@/assets/img/icons/cv.svg" alt="Experience logo" height="32" width="32"/>
+        <img class="inline experience-img" src="@/assets/img/about/cv.svg" alt="Experience logo" height="32" width="32"/>
       </div>
     </nuxt-link>
     <div class="my-10 border-t-2 border-black border-solid w-full" />
     <h1 class="mb-10 title font-bold text-4xl mr-2 inline mb-4">
       Environnement
-      <img class="inline about-img" src="@/assets/img/icons/tree.svg" height="40" width="40" alt="Environment Logo" />
+      <img class="inline about-img" src="@/assets/img/about/tree.svg" height="40" width="40" alt="Environment Logo" />
     </h1>
     <p class="text-lg leading-6 text-justify pb-8">
       Mon environnement de développement permet de gagner en productivité.
@@ -128,7 +128,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl mb-2">
         Editeurs de texte
-        <img class="inline experience-img" src="@/assets/img/icons/code.svg" alt="Editor logo" height="32" width="32"/>
+        <img class="inline experience-img" src="@/assets/img/about/code.svg" alt="Editor logo" height="32" width="32"/>
       </h3>
       <ul class="list-disc ml-10 text-gray-800">
         <li>
@@ -163,7 +163,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl mb-2">
         Apps & Logiciels
-        <img class="inline experience-img" src="@/assets/img/icons/software.svg" alt="Software logo" height="32" width="32"/>
+        <img class="inline experience-img" src="@/assets/img/about/software.svg" alt="Software logo" height="32" width="32"/>
       </h3>
       <ul class="list-disc ml-10 text-gray-800">
         <li>
@@ -192,7 +192,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl mb-2">
         Hébergement
-        <img class="inline-block experience-img" src="@/assets/img/icons/server.svg" alt="Server logo" height="32" width="32"/>
+        <img class="inline-block experience-img" src="@/assets/img/about/server.svg" alt="Server logo" height="32" width="32"/>
       </h3>
       <ul class="list-disc ml-10 text-gray-800">
         <li>
@@ -206,7 +206,7 @@
     <div class="w-full mb-10">
       <h3 class="font-bold text-2xl md:text-4xl mb-2">
         Setup bureautique
-        <img class="inline experience-img" src="@/assets/img/icons/lamp.svg" alt="Desktop logo" height="32" width="32"/>
+        <img class="inline experience-img" src="@/assets/img/about/lamp.svg" alt="Desktop logo" height="32" width="32"/>
       </h3>
       <ul class="list-disc ml-10 text-gray-800">
         <li>

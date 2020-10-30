@@ -4,16 +4,41 @@
       <div class="flex flex-col items-center border-t border-solid border-gray-400 py-4 bg-gray-200 text-center ">
         <div class="mb-3">
           <p class="inline">Retrouvez moi sur :
-            <span><a href="https://twitch.com/ArthurDanjou" target="_blank">Twitch</a></span>,
-            <span><a href="https://github.com/ArthurDanjou" target="_blank">Github</a></span> &
-            <span><a href="https://twitter.com/ArthurDanj" target="_blank">Twitter</a></span> et par
-            <span><a href="mailto:contact@arthurdanjou.fr" target="_blank">Mail</a></span></p>
+            <br class="md:hidden"/>
+            <a class="font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank">
+              <img class="inline img" src="@/assets/img/socials/twitch.svg" alt="Twitch logo" height="18" width="18" />
+              Twitch
+            </a>,
+            <a class="font-semibold" href="https://github.com/ArthurDanjou" target="_blank">
+              <img class="inline img" src="@/assets/img/socials/github.svg" alt="Github logo" height="20" width="20" />
+              Github
+            </a> &
+            <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank">
+              <img class="inline img" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="20" width="20" />
+              Twitter
+            </a> et par
+            <a class="font-semibold" href="mailto:contact@arthurdanjou.fr" target="_blank">
+              <img class="inline img" src="@/assets/img/socials/twitter.svg" alt="Mail logo" height="20" width="20" />
+              Mail
+              </a>
+          </p>
           <span class="inline text-gray-600 text-xs">
             (Clique c'est gratuit 🔗)
           </span>
         </div>
         <p>
-          Développé et conçu avec ❤ en utilisant <span>NuxtJs</span> & <span>AdonisJs</span> par <span>Arthur DANJOU</span>
+          Développé et conçu avec ❤ en utilisant
+
+          <a class="font-semibold" target="_blank" href="https://nuxtjs.org">
+            <img class="inline img" src="@/assets/img/socials/nuxtjs.svg" alt="NuxtJs logo" height="20" width="20" />
+            NuxtJs
+          </a>
+          &
+          <a class="font-semibold" target="_blank" href="https://preview.adonisjs.com/">
+            <img class="inline img" src="@/assets/img/socials/adonisjs.svg" alt="AdonisJs logo" height="20" width="20" />
+            AdonisJs
+          </a>
+          par <span>Arthur DANJOU</span>
         </p>
         <p>© Copyright {{date}} - Tous droits réservés</p>
       </div>
@@ -34,8 +59,8 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  .footer-top {
-    padding: 1rem 15%;
+  .img {
+    transform: translateY(-3px);
   }
 }
 </style>

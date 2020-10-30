@@ -1,4 +1,4 @@
-import { Axios, Head, ColorMode } from './config'
+import { Axios, Head, ColorMode, Tailwind } from './config'
 
 export default {
   head: Head,
@@ -14,11 +14,15 @@ export default {
   plugins: [
   ],
 
+  purgeCSS: {
+    whitelist: ["dark-mode"]
+  },
+
   components: true,
 
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss',
+    ['@nuxtjs/tailwindcss', Tailwind],
     ['@nuxtjs/color-mode', ColorMode],
   ],
 

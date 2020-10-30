@@ -1,5 +1,5 @@
 <template>
-  <main class="index mt-10 md:mt-32 dark:bg-gray-900 dark:text-white px-5 xl:px-64">
+  <main class="index mt-10 md:mt-32 bg-gray-100 px-5 xl:px-64">
     <section class="banner w-full flex justify-between flex-col lg:flex-row-reverse items-center mb-16">
       <div class="hidden lg:block flex justify-center items-center lg:w-1/2">
         <img src="@/assets/img/computer.png" alt="It's me !" class="me-img" />
@@ -22,7 +22,7 @@
           <nuxt-link class="mb-3 w-full text-center md:mb-0 md:w-auto" to="about">
             <p class="arrow-btn font-semibold rounded-full bg-red-400 hover:bg-red-700 duration-300 px-3 md:px-10 py-1 cursor-pointer">
               En savoir plus
-              <img class="inline arrow-img" src="@/assets/img/icons/arrow-down.svg" alt="Go Down" height="32" width="32" />
+              <img class="inline arrow-img" src="@/assets/img/utilities/arrow-down.svg" alt="Go Down" height="32" width="32" />
             </p>
           </nuxt-link>
           <nuxt-link class="mb-3 w-full text-center md:mb-0 md:w-auto" to="contact">
@@ -36,7 +36,7 @@
     <section class="my-16 border-t border-solid border-black pt-16">
       <h1 class="font-bold text-3xl mr-2 inline">
         Mes Articles
-        <img class="inline blog-img" src="@/assets/img/icons/quill.svg" height="40" width="40" alt="Blog Logo" />
+        <img class="inline blog-img" src="@/assets/img/sections/quill.svg" height="40" width="40" alt="Blog Logo" />
       </h1>
       <p class="mt-2 mb-8">
         Parfois, je rédige des articles concernant le développement, ma vie, le design ou bien encore l'apprentissage !
@@ -55,7 +55,7 @@
         <div class="text-center">
           <nuxt-link to="/blog" class="arrow-btn px-3 py-3 border-2 border-solid border-red-500 rounded-full font-semibold hover:bg-red-500 duration-300">
             Voir plus d'articles
-            <img class="inline arrow-img" src="@/assets/img/icons/arrow-down.svg" alt="Go Down" height="32" width="32" />
+            <img class="inline arrow-img" src="@/assets/img/utilities/arrow-down.svg" alt="Go Down" height="32" width="32" />
           </nuxt-link>
         </div>
       </div>
@@ -63,7 +63,7 @@
     <section class="my-16 border-t border-solid border-black pt-16">
       <h1 class="font-bold text-3xl mr-2 inline">
         Mon Travail
-        <img class="inline work-img" src="@/assets/img/icons/case.svg" width="32" height="32" alt="Work Logo" />
+        <img class="inline work-img" src="@/assets/img/sections/case.svg" width="32" height="32" alt="Work Logo" />
       </h1>
       <p class="mt-2 mb-8">
         Ayez une vision de mon travail, de mes projets personnels et professionnels ou de mes expérimentations !
@@ -76,7 +76,7 @@
     <section class="my-16 border-t border-solid border-black pt-16">
       <h1 class="font-bold text-3xl mr-2 inline">
         Mes Services
-        <img class="inline services-img" src="@/assets/img/icons/clipboard.svg" height="32" width="32" alt="Services Logo" />
+        <img class="inline services-img" src="@/assets/img/sections/clipboard.svg" height="32" width="32" alt="Services Logo" />
       </h1>
       <p class="mt-2 mb-8">
         Vous avez une idée révolutionnaire ?

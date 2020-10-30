@@ -1,8 +1,8 @@
 <template>
   <article class="border border-solid border-gray-300 w-full lg:w-1/3 h-auto h-blog p-2 flex flex-col justify-between my-5 lg:my-0 lg:mx-5">
     <div>
-      <p class="text-3xl font-bold text-justify leading-7">{{title}}</p>
-      <p class="text-gray-900 text-lg italic text-justify">{{description}}</p>
+      <p class="text-3xl font-bold text-justify leading-7 mb-3">{{title}}</p>
+      <p class="text-gray-900 text-lg italic text-justify leading-5">{{description}}</p>
     </div>
     <div class="flex justify-between mt-8">
       <div>

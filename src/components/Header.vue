@@ -1,9 +1,11 @@
 <template>
-  <header class="fixed top-0 left-0 bg-white header border-b border-gray-200 border-solid tracking-wider w-full h-16 lg:h-24">
+  <header class="fixed top-0 left-0 bg-white dark:bg-black header border-b border-gray-200 border-solid tracking-wider w-full h-16 lg:h-24">
     <div class="header-container z-index-50 flex justify-between items-center h-full px-5 xl:px-64">
-      <div class="left text-2xl font-bold cursor-pointer hover:underline duration-500 dark:text-white dark:bg-black">
-        Arthur Danjou
-      </div>
+      <nuxt-link to="/">
+        <div class="left text-2xl font-bold cursor-pointer hover:underline duration-500 dark:text-white dark:bg-black">
+          Arthur Danjou
+        </div>
+      </nuxt-link>
       <nav class="right">
         <div class="flex flex-col md:flex-row items-center">
           <ul class="flex text-xl">
@@ -12,10 +14,10 @@
             </li>
             <li class="mx-2 cursor-pointer flex items-center">
               <div @click="changeColorMode()" v-if="this.$colorMode.value === 'light'"  class="">
-                <img alt="Moon Logo" src="@/assets/img/icons/moon.svg" height="25" width="25"/>
+                <img alt="Moon Logo" src="@/assets/img/utilities/moon.svg" height="25" width="25"/>
               </div>
               <div @click="changeColorMode()" v-else class="">
-                <img src="@/assets/img/icons/sun.svg" alt="Sun Logo" height="25" width="25"/>
+                <img src="@/assets/img/utilities/sun.svg" alt="Sun Logo" height="25" width="25"/>
               </div>
             </li>
             <nuxt-link class="red hidden md:inline-block" to="/">
@@ -48,31 +50,31 @@
         <ul class="z-index-50 bg-white md:hidden fixed bottom-0 left-0 z-index-20 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
           <nuxt-link class="red" to="/">
             <li class="font-bold flex flex-col items-center justify-center">
-              <img class="inline-block" src="@/assets/img/icons/home.svg" alt="Home icon" height="15" width="15" />
+              <img class="inline-block" src="@/assets/img/sections/home.svg" alt="Home icon" height="15" width="15" />
               Accueil
             </li>
           </nuxt-link>
           <nuxt-link to="/about" class="orange">
             <li class="font-bold flex flex-col items-center justify-center">
-              <img class="inline-block" src="@/assets/img/icons/profile.svg" alt="About icon" height="15" width="15" />
+              <img class="inline-block" src="@/assets/img/sections/profile.svg" alt="About icon" height="15" width="15" />
               Moi
             </li>
           </nuxt-link>
           <nuxt-link to="/blog" class="green">
             <li class="font-bold flex flex-col items-center justify-center">
-              <img class="inline-block" src="@/assets/img/icons/quill.svg" alt="Blog icon" height="15" width="15" />
+              <img class="inline-block" src="@/assets/img/sections/quill.svg" alt="Blog icon" height="15" width="15" />
               Blog
             </li>
           </nuxt-link>
           <nuxt-link to="/work" class="blue">
             <li class="font-bold flex flex-col items-center justify-center">
-              <img class="inline-block" src="@/assets/img/icons/case.svg" alt="Work icon" height="15" width="15" />
+              <img class="inline-block" src="@/assets/img/sections/case.svg" alt="Work icon" height="15" width="15" />
               Travail
             </li>
           </nuxt-link>
           <nuxt-link to="/contact" class="purple">
             <li class="font-bold flex flex-col items-center justify-center">
-              <img class="inline-block" src="@/assets/img/icons/pin.svg" alt="Contact icon" height="15" width="15" />
+              <img class="inline-block" src="@/assets/img/sections/pin.svg" alt="Contact icon" height="15" width="15" />
               Contact
             </li>
           </nuxt-link>
