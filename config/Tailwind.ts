@@ -1,7 +1,5 @@
 export default {
-  config: {
-    plugins: [
-      require('tailwindcss-dark-mode')
-    ]
-  }
+  cssPath: './assets/css/tailwind.css',
+  configPath: 'tailwind.config.js',
+  exposeConfig: true
 }

@@ -100,6 +100,12 @@ export default {
 
   .header-container {
 
+    .nuxt-link-active {
+      &.green {
+        @apply text-green-400;
+      }
+    }
+
     .nuxt-link-exact-active {
       &.red {
         @apply text-red-400;

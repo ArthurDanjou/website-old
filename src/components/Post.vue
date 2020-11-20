@@ -11,7 +11,9 @@
       </div>
       <div class="self-end flex flex-wrap">
         <div v-for="tag in tagsSplit" class="ml-2 py-1 px-2 rounded bg-black text-white font-semibold">
-          #{{tag}}
+          <nuxt-link :to="'/blog/tags/' + tag.toLowerCase()">
+            #{{tag}}
+          </nuxt-link>
         </div>
       </div>
     </div>

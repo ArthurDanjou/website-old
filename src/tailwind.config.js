@@ -4,12 +4,11 @@ module.exports = {
     purgeLayersByDefault: false,
   },
   purge: [],
-  target: 'relaxed',
   prefix: '',
   important: false,
   separator: ':',
+  darkMode: 'class',
   theme: {
-    darkSelector: '.dark-mode',
     screens: {
       sm: '640px',
       md: '768px',
@@ -715,7 +714,7 @@ module.exports = {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
     backgroundClip: ['responsive'],
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'responsive'],
+    backgroundColor: ['hover', 'responsive'],
     backgroundImage: ['responsive'],
     gradientColorStops: ['responsive', 'hover', 'focus'],
     backgroundOpacity: ['responsive', 'hover', 'focus'],
@@ -723,7 +722,7 @@ module.exports = {
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within', 'hover', 'responsive'],
+    borderColor: ['hover', 'responsive'],
     borderOpacity: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
@@ -786,7 +785,7 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'responsive'],
+    textColor: ['hover', 'responsive'],
     textOpacity: ['responsive', 'hover', 'focus'],
     textDecoration: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
@@ -820,8 +819,5 @@ module.exports = {
     transitionDuration: ['responsive'],
     transitionDelay: ['responsive'],
     animation: ['responsive'],
-  },
-  plugins: [
-    require('tailwindcss-dark-mode')()
-  ],
+  }
 }

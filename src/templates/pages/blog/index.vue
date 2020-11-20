@@ -6,11 +6,13 @@
     </h1>
     <div class="flex flex-col justify-around items-center py-8 w-full md:w-1/2">
       <!-- TODO Insert blog's posts -->
-      <Post
-        title="Il était une nouvelle fois la vie"
-        reading_time="4"
-        description="Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi."
-        tags="Dev Tech Vie"/>
+      <nuxt-link to="/blog/1">
+        <Post
+          title="Il était une nouvelle fois la vie"
+          reading_time="4"
+          description="Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi."
+          tags="Dev Tech Vie"/>
+      </nuxt-link>
       <Post reading_time="12"/>
       <Post />
     </div>
@@ -19,7 +21,7 @@
 
 <script>
 export default {
-name: "blog"
+  name: "blog"
 }
 </script>
 

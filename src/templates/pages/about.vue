@@ -27,13 +27,48 @@
       </div>
     </div>
     <div class="w-full mb-10 mt-4">
-      <h3 class="font-bold text-2xl md:text-4xl">
+      <h3 class="font-bold text-2xl md:text-4xl mb-3">
         Compétences Techniques
         <img class="inline skill-img" src="@/assets/img/about/wrench.svg" alt="Skills logo" height="32" width="32"/>
       </h3>
-      <div>
-        <!-- TODO -->
-        TODO Insert Skills
+      <div class="flex flex-col items-center md:items-start md:justify-between md:flex-row flex-wrap">
+        <!-- TODO Insert Skills -->
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="JavaScript"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
+        <Skill
+          skill="Java"
+          color="white" />
       </div>
     </div>
     <div class="w-full mb-10">
@@ -59,6 +94,10 @@
           <li class="my-2">
             Startups & Entreprises innovantes
             <img class="inline" src="@/assets/img/about/rocket.svg" alt="Dev icon" height="25" width="25" />
+          </li>
+          <li class="my-2">
+            Administration système
+            <img class="inline" src="@/assets/img/about/server.svg" alt="Dev icon" height="25" width="25" />
           </li>
           <li class="my-2">
             Voyage
@@ -90,23 +129,47 @@
       </div>
     </div>
     <div class="w-full mb-10">
-      <h3 class="font-bold text-2xl md:text-4xl">
+      <h3 class="font-bold text-2xl md:text-4xl mb-3">
         Formation
         <img class="inline formation-img" src="@/assets/img/about/formation.svg" alt="Formations logo" height="32" width="32"/>
       </h3>
       <div>
-        <!-- TODO -->
-        TODO Insert Formations
+        <!-- TODO Insert Formations-->
+        <Formation
+          title="Autodidacte"
+          description="Apprentissage en autodidacte et en pratiquant"
+          location="At Home 🏠"
+          begin="2015"
+          end="Today" />
+        <Formation
+          title="Baccalauréat"
+          description="Examen spécialités maths & Pc"
+          location="At Passy"
+          begin="2020"
+          end="2021" />
       </div>
     </div>
     <div class="w-full mb-10">
-      <h3 class="font-bold text-2xl md:text-4xl">
+      <h3 class="font-bold text-2xl md:text-4xl mb-3">
         Expériences
         <img class="inline experience-img" src="@/assets/img/about/experience.svg" alt="Experience logo" height="32" width="32"/>
       </h3>
       <div>
-        <!-- TODO -->
-        TODO Insert Experiences
+        <!-- TODO Insert Experiences-->
+        <Experience
+          title="Junior Developer"
+          company="Erisium"
+          description="Chargé des mini-jeux et de l'infrastructure"
+          location="At Home 🏠"
+          begin="2019"
+          end="Today" />
+        <Experience
+          title="FullStack Software & Web Developer"
+          company="ArtDanjProduction"
+          description="Création d'applications web et développement de l'infrastructure"
+          location="At Home 🏠"
+          begin="2019"
+          end="2020" />
       </div>
     </div>
     <nuxt-link to="/cv">
@@ -130,7 +193,7 @@
         Editeurs de texte
         <img class="inline experience-img" src="@/assets/img/about/code.svg" alt="Editor logo" height="32" width="32"/>
       </h3>
-      <ul class="list-disc ml-10 text-gray-800">
+      <ul class="list-disc ml-10 text-gray-800 text-xl">
         <li>
           Editeur Java: <span>Intellij Idea Ultimate</span>
         </li>
@@ -165,7 +228,7 @@
         Apps & Logiciels
         <img class="inline experience-img" src="@/assets/img/about/software.svg" alt="Software logo" height="32" width="32"/>
       </h3>
-      <ul class="list-disc ml-10 text-gray-800">
+      <ul class="list-disc ml-10 text-gray-800  text-xl">
         <li>
           Email: <span>Courrier by Microsoft</span>
         </li>
@@ -194,7 +257,7 @@
         Hébergement
         <img class="inline-block experience-img" src="@/assets/img/about/server.svg" alt="Server logo" height="32" width="32"/>
       </h3>
-      <ul class="list-disc ml-10 text-gray-800">
+      <ul class="list-disc ml-10 text-gray-800  text-xl">
         <li>
           Hébergeur VPS: <span>PulseHeberg</span>
         </li>
@@ -208,7 +271,7 @@
         Setup bureautique
         <img class="inline experience-img" src="@/assets/img/about/lamp.svg" alt="Desktop logo" height="32" width="32"/>
       </h3>
-      <ul class="list-disc ml-10 text-gray-800">
+      <ul class="list-disc ml-10 text-gray-800  text-xl">
         <li>
           Bureau: <span>Ikea en bois</span>
         </li>
@@ -240,7 +303,7 @@
 
 <script lang="ts">
 export default {
-name: "about"
+  name: "about",
 }
 </script>
 

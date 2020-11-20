@@ -1,12 +1,12 @@
 <template>
   <main class="index mt-10 md:mt-32 bg-gray-100 px-5 xl:px-64">
-    <section class="banner w-full flex justify-between flex-col lg:flex-row-reverse items-center mb-16">
+    <section class="banner w-full flex justify-between flex-col lg:flex-row-reverse items-center mb-16 dark:bg-black">
       <div class="hidden lg:block flex justify-center items-center lg:w-1/2">
         <img src="@/assets/img/computer.png" alt="It's me !" class="me-img" />
       </div>
       <div class="title flex justify-center flex-col lg:w-1/2 pr-3">
         <div class="mb-4 md:mb-10">
-          <h1 class="text-4xl md:text-5xl text-left font-bold md:w-3/4">
+          <h1 class="text-4xl md:text-5xl text-left font-bold md:w-3/4 dark:text-white">
             Bonjour, je suis <br />
             <span class="text-red-700 font-black">Arthur Danjou</span> 👋
           </h1>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Nuxt class="pt-16 lg:pt-24"/>
+    <Nuxt class="content pt-16 lg:pt-24"/>
     <Footer />
   </div>
 </template>
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+.content {
+  min-height: calc(100vh - (118px + 96px));
+}
 </style>

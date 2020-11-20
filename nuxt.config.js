@@ -14,10 +14,6 @@ export default {
   plugins: [
   ],
 
-  purgeCSS: {
-    whitelist: ["dark-mode"]
-  },
-
   components: true,
 
   buildModules: [
@@ -41,7 +37,8 @@ export default {
     store: 'store',
   },
 
-  build: {},
+  build: {
+  },
 
   pageTransition: {
     name: 'page',
