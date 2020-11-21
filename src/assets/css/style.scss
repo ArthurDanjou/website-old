@@ -1,4 +1,13 @@
-img, svg, path, g {
-  z-index: 0;
+.icon {
+  transform: translate(3px, -3px);
+  z-index: 1;
+}
+
+img, svg {
+  position: static;
+}
+
+* {
+  @apply select-none outline-none ;
 }
 

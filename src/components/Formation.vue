@@ -5,7 +5,7 @@
       <span v-else class="inline-flex h-full w-full rounded-full bg-transparent border-2 border-light-accent border-gray-500"/>
     </span>
     <div class="leading-7 relative">
-      <p class="text-base text-gray-800 leading-6">{{begin}} - {{end}} <span class="px-3">|</span> {{location}}</p>
+      <p class="text-base dark:text-dark-900 text-gray-800 leading-6">{{begin}} - {{end}} <span class="px-3">|</span> {{location}}</p>
       <h1 class="text-2xl font-bold">{{title}}</h1>
       <h2 class="text-xl">{{description}}</h2>
     </div>

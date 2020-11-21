@@ -1,6 +1,6 @@
 <template>
-  <main class="blog flex flex-col items-center mt-16 md:mt-32 px-5 xl:px-64">
-    <h1 class="title font-bold text-4xl mr-2 inline mb-4">
+  <main class="blog flex flex-col items-center px-5 xl:px-64">
+    <h1 class="mt-16 md:mt-32 title font-bold text-4xl mr-2 inline mb-4">
       #{{this.getCapitalizedTag}}
     </h1>
     <div class="flex flex-col justify-around items-center py-8 w-full md:w-1/2">

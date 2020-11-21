@@ -6,7 +6,9 @@
         <nuxt-link to="/" class="home-btn">
           <div class="py-3 px-6 mb-16 font-bold border-2 border-solid border-red-500 hover:bg-red-500 duration-300 rounded">
             Revenir à l'accueil
-            <img class="inline arrow-img" src="@/assets/img/utilities/arrow-down.svg" alt="Go Down" height="32" width="32" />
+            <svg class="inline arrow-img" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </nuxt-link>
       </div>
