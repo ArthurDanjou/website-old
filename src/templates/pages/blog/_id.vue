@@ -1,39 +1,39 @@
 <template>
-  <main class="blog flex flex-col items-center px-5 xl:px-64">
-    <h1 class="mt-16 md:mt-32 title font-bold text-4xl mr-2 inline mb-4">
-      Blog
-      <svg class="inline-block blog-img" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-      </svg>
-    </h1>
-    <div class="flex flex-col justify-around items-center py-8 w-full bg-red-100">
-      <!-- TODO Insert blog's posts -->
-      <h1>
-        TITLE
+  <main class="blog flex flex-col items-center px-5 xl:px-64 mb-16 md:mb-32">
+    <!-- TODO Titre en blanc et desc en gris lien autre couleur + Définir un autre padding sur les cotés-->
+    <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
+      <h1 class="text-3xl md:text-5xl font-bold">
+        {{ title }}
       </h1>
-      <div class="w-1/2">
-        <div class="flex flex-row justify-between">
-          <div>
-            4 min. read
-          </div>
-          <div>
-            14 aout 2020
-          </div>
+      <h3 class="text-xl text-gray-800 dark:text-dark-900 my-4 md:mt-8">
+        {{ description }}
+      </h3>
+      <div class="flex flex-row justify-between w-full md:w-2/3 mb-12">
+        <div>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Date</p>
+          <p>{{ formatDate }}</p>
         </div>
-        <div class="flex justify-center">
-          COVER
+        <div>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Time</p>
+          <p>{{ reading_time }} min</p>
+        </div>
+        <div>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
+          <p>{{formatTags}}</p>
         </div>
       </div>
-      <h3>
-        DESCRIPTION
-      </h3>
-      <p>
-        CONTENT
+      <div class="w-full">
+        <div class="flex justify-center w-full h-auto">
+          <img class="w-full h-auto" :src="'http://localhost:5555/files/'+cover.file_name" alt="Cover Img" />
+        </div>
+      </div>
+      <p class="my-6 md:my-12 text-gray-800 dark:text-dark-900">
+        {{ content }}
       </p>
-      <div class="my-10 border-t border-black border-solid w-full" />
       <p class="text-center">
         Merci d'avoir lu jusqu'au bout ! 😊<br class="md:hidden"/>
         Hésite surtout pas à partager l'article sur Twitter
+        Todo : replace par des buttons : - Likes, - Twitter (proposition de tweet), - partage (lien)
       </p>
     </div>
   </main>
@@ -44,25 +44,48 @@ export default {
   name: "blog",
   data() {
     return {
-      id: this.$route.params.id
+      id: this.$route.params.id,
+      title: '',
+      description: '',
+      content: '',
+      tags: [],
+      likes: 0,
+      date: '',
+      cover: '',
+      reading_time: 0
     }
   },
+  async asyncData({ params, $axios }) {
+    const {data: post} = await $axios.get('/posts/' + params.id)
+    return {
+      title: post.title.code,
+      description: post.description.code,
+      content: post.content.code,
+      tags: post.tags,
+      likes: post.likes,
+      date: post.created_at,
+      reading_time: post.reading_time,
+      cover: post.cover
+    }
+  },
+  computed: {
+    formatDate() {
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+      ];
+      const date = new Date(this.date)
+      return date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear()
+    },
+    formatTags() {
+      let tags = ""
+      this.tags.map(tag => {
+        tags += tag.label.code + ", "
+      })
+      return tags.substring(0, tags.length - 2)
+    },
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.blog {
-  .blog-img {
-    transform: translate(3px, -10px);
-  }
-
-  .title:after {
-    margin-top: 0.1rem;
-    content: '';
-    height: 2px;
-    width: 100%;
-    display: block;
-    @apply bg-green-400;
-  }
-}
 </style>

@@ -1,4 +1,4 @@
 export default {
-  baseUrl: 'http://localhost:3333',
-  credentials: true
+  credentials: true,
+  baseURL: 'http://localhost:5555/'
 }

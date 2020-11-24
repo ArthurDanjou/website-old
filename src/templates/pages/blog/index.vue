@@ -7,23 +7,55 @@
       </svg>
     </h1>
     <div class="flex flex-col justify-around items-center py-8 w-full md:w-1/2">
-      <!-- TODO Insert blog's posts -->
-      <nuxt-link to="/blog/1">
-        <Post
-          title="Il était une nouvelle fois la vie"
-          reading_time="4"
-          description="Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi. Un tout nouvel article à propos de je ne sais pas quoi."
-          tags="Dev Tech Vie"/>
-      </nuxt-link>
-      <Post reading_time="12"/>
-      <Post />
+      <!-- TODO
+      Insert research by tags
+      Insert see more
+      -->
+      <div v-if="posts.size !== 0" class="w-full" v-for="post in posts">
+        <nuxt-link :to="'/blog/' + post.id">
+          <Post
+            :title="post.title.code"
+            :reading_time="post.reading_time"
+            :description="post.description.code"
+            :tags="displayTags(post.tags)"
+            :cover="post.cover"
+            :date="post.created_at"
+            :likes="post.likes"
+          />
+        </nuxt-link>
+      </div>
+      <div v-else class="w-full">
+        Pas de blogs !
+      </div>
     </div>
   </main>
 </template>
 
 <script>
+import Post from "~/components/Post";
 export default {
-  name: "blog"
+  name: "blog",
+  components: {Post},
+  data () {
+    return {
+      posts: []
+    }
+  },
+  methods: {
+    displayTags(tags) {
+      const tags_label = []
+      tags.map(tag => {
+        tags_label.push(tag.label.code)
+      })
+      return tags_label
+    }
+  },
+  async asyncData ({ $axios }) {
+    const {data: posts} = await $axios.get('/posts')
+    return {
+      posts
+    }
+  }
 }
 </script>
 
