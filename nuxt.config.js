@@ -1,4 +1,4 @@
-import { Axios, Head, ColorMode, Tailwind } from './config'
+import { Axios, Head, ColorMode, Tailwind, Translation } from './config'
 
 export default {
   head: Head,
@@ -23,7 +23,8 @@ export default {
   ],
 
   modules: [
-    ['@nuxtjs/axios', Axios]
+    ['@nuxtjs/axios', Axios],
+    ['nuxt-i18n', Translation]
   ],
 
   buildDir: 'build',

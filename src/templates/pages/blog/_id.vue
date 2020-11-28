@@ -1,5 +1,5 @@
 <template>
-  <main class="blog flex flex-col items-center px-5 xl:px-64 mb-16 md:mb-32">
+  <main class="flex flex-col items-center px-5 xl:px-64 mb-16 md:mb-32">
     <!-- TODO Titre en blanc et desc en gris lien autre couleur + Définir un autre padding sur les cotés-->
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
       <h1 class="text-3xl md:text-5xl font-bold">
@@ -18,7 +18,8 @@
           <p>{{ reading_time }} min</p>
         </div>
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
+          <!-- Todo remove if tags === 0 -->
+          <p :class="tags.size === 0 ? 'hidden': ''" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
           <p>{{formatTags}}</p>
         </div>
       </div>
@@ -33,7 +34,7 @@
       <p class="text-center">
         Merci d'avoir lu jusqu'au bout ! 😊<br class="md:hidden"/>
         Hésite surtout pas à partager l'article sur Twitter
-        Todo : replace par des buttons : - Likes, - Twitter (proposition de tweet), - partage (lien)
+        <!-- Todo : replace par des buttons : - Likes, - Twitter (proposition de tweet), - partage (lien) -->
       </p>
     </div>
   </main>
@@ -42,6 +43,11 @@
 <script>
 export default {
   name: "blog",
+  head() {
+    return {
+      title: 'Blog - Arthur Danjou'
+    }
+  },
   data() {
     return {
       id: this.$route.params.id,
@@ -52,7 +58,7 @@ export default {
       likes: 0,
       date: '',
       cover: '',
-      reading_time: 0
+      reading_time: 0,
     }
   },
   async asyncData({ params, $axios }) {
@@ -65,7 +71,7 @@ export default {
       likes: post.likes,
       date: post.created_at,
       reading_time: post.reading_time,
-      cover: post.cover
+      cover: post.cover,
     }
   },
   computed: {

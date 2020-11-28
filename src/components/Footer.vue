@@ -66,10 +66,10 @@ export default {
   }
 
   .link {
-    transition-duration: .3s;
+    transition-duration: .2s;
 
     &:hover {
-      text-decoration: underline;
+      @apply border-b-2 border-opacity-0 dark:border-opacity-0 dark:hover:border-opacity-100 hover:border-opacity-100 border-black dark:border-white border-solid;
     }
   }
 }

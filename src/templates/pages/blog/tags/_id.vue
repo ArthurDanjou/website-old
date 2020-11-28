@@ -19,6 +19,11 @@
 <script>
 export default {
   name: "blog",
+  head() {
+    return {
+      title: 'Blog - Arthur Danjou'
+    }
+  },
   data() {
     return {
       tag: this.$route.params.id

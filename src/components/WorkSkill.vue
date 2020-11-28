@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Skill",
+  name: "WorkSkill",
   props: {
     skill: {
       type: String,
@@ -29,5 +29,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+
 </style>
