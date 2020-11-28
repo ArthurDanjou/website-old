@@ -7,11 +7,11 @@
       <p
         class="text-3xl  font-bold text-justify leading-7 mb-3"
         :class="lightBg === 1 ? 'text-black':'text-white'"
-      >{{title}}</p>
+      >{{ $t(title) }}</p>
       <p
         class="text-lg italic text-justify leading-5"
         :class="lightBg === 1 ? 'text-gray-900':'text-dark-900'"
-      >{{description}}</p>
+      >{{ $t(description) }}</p>
     </div>
     <div
       class="flex justify-between mt-8"
@@ -19,7 +19,7 @@
     >
       <div>
         <div>{{formatDate}}</div>
-        <div>{{reading_time}} min read</div>
+        <div>{{reading_time}} {{ $t('post_reading_time') }}</div>
         <div>{{likes}} ❤</div>
       </div>
       <div class="self-end flex flex-wrap flex-col md:flex-row">
@@ -27,7 +27,7 @@
              class="my-1 md:my-0 ml-2 py-1 px-2 rounded font-semibold"
              :class="lightBg ? 'bg-black text-white':'bg-white text-black'"
         >
-          #{{tag}}
+          #{{ $t(tag) }}
         </div>
       </div>
     </div>

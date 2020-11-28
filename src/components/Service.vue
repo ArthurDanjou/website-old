@@ -1,7 +1,16 @@
 <template>
-  <div class="flex flex-col items-center m-4 p-1 md:p-2 h-64 w-64 border-gray-900 dark:border-dark-800 border-2 duration-300 rounded-3xl hover:bg-opacity-25 hover:scale-105 transform cursor-pointer">
-    <div>
-      
+  <div class="w-72 h-80 border-2 border-black border-solid rounded-xl">
+    <div class="flex flex-col items-center my-3 border-b-2 border-black border-solid">
+      <img width="85" :src="'http://localhost:5555/files/' + cover" alt="Service Img"/>
+      <h1 class="items-center flex h-16 text-xl font-bold mx-4">
+        {{ title }}
+      </h1>
+    </div>
+    <div class="h-auto">
+      {{description }}
+    </div>
+    <div class="h-auto">
+      {{ price }}
     </div>
   </div>
 </template>
@@ -24,11 +33,12 @@ export default {
     },
     price: {
       default: 0,
-      type: Number
-    },
-    bestSeller: {
-      default: false,
-      type: Boolean
+      type: String
+    }
+  },
+  computed: {
+    hasPrice() {
+      return this.price !== '0'
     }
   }
 }

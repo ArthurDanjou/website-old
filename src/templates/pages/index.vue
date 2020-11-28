@@ -21,8 +21,8 @@
       <div class="flex flex-col items-center w-full">
         <div class="flex flex-col md:flex-row justify-around w-full md:mb-8">
           <HomeLink
-            :title="$t('home_link_about')"
-            :description="$t('home_link_about_description')"
+            title="home_link_about"
+            description="home_link_about_description"
             color="orange"
             link="/about"
             >
@@ -31,8 +31,8 @@
             </svg>
           </HomeLink>
           <HomeLink
-            :title="$t('home_link_blog')"
-            :description="$t('home_link_blog_description')"
+            title="home_link_blog"
+            description="home_link_blog_description"
             color="green"
             link="/blog"
           >
@@ -43,8 +43,8 @@
         </div>
         <div class="flex flex-col md:flex-row justify-around w-full">
           <HomeLink
-            :title="$t('home_link_work')"
-            :description="$t('home_link_work_description')"
+            title="home_link_work"
+            description="home_link_work_description"
             color="blue"
             link="/work"
           >
@@ -53,8 +53,8 @@
             </svg>
           </HomeLink>
           <HomeLink
-            :title="$t('home_link_contact')"
-            :description="$t('home_link_contact_description')"
+            title="home_link_contact"
+            description="home_link_contact_description"
             color="purple"
             link="/contact"
           >

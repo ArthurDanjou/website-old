@@ -12,7 +12,7 @@
       <h1 class="text-xl font-bold text-center mb-8">
         Voici les différents projets auxquels j'ai pu participer dans mon passé !
       </h1>
-      <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full">
+      <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-x-4">
         <div v-for="work in works">
           <nuxt-link :to="'/work/' + work.id">
             <Work

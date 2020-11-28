@@ -4,7 +4,7 @@
       <div>
         <img alt="Skill Img" width="95" height="95" :src="'http://localhost:5555/files/' + cover">
       </div>
-      <h1 class="md:text-2xl text-lg font-bold">{{skill}}</h1>
+      <h1 class="md:text-2xl text-lg font-bold">{{ $t(skill) }}</h1>
     </div>
   </div>
 </template>

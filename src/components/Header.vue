@@ -14,7 +14,7 @@
                 🇫🇷
               </div>
               <div v-else @click="changeLanguage('en')">
-                🇺🇸
+                🇬🇧
               </div>
             </li>
             <li @click="changeColorMode()" class="mx-2 cursor-pointer flex items-center">

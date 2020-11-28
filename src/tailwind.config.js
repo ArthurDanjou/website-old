@@ -212,7 +212,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"Raleway"',
+        'Raleway',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',

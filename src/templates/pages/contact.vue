@@ -9,12 +9,27 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     </PageTitle>
-    <div class="flex flex-col justify-around items-center py-10 w-full">
-      <h1 class="text-xl font-bold text-center mb-8">
+    <div class="flex flex-col items-center text-center py-10 w-full">
+      <h1 class="text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900 mb-8">
         Vous voulez collaborer avec moi ? Voici mes différentes offres !
       </h1>
-      <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full">
-        <!-- Insert Services -->
+      <div class="flex flex-row w-full overflow-x-auto space-x-4 mb-6">
+        <!-- Todo Insert Services -->
+        <Service
+          title="Développement d'application"
+          cover="Logo.jpg"
+          price="0"
+        />
+        <Service
+          title="Maintenance Linux"
+          cover="Logo.jpg"
+          price="120"
+        />
+        <Service
+          title="Conseil en développement"
+          cover="Logo.jpg"
+          price="0"
+        />
       </div>
       <div class="flex flex-col items-center w-full md:w-2/3">
         <h1 class="text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">
@@ -74,9 +89,10 @@
 
 <script>
 import PageTitle from "~/components/PageTitle";
+import Service from "~/components/Service";
 export default {
   name: "contact",
-  components: {PageTitle},
+  components: {Service, PageTitle},
   data () {
     return {
       services: [],
