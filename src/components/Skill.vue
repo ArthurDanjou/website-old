@@ -1,8 +1,8 @@
 <template>
-  <div class="p-1 md:p-2 h-48 w-48 border-gray-900 dark:border-dark-800 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="'hover:bg-'+color+'-600'">
+  <div class="mb-3 mr-3 p-1 md:p-2 h-48 w-48 border-gray-900 dark:border-dark-800 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="'hover:bg-'+color+'-600'">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div>
-        <img alt="Skill Img" width="95" height="95" :src="'http://localhost:5555/files/' + cover">
+        <img class="rounded-full" alt="Skill Img" width="95" height="95" :src="'http://localhost:5555/files/' + cover">
       </div>
       <h1 class="md:text-xl text-lg font-bold text-center">{{ $t(skill) }}</h1>
     </div>

@@ -8,7 +8,10 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     </PageTitle>
-    <div class="flex flex-col justify-around items-center py-10 w-full">
+    <h1 v-if="works.length === 0" class="text-xl font-bold text-center my-8 w-full">
+      Malheureusement il n'y a pas encore de projets disponibles. Reviens plus tard 😉
+    </h1>
+    <div v-else class="flex flex-col justify-around items-center py-10 w-full">
       <h1 class="text-xl font-bold text-center mb-8">
         Voici les différents projets auxquels j'ai pu participer dans mon passé !
       </h1>
