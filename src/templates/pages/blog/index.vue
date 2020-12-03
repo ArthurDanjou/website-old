@@ -11,26 +11,81 @@
     <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">
       Malheureusement il n'y a pas encore d'articles disponibles. Reviens plus tard 😉
     </h1>
-    <div v-else>
-      <!-- TODO
-      Insert research by tags
-      Insert see more
-      -->
-    </div>
-    <div class="flex flex-col justify-around items-center py-8 w-full md:w-1/2">
-      <div class="w-full" v-for="post in posts">
-        <nuxt-link :to="'/blog/' + post.id">
-          <Post
-            :title="post.title.code"
-            :reading_time="post.reading_time"
-            :description="post.description.code"
-            :tags="displayTags(post.tags)"
-            :cover="post.cover.file_name"
-            :date="post.created_at"
-            :likes="post.likes"
-            :lightBg="post.light_back_ground"
-          />
-        </nuxt-link>
+    <div class="w-full md:w-1/2" v-else>
+      <!-- TODO improve design research by tag -->
+      <div class="flex flex-col mt-8">
+        <h1>
+          Classer les articles par tag :
+        </h1>
+        <div class="flex flex-row">
+          <div
+            @click="resetPosts"
+            v-if="current_tag !== ''"
+            class="home-arrow flex cursor-pointer"
+          >
+            <div class="arrow duration-300">
+              <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </div>
+            Tous les articles
+          </div>
+          <div v-else v-for="tag in tags"
+               @click="fetchPostsByTag(tag.label.code)"
+               :class="tag.label.code === current_tag ? 'border-solid border-black border-2' : ''"
+               class="hover:bg-gray-500 duration-300 cursor-pointer px-3 py-3 rounded-xl bg-gray-300 font-black mr-3"
+          >
+            {{tag.label.code}}
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-around items-center py-8 w-full">
+        <div class="w-full" v-for="post in posts">
+          <nuxt-link :to="'/blog/' + post.id">
+            <Post
+              :title="post.title.code"
+              :reading_time="post.reading_time"
+              :description="post.description.code"
+              :tags="displayTags(post.tags)"
+              :cover="post.cover.file_name"
+              :date="post.created_at"
+              :likes="post.likes"
+              :lightBg="post.light_back_ground"
+            />
+          </nuxt-link>
+        </div>
+      </div>
+      <div class="relative flex flex-row justify-between w-full mb-4" v-if="postsCount > 5">
+        <div
+          class="duration-500 flex w-1/2 px-5 py-4 justify-center items-center"
+          :class="page > 1 ? 'opacity-100' : 'opacity-0'"
+        >
+          <div class="flex items-center duration-300 prev-arrow" @click="prevPage">
+            <div class="arrow duration-300">
+              <svg class="inline icon" height="30" width="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+              </svg>
+            </div>
+            <div class="inline ml-4 font-bold">
+              Précédent
+            </div>
+          </div>
+        </div>
+        <div
+          class="duration-500 flex w-1/2 px-5 py-4 justify-center items-center"
+          :class="hasNextPage ? 'opacity-100' : 'opacity-0'"
+        >
+          <div class="flex items-center duration-300 suiv-arrow" @click="nextPage">
+            <div class="ml-4 font-bold">
+              Suivant
+            </div>
+            <div class="inline arrow duration-300">
+              <svg class="inline icon" height="30" width="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -49,7 +104,12 @@ export default {
   },
   data () {
     return {
-      posts: []
+      posts: [],
+      postsCount: 0,
+      page: 1,
+      current_tag: '',
+      tags: [],
+      hasNextPage: false,
     }
   },
   methods: {
@@ -59,16 +119,56 @@ export default {
         tags_label.push(tag.label.code)
       })
       return tags_label
+    },
+    async fetchPostsByTag(tag) {
+      this.current_tag = tag
+      const {data} = await this.$axios.get('/post/' + tag + '?page=1')
+      this.posts = data.data
+      this.hasNextPage = data.meta.next_page_url !== null
+    },
+    async resetPosts() {
+      this.current_tag = ''
+      const {data} = await this.$axios.get('/posts?page=1')
+      this.posts = data.data
+      this.hasNextPage = data.meta.next_page_url !== null
+    },
+    nextPage() {
+      this.page++
+    },
+    prevPage() {
+      this.page--
     }
   },
   async asyncData ({ $axios }) {
-    const {data: posts} = await $axios.get('/posts')
+    const {data: count} = await $axios.get('/posts/size')
+    const {data} = await $axios.get('/posts?page=1')
+    const {data: tags} = await $axios.get('/tags')
     return {
-      posts
+      posts: data.data,
+      postsCount: count,
+      tags,
+      hasNextPage: data.meta.next_page_url !== null
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+.blog {
+  .home-arrow:hover .arrow {
+    transform: translateX(-15px);
+  }
+
+  .prev-arrow:hover .arrow {
+    transform: translateX(-10px);
+  }
+
+  .suiv-arrow:hover .arrow {
+    transform: translateX(15px);
+  }
+
+  .arrow {
+    transform: translateX(-3px);
+  }
+}
 </style>

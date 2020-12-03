@@ -1,7 +1,20 @@
 <template>
-  <main class="flex flex-col items-center px-5 xl:px-64 mb-16 md:mb-32">
-    <!-- TODO Titre en blanc et desc en gris lien autre couleur + Définir un autre padding sur les cotés-->
+  <main class="blog flex flex-col items-center px-5 xl:px-96 mb-16 md:mb-32">
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
+      <div>
+        <div class="mb-4 flex">
+          <nuxt-link to="/blog" class="back-arrow flex">
+            <div class="duration-300 arrow">
+              <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </div>
+            <div class="ml-2">
+              Retour en arrière
+            </div>
+          </nuxt-link>
+        </div>
+      </div>
       <h1 class="text-3xl md:text-5xl font-bold">
         {{ title }}
       </h1>
@@ -18,8 +31,7 @@
           <p>{{ reading_time }} min</p>
         </div>
         <div>
-          <!-- Todo remove if tags === 0 -->
-          <p :class="tags.size === 0 ? 'hidden': ''" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
+          <p :class="tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
           <p>{{formatTags}}</p>
         </div>
       </div>
@@ -94,4 +106,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.blog {
+  .back-arrow:hover .arrow {
+    transform: translate(-8px, -1px);
+  }
+
+  .arrow {
+    transform: translate(3px, -1px);
+  }
+}
 </style>
