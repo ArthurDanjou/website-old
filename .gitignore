@@ -93,4 +93,4 @@ sw.*
 *.swp
 /build/
 
-./config/Ngrok.ts
+/config/
