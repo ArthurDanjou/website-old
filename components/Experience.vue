@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-row mb-5">
     <div class="self-center flex h-4 w-4 mr-4 relative">
-      <span v-if="end === 'Today'" class="animate-ping relative inline h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-      <span v-else class="inline relative h-full w-full rounded-full bg-gray-400 opacity-75"></span>
+      <span v-if="end === 'Today'" class="animate-ping relative inline h-4 w-4 rounded-full bg-orange-400 opacity-75"></span>
+      <span v-else class="inline relative h-4 w-4 rounded-full bg-gray-400 opacity-75"></span>
       <span v-if="end === 'Today'" class="inline absolute rounded-full h-4 w-4 bg-orange-500"></span>
       <span v-else class="inline absolute rounded-full h-4 w-4 bg-gray-500"></span>
     </div>
@@ -45,11 +45,8 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
-      ];
       const dateFormat = new Date(date)
-      return date === 'Today' ? 'Today' : monthNames[dateFormat.getMonth()] + " " + dateFormat.getFullYear()
+      return date === 'Today' ? 'Today' : this.$t('month_' + dateFormat.getMonth()) + " " + dateFormat.getFullYear()
     }
   }
 }

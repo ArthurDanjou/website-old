@@ -14,7 +14,7 @@
             {{ $t('home_banner_role') }}
           </p>
           <p class="text-lg md:text-2xl text-justify mb-8 leading-7 text-gray-700 dark:text-dark-900">
-            {{ $t('home_banner_description', {age: age}) }}
+            {{ $t('home_banner_description', { age: age }) }}
           </p>
         </div>
       </div>

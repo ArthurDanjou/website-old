@@ -57,7 +57,7 @@
           </ul>
         </div>
         <ul class="dark:text-white dark:bg-dark-200 z-index-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
-          <nuxt-link class="red" to="/">
+          <nuxt-link class="w-1/5 red" to="/">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -65,7 +65,7 @@
               {{ $t('part_home') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/about" class="orange">
+          <nuxt-link to="/about" class="w-1/5 orange">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -73,7 +73,7 @@
               {{ $t('part_about') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/blog" class="green">
+          <nuxt-link to="/blog" class="w-1/5 green">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -81,7 +81,7 @@
               {{ $t('part_blog') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/work" class="blue">
+          <nuxt-link to="/work" class="w-1/5 blue">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -89,7 +89,7 @@
               {{ $t('part_work') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/contact" class="purple">
+          <nuxt-link to="/contact" class="w-1/5 purple">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

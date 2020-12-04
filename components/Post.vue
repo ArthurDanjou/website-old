@@ -14,16 +14,16 @@
       >{{ $t(description) }}</p>
     </div>
     <div
-      class="flex justify-between mt-8"
+      class="flex justify-between mt-8 items-end"
       :class="lightBg ? 'text-gray-900':'text-dark-900'"
     >
       <div>
         <div>{{formatDate}}</div>
-        <div>{{reading_time}} {{ $t('post_reading_time') }}</div>
+        <div>{{reading_time}} min</div>
         <div>{{likes}} ❤</div>
       </div>
       <div class="self-end flex flex-wrap flex-col md:flex-row">
-        <div v-for="(tag) in tags"
+        <div v-for="tag in tags"
              class="my-1 md:my-0 ml-2 py-1 px-2 rounded font-semibold"
              :class="lightBg ? 'bg-black text-white':'bg-white text-black'"
         >
@@ -72,15 +72,9 @@ export default {
     }
   },
   computed: {
-    tagsSplit() {
-      return this.tags.keys
-    },
     formatDate() {
-      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
-      ];
       const date = new Date(this.date)
-      return date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear()
+      return date.getDate() + " " + this.$t('month_' + date.getMonth()) + " " + date.getFullYear()
     },
   }
 }

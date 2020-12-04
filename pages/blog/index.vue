@@ -1,41 +1,40 @@
 <template>
   <main class="blog flex flex-col items-center px-5 xl:px-64">
     <PageTitle
-      title="Blog"
+      title="home_link_blog"
       color="green"
     >
       <svg class="inline-block icon" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
       </svg>
     </PageTitle>
-    <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">
-      Malheureusement il n'y a pas encore d'articles disponibles. Reviens plus tard 😉
-    </h1>
+    <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog_no_posts') }}</h1>
     <div class="w-full md:w-1/2" v-else>
-      <!-- TODO improve design research by tag -->
-      <div class="flex flex-col mt-8">
-        <h1>
-          Classer les articles par tag :
-        </h1>
-        <div class="flex flex-row">
-          <div
-            @click="resetPosts"
-            v-if="current_tag !== ''"
-            class="home-arrow flex cursor-pointer"
-          >
-            <div class="arrow duration-300">
-              <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-            </div>
-            Tous les articles
+      <div class="flex flex-col mt-8 w-full">
+        <h1
+          v-if="current_tag === ''"
+          class="text-lg mb-2"
+        >{{ $t('blog_tags_search') }}</h1>
+        <div
+          @click="resetPosts"
+          v-if="current_tag !== ''"
+          class="w-full home-arrow flex cursor-pointer font-bold"
+        >
+          <div class="arrow duration-300 mr-2">
+            <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
           </div>
-          <div v-else v-for="tag in tags"
-               @click="fetchPostsByTag(tag.label.code)"
-               :class="tag.label.code === current_tag ? 'border-solid border-black border-2' : ''"
-               class="hover:bg-gray-500 duration-300 cursor-pointer px-3 py-3 rounded-xl bg-gray-300 font-black mr-3"
-          >
-            {{tag.label.code}}
+          {{ $t('blog_tags_search_back') }}
+        </div>
+        <div v-else class="flex flex-row w-full overflow-x-scroll md:overflow-x-hidden md:flex-wrap space-x-3 md:space-x-0">
+          <div v-for="tag in tags">
+            <div
+              class="mb-3 md:mr-4 border-b-2 border-opacity-0 hover:border-opacity-100 border-green-400 border-solid duration-300 cursor-pointer font-black"
+              @click="fetchPostsByTag(tag.label.code)"
+            >
+              {{ $t(tag.label.code) }}
+            </div>
           </div>
         </div>
       </div>
@@ -66,9 +65,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
               </svg>
             </div>
-            <div class="inline ml-4 font-bold">
-              Précédent
-            </div>
+            <div class="inline ml-4 font-bold">{{ $t('blog_pagination_prev') }}</div>
           </div>
         </div>
         <div
@@ -76,9 +73,7 @@
           :class="hasNextPage ? 'opacity-100' : 'opacity-0'"
         >
           <div class="flex items-center duration-300 suiv-arrow" @click="nextPage">
-            <div class="ml-4 font-bold">
-              Suivant
-            </div>
+            <div class="ml-4 font-bold">{{ $t('blog_pagination_next') }}</div>
             <div class="inline arrow duration-300">
               <svg class="inline icon" height="30" width="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
