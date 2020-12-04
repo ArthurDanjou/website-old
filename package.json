@@ -11,7 +11,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "5.12.3",
-    "core-js": "^3.7.0",
+    "core-js": "^3.8.0",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.15.4",
     "sass": "^1.29.0",
