@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Axios} from "../../config";
+import {Axios} from "../config";
 
 export default async function () {
   let informations = {}

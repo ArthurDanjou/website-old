@@ -1,4 +1,4 @@
-import { Axios, Head, ColorMode, Tailwind, Translation } from './config'
+import { Axios, Head, ColorMode, Tailwind, Translation, Ngrok } from './config'
 
 export default {
   head: Head,
@@ -20,6 +20,7 @@ export default {
     '@nuxt/typescript-build',
     ['@nuxtjs/tailwindcss', Tailwind],
     ['@nuxtjs/color-mode', ColorMode],
+    ['@nuxtjs/ngrok', Ngrok]
   ],
 
   modules: [
@@ -28,15 +29,6 @@ export default {
   ],
 
   buildDir: 'build',
-  srcDir: 'src',
-  dir: {
-    assets: 'assets',
-    layouts: 'templates/layouts',
-    middleware: 'middleware',
-    pages: 'templates/pages',
-    static: 'public',
-    store: 'store',
-  },
 
   build: {
   },
