@@ -61,6 +61,7 @@ typings/
 
 # dotenv environment variables file
 src/.env
+.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -93,4 +94,3 @@ sw.*
 *.swp
 /build/
 
-/config/
