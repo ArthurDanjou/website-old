@@ -11,7 +11,7 @@
     <h1 v-if="works.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('work_no_work') }}</h1>
     <div v-else class="flex flex-col justify-around items-center py-10 w-full">
       <h1 class="text-xl font-bold text-center mb-8">{{ $t('work_description') }}</h1>
-      <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-x-4">
+      <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-y-3 md:space-y-0 md:space-x-4">
         <div v-for="work in works">
           <nuxt-link :to="'/work/' + work.id">
             <Work
