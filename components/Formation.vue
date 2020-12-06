@@ -42,7 +42,7 @@ export default {
   methods: {
     formatDate(date) {
       const dateFormat = new Date(date)
-      return this.$t('month_' + dateFormat.getMonth()) + " " + dateFormat.getFullYear()
+      return date === 'Today' ? 'Today' : this.$t('month_' + dateFormat.getMonth()) + " " + dateFormat.getFullYear()
     }
   }
 }

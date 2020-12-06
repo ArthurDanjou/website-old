@@ -8,36 +8,36 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
       </svg>
     </PageTitle>
-    <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog_no_posts') }}</h1>
-    <div class="w-full md:w-1/2" v-else>
-      <div class="flex flex-col mt-8 w-full">
-        <h1
-          v-if="current_tag === ''"
-          class="text-lg mb-2"
-        >{{ $t('blog_tags_search') }}</h1>
-        <div
-          @click="resetPosts"
-          v-if="current_tag !== ''"
-          class="w-full home-arrow flex cursor-pointer font-bold"
-        >
-          <div class="arrow duration-300 mr-2">
-            <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-          </div>
-          {{ $t('blog_tags_search_back') }}
+    <div class="flex flex-col mt-8 w-full md:w-1/2">
+      <h1
+        v-if="current_tag === ''"
+        class="text-lg mb-2"
+      >{{ $t('blog_tags_search') }}</h1>
+      <div
+        @click="resetPosts"
+        v-if="current_tag !== ''"
+        class="w-full home-arrow flex cursor-pointer font-bold"
+      >
+        <div class="arrow duration-300 mr-2">
+          <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
         </div>
-        <div v-else class="flex flex-row w-full overflow-x-scroll md:overflow-x-hidden md:flex-wrap space-x-3 md:space-x-0">
-          <div v-for="tag in tags">
-            <div
-              class="mb-3 md:mr-4 border-b-2 border-opacity-0 hover:border-opacity-100 border-green-400 border-solid duration-300 cursor-pointer font-black"
-              @click="fetchPostsByTag(tag.label.code)"
-            >
-              {{ $t(tag.label.code) }}
-            </div>
+        {{ $t('blog_tags_search_back') }}
+      </div>
+      <div v-else class="flex flex-row w-full overflow-x-scroll md:overflow-x-hidden md:flex-wrap space-x-3 md:space-x-0">
+        <div v-for="tag in tags">
+          <div
+            class="mb-3 md:mr-4 border-b-2 border-opacity-0 hover:border-opacity-100 border-green-400 border-solid duration-300 cursor-pointer font-black"
+            @click="fetchPostsByTag(tag.label.code)"
+          >
+            {{ $t(tag.label.code) }}
           </div>
         </div>
       </div>
+    </div>
+    <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog_no_posts') }}</h1>
+    <div class="w-full md:w-1/2" v-else>
       <div class="flex flex-col justify-around items-center py-8 w-full">
         <div class="w-full" v-for="post in posts">
           <nuxt-link :to="'/blog/' + post.id">
