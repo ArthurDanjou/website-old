@@ -1,7 +1,7 @@
 <template>
   <main class="contact flex flex-col items-center px-5 xl:px-64">
     <PageTitle
-      title="home_link_contact"
+      title="part.contact"
       color="purple"
     >
       <svg class="inline-block icon" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -10,10 +10,10 @@
       </svg>
     </PageTitle>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">{{ $t('contact_newsletter') }}</h1>
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">{{ $t('contact.newsletter.title') }}</h1>
       <h3 class="text-md md:text-lg">
-        {{ $t('contact_newsletter_description') }} <br>
-        <span class="font-bold self-start">{{ $t('contact_newsletter_unfollow') }}</span>
+        {{ $t('contact.newsletter.description') }} <br>
+        <span class="font-bold self-start">{{ $t('contact.newsletter.unfollow') }}</span>
       </h3>
       <form class="flex flex-col lg:flex-row mt-4 w-full">
         <div class="flex flex-col lg:flex-row">
@@ -21,7 +21,7 @@
             <input v-model="form.name"
                    class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-100 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-200 border border-solid border-purple-700 rounded-lg"
                    type="text"
-                   :placeholder="$t('contact_form_name')"
+                   :placeholder="$t('contact.form.name')"
                    required
                    id="name"/>
           </div>
@@ -29,14 +29,14 @@
             <input v-model="form.email"
                    class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-100 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-200 border border-solid border-purple-700 rounded-lg"
                    type="email"
-                   :placeholder="$t('contact_form_mail')"
+                   :placeholder="$t('contact.form.mail')"
                    required
                    id="email"/>
           </div>
         </div>
         <div class="mb-3 self-center">
           <button @click.prevent="handleForm" class="dark:text-black font-bold px-3 py-2 bg-purple-400 hover:bg-purple-500 cursor-pointer duration-300 rounded-lg btn">
-            {{ $t('contact_form_submit')}}
+            {{ $t('contact.form.submit')}}
             <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
             </svg>
@@ -45,21 +45,21 @@
       </form>
       <div v-if="error" class="flex">
         <div class="rounded-xl px-3 py-2 bg-red-300 font-bold ">
-          {{ $t('contact_form_error') }}
+          {{ $t('contact.form.error') }}
         </div>
       </div>
       <div v-if="success" class="flex">
         <div class="rounded-xl px-3 py-2 bg-green-300 font-bold ">
-          {{ $t('contact_form_success', { email: form.email }) }}
+          {{ $t('contact.form.success', { email: form.email }) }}
         </div>
       </div>
     </div>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">
-        {{ $t('contact_how_to') }}
+        {{ $t('contact.how_to.title') }}
       </h1>
       <h3 class="text-md md:text-lg">
-        {{ $t('contact_how_to_description') }}
+        {{ $t('contact.how_to.description') }}
       </h3>
       <div class="mt-4 email text-lg duration-300 text-purple-500 hover:text-purple-700 cursor-pointer flex">
         <a class="mr-2" href="mailto:contact@arthurdanjou.fr?subject=Please enter here your project name">
@@ -74,13 +74,20 @@
     </div>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">
-        {{ $t('contact_available') }}
+        {{ $t('contact.available.title') }}
       </h1>
       <h3 class="text-lg md:text-lg">
-        {{ $t('contact_available_description') }}
+        {{ $t('contact.available.description') }}
       </h3>
       <div class="my-4 text-purple-500">
-        {{ $t('contact_available_start') }} <span class="py-1 px-2 font-bold rounded-xl" :class="'bg-' +hiringColor+ '-200 text-' +hiringColor+ '-500'">{{ $t(hiringStatus.code) }}</span> {{ $t('contact_available_end') }}
+        {{ $t('contact.available.start') }}
+        <span
+          class="py-1 px-2 font-bold rounded-xl"
+          :class="'bg-' +color+ '-200 text-' +color+ '-500'"
+        >
+          {{ $t('hiring.status.' + status) }}
+        </span>
+        {{ $t('contact.available.end') }}
       </div>
     </div>
   </main>
@@ -93,8 +100,8 @@ export default {
   components: {PageTitle},
   data () {
     return {
-      hiringStatus: '',
-      hiringColor: '',
+      status: '',
+      color: '',
       form: {
         name: '',
         email: ''
@@ -103,11 +110,11 @@ export default {
       error: false
     }
   },
-  async asyncData({ $axios }) {
-    const {data: me} = await $axios.get('/me')
+  async asyncData({ $content }) {
+    const infos = await $content('infos').fetch()
     return {
-      hiringStatus: me.hiringStatus,
-      hiringColor: me.hiring_color
+      status: infos.hiring.status,
+      color: infos.hiring.color
     }
   },
   methods: {

@@ -8,8 +8,8 @@
     </div>
     <div class="leading-7">
       <p class="text-base dark:text-dark-900 text-gray-800 leading-6">{{ formatDate(begin) }} - {{ formatDate(end) }} <span class="px-3">|</span> {{location}}</p>
-      <h1 class="text-2xl font-bold">{{ $t(title) }} - {{company}}</h1>
-      <h2 class="text-xl">{{ $t(description) }}</h2>
+      <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
+      <h2 class="text-xl">{{ company }}</h2>
     </div>
   </div>
 </template>
@@ -21,10 +21,6 @@ export default {
     title: {
       type: String,
       default: "Title"
-    },
-    description: {
-      type: String,
-      default: "Description"
     },
     company: {
       type: String,
@@ -45,8 +41,8 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const dateFormat = new Date(date)
-      return date === 'Today' ? 'Today' : this.$t('month_' + dateFormat.getMonth()) + " " + dateFormat.getFullYear()
+      const dateFormat = date.split('-')
+      return date === 'Today' ? 'Today' : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
     }
   }
 }

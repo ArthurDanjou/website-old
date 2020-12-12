@@ -3,6 +3,6 @@ import Head from './Head'
 import ColorMode from './ColorMode'
 import Tailwind from './Tailwind'
 import Translation from './Translation'
-import Ngrok from './Ngrok'
+import Content from './Content'
 
-export { Axios, Head, ColorMode, Tailwind, Translation, Ngrok }
+export { Axios, Head, ColorMode, Tailwind, Translation, Content }

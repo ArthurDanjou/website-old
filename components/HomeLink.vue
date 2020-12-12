@@ -4,7 +4,7 @@
       class="home-link h-full duration-500 cursor-pointer flex flex-row justify-between py-3 w-full md:w-96 items-center"
       :class="color ? 'hover:bg-' + color + '-400 dark:hover:bg-' + color + '-600 active:bg-' + color + '-400 dark:active:bg-' + color + '-600' : ''">
       <div class="ml-4">
-        <h1 class="text-3xl font-bold my-2">
+        <h1 class="text-2xl md:text-3xl font-bold my-2">
           {{ $t(title) }}
           <slot />
         </h1>

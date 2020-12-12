@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "artsite",
+    "title": "arthurdanjou.fr",
+    "description": "works.artsite",
+    "url": "https://arthurdanjou.fr",
+    "cover": "artsite",
+    "color": "gray",
+    "skills": [
+      "typescript",
+      "nuxtjs",
+      "vuejs",
+      "git",
+      "tailwindcss",
+      "sass"
+    ]
+  },
+  {
+    "slug": "artapi",
+    "title": "api.arthurdanjou.fr",
+    "description": "works.artapi",
+    "url": "https://api.arthurdanjou.fr",
+    "cover": "artapi",
+    "color": "gray",
+    "skills": [
+      "typescript",
+      "adonisjs",
+      "git",
+      "docker",
+      "nodejs",
+      "redis",
+      "mariadb"
+    ]
+  }
+]

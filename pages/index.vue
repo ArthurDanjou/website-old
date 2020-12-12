@@ -7,22 +7,22 @@
         </div>
         <div class="mb-4 md:mb-10 lg:w-1/2 self-center">
           <h1 class="text-4xl md:text-5xl text-left font-bold md:w-3/4">
-            {{ $t('home_banner_hello') }} <br />
+            {{ $t('home.banner.hello') }} <br />
             <span class="text-red-700 font-black">Arthur Danjou</span> 👋
           </h1>
           <p class="text-2xl md:text-3xl my-5 font-semibold">
-            {{ $t('home_banner_role') }}
+            {{ $t('home.banner.role') }}
           </p>
           <p class="text-lg md:text-2xl text-justify mb-8 leading-7 text-gray-700 dark:text-dark-900">
-            {{ $t('home_banner_description', { age: age }) }}
+            {{ $t('home.banner.description', { age: age }) }}
           </p>
         </div>
       </div>
       <div class="flex flex-col items-center w-full">
         <div class="flex flex-col md:flex-row justify-around w-full md:mb-8">
           <HomeLink
-            title="home_link_about"
-            description="home_link_about_description"
+            title="part.about"
+            description="part.about_description"
             color="orange"
             link="/about"
             >
@@ -31,8 +31,8 @@
             </svg>
           </HomeLink>
           <HomeLink
-            title="home_link_blog"
-            description="home_link_blog_description"
+            title="part.blog"
+            description="part.blog_description"
             color="green"
             link="/blog"
           >
@@ -43,8 +43,8 @@
         </div>
         <div class="flex flex-col md:flex-row justify-around w-full">
           <HomeLink
-            title="home_link_work"
-            description="home_link_work_description"
+            title="part.work"
+            description="part.work_description"
             color="blue"
             link="/work"
           >
@@ -53,8 +53,8 @@
             </svg>
           </HomeLink>
           <HomeLink
-            title="home_link_contact"
-            description="home_link_contact_description"
+            title="part.contact"
+            description="part.contact_description"
             color="purple"
             link="/contact"
           >
@@ -80,15 +80,10 @@ export default Vue.extend({
       title: 'Arthur Danjou - Web & Software Developer'
     }
   },
-  data () {
+  async asyncData({ $content }) {
+    const infos = await $content('infos').fetch()
     return {
-      age: 0
-    }
-  },
-  async asyncData({$axios}) {
-    const {data: me} = await $axios.get('/me')
-    return {
-      age: me.age
+      age: infos.age
     }
   }
 })

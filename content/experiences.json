@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "erisium",
+    "title": "experiences.erisium",
+    "company": "Erisium",
+    "location": "Remote",
+    "begin_date": "02-2019",
+    "end_date": "11-2020"
+  },
+  {
+    "slug": "freelance",
+    "title": "experiences.freelance",
+    "company": "ArtDanjProduction",
+    "location": "France",
+    "begin_date": "09-2015",
+    "end_date": "Today"
+  },
+  {
+    "slug": "idemia",
+    "title": "experiences.idemia",
+    "company": "Idemia",
+    "location": "France",
+    "begin_date": "06-2019",
+    "end_date": "06-2019"
+  },
+  {
+    "slug": "la-salle-a-manger",
+    "title": "experiences.lsam",
+    "company": "La Salle à manger",
+    "location": "France",
+    "begin_date": "04-2018",
+    "end_date": "04-2018"
+  }
+]

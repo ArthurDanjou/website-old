@@ -41,8 +41,8 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const dateFormat = new Date(date)
-      return date === 'Today' ? 'Today' : this.$t('month_' + dateFormat.getMonth()) + " " + dateFormat.getFullYear()
+      const dateFormat = date.split('-')
+      return date === 'Today' ? 'Today' : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
     }
   }
 }

@@ -3,12 +3,14 @@ export default {
     {
       code: 'en',
       name: 'English',
+      iso: 'en-Us',
       file: 'en-US.ts',
     },
     {
       code: 'fr',
-      name: 'Français',
+      iso: 'fr-FR',
       file: 'fr-FR.ts',
+      name: 'Français'
     },
   ],
   strategy: 'no_prefix',
@@ -19,4 +21,5 @@ export default {
   vueI18n: {
     fallbackLocale: 'en',
   },
+  differentDomains: (process.env.NODE_ENV === 'production')
 }

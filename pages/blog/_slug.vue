@@ -10,16 +10,16 @@
               </svg>
             </div>
             <div class="ml-2">
-              {{ $t('blog_read_back') }}
+              {{ $t('blog.read.back') }}
             </div>
           </nuxt-link>
         </div>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold">
-        {{ $t(title) }}
+        {{ post.title }}
       </h1>
       <h3 class="text-xl text-gray-800 dark:text-dark-900 my-4 md:mt-8">
-        {{ $t(description) }}
+        {{ post.description }}
       </h3>
       <div class="flex flex-row justify-between w-full md:w-2/3 mb-12">
         <div>
@@ -27,24 +27,28 @@
           <p>{{ formatDate }}</p>
         </div>
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">{{ $t('blog_read_time') }}</p>
-          <p>{{ reading_time }} min</p>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">{{ $t('blog.read.time') }}</p>
+          <p>{{ post.reading_time }} min</p>
         </div>
         <div>
-          <p :class="tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
+          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
           <p>{{ formatTags }}</p>
         </div>
       </div>
       <div class="w-full">
         <div class="flex justify-center w-full h-auto">
-          <img class="w-full h-auto" :src="'http://localhost:5555/files/'+cover.file_name" alt="Cover Img" />
+          <img class="w-full h-auto" :src="'http://localhost:5555/files/'+post.cover" alt="Cover Img" />
         </div>
       </div>
       <p class="my-6 md:my-12 text-gray-800 dark:text-dark-900">
-        {{ $t(content) }}
+
       </p>
+      <nuxt-content
+        :document="post"
+        class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl my-6 md:my-12"
+      />
       <p class="mb-3">
-        {{ $t('blog_read_thanks') }}
+        {{ $t('blog.read.thanks') }}
       </p>
       <div class="flex items-center">
         <div
@@ -59,7 +63,7 @@
         </div>
         <a
           target="_blank"
-          :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + id + '&text=' + $t('blog_tweet') + ' ' + $t(title) +'&via=ArthurDanj'"
+          :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
           class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 mr-2 hover:border-cyan-500 dark:hover:border-cyan-500"
         >
           <img class="inline img icon-hover" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
@@ -89,43 +93,29 @@ export default {
   name: "blog",
   head() {
     return {
-      title: 'Blog - Arthur Danjou'
+      title: 'Blog - Arthur Danjou - ' + this.post.title
     }
   },
   data() {
     return {
-      id: this.$route.params.id,
-      title: '',
-      description: '',
-      content: '',
-      tags: [],
       likes: 0,
-      date: '',
-      cover: '',
-      reading_time: 0,
+      post: null,
 
       isCopied: false,
       liked: false
     }
   },
-  async asyncData({ params, $axios }) {
-    const {data: post} = await $axios.get('/posts/' + params.id)
-    const {data: liked} = await $axios.get('/post/' + params.id + '/isLiked')
+  async asyncData({ params, $content, app }) {
+    const post = await $content(`articles/${app.i18n.locale}/`, params.slug).fetch()
+    const liked = false
     return {
-      title: post.title.code,
-      description: post.description.code,
-      content: post.content.code,
-      tags: post.tags,
-      likes: post.likes,
-      date: post.created_at,
-      reading_time: post.reading_time,
-      cover: post.cover,
-      liked: liked !== 0
+      post,
+      liked: liked
     }
   },
   methods: {
     copyToClipBoard() {
-      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + this.id)
+      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + this.post.slug)
       this.isCopied = true
       setTimeout(() => {
         this.isCopied = false
@@ -133,13 +123,13 @@ export default {
     },
     async handleLike() {
       if (this.liked) {
-        const {data} = await this.$axios.get('/post/' + this.id  + '/unlike')
+        const {data} = await this.$axios.get('/post/' + this.post.slug  + '/unlike')
         if (data.code === 200) {
           this.liked = false
           this.likes = data.post.likes
         }
       } else {
-        const {data} = await this.$axios.get('/post/' + this.id  + '/like')
+        const {data} = await this.$axios.get('/post/' + this.post.slug  + '/like')
         if (data.code === 200) {
           this.liked = true
           this.likes = data.post.likes
@@ -149,16 +139,13 @@ export default {
   },
   computed: {
     formatDate() {
-      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
-      ];
-      const date = new Date(this.date)
-      return date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear()
+      const dateFormat = this.post.date.split('-')
+      return dateFormat[0] + " " + this.$t('month.' + dateFormat[1]) + " " + dateFormat[2]
     },
     formatTags() {
       let tags = ""
-      this.tags.map(tag => {
-        tags += this.$t(tag.label.code) + ", "
+      this.post.tags.map(tag => {
+        tags += this.$t(tag) + ", "
       })
       return tags.substring(0, tags.length - 2)
     },

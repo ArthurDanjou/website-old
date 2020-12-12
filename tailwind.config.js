@@ -51,7 +51,7 @@ module.exports = {
         200: '#121212',
         700: 'rgb(112,112,112)',
         800: '#212121',
-        900: 'rgba(255,255,255,0.6)'
+        900: 'rgba(150, 150, 150)'
       },
     },
     spacing: {
@@ -865,5 +865,7 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

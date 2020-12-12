@@ -5,13 +5,13 @@
   >
     <div>
       <p
-        class="text-3xl  font-bold text-justify leading-7 mb-3"
-        :class="lightBg === 1 ? 'text-black':'text-white'"
-      >{{ $t(title) }}</p>
+        class="text-2xl md:text-3xl font-bold md:text-justify leading-7 mb-3"
+        :class="lightBg ? 'text-black':'text-white'"
+      >{{ title }}</p>
       <p
         class="text-lg italic text-justify leading-5"
-        :class="lightBg === 1 ? 'text-gray-900':'text-dark-900'"
-      >{{ $t(description) }}</p>
+        :class="lightBg ? 'text-gray-900':'text-dark-900'"
+      >{{ description }}</p>
     </div>
     <div
       class="flex justify-between mt-8 items-end"
@@ -20,7 +20,6 @@
       <div>
         <div>{{formatDate}}</div>
         <div>{{reading_time}} min</div>
-        <div>{{likes}} ❤</div>
       </div>
       <div class="self-end flex flex-wrap flex-col md:flex-row">
         <div v-for="tag in tags"
@@ -54,10 +53,6 @@ export default {
       type: String,
       default: "Today"
     },
-    likes: {
-      type: Number,
-      default: 0
-    },
     tags: {
       type: Array,
       default: () => ["Tag1", "Tag2", "Tag3"],
@@ -67,14 +62,14 @@ export default {
       default: "default.png"
     },
     lightBg: {
-      type: Number,
+      type: Boolean,
       default: false
     }
   },
   computed: {
     formatDate() {
-      const date = new Date(this.date)
-      return date.getDate() + " " + this.$t('month_' + date.getMonth()) + " " + date.getFullYear()
+      const dateFormat = this.date.split('-')
+      return dateFormat[0] + " " + this.$t('month.' + dateFormat[1]) + " " + dateFormat[2]
     },
   }
 }

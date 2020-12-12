@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "freelance",
+    "title": "formations.freelance.title",
+    "description": "formations.freelance.description",
+    "location": "Remote",
+    "begin_date": "04-2015",
+    "end_date": "Today"
+  },
+  {
+    "slug": "dnb",
+    "title": "formations.dnb.title",
+    "description": "formations.dnb.description",
+    "location": "France",
+    "begin_date": "09-2017",
+    "end_date": "09-2018"
+  },
+  {
+    "slug": "bac",
+    "title": "formations.bac.title",
+    "description": "formations.bac.description",
+    "location": "France",
+    "begin_date": "09-2020",
+    "end_date": "Today"
+  }
+]
