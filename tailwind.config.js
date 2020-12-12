@@ -9,7 +9,7 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   presets: [],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
@@ -831,6 +831,7 @@ module.exports = {
     placeholderOpacity: ['responsive', 'focus'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
+    prose: ['dark'],
     resize: ['responsive'],
     ringColor: ['responsive', 'dark', 'focus-within', 'focus'],
     ringOffsetColor: ['responsive', 'dark', 'focus-within', 'focus'],

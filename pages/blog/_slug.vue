@@ -45,7 +45,7 @@
       </p>
       <nuxt-content
         :document="post"
-        class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl my-6 md:my-12"
+        class="my-6 md:my-12 prose prose-sm sm:prose lg:prose-lg xl:prose-xl prose-black dark:prose-dark-900"
       />
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
@@ -105,12 +105,14 @@ export default {
       liked: false
     }
   },
-  async asyncData({ params, $content, app }) {
+  async asyncData({ params, $content, app, $axios }) {
     const post = await $content(`articles/${app.i18n.locale}/`, params.slug).fetch()
-    const liked = false
+    const {data: likes} = await $axios.get(`posts/${params.slug}`)
+    const liked = await $axios.get(`posts/is/${params.slug}`)
     return {
       post,
-      liked: liked
+      likes,
+      liked: liked.data !== 0
     }
   },
   methods: {
@@ -123,13 +125,13 @@ export default {
     },
     async handleLike() {
       if (this.liked) {
-        const {data} = await this.$axios.get('/post/' + this.post.slug  + '/unlike')
+        const {data} = await this.$axios.post(`posts/${this.post.slug}/unlike`)
         if (data.code === 200) {
           this.liked = false
           this.likes = data.post.likes
         }
       } else {
-        const {data} = await this.$axios.get('/post/' + this.post.slug  + '/like')
+        const {data} = await this.$axios.post(`posts/${this.post.slug}/like`)
         if (data.code === 200) {
           this.liked = true
           this.likes = data.post.likes
