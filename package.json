@@ -14,13 +14,13 @@
     "@nuxtjs/axios": "5.12.3",
     "@tailwindcss/typography": "^0.3.1",
     "core-js": "^3.8.0",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.11",
     "nuxt-i18n": "^6.15.4",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
+    "@nuxt/types": "^2.14.11",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/color-mode": "^2.0.0",
     "@nuxtjs/tailwindcss": "^3.3.1",
