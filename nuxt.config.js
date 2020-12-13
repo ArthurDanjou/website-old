@@ -3,6 +3,8 @@ import { Axios, Head, ColorMode, Tailwind, Translation, Content } from './config
 export default {
   head: Head,
 
+  target: 'static',
+
   server: {
     host: '0.0.0.0',
     port: 3333
