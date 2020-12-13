@@ -21,5 +21,4 @@ export default {
   vueI18n: {
     fallbackLocale: 'en',
   },
-  differentDomains: (process.env.NODE_ENV === 'production')
 }
