@@ -121,9 +121,6 @@ export default {
     },
     changeLanguage(lang) {
       this.$i18n.setLocale(lang)
-      if (this.$router.currentRoute.fullPath.includes('blog')) {
-        this.$fetch()
-      }
     },
   },
   mounted() {

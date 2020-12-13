@@ -10,3 +10,11 @@ img, svg {
 * {
   @apply select-none outline-none;
 }
+
+.nuxt-content-editor {
+  @apply dark:bg-dark-200 border dark:border-white border-black border-solid;
+}
+
+.nuxt-content {
+  @apply dark:text-dark-700;
+}

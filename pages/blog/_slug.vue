@@ -40,12 +40,9 @@
           <img class="w-full h-auto" :src="'http://localhost:5555/files/'+post.cover" alt="Cover Img" />
         </div>
       </div>
-      <p class="my-6 md:my-12 text-gray-800 dark:text-dark-900">
-
-      </p>
       <nuxt-content
         :document="post"
-        class="my-6 md:my-12 prose prose-sm sm:prose lg:prose-lg xl:prose-xl prose-black dark:prose-dark-900"
+        class="my-6 md:my-12 max-w-none w-full text-justify prose prose-sm sm:prose lg:prose-lg xl:prose-2xl dark:prose dark:prose-dark"
       />
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
@@ -64,11 +61,17 @@
         <a
           target="_blank"
           :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
-          class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 mr-2 hover:border-cyan-500 dark:hover:border-cyan-500"
+          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
         >
           <img class="inline img icon-hover" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
         </a>
-
+        <nuxt-link to="/contact"
+          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-dark-200 dark:hover:border-white"
+        >
+          <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+          </svg>
+        </nuxt-link>
         <div
           @click="copyToClipBoard"
           class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-dark-200 dark:hover:border-white"

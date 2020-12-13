@@ -11,6 +11,78 @@ module.exports = {
   presets: [],
   darkMode: 'class',
   theme: {
+    extend: {
+      typography: (theme) => ({
+        dark: {
+          css: [
+            {
+              color: theme('colors.dark.900'),
+              h1: {
+                color: theme('colors.white'),
+              },
+              h2: {
+                color: theme('colors.white'),
+              },
+              h3: {
+                color: theme('colors.white'),
+              },
+              h4: {
+                color: theme('colors.white'),
+              },
+              h5: {
+                color: theme('colors.white'),
+              },
+              h6: {
+                color: theme('colors.white'),
+              },
+              a: {
+                color: theme('color.dark.900'),
+              },
+              strong: {
+                color: theme('color.dark.900'),
+              },
+              blockquote: {
+                color: theme('color.dark.900'),
+                borderLeftColor: theme('colors.white'),
+              },
+              code: {
+                color: theme('color.dark.900'),
+              },
+              pre: {
+                backgroundColor: theme('colors.gray.900'),
+                color: theme('colors.dark.900'),
+              },
+              thead: {
+                color: theme('colors.dark.900'),
+                borderBottomColor: theme('colors.dark.700'),
+              },
+              'tbody tr': {
+                borderBottomColor: theme('colors.dark.700'),
+              },
+              'ol > li::before': {
+                color: theme('colors.dark.700'),
+              },
+              'ul > li::before': {
+                backgroundColor: theme('colors.dark.700'),
+              },
+              maxWidth: '65ch',
+              '[class~="lead"]': {
+                color: theme('colors.dark.700'),
+              },
+              hr: {
+                borderColor: theme('colors.white'),
+              },
+              'figure figcaption': {
+                color: theme('colors.dark.700'),
+              },
+              'a code': {
+                color: theme('colors.dark.900'),
+              }
+            }
+          ]
+        }
+      })
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -831,7 +903,6 @@ module.exports = {
     placeholderOpacity: ['responsive', 'focus'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
-    prose: ['dark'],
     resize: ['responsive'],
     ringColor: ['responsive', 'dark', 'focus-within', 'focus'],
     ringOffsetColor: ['responsive', 'dark', 'focus-within', 'focus'],
@@ -858,6 +929,7 @@ module.exports = {
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
     translate: ['responsive', 'hover', 'focus'],
+    typography: ['dark'],
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
     visibility: ['responsive'],

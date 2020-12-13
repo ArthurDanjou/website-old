@@ -1,21 +1,32 @@
 ---
 slug: test-1
-title: Mon premier Article
-description: C'est un article écrit pour tester mon super système
-reading_time: 15
-tags: ["tags.dev", "tags.life"]
+title: Ouverture de la nouvelle version de mon site !
+description: Après de long mois de développement, voici la version 2 de mon site !
+reading_time: 0
+tags: ["tags.dev"]
 cover: 'default'
 date: 12-04-2020
 background: false
 ---
 
-Hey bro
-Whats'up
-I'am fine 
+- Informations suplémentaires
 
-## hey bro
+```java
+public void main (String[] args) {
+  System.out.println("New test here !");
+}
+```
 
-# Hey
+`test` test
 
-Faut bien test hein
+> Test
 
+Test de lien [Twitter](https://twitter.com/ArthurDanj)
+
+---
+
+Hey
+**Hey**
+__hey__
+
+~~Hey~~

@@ -58,7 +58,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="relative flex flex-row justify-between w-full mb-4" v-if="next || prev">
+      <div class="relative flex flex-row justify-between w-full mb-4" v-if="(next || prev) && this.postsCount > 5">
         <div
           class="duration-300 flex w-1/2 px-5 py-4 justify-center items-center"
           :class="prev === null ? 'opacity-0': 'opacity-100'"
