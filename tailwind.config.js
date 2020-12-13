@@ -929,7 +929,7 @@ module.exports = {
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
     translate: ['responsive', 'hover', 'focus'],
-    typography: ['dark'],
+    typography: ['dark', 'responsive'],
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
     visibility: ['responsive'],

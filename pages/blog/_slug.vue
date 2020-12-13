@@ -42,7 +42,7 @@
       </div>
       <nuxt-content
         :document="post"
-        class="my-6 md:my-12 max-w-none w-full text-justify prose prose-sm sm:prose lg:prose-lg xl:prose-2xl dark:prose dark:prose-dark"
+        class="my-6 md:my-12 max-w-none w-full text-justify prose prose-sm sm:prose sm:max-w-none lg:prose-lg lg:max-w-none dark:prose-dark dark:max-w-none"
       />
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
