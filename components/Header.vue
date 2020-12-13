@@ -1,5 +1,5 @@
 <template>
-  <header class="dark:bg-dark-200 dark:text-white fixed z-50 top-0 left-0 bg-white header tracking-wider w-full h-16 lg:h-24 duration-500" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white' : ''">
+  <header class="dark:bg-dark-900 dark:text-white fixed z-50 top-0 left-0 bg-white header tracking-wider w-full h-16 lg:h-24 duration-500" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white' : ''">
     <div class="header-container z-index-50 flex justify-between items-center h-full px-5 xl:px-64">
       <nuxt-link to="/">
         <div class="left text-2xl font-bold cursor-pointer border-b-2 border-opacity-0 dark:border-opacity-0 dark:hover:border-opacity-100 hover:border-opacity-100 border-black dark:border-white border-solid duration-500">
@@ -56,7 +56,7 @@
             </nuxt-link>
           </ul>
         </div>
-        <ul class="dark:text-white dark:bg-dark-200 text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
+        <ul class="dark:text-white dark:bg-dark-800 text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
           <nuxt-link to="/" class="w-1/5 red">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,8 +119,9 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY
     },
-    changeLanguage(lang) {
+    async changeLanguage(lang) {
       this.$i18n.setLocale(lang)
+      await this.$router.push('/')
     },
   },
   mounted() {

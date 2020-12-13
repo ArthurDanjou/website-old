@@ -10,12 +10,12 @@
       >{{ title }}</p>
       <p
         class="text-lg italic text-justify leading-5"
-        :class="lightBg ? 'text-gray-900':'text-dark-900'"
+        :class="lightBg ? 'text-gray-900':'text-dark-100'"
       >{{ description }}</p>
     </div>
     <div
       class="flex justify-between mt-8 items-end"
-      :class="lightBg ? 'text-gray-900':'text-dark-900'"
+      :class="lightBg ? 'text-gray-900':'text-dark-100'"
     >
       <div>
         <div>{{formatDate}}</div>

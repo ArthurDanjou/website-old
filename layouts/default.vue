@@ -1,5 +1,5 @@
 <template>
-  <div class="dark:bg-dark-200 dark:text-white font-sans">
+  <div class="dark:bg-dark-900 dark:text-white font-sans">
     <Header />
     <Nuxt class="z-10 pt-16 lg:pt-24 content"/>
     <Footer />

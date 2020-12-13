@@ -10,7 +10,7 @@
       </svg>
     </PageTitle>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">{{ $t('contact.newsletter.title') }}</h1>
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-200">{{ $t('contact.newsletter.title') }}</h1>
       <h3 class="text-md md:text-lg">
         {{ $t('contact.newsletter.description') }} <br>
         <span class="font-bold self-start">{{ $t('contact.newsletter.unfollow') }}</span>
@@ -19,7 +19,7 @@
         <div class="flex flex-col lg:flex-row">
           <div class="mb-3 lg:mr-4 w-full md:w-auto">
             <input v-model="form.name"
-                   class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-100 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-200 border border-solid border-purple-700 rounded-lg"
+                   class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-900 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-900 border border-solid border-purple-700 rounded-lg"
                    type="text"
                    :placeholder="$t('contact.form.name')"
                    required
@@ -27,7 +27,7 @@
           </div>
           <div class="mb-3 lg:mr-4 w-full md:w-auto">
             <input v-model="form.email"
-                   class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-100 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-200 border border-solid border-purple-700 rounded-lg"
+                   class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-900 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-800 border border-solid border-purple-700 rounded-lg"
                    type="email"
                    :placeholder="$t('contact.form.mail')"
                    required
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-100">
         {{ $t('contact.how_to.title') }}
       </h1>
       <h3 class="text-md md:text-lg">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="w-full lg:w-3/4 mb-10 mt-4">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-900">
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-100">
         {{ $t('contact.available.title') }}
       </h1>
       <h3 class="text-lg md:text-lg">

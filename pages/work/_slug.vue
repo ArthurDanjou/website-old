@@ -27,7 +27,7 @@
         <h1 class="text-xl lg:text-3xl font-bold">
           {{ $t(work.title) }}
         </h1>
-        <p class="mt-5 mb-10 text-md lg:text-lg text-gray-900 dark:text-dark-900">
+        <p class="mt-5 mb-10 text-md lg:text-lg text-gray-900 dark:text-dark-100">
           {{ $t(work.description) }}
         </p>
         <div>

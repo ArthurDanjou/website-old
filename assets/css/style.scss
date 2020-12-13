@@ -12,9 +12,5 @@ img, svg {
 }
 
 .nuxt-content-editor {
-  @apply dark:bg-dark-200 border dark:border-white border-black border-solid;
-}
-
-.nuxt-content {
-  @apply dark:text-dark-700;
+  @apply dark:bg-dark-800 border dark:border-white border-black border-solid;
 }

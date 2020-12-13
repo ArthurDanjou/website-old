@@ -8,7 +8,7 @@
           {{ $t(title) }}
           <slot />
         </h1>
-        <p class="w-5/6 text-gray-900 dark:text-dark-900 text-justify duration-300">{{ $t(description) }}</p>
+        <p class="w-5/6 text-gray-900 dark:text-dark-100 text-justify duration-300">{{ $t(description) }}</p>
       </div>
       <div class="mr-10 arrow duration-300">
         <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +46,7 @@ export default {
 <style scoped lang="scss">
 .home-link:hover {
   p {
-    @apply dark:text-dark-200;
+    @apply dark:text-dark-800;
   }
 
   .arrow {

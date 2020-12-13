@@ -13,7 +13,7 @@
           <p class="text-2xl md:text-3xl my-5 font-semibold">
             {{ $t('home.banner.role') }}
           </p>
-          <p class="text-lg md:text-2xl text-justify mb-8 leading-7 text-gray-700 dark:text-dark-900">
+          <p class="text-lg md:text-2xl text-justify mb-8 leading-7 text-gray-700 dark:text-dark-200">
             {{ $t('home.banner.description', {age: age}) }}
           </p>
         </div>

@@ -24,10 +24,11 @@
               <span class="link">Mail</span>
               </a>
           </p>
-          <span class="inline dark:text-dark-900 text-gray-600 text-xs">
+          <span class="inline dark:text-dark-200 text-gray-600 text-xs">
             {{ $t('footer.links_click') }}
           </span>
         </div>
+        <br class="md:hidden"/>
         <p>
           {{ $t('footer.credits') }}
           <a class="font-semibold" target="_blank" href="https://nuxtjs.org">

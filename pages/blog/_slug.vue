@@ -18,20 +18,20 @@
       <h1 class="text-3xl md:text-5xl font-bold">
         {{ post.title }}
       </h1>
-      <h3 class="text-xl text-gray-800 dark:text-dark-900 my-4 md:mt-8">
+      <h3 class="text-xl text-gray-800 dark:text-dark-100 my-4 md:mt-8">
         {{ post.description }}
       </h3>
       <div class="flex flex-row justify-between w-full md:w-2/3 mb-12">
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Date</p>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">Date</p>
           <p>{{ formatDate }}</p>
         </div>
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">{{ $t('blog.read.time') }}</p>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">{{ $t('blog.read.time') }}</p>
           <p>{{ post.reading_time }} min</p>
         </div>
         <div>
-          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-900">Tags</p>
+          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">Tags</p>
           <p>{{ formatTags }}</p>
         </div>
       </div>
@@ -42,7 +42,9 @@
       </div>
       <nuxt-content
         :document="post"
-        class="my-6 md:my-12 max-w-none w-full text-justify prose prose-sm sm:prose sm:max-w-none lg:prose-lg lg:max-w-none dark:prose-dark dark:max-w-none"
+        class="my-6 md:my-12 w-full text-justify max-w-none
+        prose prose-sm sm:prose lg:prose-lg lg:max-w-none sm:max-w-none
+        dark:prose-dark dark:max-w-none"
       />
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
@@ -51,7 +53,7 @@
         <div
           @click="handleLike"
           class="h-16 end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-3xl p-3 border-solid border mr-2"
-          :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-800' : 'border-gray-400 dark:border-dark-800 hover:border-red-500 dark:hover:border-red-500'"
+          :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
         >
           <div class="mr-2">
             {{ likes }}
@@ -61,12 +63,12 @@
         <a
           target="_blank"
           :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
-          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
+          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
         >
           <img class="inline img icon-hover" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
         </a>
         <nuxt-link to="/contact"
-          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-dark-200 dark:hover:border-white"
+          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
         >
           <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
@@ -74,7 +76,7 @@
         </nuxt-link>
         <div
           @click="copyToClipBoard"
-          class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-800 hover:border-dark-200 dark:hover:border-white"
+          class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
         >
           <svg class="inline icon-hover" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />

@@ -218,18 +218,27 @@ export default {
       posts.push(post)
     })
 
-    const [_, next] = await $content(`articles/${app.i18n.locale}`)
-      .surround(posts[posts.length - 1].slug, {
-        before: 1,
-        after: 1
-      })
-      .fetch()
-    const [prev, __] = await $content(`articles/${app.i18n.locale}`)
-      .surround(posts[0].slug, {
-        before: 1,
-        after: 1
-      })
-      .fetch()
+    let prev = null
+    let next = null
+
+    if (posts.length > 0) {
+      const [_, nextTemp] = await $content(`articles/${app.i18n.locale}`)
+        .surround(posts[posts.length - 1].slug, {
+          before: 1,
+          after: 1
+        })
+        .fetch()
+
+      const [prevTemp, __] = await $content(`articles/${app.i18n.locale}`)
+        .surround(posts[0].slug, {
+          before: 1,
+          after: 1
+        })
+        .fetch()
+
+      next = nextTemp
+      prev = prevTemp
+    }
 
     return {
       posts,

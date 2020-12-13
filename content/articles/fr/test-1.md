@@ -13,8 +13,13 @@ background: false
 
 ```java
 public void main (String[] args) {
-  System.out.println("New test here !");
+  System.out.println("Hello World !");
 }
+```
+
+
+```javascript
+console.log('Hello World !')
 ```
 
 `test` test
@@ -28,5 +33,5 @@ Test de lien [Twitter](https://twitter.com/ArthurDanj)
 Hey
 **Hey**
 __hey__
-
+_hey_
 ~~Hey~~

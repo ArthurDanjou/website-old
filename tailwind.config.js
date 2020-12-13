@@ -16,7 +16,29 @@ module.exports = {
         dark: {
           css: [
             {
-              color: theme('colors.dark.900'),
+              color: theme('colors.dark.100'),
+              '[class~="lead"]': {
+                color: theme('colors.dark.100'),
+              },
+              a: {
+                color: theme('colors.dark.100'),
+              },
+              strong: {
+                color: theme('colors.dark.100'),
+              },
+              'ol > li::before': {
+                color: theme('colors.white'),
+              },
+              'ul > li::before': {
+                backgroundColor: theme('colors.white'),
+              },
+              hr: {
+                borderColor: theme('colors.white'),
+              },
+              blockquote: {
+                color: theme('colors.dark.100'),
+                borderLeftColor: theme('colors.white'),
+              },
               h1: {
                 color: theme('colors.white'),
               },
@@ -29,55 +51,26 @@ module.exports = {
               h4: {
                 color: theme('colors.white'),
               },
-              h5: {
-                color: theme('colors.white'),
-              },
-              h6: {
-                color: theme('colors.white'),
-              },
-              a: {
-                color: theme('color.dark.900'),
-              },
-              strong: {
-                color: theme('color.dark.900'),
-              },
-              blockquote: {
-                color: theme('color.dark.900'),
-                borderLeftColor: theme('colors.white'),
-              },
-              code: {
-                color: theme('color.dark.900'),
-              },
-              pre: {
-                backgroundColor: theme('colors.gray.900'),
-                color: theme('colors.dark.900'),
-              },
-              thead: {
-                color: theme('colors.dark.900'),
-                borderBottomColor: theme('colors.dark.700'),
-              },
-              'tbody tr': {
-                borderBottomColor: theme('colors.dark.700'),
-              },
-              'ol > li::before': {
-                color: theme('colors.dark.700'),
-              },
-              'ul > li::before': {
-                backgroundColor: theme('colors.dark.700'),
-              },
-              maxWidth: '65ch',
-              '[class~="lead"]': {
-                color: theme('colors.dark.700'),
-              },
-              hr: {
-                borderColor: theme('colors.white'),
-              },
               'figure figcaption': {
                 color: theme('colors.dark.700'),
               },
+              code: {
+                color: theme('colors.dark.100'),
+              },
               'a code': {
+                color: theme('colors.dark.100'),
+              },
+              pre: {
+                backgroundColor: theme('colors.gray.500'),
                 color: theme('colors.dark.900'),
-              }
+              },
+              thead: {
+                color: theme('colors.dark.100'),
+                borderBottomColor: theme('colors.white'),
+              },
+              'tbody tr': {
+                borderBottomColor: theme('colors.white'),
+              },
             }
           ]
         }
@@ -119,12 +112,12 @@ module.exports = {
       coolGray: colors.coolGray,
       blueGray: colors.blueGray,
       dark: {
-        100: '#272727',
-        200: '#121212',
-        700: 'rgb(112,112,112)',
+        100: 'rgb(150,150,150)',
+        200: 'rgb(112,112,112)',
+        700: '#272727',
         800: '#212121',
-        900: 'rgba(150, 150, 150)'
-      },
+        900: '#121212',
+      }
     },
     spacing: {
       px: '1px',
