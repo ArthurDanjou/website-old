@@ -46,7 +46,7 @@ export default {
 <style scoped lang="scss">
 .home-link:hover {
   p {
-    @apply dark:text-dark-800;
+    @apply dark:text-white;
   }
 
   .arrow {

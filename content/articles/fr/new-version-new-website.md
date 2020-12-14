@@ -29,7 +29,6 @@ Quelles sont les nouveautés ? Quelles sont les techniques utilisées ? Tout ser
 - Que propose cette nouvelle version ?
 - Quelles sont les technologies utilisées ?
 - Conclusion
-- Informations supplémentaires
 
 ## 1. Pourquoi une nouvelle version ?
 
@@ -74,4 +73,8 @@ Dans cette version, j'ai utilisé plusieurs technologies :
 
 ## 5. Conclusion
 
-Pour conclure, je 
+Pour conclure, je suis très satisfait du résultat de cette nouvelle version. 
+Je vous laisse visiter le reste du site
+
+### Informations Supplémentaires
+

@@ -19,6 +19,12 @@ export default {
     copyrights: '© Copyright {date} - Tous droits réservés'
   },
 
+  404: {
+    description: 'Où suis-je ?',
+    back: 'Revenir à l\'accueil',
+    no_page: 'La page demandée n\'existe pas'
+  },
+
   part: {
     about: 'A Propos',
     blog: 'Mon Blog',

@@ -13,6 +13,26 @@ module.exports = {
   theme: {
     extend: {
       typography: (theme) => ({
+        DEFAULT: {
+          css: [
+            {
+              a: {
+                color: theme('colors.green.400'),
+                transitionDuration: '300ms',
+                cursor: 'pointer',
+                borderBottomColor: theme('colors.dark.200'),
+                borderOpacity: '0%',
+                borderBottomWidth: '2px',
+                borderBottomStyle: 'solid',
+                textDecoration: 'none',
+                '&:hover': {
+                  borderBottomColor: theme('colors.green.400'),
+                  color: theme('colors.black')
+                }
+              }
+            }
+          ]
+        },
         dark: {
           css: [
             {
@@ -21,10 +41,20 @@ module.exports = {
                 color: theme('colors.dark.100'),
               },
               a: {
-                color: theme('colors.dark.100'),
+                color: theme('colors.green.400'),
+                transitionDuration: '300ms',
+                cursor: 'pointer',
+                borderBottomColor: theme('colors.dark.200'),
+                borderBottomWidth: '2px',
+                borderBottomStyle: 'solid',
+                textDecoration: 'none',
+                '&:hover': {
+                  borderBottomColor: theme('colors.green.400'),
+                  color: theme('colors.white')
+                }
               },
               strong: {
-                color: theme('colors.dark.100'),
+                color: theme('colors.white'),
               },
               'ol > li::before': {
                 color: theme('colors.white'),
@@ -55,14 +85,10 @@ module.exports = {
                 color: theme('colors.dark.700'),
               },
               code: {
-                color: theme('colors.dark.100'),
+                color: theme('colors.white'),
               },
               'a code': {
-                color: theme('colors.dark.100'),
-              },
-              pre: {
-                backgroundColor: theme('colors.gray.500'),
-                color: theme('colors.dark.900'),
+                color: theme('colors.white'),
               },
               thead: {
                 color: theme('colors.dark.100'),

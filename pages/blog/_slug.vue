@@ -49,44 +49,54 @@
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
       </p>
-      <div class="flex items-center">
-        <div
-          @click="handleLike"
-          class="h-16 end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-3xl p-3 border-solid border mr-2"
-          :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
-        >
-          <div class="mr-2">
-            {{ likes }}
+      <div class="flex flex-col md:flex-row">
+        <div class="flex items-center mb-2 md:mb-0">
+          <div
+            @click="handleLike"
+            class="h-16 end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-3xl p-3 border-solid border mr-2"
+            :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
+          >
+            <div class="mr-2">
+              {{ likes }}
+            </div>
+            <div class="icon-hover inline">❤</div>
           </div>
-          <div class="icon-hover inline">❤</div>
+          <a
+            target="_blank"
+            :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
+            class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
+          >
+            <img class="inline img icon-hover" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
+          </a>
+          <div @click="scrollToTop"
+               class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white">
+            <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
         </div>
-        <a
-          target="_blank"
-          :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
-          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
-        >
-          <img class="inline img icon-hover" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
-        </a>
-        <nuxt-link to="/contact"
-          class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
-        >
-          <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-          </svg>
-        </nuxt-link>
-        <div
-          @click="copyToClipBoard"
-          class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
-        >
-          <svg class="inline icon-hover" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-          </svg>
-        </div>
-        <div v-if="isCopied" class="p-3 relative text-sm flex justify-center items-center text-green-500">
-          {{ $t('copied') }}
-          <svg class="inline icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
+        <div class="flex items-center">
+          <nuxt-link to="/contact"
+                     class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
+          >
+            <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </nuxt-link>
+          <div
+            @click="copyToClipBoard"
+            class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
+          >
+            <svg class="inline icon-hover" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+            </svg>
+          </div>
+          <div v-if="isCopied" class="p-3 relative text-sm flex justify-center items-center text-green-500">
+            {{ $t('copied') }}
+            <svg class="inline icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -121,6 +131,12 @@ export default {
     }
   },
   methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    },
     copyToClipBoard() {
       navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + this.post.slug)
       this.isCopied = true

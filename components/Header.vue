@@ -56,7 +56,7 @@
             </nuxt-link>
           </ul>
         </div>
-        <ul class="dark:text-white dark:bg-dark-800 text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
+        <ul class="dark:text-white dark:bg-dark-900 text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
           <nuxt-link to="/" class="w-1/5 red">
             <li class="font-bold flex flex-col items-center justify-center">
               <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
