@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="link">
     <div
-      class="group home-link h-full duration-500 cursor-pointer flex flex-row justify-between py-3 w-full md:w-96 items-center"
+      class="home-link h-full duration-500 cursor-pointer flex flex-row justify-between py-3 w-full md:w-96 items-center"
       :class="getColor"
     >
       <div class="ml-4">
@@ -9,7 +9,7 @@
           {{ $t(title) }}
           <slot />
         </h1>
-        <p class="group-hover:dark:text-white w-5/6 text-gray-900 dark:text-dark-100 text-justify duration-300">{{ $t(description) }}</p>
+        <p class="w-5/6 text-gray-900 dark:text-dark-100 text-justify duration-300">{{ $t(description) }}</p>
       </div>
       <div class="mr-10 arrow duration-300">
         <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,6 +60,9 @@ export default {
 
 <style scoped lang="scss">
 .home-link:hover {
+  p {
+    @apply dark:etxt-white
+  }
   .arrow {
     transform: translateX(15px);
   }

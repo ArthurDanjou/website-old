@@ -39,7 +39,13 @@
     "title": "VueJs",
     "color": "emerald",
     "cover": "VueJs",
-    "slug": "VueJs"
+    "slug": "vueJs"
+  },
+  {
+    "title": "AdonisJs",
+    "color": "black",
+    "cover": "AdonisJs",
+    "slug": "adonisjs"
   },
   {
     "title": "Html",

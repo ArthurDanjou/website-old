@@ -3,7 +3,7 @@
        :class="getColor">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div class="text-center">
-        <img alt="Project Img" class="rounded-md" width="150" :src="'http://localhost:5555/files/' + cover">
+        <img alt="Project Img" class="rounded-md" width="150" :src="require(`@/assets/img/skills/${cover}.png`)">
       </div>
       <div class="text-center">
         <h1 class="md:text-2xl text-lg font-bold">{{ title }}</h1>
