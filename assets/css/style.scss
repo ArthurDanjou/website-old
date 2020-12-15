@@ -7,6 +7,10 @@ img, svg {
   position: static;
 }
 
+body {
+  @apply dark:bg-dark-900
+}
+
 * {
   @apply select-none outline-none;
 }

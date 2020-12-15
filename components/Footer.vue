@@ -16,7 +16,9 @@
             <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank">
               <img class="inline img" src="@/assets/img/socials/twitter.svg" alt="Twitter logo" height="20" width="20" />
               <span class="link">Twitter</span>
-            </a> {{ $t('footer.separator') }}
+            </a>
+            <br class="md:hidden"/>
+            {{ $t('footer.separator') }}
             <a class="font-semibold" href="mailto:contact@arthurdanjou.fr" target="_blank">
               <svg class="inline img" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -24,11 +26,11 @@
               <span class="link">Mail</span>
               </a>
           </p>
+          <br class="md:hidden"/>
           <span class="inline dark:text-dark-200 text-gray-600 text-xs">
             {{ $t('footer.links_click') }}
           </span>
         </div>
-        <br class="md:hidden"/>
         <p>
           {{ $t('footer.credits') }}
           <a class="font-semibold" target="_blank" href="https://nuxtjs.org">

@@ -28,6 +28,8 @@ console.log('Hello World !')
 
 Test de lien [Twitter](https://twitter.com/ArthurDanj)
 
+Lien [GitHub](https://github.com/arthurdanjou)
+
 ---
 
 Hey
@@ -36,9 +38,3 @@ __hey__
 _hey_
 ~~Hey~~
 
-```mermaid 
-graph TD
-  A --> B
-  B --> C
-  C --> A
-```

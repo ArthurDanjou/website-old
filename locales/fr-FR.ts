@@ -19,10 +19,11 @@ export default {
     copyrights: '© Copyright {date} - Tous droits réservés'
   },
 
-  404: {
-    description: 'Où suis-je ?',
+  error: {
     back: 'Revenir à l\'accueil',
-    no_page: 'La page demandée n\'existe pas'
+    no_page: 'La page demandée n\'existe pas',
+    internal: 'Erreur interne',
+    error: 'Erreur'
   },
 
   part: {

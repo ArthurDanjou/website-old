@@ -120,8 +120,12 @@ export default {
       liked: false
     }
   },
-  async asyncData({ params, $content, app, $axios }) {
-    const post = await $content(`articles/${app.i18n.locale}/`, params.slug).fetch()
+  async asyncData({ params, $content, app, $axios, error }) {
+    const post = await $content(`articles/${app.i18n.locale}/`, params.slug)
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Post not found" });
+      });
     const {data: likes} = await $axios.get(`posts/${params.slug}`)
     const liked = await $axios.get(`posts/is/${params.slug}`)
     return {

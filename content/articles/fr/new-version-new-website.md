@@ -73,8 +73,6 @@ Dans cette version, j'ai utilisé plusieurs technologies :
 
 ## 5. Conclusion
 
-Pour conclure, je suis très satisfait du résultat de cette nouvelle version. 
-Je vous laisse visiter le reste du site
-
-### Informations Supplémentaires
+Pour conclure, je suis très satisfait du résultat de cette nouvelle version, de ses fonctionnalités.
+Je vous laisse visiter le reste du site et me donner votre avis !
 

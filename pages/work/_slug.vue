@@ -51,6 +51,7 @@
 
 <script>
 import WorkSkill from "~/components/WorkSkill";
+
 export default {
   components: {WorkSkill},
   head() {
@@ -63,14 +64,19 @@ export default {
       work: null
     }
   },
-  async asyncData({ params, $content }) {
-    let work
-    try {
-      work = await $content('works', params.slug).fetch()
-    } catch (e) {
-      return error({ message: 'Work not found' })
+  async asyncData({ params, $content, error }) {
+    const work = await $content('works', params.slug)
+      .fetch()
+      .catch(() => {
+        error({
+          statusCode: 404,
+          message: 'Work not found',
+        })
+      });
+    let skills = []
+    if (work) {
+      skills = await $content('skills').where({ slug: { $in: work.skills } }).fetch()
     }
-    const skills = await $content('skills').where({ slug: { $in: work.skills } }).fetch()
     return {
       work,
       skills

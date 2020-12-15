@@ -112,9 +112,11 @@ export default {
   methods: {
     displayTags(tags) {
       const tags_label = []
-      tags.map(tag => {
-        tags_label.push(tag)
-      })
+      if (tags.length > 0) {
+        tags.map(tag => {
+          tags_label.push(tag)
+        })
+      }
       return tags_label
     },
     async fetchPostsByTag(tag) {

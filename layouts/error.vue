@@ -1,23 +1,36 @@
 <template>
-  <main class="error relative">
-    <div class="w-full h-screen">
-      <img class="w-full h-full" src="~/assets/img/404.png" alt="404 Image" />
-    </div>
-    <div class="text absolute inset-1/4 w-full h-screen mb-8">
-      <div class="flex items-center justify-center h-full">
-        <div class="flex flex-col justify-center text-center">
-          <h1 class="title dark:text-white font-bold">
-            404
-          </h1>
-          <h2 class="text-4xl dark:text-white">
-            {{ $t('404.description') }}
-          </h2>
-          <p class="text-2xl dark:text-dark-100 mb-4">
-            {{ $t('404.no_page') }}
-          </p>
+  <main class="error w-full px-5 xl:px-64">
+    <div class="mt-24 w-full h-full flex items-center justify-center">
+      <div class="flex flex-col items-center md:mb-20">
+        <div class="flex">
+          <div class="h-16 w-16 mr-4">
+            <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div class="mb-12 lining-nums">
+            <div class="mb-2">
+              <p v-if="error.statusCode === 404" class="text-3xl md:text-6xl dark:text-white font-bold">
+                {{ $t('error.error').toUpperCase() }} 404
+              </p>
+              <p v-else class="text-3xl md:text-6xl dark:text-white font-bold">
+                {{ $t('error.error').toUpperCase() }} 500
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <p v-if="error.statusCode === 404" class="text-xl md:text-2xl text-gray-900 dark:text-dark-100">
+                {{ $t('error.no_page') }}
+              </p>
+              <p v-else class="text-xl md:text-2xl text-gray-900 dark:text-dark-100">
+                {{ $t('error.internal') }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
           <nuxt-link class="home-btn" to="/">
-            <div class="py-3 px-6 font-bold border-2 border-solid border-red-500 hover:bg-red-500 duration-300 rounded">
-              {{ $t('404.back') }}
+            <div class="w-full py-4 px-8 md:py-8 md:px-16 font-bold hover:bg-red-500 duration-500 rounded">
+              {{ $t('error.back') }}
               <svg class="inline arrow-img" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -32,22 +45,15 @@
 <script>
 export default {
   name: "error",
-  layout: "error-2"
+  props: ['error'],
+  head: {
+    title: 'Error - Arthur Danjou'
+  }
 }
 </script>
 
 <style scoped lang="scss">
 .error {
-
-  .text {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .title {
-    font-size: 14rem;
-  }
 
   .home-btn:hover .arrow-img {
     transform: translate(3px, 0);
