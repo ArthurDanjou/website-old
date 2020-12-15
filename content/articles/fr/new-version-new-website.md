@@ -4,19 +4,10 @@ title: Ouverture de la nouvelle version de mon site !
 description: Après de long mois de développement, voici la version 2 de mon site !
 reading_time: 2
 tags: ["tags.dev"]
-cover: 'default'
+cover: 'post-1'
 date: 13-12-2020
 background: false
 ---
-
-Todo:
-
-- Parler de pourquoi une nouvelle version
-- Pourquoi si long
-- Technologies utilisées
-- Ce que ca propose (blog etc)
-- Conclusion
-- Informations supplémentaires
 
 ## Présentation
 

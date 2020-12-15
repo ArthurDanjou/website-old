@@ -1,7 +1,7 @@
 <template>
   <article
     class="border-2 border-black border-solid rounded-xl w-full h-blog p-2 flex flex-col justify-between my-5 duration-200 transform hover:scale-95"
-    :style="{ backgroundImage: 'url(http://localhost:5555/files/' + cover + ')' }"
+    :style="{ backgroundImage: require(`@/assets/img/posts/${cover}.png`) }"
   >
     <div>
       <p

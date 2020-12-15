@@ -61,7 +61,7 @@ export default {
 <style scoped lang="scss">
 .home-link:hover {
   p {
-    @apply dark:etxt-white
+    @apply dark:text-white
   }
   .arrow {
     transform: translateX(15px);
