@@ -16,7 +16,7 @@
             </nuxt-link>
           </div>
         </div>
-        <!--<img class="w-4/5 rounded-xl" :src="require(`@/assets/img/works/${work.cover}.png`)" alt="Project Img" /> -->
+        <img class="w-4/5 rounded-xl" :src="require(`@/assets/img/works/${work.cover}.png`)" alt="Project Img" />
         <a
           class="mt-4 py-3 px-6 rounded-full cursor-pointer duration-300 mb-10 lg:mb-0"
           :class="'bg-' + work.color + '-400 hover:bg-' + work.color + '-600'"

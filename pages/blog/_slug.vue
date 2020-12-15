@@ -127,11 +127,11 @@ export default {
         error({ statusCode: 404, message: "Post not found" });
       });
     const {data: likes} = await $axios.get(`posts/${params.slug}`)
-    const liked = await $axios.get(`posts/is/${params.slug}`)
+    const liked = 0 // await $axios.get(`posts/is/${params.slug}`)
     return {
       post,
       likes,
-      liked: liked.data !== 0
+      liked: 0//liked.data !== 0
     }
   },
   methods: {
@@ -149,7 +149,7 @@ export default {
       }, 7000)
     },
     async handleLike() {
-      if (this.liked) {
+      /*if (this.liked) {
         const {data} = await this.$axios.post(`posts/${this.post.slug}/unlike`)
         if (data.code === 200) {
           this.liked = false
@@ -161,7 +161,7 @@ export default {
           this.liked = true
           this.likes = data.post.likes
         }
-      }
+      }*/
     }
   },
   computed: {
