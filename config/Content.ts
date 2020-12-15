@@ -11,7 +11,6 @@ export default {
       'remark-autolink-headings',
       'remark-external-links',
       'remark-footnotes',
-      'remark-mermaid'
     ],
   }
 }
