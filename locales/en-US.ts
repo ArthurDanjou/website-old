@@ -218,6 +218,8 @@ export default {
 
   works: {
     artapi: 'ArtApi is my personal API connected to my various instances',
-    artsite: 'ArtSite is my personal website creating a single point of contact'
+    artsite: 'ArtSite is my personal website creating a single point of contact',
+    erisium: 'Erisium is a french minecraft mini-game server.',
+    artclick: 'ArtClick is my url shortener'
   }
 }
