@@ -1,6 +1,4 @@
 export default {
-  test: 'Test',
-
   header: {
     title: 'Arthur Danjou',
     home: 'Accueil',
@@ -34,12 +32,12 @@ export default {
     about_description: 'Apprenez en plus à mon propos, comment je travaille et qui je suis',
     blog_description: 'Je rédige des articles concernant ma vie, le développement et mes passions',
     work_description: 'Découvrez mes créations pour avoir une idée de mes compétences',
-    contact_description: 'Trouvez le service qui vous correspond le plus pour collaborer ensemble'
+    contact_description: 'Retrouvez tous mes réseaux sociaux pour me contacter'
   },
 
   home: {
     banner: {
-      role: 'Développeur & étudiant ',
+      role: 'Développeur & étudiant',
       hello: 'Bonjour, je suis',
       description: 'Je suis un jeune développeur autodidacte de {age} ans. J\'habite à Paris 🇫🇷. J\'adore créer des applications et des logiciels plus ou moins utiles. J\'utilise des technologies modernes pour obtenir le meilleur résultat possible ✨',
     },
@@ -72,7 +70,7 @@ export default {
       3: 'Je suis capable d\'apprendre rapidement des nouvelles technologies pour répondre aux besoins des différents projets. J\'identifie souvent le besoin de nouveaux systèmes ou outils pour améliorer l\'efficacité du flux de travail. Je suis toujours motivé par un défi et j\'aime être bien organisé pour produire des résultats cohérents.',
     },
     title: {
-      skills: 'Compétences Techniques',
+      skills: 'Compétences',
       interests: 'Intérêts',
       technologies: 'Technologies',
       languages: 'Langues',
@@ -154,7 +152,7 @@ export default {
       mail: 'Adresse Mail',
       submit: 'S\'abonner',
       error: 'Erreur dans le formulaire !',
-      success: 'nscription confirmée pour %email% !'
+      success: 'Inscription confirmée pour {email} !'
     },
     how_to: {
       title: 'Comment me contacter ? ✉',
