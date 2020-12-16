@@ -83,7 +83,7 @@
         {{ $t('contact.available.start') }}
         <span
           class="py-1 px-2 font-bold rounded-xl"
-          :class="'bg-' +color+ '-200 text-' +color+ '-500'"
+          :class="getColor"
         >
           {{ $t('hiring.status.' + status) }}
         </span>
@@ -137,6 +137,60 @@ export default {
             this.error = false
           }, 5000)
         })
+    }
+  },
+  computed: {
+    getColor() {
+      switch (this.color) {
+        case 'red':
+          return 'bg-red-200 text-red-500'
+        case 'orange':
+          return 'bg-orange-200 text-orange-500'
+        case 'purple':
+          return 'bg-purple-200 text-purple-500'
+        case 'blue':
+          return 'bg-blue-200 text-blue-500'
+        case 'green':
+          return 'bg-green-200 text-green-500'
+        case 'yellow':
+          return 'bg-yellow-200 text-yellow-500'
+        case 'cyan':
+          return 'bg-cyan-200 text-cyan-500'
+        case 'teal':
+          return 'bg-teal-200 text-teal-500'
+        case 'amber':
+          return 'bg-amber-200 text-amber-500'
+        case 'blueGray':
+          return 'bg-blueGray-200 text-blueGray-500'
+        case 'emerald':
+          return 'bg-emerald-200 text-emerald-500'
+        case 'lightBlue':
+          return 'bg-lightBlue-200 text-lightBlue-500'
+        case 'lime':
+          return 'bg-lime-200 text-lime-500'
+        case 'rose':
+          return 'bg-rose-200 text-rose-500'
+        case 'black':
+          return 'bg-black text-black'
+        case 'white':
+          return 'bg-white text-white'
+        case 'pink':
+          return 'bg-pink-200 text-pink-500'
+        case 'fuchsia':
+          return 'bg-fuchsia-200 text-fuchsia-500'
+        case 'violet':
+          return 'bg-violet-200 text-violet-500'
+        case 'indigo':
+          return 'bg-indigo-200 text-indigo-500'
+        case 'warmGray':
+          return 'bg-warmGray-200 text-warmGray-500'
+        case 'trueGray':
+          return 'bg-trueGray-200 text-trueGray-500'
+        case 'gray':
+          return 'bg-gray-200 text-gray-500'
+        case 'coolGray':
+          return 'bg-coolGray-200 text-coolGray-500'
+      }
     }
   }
 }

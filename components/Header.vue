@@ -121,7 +121,9 @@ export default {
     },
     async changeLanguage(lang) {
       this.$i18n.setLocale(lang)
-      await this.$router.push('/')
+      if (this.$router.currentRoute.fullPath.includes('blog')) {
+        await this.$nuxt.refresh()
+      }
     },
   },
   mounted() {

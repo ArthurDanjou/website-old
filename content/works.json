@@ -1,11 +1,25 @@
 [
   {
+    "slug": "erisium",
+    "title": "Erisium",
+    "description": "works.erisium",
+    "url": "https://erisium.com",
+    "cover": "erisium",
+    "color": "fuchsia",
+    "skills": [
+      "java",
+      "git",
+      "redis",
+      "mariadb"
+    ]
+  },
+  {
     "slug": "artsite",
     "title": "ArtSite",
     "description": "works.artsite",
     "url": "https://arthurdanjou.fr",
     "cover": "artsite",
-    "color": "gray",
+    "color": "trueGray",
     "skills": [
       "typescript",
       "nuxtjs",
@@ -31,20 +45,6 @@
       "git",
       "docker",
       "nodejs",
-      "redis",
-      "mariadb"
-    ]
-  },
-  {
-    "slug": "erisium",
-    "title": "Erisium",
-    "description": "works.erisium",
-    "url": "https://erisium.com",
-    "cover": "erisium",
-    "color": "fuchsia",
-    "skills": [
-      "java",
-      "git",
       "redis",
       "mariadb"
     ]

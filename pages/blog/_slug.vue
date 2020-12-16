@@ -37,7 +37,7 @@
       </div>
       <div class="w-full">
         <div class="flex justify-center w-full h-auto">
-          <img class="w-full h-auto" :src="'http://localhost:5555/files/'+post.cover" alt="Cover Img" />
+          <img class="w-full h-auto" :src="require(`@/assets/img/posts/${post.cover}.png`)" alt="Cover Img" />
         </div>
       </div>
       <nuxt-content
@@ -126,12 +126,12 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: "Post not found" });
       });
-    const {data: likes} = await $axios.get(`posts/${params.slug}`)
-    const liked = 0 // await $axios.get(`posts/is/${params.slug}`)
+    //const {data: likes} = await $axios.get(`posts/${params.slug}`)
+    //const liked = 0 await $axios.get(`posts/is/${params.slug}`)
     return {
       post,
-      likes,
-      liked: 0//liked.data !== 0
+      likes: 0,
+      liked: true//liked.data !== 0
     }
   },
   methods: {

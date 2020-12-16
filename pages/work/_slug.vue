@@ -16,10 +16,10 @@
             </nuxt-link>
           </div>
         </div>
-        <img class="w-4/5 rounded-xl" :src="require(`@/assets/img/works/${work.cover}.png`)" alt="Project Img" />
+        <img class="w-72 rounded-xl" :src="require(`@/assets/img/works/${work.cover}.png`)" alt="Project Img" />
         <a
           class="mt-4 py-3 px-6 rounded-full cursor-pointer duration-300 mb-10 lg:mb-0"
-          :class="'bg-' + work.color + '-400 hover:bg-' + work.color + '-600'"
+          :class="getColor"
           :href="work.url"
         >{{work.url.replace('https://', '').replace('http://', '')}}</a>
       </div>
@@ -80,6 +80,60 @@ export default {
     return {
       work,
       skills
+    }
+  },
+  computed: {
+    getColor() {
+      switch (this.work.color) {
+        case 'red':
+          return 'bg-red-400 hover:bg-red-600'
+        case 'orange':
+          return 'bg-orange-400 hover:bg-orange-600'
+        case 'purple':
+          return 'bg-purple-400 hover:bg-purple-600'
+        case 'blue':
+          return 'bg-blue-400 hover:bg-blue-600'
+        case 'green':
+          return 'bg-green-400 hover:bg-green-600'
+        case 'yellow':
+          return 'bg-yellow-400 hover:bg-yellow-600'
+        case 'cyan':
+          return 'bg-cyan-400 hover:bg-cyan-600'
+        case 'teal':
+          return 'bg-teal-400 hover:bg-teal-600'
+        case 'amber':
+          return 'bg-amber-400 hover:bg-amber-600'
+        case 'blueGray':
+          return 'bg-blueGray-400 hover:bg-blueGray-600'
+        case 'emerald':
+          return 'bg-emerald-400 hover:bg-emerald-600'
+        case 'lightBlue':
+          return 'bg-lightBlue-400 hover:bg-lightBlue-600'
+        case 'lime':
+          return 'bg-lime-400 hover:bg-lime-600'
+        case 'rose':
+          return 'bg-rose-400 hover:bg-rose-600'
+        case 'black':
+          return 'bg-black hover:bg-black'
+        case 'white':
+          return 'bg-white hover:bg-white'
+        case 'pink':
+          return 'bg-pink-400 hover:bg-pink-600'
+        case 'fuchsia':
+          return 'bg-fuchsia-400 hover:bg-fuchsia-600'
+        case 'violet':
+          return 'bg-violet-400 hover:bg-violet-600'
+        case 'indigo':
+          return 'bg-indigo-400 hover:bg-indigo-600'
+        case 'warmGray':
+          return 'bg-warmGray-400 hover:bg-warmGray-600'
+        case 'trueGray':
+          return 'bg-trueGray-400 hover:bg-trueGray-600'
+        case 'gray':
+          return 'bg-gray-400 hover:bg-gray-600'
+        case 'coolGray':
+          return 'bg-coolGray-400 hover:bg-coolGray-600'
+      }
     }
   }
 }

@@ -58,9 +58,9 @@ export default {
         case 'rose':
           return 'hover:bg-rose-400'
         case 'black':
-          return 'hover:bg-black-400'
+          return 'hover:bg-black'
         case 'white':
-          return 'hover:bg-white-400'
+          return 'hover:bg-white'
         case 'pink':
           return 'hover:bg-pink-400'
         case 'fuchsia':

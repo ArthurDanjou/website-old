@@ -1,7 +1,7 @@
 <template>
   <article
-    class="border-2 border-black border-solid rounded-xl w-full h-blog p-2 flex flex-col justify-between my-5 duration-200 transform hover:scale-95"
-    :style="{ backgroundImage: require(`@/assets/img/posts/${cover}.png`) }"
+    class="post border-2 border-black border-solid rounded-xl w-full h-blog p-2 flex flex-col justify-between my-5 duration-200 transform hover:scale-95"
+    :style="{ backgroundImage: `url(${this.getBackgroundUrl})` }"
   >
     <div>
       <p
@@ -71,6 +71,9 @@ export default {
       const dateFormat = this.date.split('-')
       return dateFormat[0] + " " + this.$t('month.' + dateFormat[1]) + " " + dateFormat[2]
     },
+    getBackgroundUrl() {
+      return require(`~/assets/img/posts/${this.cover}.png`)
+    }
   }
 }
 </script>
