@@ -49,7 +49,7 @@ export default {
       thanks: 'Thanks for reading to the end!',
       time: 'Reading'
     },
-    tweet: 'I love a new post from @ ArthurDanj, check it out here:',
+    tweet: 'I love a new post from @ArthurDanj, check it out here:',
     no_posts: 'Unfortunately there are no items available yet. Come back later 😉',
     tags: {
       search: 'Are you looking for a specific type of article? Test the search by tag 🏷',
