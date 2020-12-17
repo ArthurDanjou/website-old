@@ -1,4 +1,4 @@
-import { Axios, Head, ColorMode, Tailwind, Translation, Content, Netlify } from './config'
+import { Axios, Head, ColorMode, Tailwind, Translation, Content } from './config'
 
 export default {
   head: Head,
@@ -22,7 +22,6 @@ export default {
     '@nuxt/typescript-build',
     ['@nuxtjs/tailwindcss', Tailwind],
     ['@nuxtjs/color-mode', ColorMode],
-    ['@nuxtjs/netlify-files', Netlify]
   ],
 
   modules: [
