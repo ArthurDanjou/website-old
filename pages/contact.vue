@@ -44,12 +44,12 @@
         </div>
       </form>
       <div v-if="error" class="flex">
-        <div class="rounded-xl px-3 py-2 bg-red-300 font-bold ">
+        <div class="rounded-xl px-3 py-2 bg-red-300 font-bold dark:text-black">
           {{ $t('contact.form.error') }}
         </div>
       </div>
       <div v-if="success" class="flex">
-        <div class="rounded-xl px-3 py-2 bg-green-300 font-bold ">
+        <div class="rounded-xl px-3 py-2 bg-green-300 font-bold dark:text-black">
           {{ $t('contact.form.success', { email: form.email }) }}
         </div>
       </div>
@@ -62,8 +62,8 @@
         {{ $t('contact.how_to.description') }}
       </h3>
       <div class="mt-4 email text-lg duration-300 text-purple-500 hover:text-purple-700 cursor-pointer flex">
-        <a class="mr-2" href="mailto:contact@arthurdanjou.fr?subject=Please enter here your project name">
-          contact@arthurdanjou.fr
+        <a class="mr-2" href="mailto:me@arthurdanjou.fr?subject=Please enter here your project name">
+          me@arthurdanjou.fr
         </a>
         <div class="arrow duration-300">
           <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,7 +119,7 @@ export default {
   },
   methods: {
     async handleForm () {
-      await this.$axios.post('/subscribers',
+      await this.$axios.post('subscribers',
         {
           email: this.form.email,
           name: this.form.name
