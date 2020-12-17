@@ -121,7 +121,7 @@ export default {
     }
   },
   async asyncData({ params, $content, app, $axios, error }) {
-    const post = await $content(`articles/${app.i18n.locale}/`, params.slug)
+    const post = await $content(`${app.i18n.locale}`, params.slug)
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: "Post not found" });

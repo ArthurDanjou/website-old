@@ -132,7 +132,7 @@ export default {
     },
     async resetPosts() {
       this.current_tag = ''
-      this.posts = await this.$content(`articles/${this.$i18n.locale}`)
+      this.posts = await this.$content(`${this.$i18n.locale}`)
         .sortBy('date', 'asc')
         .limit(5)
         .fetch()
@@ -159,13 +159,13 @@ export default {
     async fetchPosts() {
       let postsTemp = []
       if (this.current_tag === "") {
-        postsTemp = await this.$content(`articles/${this.$i18n.locale}`)
+        postsTemp = await this.$content(`${this.$i18n.locale}`)
           .sortBy('date', 'asc')
           .limit(5)
           .skip(this.page * 5)
           .fetch()
       } else {
-        postsTemp = await this.$content(`articles/${this.$i18n.locale}`)
+        postsTemp = await this.$content(`${this.$i18n.locale}`)
           .sortBy('date', 'asc')
           .limit(5)
           .skip(this.page * 5)
@@ -184,13 +184,13 @@ export default {
       this.posts = posts
     },
     async fetchPrevAndNext() {
-      const [_, next] = await this.$content(`articles/${this.$i18n.locale}`)
+      const [_, next] = await this.$content(`${this.$i18n.locale}`)
         .surround(this.posts[this.posts.length - 1].slug, {
           before: 1,
           after: 1
         })
         .fetch()
-      const [prev, __] = await this.$content(`articles/${this.$i18n.locale}`)
+      const [prev, __] = await this.$content(`${this.$i18n.locale}`)
         .skip(this.page)
         .surround(this.posts[0].slug, {
           before: 1,
@@ -210,7 +210,7 @@ export default {
   },
   async asyncData ({ $content, app }) {
     const tags = await $content('tags').fetch()
-    const postsTemp = await $content(`articles/${app.i18n.locale}`)
+    const postsTemp = await $content(`${app.i18n.locale}`)
       .sortBy('date', 'asc')
       .limit(5)
       .fetch()
@@ -224,14 +224,14 @@ export default {
     let next = null
 
     if (posts.length > 0) {
-      const [_, nextTemp] = await $content(`articles/${app.i18n.locale}`)
+      const [_, nextTemp] = await $content(`${app.i18n.locale}`)
         .surround(posts[posts.length - 1].slug, {
           before: 1,
           after: 1
         })
         .fetch()
 
-      const [prevTemp, __] = await $content(`articles/${app.i18n.locale}`)
+      const [prevTemp, __] = await $content(`${app.i18n.locale}`)
         .surround(posts[0].slug, {
           before: 1,
           after: 1
