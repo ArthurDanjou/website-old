@@ -122,7 +122,7 @@ export default {
     async changeLanguage(lang) {
       this.$i18n.setLocale(lang)
       if (this.$router.currentRoute.fullPath.includes('blog')) {
-        await this.$router.push('blog')
+        await this.$router.push('/blog')
       }
     },
   },
