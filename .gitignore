@@ -91,3 +91,6 @@ sw.*
 /build/
 
 /dist/
+
+# Local Netlify folder
+.netlify
