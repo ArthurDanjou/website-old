@@ -120,10 +120,8 @@ export default {
       this.scrollPosition = window.scrollY
     },
     async changeLanguage(lang) {
+      await this.$router.push('/')
       this.$i18n.setLocale(lang)
-      if (this.$router.currentRoute.fullPath.includes('blog')) {
-        await this.$router.push('/blog')
-      }
     },
   },
   mounted() {
