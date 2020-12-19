@@ -166,6 +166,9 @@ export default {
     }
   },
 
+  date: {
+    today: 'Aujourd\'hui'
+  },
   copied: 'Copié',
   month: {
     '01': 'Janvier',
