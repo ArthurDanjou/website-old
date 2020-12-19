@@ -210,7 +210,6 @@ export default {
   },
   async asyncData ({ $content, app }) {
     const tags = await $content('tags').fetch()
-
     const locale = await app.i18n.locale
 
     const postsTemp = await $content(`articles/${locale}`)
@@ -222,7 +221,6 @@ export default {
     postsTemp.map(post => {
       posts.push(post)
     })
-    console.log(posts)
 
     let prev = null
     let next = null

@@ -61,14 +61,16 @@
       <h3 class="text-md md:text-lg">
         {{ $t('contact.how_to.description') }}
       </h3>
-      <div class="mt-4 email text-lg duration-300 text-purple-500 hover:text-purple-700 cursor-pointer flex">
-        <a class="mr-2" href="mailto:me@arthurdanjou.fr?subject=Please enter here your project name">
-          me@arthurdanjou.fr
-        </a>
-        <div class="arrow duration-300">
-          <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
+      <div class="mt-4 text-lg flex">
+        <div class="flex email duration-300 text-purple-500 hover:text-purple-700 cursor-pointer">
+          <a class="mr-2" href="mailto:me@arthurdanjou.fr?subject=Please enter here your project name">
+            me@arthurdanjou.fr
+          </a>
+          <div class="arrow duration-300">
+            <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +84,7 @@
       <div class="my-4 text-purple-500">
         {{ $t('contact.available.start') }}
         <span
-          class="py-1 px-2 font-bold rounded-xl"
+          class="py-1 px-2 font-bold rounded-xl mx-1"
           :class="getColor"
         >
           {{ $t('hiring.status.' + status) }}
