@@ -219,7 +219,7 @@
         <EnvListItem title="about.setup.desk" content="Ikea"/>
         <EnvListItem title="about.setup.phone" content="Samsung Galaxy Note 8" link="https://www.samsung.com/smartphones/galaxy-note8/"/>
         <EnvListItem title="about.setup.computer" content="Asus i5, 8Go Ram, GTX 950, 1To HDD"/>
-        <EnvListItem title="about.setup.screen" content="iiyama ProLite E2283HS" link="https://iiyama.com/fr.fr/produits/prolite-e2283hs-b3/"/>
+        <EnvListItem title="about.setup.screen" content="iiyama ProLite E2283HS" link="https://iiyama.com/fr/fr/produits/prolite-e2283hs-b3/"/>
         <EnvListItem title="about.setup.keyboard" content="Microsoft"/>
         <EnvListItem title="about.setup.mouse" content="Roccat Kova" link="https://fr.roccat.org/Mice/Kova-AIMO"/>
         <EnvListItem title="about.setup.headphone" content="Apple Airpods" link="https://www.apple.com/fr/airpods/"/>
