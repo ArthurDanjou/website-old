@@ -86,7 +86,7 @@ export default Vue.extend({
   components: {HomeLink},
   head() {
     return {
-      title: 'Arthur Danjou - Web & Software Developer'
+      title: 'Arthur Danjou - FullStack Web & Software Developer'
     }
   },
   async asyncData({$content}) {
