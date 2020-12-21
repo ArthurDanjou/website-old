@@ -46,6 +46,10 @@ export default {
       return date === 'Today' ? this.$t('date.today') : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
     },
     isSameDate() {
+      console.log(this.begin)
+      console.log(this.end)
+      console.log(this.end === this.begin)
+      console.log(this.end == this.begin)
       return this.begin === this.end
     }
   }
