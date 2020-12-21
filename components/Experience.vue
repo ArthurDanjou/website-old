@@ -7,7 +7,7 @@
       <span v-else class="inline absolute rounded-full h-4 w-4 bg-gray-500"></span>
     </div>
     <div class="leading-7">
-      <p v-if="isSameDate" class="text-base dark:text-dark-100 text-gray-800 leading-6">{{ formatDate(begin) }} <span class="px-3">|</span> {{location}}</p>
+      <p v-if="isSameDate()" class="text-base dark:text-dark-100 text-gray-800 leading-6">{{ formatDate(begin) }} <span class="px-3">|</span> {{location}}</p>
       <p v-else class="text-base dark:text-dark-100 text-gray-800 leading-6">{{ formatDate(begin) }} - {{ formatDate(end) }} <span class="px-3">|</span> {{location}}</p>
       <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
       <h2 class="text-xl">{{ company }}</h2>
@@ -46,10 +46,6 @@ export default {
       return date === 'Today' ? this.$t('date.today') : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
     },
     isSameDate() {
-      console.log(this.begin)
-      console.log(this.end)
-      console.log(this.end === this.begin)
-      console.log(this.end == this.begin)
       return this.begin === this.end
     }
   }
