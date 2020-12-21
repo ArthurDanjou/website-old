@@ -42,7 +42,7 @@ export default {
   methods: {
     formatDate(date) {
       const dateFormat = date.split('-')
-      return date === 'Today' ? 'Today' : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
+      return date === 'Today' ? this.$t('date.today') : this.$t('month.' + dateFormat[0]) + " " + dateFormat[1]
     }
   }
 }

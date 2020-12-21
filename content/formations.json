@@ -5,7 +5,7 @@
     "description": "formations.freelance.description",
     "location": "Remote",
     "begin_date": "04-2015",
-    "end_date": "date.today"
+    "end_date": "Today"
   },
   {
     "slug": "dnb",
@@ -21,6 +21,6 @@
     "description": "formations.bac.description",
     "location": "France",
     "begin_date": "09-2020",
-    "end_date": "date.today"
+    "end_date": "Today"
   }
 ]
