@@ -3,7 +3,7 @@
     <section class="mt-16 md:mt-32 banner w-full mb-16">
       <div class="flex flex-col lg:flex-row-reverse mb-4">
         <div class="hidden lg:block flex justify-center items-center lg:w-1/2">
-          <img src="@/assets/img/computer.png" alt="It's me !" class="icon"/>
+          <img src="@/assets/img/computer.png" alt="It's me !" class="icon" width="100%" height="100%"/>
         </div>
         <div class="mb-4 md:mb-10 lg:w-1/2 self-center">
           <h1 class="text-4xl md:text-5xl text-left font-bold md:w-3/4">
