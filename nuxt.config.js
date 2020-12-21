@@ -1,4 +1,4 @@
-import { Axios, Head, ColorMode, Tailwind, Translation, Content, Robots, Redirect, SiteMap } from './config'
+import { Axios, Head, ColorMode, Tailwind, Translation, Content, Robots, SiteMap } from './config'
 
 export default {
   head: Head,
@@ -29,7 +29,6 @@ export default {
     ['nuxt-i18n', Translation],
     ['@nuxt/content', Content],
     ['@nuxtjs/robots', Robots],
-    ['@nuxtjs/redirect-module', Redirect],
     ['@nuxtjs/sitemap', SiteMap]
   ],
 
