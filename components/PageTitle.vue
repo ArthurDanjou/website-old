@@ -31,7 +31,7 @@ export default {
         case 'blue':
           return 'border-blue-400'
         case 'green':
-          return 'border-orange-400'
+          return 'border-green-400'
       }
     }
   }
