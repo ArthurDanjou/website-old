@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="link">
     <div
-      class="home-link h-full duration-500 cursor-pointer flex flex-row justify-between py-3 w-full md:w-96 items-center"
+      class="mb-8 md:mb-0 home-link h-full duration-500 cursor-pointer flex flex-row justify-between py-3 w-full md:w-96 items-center"
       :class="getColor"
     >
       <div class="ml-4">
