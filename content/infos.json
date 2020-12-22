@@ -1,7 +1,7 @@
 {
   "age": 17,
   "hiring": {
-    "status": "not_available",
-    "color": "red"
+    "status": "available",
+    "color": "green"
   }
 }

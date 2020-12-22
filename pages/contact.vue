@@ -84,7 +84,7 @@
       <div class="my-4 text-purple-500">
         {{ $t('contact.available.start') }}
         <span
-          class="py-1 px-2 font-bold rounded-xl mx-1"
+          class="p-1 font-bold rounded-xl mx-1"
           :class="getColor"
         >
           {{ $t('hiring.status.' + status) }}
