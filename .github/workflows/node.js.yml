@@ -34,5 +34,5 @@ jobs:
           cd ${{ secrets.PATH }}
           git pull
           yarn install
-          yarn generate
+          yarn build
           pm2 start
