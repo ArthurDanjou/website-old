@@ -3,7 +3,7 @@ import { Axios, Head, ColorMode, Tailwind, Translation, Content, Robots, SiteMap
 export default {
   head: Head,
 
-  target: 'static',
+  target: 'server',
 
   server: {
     host: '0.0.0.0',
