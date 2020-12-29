@@ -32,6 +32,8 @@ export default {
   computed: {
     getColor() {
       switch (this.color) {
+        case 'red':
+          return 'hover:bg-red-600'
         case 'orange':
           return 'hover:bg-orange-600'
         case 'purple':

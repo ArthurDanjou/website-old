@@ -41,4 +41,10 @@ export default {
     name: 'page',
     mode: 'out-in',
   },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'white'
+  }
 }
