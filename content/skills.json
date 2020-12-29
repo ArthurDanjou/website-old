@@ -18,12 +18,6 @@
     "slug": "javascript"
   },
   {
-    "title": "Python",
-    "color": "amber",
-    "cover": "Python",
-    "slug": "python"
-  },
-  {
     "title": "Go",
     "color": "cyan",
     "cover": "GoLang",
