@@ -56,7 +56,7 @@
             class="h-16 end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-3xl p-3 border-solid border mr-2"
             :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
           >
-            <div class="mr-2">
+            <div class="mr-2 lining-nums">
               {{ likes }}
             </div>
             <div class="icon-hover inline">❤</div>

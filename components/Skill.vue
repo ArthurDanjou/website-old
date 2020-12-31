@@ -1,10 +1,10 @@
 <template>
-  <div class="mb-3 mr-3 p-1 md:p-2 h-48 w-48 border-gray-900 dark:border-dark-200 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="getColor">
+  <div class="mb-3 mr-2 p-1 md:p-2 h-32 w-32 border-gray-900 dark:border-dark-200 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="getColor">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div>
         <img class="rounded-sm" alt="Skill Img" :src="require(`@/assets/img/skills/${cover}.png`)">
       </div>
-      <h1 class="md:text-xl text-lg font-bold text-center">{{ skill }}</h1>
+      <h1 class="md:text-lg text-md font-bold text-center">{{ skill }}</h1>
     </div>
   </div>
 </template>

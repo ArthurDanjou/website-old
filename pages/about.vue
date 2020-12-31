@@ -12,7 +12,7 @@
       <div>
         <img class="logo-img rounded-full my-5" src="@/assets/img/Logo.jpg" alt="It's me !" />
       </div>
-      <div class="text-lg leading-6 md:w-2/3 text-justify">
+      <div class="ml-2 text-lg leading-6 md:w-2/3 text-justify">
         <p>{{ $t('about.banner.hello') }} <span class="text-orange-400 font-bold">Arthur DANJOU</span> 👋.</p> <br/>
         <p>{{ $t('about.banner.1')}}</p> <br/>
         <p>{{ $t('about.banner.2') }}</p> <br/>

@@ -1,6 +1,6 @@
 export default {
   preference: 'system',
-  fallback: 'dark',
+  fallback: 'light',
   classPrefix: '',
   classSuffix: '',
 }

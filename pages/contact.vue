@@ -83,12 +83,7 @@
       </h3>
       <div class="my-4 text-purple-500">
         {{ $t('contact.available.start') }}
-        <span
-          class="p-1 font-bold rounded-xl mx-1"
-          :class="getColor"
-        >
-          {{ $t('hiring.status.' + status) }}
-        </span>
+        <span class="py-1 px-2 font-bold rounded-full m-0.5" :class="getColor">{{ $t('hiring.status.' + status) }}</span>
         {{ $t('contact.available.end') }}
       </div>
     </div>
