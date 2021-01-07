@@ -102,7 +102,6 @@ export default {
     },
     ide: {
       java: 'Editeur Java',
-      python: 'Editeur Python',
       web: 'Editeur Web',
       go: 'Editeur Go',
       db: 'Editeur Bases de données',
@@ -207,7 +206,7 @@ export default {
   formations: {
     freelance: {
       title: 'Auto-apprentissage',
-      description: 'Java, TypeScript, Go, Python, etc...'
+      description: 'Java, TypeScript, Go, etc...'
     },
     dnb: {
       title: 'Diplôme National du Brevet',

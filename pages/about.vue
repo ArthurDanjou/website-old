@@ -169,13 +169,12 @@
       </EnvTitle>
       <EnvList>
         <EnvListItem title="about.ide.java" content="Intellij Idea Ultimate" link="https://www.jetbrains.com/fr-fr/idea/"/>
-        <EnvListItem title="about.ide.python" content="PyCharm Ultimate" link="https://www.jetbrains.com/fr-fr/pycharm/"/>
         <EnvListItem title="about.ide.web" content="WebStorm" link="https://www.jetbrains.com/fr-fr/webstorm/"/>
         <EnvListItem title="about.ide.go" content="GoLand" link="https://www.jetbrains.com/fr-fr/go/"/>
         <EnvListItem title="about.ide.db" content="DataGrip" link="https://www.jetbrains.com/fr-fr/datagrip/"/>
         <EnvListItem title="about.ide.all" content="Jetbrains Toolbox" link="https://www.jetbrains.com/toolbox-app/"/>
         <EnvListItem title="about.police" content="Jetbrains Mono" link="https://www.jetbrains.com/lp/mono/"/>
-        <EnvListItem title="about.console" content="HyperJs" link="https://hyper.is/"/>
+        <EnvListItem title="about.console" content="Terminal" link="https://github.com/Eugeny/terminus"/>
         <EnvListItem title="about.wsl_2" content="Ubuntu 20.04" link="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab"/>
       </EnvList>
     </EnvGroup>
