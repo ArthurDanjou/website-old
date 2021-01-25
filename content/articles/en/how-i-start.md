@@ -54,9 +54,9 @@ I am available for all your additional questions!
 
 ## Information
 Here are various links of development discord servers with an active community:
-- [ItsAlexousd] (https://discord.gg/HE4UeBGvGA)
-- [The Pack] (https://discord.gg/TzJJ4KVGDd)
-- [ArtDanjProduction] (https://discord.gg/rEzmnWSp3V) (Brand-new server)
+- [ItsAlexousd](https://discord.gg/HE4UeBGvGA)
+- [The Pack](https://discord.gg/TzJJ4KVGDd)
+- [ArtDanjProduction](https://discord.gg/rEzmnWSp3V) (Brand-new server)
 
 In addition, I would like to thank ** \ _ RealAlpha \ _ ** and ** Freeze ** (and all the others) who answered all my questions and with whom I share a great passion!
 I started the web efficiently thanks to Freeze, thanks to you 😉
