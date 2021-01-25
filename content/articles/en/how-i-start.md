@@ -33,14 +33,14 @@ These languages were much easier to learn because I had a good foundation in pro
 The `Front` results in the interface of the application visible by a user and the` Back` by the part invisible and inaccessible by a user.
 
 ## 3. What training did I take?
-When I started, I took a course on [OpenClassrooms] (https://openclassrooms.com) to learn Java syntax.
+When I started, I took a course on [OpenClassrooms](https://openclassrooms.com) to learn Java syntax.
 In addition, I bought myself a big book, very big 400-page book called `Programming in Java`. I acquired new functionalities such as the principles of object programming for example.
 Today, I mostly learn on my own using the Internet and development discord servers.
-Recently, I have been taking training on [Udemy] (https://udemy.com) in particular to learn **Go** and **Docker**.
-Finally, I also use [Youtube] (https://youtube.com) to follow more or less technical tutorials.
+Recently, I have been taking training on [Udemy](https://udemy.com) in particular to learn **Go** and **Docker**.
+Finally, I also use [Youtube](https://youtube.com) to follow more or less technical tutorials.
 
 ## 4. What am I able to achieve today
-Currently, I am able to do entire web applications, both the `Back` and the` Front`. As mobile and office applications are based on the same technologies,
+Currently, I am able to do entire web applications, both the `Back` and the `Front`. As mobile and office applications are based on the same technologies,
 I also know how to develop applications of this type. To see all my skills mastered, please visit my [About](/about) page, in the _Technical Skills_ section.
 
 ## 5. How do I see my future in this field?
@@ -55,9 +55,9 @@ I am available for all your additional questions!
 ## Information
 Here are various links of development discord servers with an active community:
 - [ItsAlexousd](https://discord.gg/HE4UeBGvGA)
-- [The Pack](https://discord.gg/TzJJ4KVGDd)
+- [La Meute](https://discord.gg/TzJJ4KVGDd)
 - [ArtDanjProduction](https://discord.gg/rEzmnWSp3V) (Brand-new server)
 
-In addition, I would like to thank ** \ _ RealAlpha \ _ ** and ** Freeze ** (and all the others) who answered all my questions and with whom I share a great passion!
+In addition, I would like to thank **\_RealAlpha\_** and **Freeze** (and all the others) who answered all my questions and with whom I share a great passion!
 I started the web efficiently thanks to Freeze, thanks to you 😉
 They are very active on discord servers and will be able to help you with Java and Web development.
