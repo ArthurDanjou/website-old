@@ -6,7 +6,7 @@ reading_time: 5
 tags: ["tags.life"]
 cover: post-2
 date: 07-01-2021
-background: true
+background: false
 ---
 
 ## Présentation
