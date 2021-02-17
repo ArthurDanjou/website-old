@@ -28,8 +28,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         port: ${{ secrets.SSH_PORT }}
         username: ${{ secrets.SSH_USER }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }} 
-        key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.SSH_PASSPHRASE }} 
         script: |
           cd ${{ secrets.PATH }}
           git pull
