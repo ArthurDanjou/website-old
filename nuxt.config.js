@@ -19,7 +19,6 @@ export default {
   components: true,
 
   buildModules: [
-    '@nuxt/typescript-build',
     ['@nuxtjs/tailwindcss', Tailwind],
     ['@nuxtjs/color-mode', ColorMode],
   ],
