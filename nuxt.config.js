@@ -35,6 +35,12 @@ export default {
   buildDir: 'build',
 
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    }
   },
 
   pageTransition: {
