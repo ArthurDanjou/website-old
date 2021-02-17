@@ -1,12 +1,15 @@
-FROM node:14
+FROM node:15.8.0-alpine3.10
 
-EXPOSE 3333
-
+RUN mkdir -p /usr/src/artsite
 WORKDIR /usr/src/artsite
 
-COPY package.json package.json
+COPY . /usr/src/artsite
+
+RUN yarn install
 
 RUN yarn build
+
+EXPOSE 3333
 
 COPY . .
 
