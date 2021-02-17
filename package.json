@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node --optimize-for-size --max-old-space-size=4096 node_modules/@nuxt/typescript-runtime/bin/nuxt-ts.js",
+    "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate"
