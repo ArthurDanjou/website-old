@@ -30,7 +30,7 @@ services:
       - internal
       - proxy
     depends_on:
-      - mysql
+      - mariadb
   mariadb:
     image: mariadb:10.5.8-focal
     environment:
