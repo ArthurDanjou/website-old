@@ -31,6 +31,7 @@ services:
       - proxy
     depends_on:
       - mariadb
+      - redis
   mariadb:
     image: mariadb:10.5.8-focal
     environment:
@@ -39,3 +40,15 @@ services:
       - internal
     labels:
       - traefik.enable=false
+    volumes:
+      - "/root/mariadb/data:/var/lib/mysql"
+  redis:
+    image: redis:6.0.10
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      networks:
+        - internal
+      labels:
+        - traefik.enable=false
+    volumes:
+      - "/root/redis/redis.conf:/usr/local/etc/redis/redis.conf"
