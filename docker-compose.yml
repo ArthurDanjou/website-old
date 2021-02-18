@@ -11,9 +11,8 @@ services:
     image: artsite:latest
     container_name: artsite
     labels:
-      - traefik.backend=artsite
-      - traefik.frontend.rule=Host:dev.arthurdanjou.fr
-      - traefik.docker.network=proxy
+      - traefik.http.routers.artsite.rule=Host(`api.arthurdanjou.fr`)
+      - traefik.http.routers.artsite.tls=true
       - traefik.port=443
     networks:
       - internal
@@ -24,9 +23,8 @@ services:
     image: artapi:latest
     container_name: artapi
     labels:
-      - traefik.backend=api
-      - traefik.frontend.rule=Host:devapi.arthurdanjou.fr
-      - traefik.docker.network=proxy
+      - traefik.http.routers.artapi.rule=Host(`devapi.arthurdanjou.fr`)
+      - traefik.http.routers.artapi.tls=true
       - traefik.port=443
     networks:
       - internal
