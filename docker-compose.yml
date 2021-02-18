@@ -13,7 +13,7 @@ services:
     image: artsite:latest
     container_name: artsite
     labels:
-      - traefik.http.routers.artsite.rule=Host(`dev.arthurdanjou.fr`)
+      - traefik.http.routers.artsite.rule=Host(`arthurdanjou.fr`)
       - traefik.http.routers.artsite.tls=true
       - traefik.http.routers.artsite.tls.certresolver=lets-encrypt
       - traefik.docker.network=proxy
@@ -29,7 +29,7 @@ services:
     image: artapi:latest
     container_name: artapi
     labels:
-      - traefik.http.routers.artapi.rule=Host(`devapi.arthurdanjou.fr`)
+      - traefik.http.routers.artapi.rule=Host(`api.arthurdanjou.fr`)
       - traefik.http.routers.artapi.tls=true
       - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
       - traefik.docker.network=proxy
