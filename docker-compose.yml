@@ -11,7 +11,7 @@ services:
     image: artsite:latest
     container_name: artsite
     labels:
-      - traefik.http.routers.artsite.rule=Host(`api.arthurdanjou.fr`)
+      - traefik.http.routers.artsite.rule=Host(`dev.arthurdanjou.fr`)
       - traefik.http.routers.artsite.tls=true
       - traefik.port=443
     networks:
