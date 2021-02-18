@@ -1,0 +1,41 @@
+version: "3"
+
+networks:
+  artnetwork:
+    external: true
+  internal:
+    external: false
+
+services:
+  artsite:
+    image: artsite:latest
+    labels:
+      - traefik.backend=artsite
+      - traefik.frontend.rule=Host:dev.arthurdanjou.fr
+      - traefik.docker.network=artnetwork
+      - traefik.port=443
+    networks:
+      - internal
+      - artnetwork
+      depends_on:
+        - artapi
+  artapi:
+    image: artapi:latest
+    labels:
+      - traefik.backend=api
+      - traefik.frontend.rule=Host:devapi.arthurdanjou.fr
+      - traefik.docker.network=artnetwork
+      - traefik.port=443
+    networks:
+      - internal
+      - artnetwork
+      depends_on:
+        - mysql
+  mariadb:
+    image: mariadb:10.5.8-focal
+    environment:
+      MYSQL_ROOT_PASSWORD:
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
