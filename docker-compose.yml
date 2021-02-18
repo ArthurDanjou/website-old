@@ -15,6 +15,8 @@ services:
       - traefik.http.routers.artsite.tls=true
       - traefik.http.routers.artsite.tls.certresolver=lets-encrypt
       - traefik.port=443
+    ports:
+    - 3333:3333
     networks:
       - internal
       - proxy
@@ -28,6 +30,8 @@ services:
       - traefik.http.routers.artapi.tls=true
       - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
       - traefik.port=443
+    ports:
+      - 5555:5555
     networks:
       - internal
       - proxy
