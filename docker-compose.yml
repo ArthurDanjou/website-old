@@ -61,4 +61,4 @@ services:
     labels:
       - traefik.enable=false
     volumes:
-      - "/root/redis/redis.conf:/usr/local/etc/redis/redis.conf/redis.conf"
+      - "/root/redis/redis.conf:/usr/local/etc/redis/redis.conf"
