@@ -2,8 +2,10 @@ version: "3"
 
 networks:
   proxy:
+    name: proxy
     external: true
   internal:
+    name: internal
     external: false
 
 services:
@@ -13,7 +15,7 @@ services:
     labels:
       - traefik.http.routers.artsite.rule=Host(`dev.arthurdanjou.fr`)
       - traefik.http.routers.artsite.tls=true
-      - traefik.http.routers.artsite.tls.certresolver=lets-encrypt
+      - traefik.http.routers.artsite.tls.certresolver=cloudflare
       - traefik.port=443
     ports:
     - 3333:3333
@@ -28,7 +30,7 @@ services:
     labels:
       - traefik.http.routers.artapi.rule=Host(`devapi.arthurdanjou.fr`)
       - traefik.http.routers.artapi.tls=true
-      - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
+      - traefik.http.routers.artapi.tls.certresolver=cloudflare
       - traefik.port=443
     ports:
       - 5555:5555
