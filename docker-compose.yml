@@ -9,6 +9,7 @@ networks:
 services:
   artsite:
     image: artsite:latest
+    container_name: artsite
     labels:
       - traefik.backend=artsite
       - traefik.frontend.rule=Host:dev.arthurdanjou.fr
@@ -21,6 +22,7 @@ services:
       - artapi
   artapi:
     image: artapi:latest
+    container_name: artapi
     labels:
       - traefik.backend=api
       - traefik.frontend.rule=Host:devapi.arthurdanjou.fr
@@ -34,6 +36,7 @@ services:
       - redis
   mariadb:
     image: mariadb:10.5.8-focal
+    container_name: mariadb
     environment:
       MYSQL_ROOT_PASSWORD:
     networks:
@@ -44,6 +47,7 @@ services:
       - "/root/mariadb/data:/var/lib/mysql"
   redis:
     image: redis:6.0.10
+    container_name: redis
     environment:
       MYSQL_ROOT_PASSWORD:
       networks:
