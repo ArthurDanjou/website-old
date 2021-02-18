@@ -1,7 +1,7 @@
 version: "3"
 
 networks:
-  artnetwork:
+  proxy:
     external: true
   internal:
     external: false
@@ -12,11 +12,11 @@ services:
     labels:
       - traefik.backend=artsite
       - traefik.frontend.rule=Host:dev.arthurdanjou.fr
-      - traefik.docker.network=artnetwork
+      - traefik.docker.network=proxy
       - traefik.port=443
     networks:
       - internal
-      - artnetwork
+      - proxy
       depends_on:
         - artapi
   artapi:
@@ -24,11 +24,11 @@ services:
     labels:
       - traefik.backend=api
       - traefik.frontend.rule=Host:devapi.arthurdanjou.fr
-      - traefik.docker.network=artnetwork
+      - traefik.docker.network=proxy
       - traefik.port=443
     networks:
       - internal
-      - artnetwork
+      - proxy
       depends_on:
         - mysql
   mariadb:
