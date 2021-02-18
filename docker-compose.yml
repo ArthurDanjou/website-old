@@ -17,8 +17,8 @@ services:
     networks:
       - internal
       - proxy
-      depends_on:
-        - artapi
+    depends_on:
+      - artapi
   artapi:
     image: artapi:latest
     labels:
@@ -29,8 +29,8 @@ services:
     networks:
       - internal
       - proxy
-      depends_on:
-        - mysql
+    depends_on:
+      - mysql
   mariadb:
     image: mariadb:10.5.8-focal
     environment:
