@@ -18,7 +18,7 @@
     "nuxt": "2.15.0",
     "nuxt-i18n": "6.20.1",
     "prism-themes": "1.5.0",
-    "sass": "1.32.8",
+    "sass": "1.32.7",
     "sass-loader": "10.1.1"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "autoprefixer": "^10.2.4",
     "css-loader": "^5.0.0",
     "postcss": "^7.0.32",
-    "postcss-import": "^14.0.0",
+    "postcss-import": "^13.0.0",
     "postcss-loader": "^5.0.0",
     "postcss-url": "^10.1.1",
     "tailwindcss": "2.0.3"
