@@ -51,8 +51,13 @@ services:
       - 3306:3306
     networks:
       - internal
+      - proxy
     labels:
-      - traefik.enable=false
+      - traefik.http.routers.artapi.rule=Host(`sql.arthurdanjou.fr`)
+      - traefik.http.routers.artapi.tls=true
+      - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
+      - traefik.docker.network=proxy
+      - traefik.port=443
     volumes:
       - "/root/mariadb/data:/var/lib/mysql"
   redis:
@@ -62,7 +67,12 @@ services:
       - 6379:6379
     networks:
       - internal
+      - proxy
     labels:
-      - traefik.enable=false
+      - traefik.http.routers.artapi.rule=Host(`redis.arthurdanjou.fr`)
+      - traefik.http.routers.artapi.tls=true
+      - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
+      - traefik.docker.network=proxy
+      - traefik.port=443
     volumes:
       - "/root/redis/:/usr/local/etc/redis/"
