@@ -47,6 +47,8 @@ services:
     container_name: mariadb
     environment:
       MYSQL_ROOT_PASSWORD:
+    ports:
+      - 3306:3306
     networks:
       - internal
     labels:
@@ -56,9 +58,11 @@ services:
   redis:
     image: redis:6.0.10
     container_name: redis
+    ports:
+      - 6379:6379
     networks:
       - internal
     labels:
       - traefik.enable=false
     volumes:
-      - "/root/redis/redis.conf:/usr/local/etc/redis/redis.conf"
+      - "/root/redis/:/usr/local/etc/redis/"
