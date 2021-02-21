@@ -57,6 +57,7 @@ services:
       - traefik.tcp.routers.sql.tls=true
       - traefik.tcp.routers.sql.tls.certresolver=lets-encrypt
       - traefik.docker.network=proxy
+      - traefik.port=3306
     volumes:
       - "/root/mariadb/data:/var/lib/mysql"
   redis:
@@ -74,4 +75,4 @@ services:
       - traefik.docker.network=proxy
       - traefik.port=6379
     volumes:
-      - "/root/redis/:/usr/local/etc/redis/"
+      - "/root/redis:/data"
