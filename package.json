@@ -15,6 +15,8 @@
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "0.4.0",
+    "nuxt": "2.15.2",
+    "nuxt-i18n": "6.20.3",
     "nuxt": "2.15.0",
     "nuxt-i18n": "6.20.3",
     "prism-themes": "1.5.0",
