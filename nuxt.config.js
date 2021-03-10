@@ -21,6 +21,7 @@ export default {
   buildModules: [
     ['@nuxtjs/tailwindcss', Tailwind],
     ['@nuxtjs/color-mode', ColorMode],
+    'nuxt-postcss8'
   ],
 
   modules: [
