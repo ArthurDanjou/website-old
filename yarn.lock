@@ -6485,12 +6485,14 @@ nuxt-i18n@6.20.6:
     klona "^2.0.4"
     vue-i18n "^8.23.0"
 
-nuxt-postcss8@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-postcss8/-/nuxt-postcss8-1.0.3.tgz#b635e7c2ac7e8ec2d288e377dbe3eefd2bdd8e89"
-  integrity sha512-MPxw37YKX6OUVcoPb2MJALd5JZF371oNgQA53PIY80l21Y0m6r76TIgdiwmfeNk0vZbm1DsV+wqwPLySC70AoA==
+nuxt-postcss8@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/nuxt-postcss8/-/nuxt-postcss8-1.1.2.tgz#63c037dfe8a86443865b925c63a3e94e2b8b821d"
+  integrity sha512-xBlylG9u1o8yOa3SrpppBzwD4Zhj7pWJO6g2FBcOn4/oPWZ2tTj9e3opwlj/IMtmlUtnwucogV1GP5UATb8WKA==
   dependencies:
+    autoprefixer "^10.2.5"
     css-loader "^5.0.0"
+    defu "^3.2.2"
     postcss "^8.1.10"
     postcss-import "^13.0.0"
     postcss-loader "^4.1.0"
