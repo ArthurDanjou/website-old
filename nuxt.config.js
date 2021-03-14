@@ -1,57 +1,22 @@
-import { Axios, Head, ColorMode, Tailwind, Translation, Content, Robots, SiteMap, Redirect } from './config'
+import {defineNuxtConfig} from "@nuxtjs/composition-api";
+import head from './settings/Head'
+import buildModules from './settings/BuildModules'
+import modules from './settings/Modules'
+import build from './settings/Build'
+import arch from './settings/Arch'
+import plugins from './settings/Plugins'
+import css from './settings/Style'
 
-export default {
-  head: Head,
-
-  target: 'server',
-
-  server: {
-    host: '0.0.0.0',
-    port: 3333
-  },
-
-  css: [
-  ],
-
-  plugins: [
-  ],
-
+export default defineNuxtConfig({
+  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  buildModules: [
-    ['@nuxtjs/tailwindcss', Tailwind],
-    ['@nuxtjs/color-mode', ColorMode],
-    'nuxt-postcss8'
-  ],
+  head,
+  modules,
+  ...arch,
+  build,
+  plugins,
+  css,
+  buildModules,
 
-  modules: [
-    ['@nuxtjs/axios', Axios],
-    ['nuxt-i18n', Translation],
-    ['@nuxt/content', Content],
-    ['@nuxtjs/robots', Robots],
-    ['@nuxtjs/sitemap', SiteMap],
-    ['@nuxtjs/redirect-module', Redirect]
-  ],
-
-  buildDir: 'build',
-
-  build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    }
-  },
-
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in',
-  },
-
-  loadingIndicator: {
-    name: 'circle',
-    color: '#3B8070',
-    background: 'white'
-  }
-}
+})

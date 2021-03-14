@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: arthurdanjou.fr
-Token: 4a2af96a34d665c81e83234208a5d2cd075531febad11b7083b1fa40b2db9940
