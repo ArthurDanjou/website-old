@@ -31,8 +31,6 @@ import {setLocale, getLocale} from "../services/useTranslation";
 
 export default Vue.extend({
 
-  const
-
   setup() {
     return {
       setLocale, getLocale
