@@ -14,14 +14,12 @@
         >
           Documentation
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
           class="button--grey"
+          @click="setLocale(getLocale.toString() === 'fr' ? 'en' : 'fr')"
         >
-          GitHub
-        </a>
+          {{ $t("test") }}
+        </div>
       </div>
     </div>
   </div>
@@ -29,8 +27,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import {setLocale, getLocale} from "../services/useTranslation";
 
-export default Vue.extend({})
+export default Vue.extend({
+
+  const
+
+  setup() {
+    return {
+      setLocale, getLocale
+    }
+  }
+})
 </script>
 
 <style>
