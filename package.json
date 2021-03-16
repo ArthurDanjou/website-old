@@ -16,7 +16,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "0.4.0",
     "nuxt": "2.15.3",
-    "nuxt-i18n": "6.21.0",
+    "nuxt-i18n": "6.21.1",
     "prism-themes": "1.6.0",
     "sass": "1.32.8",
     "sass-loader": "11.0.1"
