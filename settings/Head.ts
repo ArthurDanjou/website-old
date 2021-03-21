@@ -1,9 +1,9 @@
 // Global page headers: https://go.nuxtjs.dev/config-head
 const params = {
-  title: 'nuxt-ts-app',
+  title: 'artsite',
   color: '#0DA5FF',
   image: '/images/image.jpg',
-  url: 'https://my-domain.com',
+  url: 'https://arthurdanjou.fr',
   favicon: {
     type: 'image/jpg',
     href: '/favicon.jpg',

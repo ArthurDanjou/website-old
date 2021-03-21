@@ -15,9 +15,9 @@ const i18n = {
     },
     {
       code: 'fr',
+      name: 'Français',
       iso: 'fr-FR',
-      file: 'fr-FR.ts',
-      name: 'Français'
+      file: 'fr-FR.ts'
     },
   ],
   strategy: 'no_prefix',

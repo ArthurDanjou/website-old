@@ -6,17 +6,14 @@ import build from './settings/Build'
 import arch from './settings/Arch'
 import plugins from './settings/Plugins'
 import css from './settings/Style'
+import {NuxtConfig} from "@nuxt/types";
 
 export default defineNuxtConfig({
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
   head,
   modules,
   ...arch,
   build,
   plugins,
   css,
-  buildModules,
-
-})
+  buildModules
+} as any as NuxtConfig)

@@ -28,6 +28,8 @@ const server = {
   port: 3333
 }
 
+const components = true
+
 const buildDir = 'build'
 
-export default { srcDir, dir, generate, build, pageTransition, target, server, buildDir }
+export default { srcDir, dir, generate, build, pageTransition, target, server, buildDir, components }
