@@ -1,10 +1,13 @@
 <template>
-  <div class="mb-3 mr-2 p-1 md:p-2 h-32 w-32 border-gray-900 dark:border-dark-200 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="getColor">
+  <div
+    class="m-2 p-1 md:p-2 h-48 w-48 border-gray-900 dark:border-dark-200 border-2 duration-300 rounded-3xl hover:bg-opacity-25"
+    :class="getColor"
+  >
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div>
         <img class="rounded-sm" alt="Skill Img" :src="getCoverLink">
       </div>
-      <h1 class="md:text-lg text-md font-bold text-center">{{ skill }}</h1>
+      <h1 class="md:text-xl text-lg font-bold text-center">{{ skill }}</h1>
     </div>
   </div>
 </template>
@@ -12,14 +15,14 @@
 <script lang="ts">
 import { computed } from '@nuxtjs/composition-api'
 
-interface SkillProp {
+interface WorkSkillProp {
   skill: string,
   color: string,
   cover: string
 }
 
 export default {
-  name: "Skill",
+  name: "WorkSkill",
   props: {
     skill: {
       type: String,
@@ -27,15 +30,15 @@ export default {
     },
     color: {
       type: String,
-      default: "red"
+      default: "red-100"
     },
     cover: {
       type: String,
       default: "logo.jpg"
     }
   },
-  setup(props: SkillProp) {
-    const getColor = computed(() => `hover:bg-${props.color}-400`)
+  setup(props: WorkSkillProp) {
+    const getColor = computed(() => `hover:bg-${props.color}-600`)
     const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}.png`))
 
     return {
@@ -46,5 +49,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+
 </style>

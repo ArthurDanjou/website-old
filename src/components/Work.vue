@@ -3,7 +3,7 @@
        :class="getColor">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div class="text-center">
-        <img alt="Project Img" class="rounded-md" width="150" :src="require(`@/assets/img/works/${cover}.png`)">
+        <img alt="Project Img" class="rounded-md" width="150" :src="getCoverLink">
       </div>
       <div class="text-center">
         <h1 class="md:text-2xl text-lg font-bold">{{ title }}</h1>
@@ -46,10 +46,12 @@ export default {
   setup(props: WorkProp) {
     const formatLink = computed(() => props.url.replace('https://', '').replace('http://', ''))
     const getColor = computed(() => `hover:bg-${props.color}-600`)
+    const getCoverLink = computed(() => `@/assets/images/works/${props.cover}.png`)
 
     return {
       formatLink,
-      getColor
+      getColor,
+      getCoverLink
     }
   }
 }
