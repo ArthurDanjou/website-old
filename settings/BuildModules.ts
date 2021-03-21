@@ -18,6 +18,6 @@ export default  [
   '@nuxtjs/composition-api',
   '@nuxt/postcss8',
   ['@nuxtjs/tailwindcss', tailwindcss],
-  'nuxt-vite',
+  //'nuxt-vite',
   ['@nuxtjs/color-mode', color_mode],
 ]
