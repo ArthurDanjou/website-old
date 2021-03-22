@@ -1,4 +1,6 @@
 // Global page headers: https://go.nuxtjs.dev/config-head
+import {NuxtOptionsHead} from "@nuxt/types/config/head";
+
 const params = {
   title: 'artsite',
   color: '#0DA5FF',
@@ -36,4 +38,4 @@ export default {
     { name: 'theme-color', content: params.color },
   ],
   link: [{ rel: 'icon', type: params.favicon.type, href: params.favicon.href }],
-}
+} as NuxtOptionsHead

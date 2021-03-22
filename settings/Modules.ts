@@ -1,3 +1,5 @@
+import {NuxtOptionsModule} from "@nuxt/types/config/module";
+
 const axios = {
   credentials: true,
   baseURL: process.env.NODE_ENV == 'production'
@@ -51,4 +53,4 @@ export default [
   ['@nuxtjs/axios', axios],
   ['nuxt-i18n', i18n],
   ['@nuxt/content', content],
-]
+] as NuxtOptionsModule[]

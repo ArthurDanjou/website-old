@@ -16,4 +16,4 @@ export default defineNuxtConfig({
   plugins,
   css,
   buildModules
-} as any as NuxtConfig)
+} as NuxtConfig)
