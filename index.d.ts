@@ -1,5 +1,6 @@
 import { NuxtAxiosInstance } from '@nuxtjs/axios'
 import VueI18n, {IVueI18n} from "vue-i18n";
+import {ColorModeInstance} from "@nuxtjs/color-mode/types/color-mode";
 
 declare module 'vue/types/vue' {
 
@@ -16,6 +17,7 @@ declare module '@nuxt/types' {
   interface Context {
     $axios: NuxtAxiosInstance,
     $i18n: VueI18n & IVueI18n
+    $colorMode: ColorModeInstance
   }
 }
 

@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from '@nuxtjs/composition-api'
+import {computed} from '@nuxtjs/composition-api'
 
-interface WorkProp {
+interface WorkProps {
   title: string,
   url: string,
   cover: string,
@@ -43,7 +43,7 @@ export default {
       default: 'white'
     }
   },
-  setup(props: WorkProp) {
+  setup(props: WorkProps) {
     const formatLink = computed(() => props.url.replace('https://', '').replace('http://', ''))
     const getColor = computed(() => `hover:bg-${props.color}-600`)
     const getCoverLink = computed(() => `@/assets/images/works/${props.cover}.png`)

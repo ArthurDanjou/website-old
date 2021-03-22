@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from '@nuxtjs/composition-api'
+import {computed} from '@nuxtjs/composition-api'
 
-interface WorkSkillProp {
+interface WorkSkillProps {
   skill: string,
   color: string,
   cover: string
@@ -37,7 +37,7 @@ export default {
       default: "logo.jpg"
     }
   },
-  setup(props: WorkSkillProp) {
+  setup(props: WorkSkillProps) {
     const getColor = computed(() => `hover:bg-${props.color}-600`)
     const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}.png`))
 
