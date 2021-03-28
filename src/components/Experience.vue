@@ -50,7 +50,7 @@ export default {
       default: "Never"
     }
   },
-  setup(props: FormationProps) {
+  setup(props: ExperienceProps) {
     const {$i18n} = useContext()
     const getBeginDate = computed(() => {
       const dateFormat = props.begin.split('-')

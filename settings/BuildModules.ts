@@ -8,18 +8,34 @@ const color_mode = {
   classSuffix: '',
 }
 
-const tailwindcss = {
-  cssPath: './assets/css/tailwind.css',
-  configPath: 'tailwind.config.js',
-  exposeConfig: true,
-  jit: true
+const windicss = {
+  scan: {
+    dirs: [ './' ],
+    exclude: [
+      'node_modules',
+      '.git',
+      '.nuxt/**/*',
+      'build/**/*',
+      '*.template.html',
+      'app.html'
+    ],
+    include: []
+  },
+  transformCSS: 'pre',
+  preflight: {
+    alias: {
+      // add nuxt aliases
+      'nuxt-link': 'a',
+      // @nuxt/image module
+      'nuxt-img': 'img',
+    }
+  }
 }
 
 export default [
   '@nuxt/typescript-build',
   '@nuxtjs/composition-api',
-  '@nuxt/postcss8',
-  ['@nuxtjs/tailwindcss', tailwindcss],
+  ['nuxt-windicss', windicss],
   //'nuxt-vite',
   ['@nuxtjs/color-mode', color_mode],
 ] as NuxtOptionsModule[]

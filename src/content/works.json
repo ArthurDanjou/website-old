@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "erisium",
+    "title": "Erisium",
+    "description": "works.erisium",
+    "url": "https://erisium.com",
+    "cover": "erisium",
+    "color": "fuchsia",
+    "skills": [
+      "java",
+      "git",
+      "redis",
+      "mariadb"
+    ]
+  },
+  {
+    "slug": "artsite",
+    "title": "ArtSite",
+    "description": "works.artsite",
+    "url": "https://arthurdanjou.fr",
+    "cover": "artsite",
+    "color": "trueGray",
+    "skills": [
+      "typescript",
+      "nuxtjs",
+      "vuejs",
+      "git",
+      "tailwindcss",
+      "sass",
+      "html",
+      "css",
+      "nodejs"
+    ]
+  },
+  {
+    "slug": "artapi",
+    "title": "ArtApi",
+    "description": "works.artapi",
+    "url": "https://api.arthurdanjou.fr",
+    "cover": "artapi",
+    "color": "trueGray",
+    "skills": [
+      "typescript",
+      "adonisjs",
+      "git",
+      "docker",
+      "nodejs",
+      "redis",
+      "mariadb"
+    ]
+  },
+  {
+    "slug": "artclick",
+    "title": "ArtClick",
+    "description": "works.artclick",
+    "url": "https://artdanj.to",
+    "cover": "artclick",
+    "color": "trueGray",
+    "skills": [
+      "adonisjs",
+      "git",
+      "redis",
+      "mariadb",
+      "typescript"
+    ]
+  }
+]
