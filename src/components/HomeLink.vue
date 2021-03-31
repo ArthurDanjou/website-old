@@ -43,7 +43,7 @@ export default {
       type: String
     },
     color: {
-      default: "red-100",
+      default: "red",
       type: String
     },
     link: {
@@ -52,10 +52,24 @@ export default {
     }
   },
   setup(props: HomeLinkProps) {
-    const getColor = computed(() => `hover:bg-${props.color}-400 dark:hover:bg-${props.color}-600 active:bg-${props.color}-400 dark:active:bg-${props.color}-600`)
+    /**const getColor = computed(() => {
+      return 'hover:bg-color-400 dark:hover:bg-color-600 active:bg-color-400 dark:active:bg-color-600'.replaceAll('color', props.color)
+    })*/
+    const getColor = computed(() => {
+      switch (props.color) {
+        case 'orange':
+          return 'hover:bg-orange-400 dark:hover:bg-orange-600 active:bg-orange-400 dark:active:bg-orange-600'
+        case 'purple':
+          return 'hover:bg-purple-400 dark:hover:bg-purple-600 active:bg-purple-400 dark:active:bg-purple-600'
+        case 'blue':
+          return 'hover:bg-blue-400 dark:hover:bg-blue-600 active:bg-blue-400 dark:active:bg-blue-600'
+        case 'green':
+          return 'hover:bg-green-400 dark:hover:bg-green-600 active:bg-green-400 dark:active:bg-green-600'
+      }
+    })
 
     return {
-      getColor
+      getColor,
     }
   }
 }

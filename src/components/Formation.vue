@@ -53,10 +53,14 @@ export default {
     const {$i18n} = useContext()
     const getBeginDate = computed(() => {
       const dateFormat = props.begin.split('-')
+      console.log('1')
+      console.log($i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1])
       return $i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
     })
     const getEndDate = computed(() => {
       const dateFormat = props.end.split('-')
+      console.log('2')
+      console.log(props.end === 'Today' ? $i18n.t('date.today') : $i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1])
       return props.end === 'Today' ? $i18n.t('date.today') : $i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
     })
 

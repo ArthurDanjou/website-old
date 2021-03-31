@@ -1,11 +1,10 @@
 export default {
   header: {
-    title: 'Arthur Danjou',
-    home: 'Accueil',
     about: 'Moi',
     blog: 'Blog',
-    work: 'Travail',
-    contact: 'Contact'
+    contact: 'Contact',
+    projects: 'Projets',
+    uses: 'Usages'
   },
 
   footer: {

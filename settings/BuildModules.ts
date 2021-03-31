@@ -21,7 +21,7 @@ const windicss = {
     ],
     include: []
   },
-  transformCSS: 'pre',
+  transformCSS: 'post',
   preflight: {
     alias: {
       // add nuxt aliases
@@ -36,6 +36,6 @@ export default [
   '@nuxt/typescript-build',
   '@nuxtjs/composition-api',
   ['nuxt-windicss', windicss],
-  //'nuxt-vite',
+  'nuxt-vite',
   ['@nuxtjs/color-mode', color_mode],
 ] as NuxtOptionsModule[]
