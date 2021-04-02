@@ -1,8 +1,8 @@
 export default {
   header: {
-    home: 'Home',
     about: 'About',
     blog: 'Blog',
+    contact: 'Contact',
     projects: 'Projects',
     uses: 'Uses',
   },
@@ -192,7 +192,9 @@ export default {
   tags: {
     life: 'Life',
     dev: 'Dev',
-    tech: 'Tech'
+    tech: 'Tech',
+    software: 'Software',
+    web: 'Web'
   },
 
   experiences: {

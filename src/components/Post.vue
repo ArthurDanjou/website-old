@@ -1,104 +1,85 @@
 <template>
-  <article
-    class="post border-2 border-black border-solid rounded-xl w-full h-blog p-2 flex flex-col justify-between my-5 duration-200 transform hover:scale-95"
-    :style="{ backgroundImage: `url(${getBackGroundCover})` }"
-  >
-    <div>
-      <p
-        class="text-2xl md:text-3xl font-bold md:text-justify leading-7 mb-3"
-        :class="lightBg ? 'text-black':'text-white'"
-      >{{ title }}</p>
-      <p
-        class="text-lg italic text-justify leading-5"
-        :class="lightBg ? 'text-gray-900':'text-dark-100'"
-      >{{ description }}</p>
-    </div>
-    <div
-      class="flex justify-between mt-8 items-end"
-      :class="lightBg ? 'text-gray-900':'text-dark-100'"
-    >
-      <div>
-        <div>{{getDate}}</div>
-        <div>{{reading_time}} min</div>
+  <nuxt-link :to="`/blog/${slug}`">
+    <div class="rounded-lg shadow-lg h-116 w-100 text-left dark:bg-gray-800 transform hover:scale-103 duration-300">
+      <div class="h-2/5 post rounded-t-lg"
+           :style="{ backgroundImage: `url(${getBackgroundCover})` }">
       </div>
-      <div class="self-end flex flex-wrap flex-col md:flex-row">
-        <div v-for="tag in tags"
-             class="my-1 md:my-0 ml-2 py-1 px-2 rounded font-semibold"
-             :class="lightBg ? 'bg-black text-white':'bg-white text-black'"
-        >
-          #{{ $t(tag) }}
+      <div class="h-3/5 p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex space-x-2 mb-2">
+            <div v-for="tag in tags">
+              <TagPreview :content="tag" :pill="true"/>
+            </div>
+          </div>
+          <h1 class="text-2xl font-bold">{{ title }}</h1>
+          <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ description }}</p>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ date }}</h5>
+          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ reading_time }} min.</h5>
         </div>
       </div>
     </div>
-  </article>
+  </nuxt-link>
 </template>
 
 <script lang="ts">
-import {computed, useContext} from "@nuxtjs/composition-api";
+import {computed} from "@nuxtjs/composition-api";
 
-interface PostProps {
+interface PostHomeProps {
   title: string,
   description: string,
-  reading_time: number,
   date: string,
-  tags: [],
   cover: string,
-  background_is_light: boolean
+  slug: string,
+  tags: Array<string>,
+  reading_time: number
 }
 
 export default {
-  name: "Post",
+  name: "PostHome",
   props: {
     title: {
       type: String,
-      default: "New Post's title "
+      default: "Title"
     },
     description: {
       type: String,
-      default: "New Post's description"
-    },
-    reading_time: {
-      type: Number,
-      default: 0
+      default: "Description"
     },
     date: {
       type: String,
-      default: "Today"
+      default: "Date"
+    },
+    cover: {
+      type: String,
+      default: "string"
+    },
+    slug: {
+      type: String,
+      default: "slug"
     },
     tags: {
       type: Array,
       default: () => ["Tag1", "Tag2", "Tag3"],
     },
-    cover: {
-      type: String,
-      default: "default.png"
+    reading_time: {
+      type: Number,
+      default: 0
     },
-    lightBg: {
-      type: Boolean,
-      default: false
-    }
   },
-  setup(props: PostProps) {
-    const {$i18n} = useContext()
-
-    const getDate = computed(() => {
-      const dateFormat = props.date.split('-')
-      return dateFormat[0] + " " + $i18n.t('month.' + dateFormat[1]) + " " + dateFormat[2]
-    })
-
-    const getBackGroundCover = computed(() => require(`~/assets/images/posts/${props.cover}.png`))
+  setup(props: PostHomeProps) {
+    const getBackgroundCover = computed(() => require(`@/assets/images/posts/${props.cover}`))
 
     return {
-      getDate,
-      getBackGroundCover
+      getBackgroundCover
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.h-blog {
-  min-height: 20rem;
+.post {
   background-position: center;
   background-size: cover;
   @apply bg-opacity-50;

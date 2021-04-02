@@ -4,7 +4,7 @@ title: Comment ai-je commencé le développement ?
 description: Comment ai-je commencé le développement ? Que suis-je capable de maitriser ? Quel sera mon futur ?
 reading_time: 5
 tags: ["tags.life"]
-cover: post-2
+cover: post-2.png
 date: 07-01-2021
 background: false
 ---

@@ -1,5 +1,5 @@
 <template>
-  <header class="dark:bg-black dark:text-white fixed z-50 top-0 left-0 bg-white header w-full h-16 lg:h-24 duration-500" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white' : ''">
+  <header class="dark:bg-black dark:text-white fixed z-50 top-0 left-0 bg-white w-full duration-400" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white h-10 lg:h-18' : 'h-16 lg:h-24'">
     <div class="header-container z-index-50 flex justify-between items-center h-full px-5 xl:px-32">
       <nuxt-link to="/">
         <img src="@/assets/images/logo-header.png" alt="Logo Circle" class="h-10 left cursor-pointer duration-500" />
@@ -80,11 +80,11 @@
       </nav>
       <div>
         <ul class="flex items-center">
-          <li class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-850">
-            <div v-if="this.$i18n.locale === 'en'" @click="changeLanguage('fr')">
-              :fr:
+          <li @click="changeLanguage()" class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-850">
+            <div v-if="this.$i18n.locale === 'en'">
+              Fr
             </div>
-            <div v-else @click="changeLanguage('en')">
+            <div v-else>
               🇬🇧
             </div>
           </li>
@@ -114,7 +114,6 @@ export default {
   setup() {
     const {$colorMode} = useContext()
     const changeColorMode = () => {
-      console.log("changed !")
       $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
     }
 
@@ -131,13 +130,12 @@ export default {
       window.removeEventListener('scroll', updateScroll)
     })
 
-    const {app, $i18n} = useContext()
+    const {i18n} = useContext()
     const $router = useRouter()
-    const changeLanguage = (lang: 'fr' | 'en') => useAsync(() => {
-      console.log("i18n changed")
-      $i18n.setLocale(lang)
-      if ($router.currentRoute.fullPath.includes('blog')) {
-        app.refresh()
+    const changeLanguage = () => useAsync(() => {
+      i18n.setLocale(i18n.locale === 'fr' ? 'en' : 'fr')
+      if ($router.currentRoute.fullPath.includes('blog') || $router.currentRoute.fullPath === '/') {
+        window.location.reload()
       }
     })
 
@@ -152,25 +150,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header {
+.nav-link {
+  @apply text-gray-500 dark:text-gray-400 hover:dark:text-white font-medium hover:text-black mx-4 cursor-pointer duration-300
+}
 
-  .header-container {
+.nav-link-mobile {
+  @apply text-gray-500 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300
+}
 
-    .nav-link {
-      @apply text-gray-500 dark:text-gray-400 hover:dark:text-white font-medium hover:text-black mx-4 cursor-pointer duration-300
-    }
+nav .nuxt-link-exact-active {
+  @apply text-black dark:text-white;
+}
 
-    .nav-link-mobile {
-      @apply text-gray-500 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300
-    }
-
-    nav .nuxt-link-exact-active {
-      @apply text-black dark:text-white;
-    }
-
-    .navbar-bottom-items li {
-      transition: all .2s ease-in-out;
-    }
-  }
+.navbar-bottom-items li {
+  transition: all .2s ease-in-out;
 }
 </style>

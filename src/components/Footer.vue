@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer w-full border-t-2 border-solid border-black dark:border-white mb-20 md:mb-0">
+  <footer class="footer w-full border-t-2 border-solid border-gray-200 dark:border-gray-800 mb-20 md:mb-0">
     <div>
       <div class="flex flex-col items-center py-4 text-center ">
         <div class="mb-3">
@@ -67,7 +67,7 @@ export default {
   }
 
   .link {
-    @apply duration-300;
+    @apply duration-100;
 
     &:hover {
       @apply border-b-2 border-opacity-0 dark:border-opacity-0 dark:hover:border-opacity-100 hover:border-opacity-100 border-black dark:border-white border-solid;

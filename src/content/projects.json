@@ -4,7 +4,7 @@
     "title": "Erisium",
     "description": "works.erisium",
     "url": "https://erisium.com",
-    "cover": "erisium",
+    "cover": "erisium.png",
     "color": "fuchsia",
     "skills": [
       "java",
@@ -18,7 +18,7 @@
     "title": "ArtSite",
     "description": "works.artsite",
     "url": "https://arthurdanjou.fr",
-    "cover": "artsite",
+    "cover": "artsite.png",
     "color": "trueGray",
     "skills": [
       "typescript",
@@ -37,7 +37,7 @@
     "title": "ArtApi",
     "description": "works.artapi",
     "url": "https://api.arthurdanjou.fr",
-    "cover": "artapi",
+    "cover": "artapi.png",
     "color": "trueGray",
     "skills": [
       "typescript",
@@ -54,7 +54,7 @@
     "title": "ArtClick",
     "description": "works.artclick",
     "url": "https://artdanj.to",
-    "cover": "artclick",
+    "cover": "artclick.png",
     "color": "trueGray",
     "skills": [
       "adonisjs",

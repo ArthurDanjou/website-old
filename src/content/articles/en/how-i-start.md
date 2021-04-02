@@ -4,7 +4,7 @@ title: How did I start development?
 description: How did I start development? What am I capable of mastering? What will my future be?
 reading_time: 5
 tags: ["tags.life"]
-cover: post-2
+cover: post-2.png
 date: 07-01-2021
 background: true
 ---

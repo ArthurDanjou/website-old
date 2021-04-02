@@ -192,7 +192,9 @@ export default {
   tags: {
     life: 'Vie',
     dev: 'Dev',
-    tech: 'Tech'
+    tech: 'Tech',
+    software: 'Logiciel',
+    web: 'Web'
   },
 
   experiences: {

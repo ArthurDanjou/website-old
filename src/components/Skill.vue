@@ -35,7 +35,34 @@ export default {
     }
   },
   setup(props: SkillProps) {
-    const getColor = computed(() => `hover:bg-${props.color}-400`)
+    const getColor = computed(() => {
+      switch (props.color) {
+        case 'blueGray':
+          return 'hover:bg-blueGray-400'
+        case 'cyan':
+          return 'hover:bg-cyan-400'
+        case 'yellow':
+          return 'hover:bg-yellow-400'
+        case 'emerald':
+          return 'hover:bg-emerald-400'
+        case 'black':
+          return 'hover:bg-black dark:hover:bg-gray-500'
+        case 'orange':
+          return 'hover:bg-orange-400'
+        case 'lightBlue':
+          return 'hover:bg-lightBlue-400'
+        case 'lime':
+          return 'hover:bg-lime-400'
+        case 'teal':
+          return 'hover:bg-teal-400'
+        case 'blue':
+          return 'hover:bg-blue-400'
+        case 'red':
+          return 'hover:bg-red-400'
+        case 'rose':
+          return 'hover:bg-rose-400'
+      }
+    })
     const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}.png`))
 
     return {

@@ -1,0 +1,70 @@
+version: "3"
+
+networks:
+  proxy:
+    name: proxy
+    external: true
+  internal:
+    name: internal
+    external: false
+
+services:
+  artsite:
+    image: artsite:latest
+    container_name: artsite
+    labels:
+      - traefik.http.routers.artsite.rule=Host(`arthurdanjou.fr`)
+      - traefik.http.routers.artsite.tls=true
+      - traefik.http.routers.artsite.tls.certresolver=lets-encrypt
+      - traefik.docker.network=proxy
+      - traefik.port=443
+    ports:
+    - 3333:3333
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      - artapi
+  artapi:
+    image: artapi:latest
+    container_name: artapi
+    labels:
+      - traefik.http.routers.artapi.rule=Host(`api.arthurdanjou.fr`)
+      - traefik.http.routers.artapi.tls=true
+      - traefik.http.routers.artapi.tls.certresolver=lets-encrypt
+      - traefik.docker.network=proxy
+      - traefik.port=443
+    ports:
+      - 5555:5555
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      - mariadb
+      - redis
+  mariadb:
+    image: mariadb:10.5.8-focal
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD:
+    ports:
+      - 3306:3306
+    networks:
+      - internal
+      - proxy
+    labels:
+      - traefik.tcp.routers.sql.entrypoints=sql
+      - traefik.tcp.routers.sql.rule=HostSNI(`sql.arthurdanjou.fr`)
+      - traefik.docker.network=proxy
+    volumes:
+      - "/root/mariadb/data:/var/lib/mysql"
+  redis:
+    image: redis:6.0.10
+    container_name: redis
+    command: redis-server
+    ports:
+      - 6379:6379
+    networks:
+      - internal
+    volumes:
+      - "/root/redis/data:/data"

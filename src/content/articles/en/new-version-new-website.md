@@ -4,7 +4,7 @@ title: Opening of the new version of my site!
 description: After long months of development, here is version 2 of my site!
 reading_time: 2
 tags: ["tags.dev"]
-cover: post-1
+cover: post-1.png
 date: 13-12-2020
 background: false
 ---

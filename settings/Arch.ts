@@ -13,10 +13,6 @@ const build = {
   extractCss: true,
 }
 
-const generate = {
-  interval: 2000,
-}
-
 const pageTransition = {
   name: 'page',
   mode: 'out-in',
@@ -32,4 +28,6 @@ const components = true
 
 const buildDir = 'build'
 
-export default { srcDir, dir, generate, build, pageTransition, target, server, buildDir, components }
+const ssr = true
+
+export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr }

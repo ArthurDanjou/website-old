@@ -1,5 +1,5 @@
 <template>
-  <main class="blog flex flex-col items-center px-5 xl:px-96 mb-16 md:mb-32">
+  <main v-if="post" class="blog flex flex-col items-center px-5 xl:px-96 mb-16 md:mb-32">
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
       <div>
         <div class="mb-4 flex">
@@ -37,7 +37,7 @@
       </div>
       <div class="w-full">
         <div class="flex justify-center w-full h-auto">
-          <img class="w-full h-auto" :src="require(`@/assets/images/posts/${post.cover}.png`)" alt="Cover Img" />
+          <img class="w-full h-auto" :src="require(`@/assets/images/posts/${post.cover}`)" alt="Cover Img" />
         </div>
       </div>
       <nuxt-content
@@ -84,7 +84,7 @@
             </svg>
           </nuxt-link>
           <div
-            @click="copyToClipBoard"
+            @click="copyToClipboard"
             class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
           >
             <svg class="inline icon-hover" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,80 +103,93 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
+import {computed, ref, useAsync, useContext, useFetch, useMeta, useRoute} from "@nuxtjs/composition-api";
+import {Post} from "../../../@types/types";
+
 export default {
   name: "blog",
-  head() {
-    return {
-      title: 'Blog - Arthur Danjou - ' + this.post.title
-    }
-  },
-  data() {
-    return {
-      likes: 0,
-      post: null,
+  setup() {
+    const { $content, i18n, $axios } = useContext()
+    const slug = useRoute().value.params.slug
 
-      isCopied: false,
-      liked: false
+    const post = useAsync(() => {
+      return $content(`articles/${i18n.locale}`, slug)
+        .fetch<Post>()
+        .catch(() => {
+          error({ statusCode: 404, message: "Post not found" });
+        })
+    })
+
+    const likes = ref(0)
+    const liked = ref(false)
+    const { fetch } = useFetch(async () => {
+      likes.value = await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).data
+      liked.value = await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).data !== 0
+    })
+    fetch()
+
+    if (post.value) {
+      useMeta(() => ({ title: 'Blog - Arthur Danjou - ' + post.value.title }))
     }
-  },
-  async asyncData({ params, $content, app, $axios, error }) {
-    const post = await $content(`articles/${app.i18n.locale}`, params.slug)
-      .fetch()
-      .catch(() => {
-        error({ statusCode: 404, message: "Post not found" });
-      });
-    const {data: likes} = await $axios.get(`posts/${params.slug}`)
-    const liked = await $axios.get(`posts/is/${params.slug}`)
-    return {
-      post,
-      likes,
-      liked: liked.data !== 0
+
+    const handleLike = async () => {
+      if (liked.value) {
+        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value.slug}/unlike`)
+        if (data.code === 200) {
+          liked.value = false
+          likes.value = data.post.likes
+        }
+      } else {
+        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value.slug}/like`)
+        if (data.code === 200) {
+          liked.value = true
+          likes.value = data.post.likes
+        }
+      }
     }
-  },
-  methods: {
-    scrollToTop() {
+
+    const isCopied = ref(false)
+    const copyToClipboard = () => {
+      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + post.value.slug)
+      isCopied.value = true
+      setTimeout(() => {
+        isCopied.value = false
+      }, 7000)
+    }
+
+    const scrollToTop = () => {
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       })
-    },
-    copyToClipBoard() {
-      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + this.post.slug)
-      this.isCopied = true
-      setTimeout(() => {
-        this.isCopied = false
-      }, 7000)
-    },
-    async handleLike() {
-      if (this.liked) {
-        const {data} = await this.$axios.post(`posts/${this.post.slug}/unlike`)
-        if (data.code === 200) {
-          this.liked = false
-          this.likes = data.post.likes
-        }
-      } else {
-        const {data} = await this.$axios.post(`posts/${this.post.slug}/like`)
-        if (data.code === 200) {
-          this.liked = true
-          this.likes = data.post.likes
-        }
-      }
     }
-  },
-  computed: {
-    formatDate() {
-      const dateFormat = this.post.date.split('-')
-      return dateFormat[0] + " " + this.$t('month.' + dateFormat[1]) + " " + dateFormat[2]
-    },
-    formatTags() {
+
+    const formatDate = computed(() => {
+      const dateFormat = post.value.date.split('-')
+      return dateFormat[0] + " " + i18n.t('month.' + dateFormat[1]) + " " + dateFormat[2]
+    })
+
+    const formatTags = computed(() => {
       let tags = ""
-      this.post.tags.map(tag => {
-        tags += this.$t(tag) + ", "
+      post.value.tags.map(tag => {
+        tags += i18n.t(tag) + ", "
       })
       return tags.substring(0, tags.length - 2)
-    },
-  },
+    })
+
+    return {
+      post,
+      likes,
+      liked,
+      handleLike,
+      isCopied,
+      copyToClipboard,
+      scrollToTop,
+      formatDate,
+      formatTags
+    }
+  }
 }
 </script>
 

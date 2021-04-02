@@ -36,5 +36,28 @@ interface Formation {
   end_date: string
 }
 
+interface Tag {
+  slug: string
+}
 
-export { FormData, InfoData, Skill, Experience, Formation }
+interface Post {
+  slug: string,
+  title: string,
+  description: string,
+  reading_time: number,
+  tags: Array<Tag>,
+  cover: string,
+  date: string
+}
+
+interface Project {
+  slug: string,
+  title: string,
+  description: string,
+  url: string,
+  cover: string,
+  color: string,
+  skills: Array<Skill>
+}
+
+export { FormData, InfoData, Skill, Experience, Formation, Post, Tag, Project }

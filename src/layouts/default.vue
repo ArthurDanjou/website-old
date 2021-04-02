@@ -1,7 +1,7 @@
 <template>
-  <div class="dark:bg-dark-900 dark:text-white font-sans">
+  <div>
     <Header />
-    <Nuxt class="z-10 pt-16 lg:pt-24 content" />
+    <Nuxt class="z-10 pt-16 lg:pt-24 content px-5 xl:px-32"/>
     <Footer />
   </div>
 </template>

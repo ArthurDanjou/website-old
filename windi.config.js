@@ -1,7 +1,6 @@
 const colors = require('windicss/colors')
 const typography = require('windicss/plugin/typography')
 
-//export default defineConfig({
 module.exports = {
   presets: [],
   darkMode: 'class',
