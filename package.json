@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "2.0.5",
-    "@nuxtjs/tailwindcss": "4.0.1",
+    "@nuxtjs/tailwindcss": "4.0.3",
     "autoprefixer": "^10.2.5",
     "css-loader": "5.2.0",
     "nuxt-postcss8": "^1.1.2",
