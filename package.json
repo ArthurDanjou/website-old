@@ -28,6 +28,6 @@
     "css-loader": "5.2.0",
     "nuxt-postcss8": "^1.1.2",
     "postcss": "^8.2.6",
-    "tailwindcss": "^2.0.4"
+    "tailwindcss": "^2.1.1"
   }
 }
