@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="link">
+  <nuxt-link :to="link" class="duration-150 transform hover:scale-110">
     <div class="text-lg cursor-pointer px-8 py-4 rounded-xl border-2 border-gray-600 hover:(bg-gray-700 text-white) text-gray-700 duration-300 dark:(border-gray-400 text-gray-400) dark:hover:bg-gray-400 dark:hover:text-black">
       {{ content }}
     </div>
@@ -23,5 +23,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>
