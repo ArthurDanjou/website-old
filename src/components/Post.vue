@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
-    <div class="rounded-lg shadow-lg h-116 w-100 text-left dark:bg-gray-800 transform hover:scale-103 duration-300">
+    <div class="rounded-lg shadow-lg h-116 w-full md:w-100 text-left dark:bg-gray-800 transform hover:scale-103 duration-300">
       <div class="h-2/5 post rounded-t-lg"
            :style="{ backgroundImage: `url(${getBackgroundCover})` }">
       </div>

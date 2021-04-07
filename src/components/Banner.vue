@@ -1,5 +1,5 @@
 <template>
-  <section class="my-32 w-full flex items-center justify-center">
+  <section class="my-16 md:my-32 w-full flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-6xl font-bold text-gray-700 dark:text-gray-400">
         Hello I am <span class="text-black dark:text-white">Arthur Danjou</span>

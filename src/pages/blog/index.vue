@@ -14,7 +14,7 @@
     <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog.no_posts') }}</h1>
     <div class="w-full" v-else>
       <div class="flex py-8 w-full flex-wrap" >
-        <div class="mx-3 my-2" v-for="post in posts">
+        <div class="md:mx-3 my-2" v-for="post in posts">
           <Post
             :title="post.title"
             :cover="post.cover"

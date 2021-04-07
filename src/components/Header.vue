@@ -1,5 +1,5 @@
 <template>
-  <header class="dark:bg-black dark:text-white fixed z-50 top-0 left-0 bg-white w-full duration-400" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white h-10 lg:h-18' : 'h-16 lg:h-24'">
+  <header class="dark:bg-black dark:text-white fixed z-50 top-0 left-0 bg-white w-full duration-400" :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white h-16 lg:h-20' : 'h-20 lg:h-24'">
     <div class="header-container z-index-50 flex justify-between items-center h-full px-5 xl:px-32">
       <nuxt-link to="/">
         <img src="@/assets/images/logo-header.png" alt="Logo Circle" class="h-10 left cursor-pointer duration-500" />
