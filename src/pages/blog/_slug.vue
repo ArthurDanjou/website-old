@@ -42,7 +42,7 @@
       </div>
       <nuxt-content
         :document="post"
-        class="my-6 md:my-12 w-full text-justify max-w-none
+        class="my-6 md:my-10 w-full text-justify max-w-none
         prose prose-sm sm:prose lg:prose-lg lg:max-w-none sm:max-w-none
         dark:prose-dark dark:max-w-none"
       />
@@ -104,54 +104,68 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, useAsync, useContext, useFetch, useMeta, useRoute} from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  ref,
+  useContext,
+  useFetch,
+  useMeta,
+  useRoute, useStatic
+} from "@nuxtjs/composition-api";
 import {Post} from "../../../@types/types";
 
-export default {
+export default defineComponent({
   name: "blog",
+  head: {},
   setup() {
-    const { $content, i18n, $axios } = useContext()
-    const slug = useRoute().value.params.slug
+    const {$content, i18n, $axios, app, $storage} = useContext()
+    const {title} = useMeta()
+    const route = useRoute()
+    const slug = computed(() => route.value.params.slug)
 
-    const post = useAsync(() => {
+    const post = useStatic((slug) => {
       return $content(`articles/${i18n.locale}`, slug)
         .fetch<Post>()
         .catch(() => {
-          error({ statusCode: 404, message: "Post not found" });
-        })
-    })
+          app.error({statusCode: 404, message: "Post not found"});
+        }) as Promise<Post>
+    }, slug, 'post')
+
+    title.value = `Blog - Arthur Danjou - ${post.value?.title}`
 
     const likes = ref(0)
     const liked = ref(false)
-    const { fetch } = useFetch(async () => {
-      likes.value = await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).data
-      liked.value = await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).data !== 0
+    const {fetch} = useFetch(async () => {
+      await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).then((response) => likes.value = response.data)
     })
+
     fetch()
 
-    if (post.value) {
-      useMeta(() => ({ title: 'Blog - Arthur Danjou - ' + post.value.title }))
-    }
-
+    //todo rework
+    liked.value = $storage.getLocalStorage(`blog:${slug}`) === null
     const handleLike = async () => {
+      console.log("tentative")
       if (liked.value) {
-        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value.slug}/unlike`)
-        if (data.code === 200) {
-          liked.value = false
-          likes.value = data.post.likes
-        }
+        console.log("true")
+        liked.value = false
+        likes.value = likes.value - 1 <= 0 ? likes.value - 1 : 0
+        $storage.removeLocalStorage(`blog:${slug}`)
+        console.log("unliked")
       } else {
-        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value.slug}/like`)
+        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value?.slug}/like`)
         if (data.code === 200) {
           liked.value = true
           likes.value = data.post.likes
+          $storage.setLocalStorage(`blog:${slug}`, true)
+          console.log('liked')
         }
       }
     }
 
     const isCopied = ref(false)
     const copyToClipboard = () => {
-      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + post.value.slug)
+      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + post.value?.slug)
       isCopied.value = true
       setTimeout(() => {
         isCopied.value = false
@@ -166,14 +180,14 @@ export default {
     }
 
     const formatDate = computed(() => {
-      const dateFormat = post.value.date.split('-')
-      return dateFormat[0] + " " + i18n.t('month.' + dateFormat[1]) + " " + dateFormat[2]
+      const [first, second, third]: any = post.value?.date.split('-')
+      return `${first} ${i18n.t(`month.${second}`)} ${third}`
     })
 
     const formatTags = computed(() => {
       let tags = ""
-      post.value.tags.map(tag => {
-        tags += i18n.t(tag) + ", "
+      post.value?.tags.map(tag => {
+        tags += i18n.t(String(tag)) + ", "
       })
       return tags.substring(0, tags.length - 2)
     })
@@ -190,7 +204,7 @@ export default {
       formatTags
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">
