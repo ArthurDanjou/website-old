@@ -1449,6 +1449,17 @@
   dependencies:
     http-proxy-middleware "^1.0.6"
 
+"@nuxtjs/universal-storage@^0.5.7":
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/universal-storage/-/universal-storage-0.5.7.tgz#39b2b2e0afbdb1a8bada3ea3281bfd52ddb827a1"
+  integrity sha512-2lQ4ZgCKQ1W9qpf2nmmm4OmRUEjzykgA+P3YBJQNr+Qji+W3+N6l5q/kXlZEAw/8oz1HvhT8zvH296xo912R8w==
+  dependencies:
+    cookie "^0.4.1"
+    defu "^3.2.2"
+    dotprop "^1.2.1"
+    upath "^2.0.1"
+    uri-js "^4.4.1"
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"
@@ -3622,7 +3633,7 @@ cookie@^0.3.1:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
-cookie@^0.4.0:
+cookie@^0.4.0, cookie@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
   integrity sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
@@ -4165,6 +4176,11 @@ dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
+dotprop@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/dotprop/-/dotprop-1.2.1.tgz#7df88dd1c50ae4e93773475f85c84f77c302953b"
+  integrity sha512-TcgsqnhHYytg+JKusKAwe4YLZWtD/vfOmblUEbSDZxQy1nlOQTChbyvj/f6kqKLUYbcJqie97rVhDc1JBs00LA==
 
 duplexer@^0.1.2:
   version "0.1.2"
@@ -9711,7 +9727,7 @@ upper-case@^2.0.2:
   dependencies:
     tslib "^2.0.3"
 
-uri-js@^4.2.2:
+uri-js@^4.2.2, uri-js@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
@@ -10155,6 +10171,11 @@ windicss@^2.3.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/windicss/-/windicss-2.5.7.tgz#aea36568cfb412e1c673468496e920f21ef06086"
   integrity sha512-gsWZkotmw9Hr7yZy2nJAp46pmgMO1wXFFa3rfLWm57KDM31U/AucksQnwZi7zxsKM9c6O/z/61/Uvv4J096zKA==
+
+windicss@^2.5.11:
+  version "2.5.11"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-2.5.11.tgz#dd4027c724c7b12a37746d1474b96a52239157d1"
+  integrity sha512-u7b4rOPb8MwO1glkf0gdDygZ+lIzXb/PYLNjqni5Fe2684DCEt6dWTKdk3iMxXgbKoqRNncKu7xt3pFwXHdSAw==
 
 windicss@^2.5.8:
   version "2.5.8"

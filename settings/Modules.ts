@@ -3,8 +3,8 @@ import {NuxtOptionsModule} from "@nuxt/types/config/module";
 const axios = {
   credentials: true,
   baseURL: process.env.NODE_ENV == 'production'
-  ? 'https://my-domain.fr'
-  : 'http://localhost:3333',
+  ? 'https://api.arthurdanjou.fr'
+  : 'http://localhost:5555',
 }
 
 const i18n = {
@@ -49,8 +49,18 @@ const content = {
   }
 }
 
+const storage = {
+  cookie: {
+    prefix: 'artsite',
+    options: {
+      path: '/'
+    }
+  },
+}
+
 export default [
   ['@nuxtjs/axios', axios],
   ['nuxt-i18n', i18n],
   ['@nuxt/content', content],
+  ['@nuxtjs/universal-storage', storage]
 ] as NuxtOptionsModule[]
