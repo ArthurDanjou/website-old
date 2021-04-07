@@ -25,12 +25,12 @@
           />
         </div>
       </div>
-      <div class="flex w-full justify-center mb-8">
+      <!--<div class="flex w-full justify-center mb-8">
         <Button
           content="Voir les anciens posts"
-          to="/blog/page/2"
+          link="/blog/page/2"
         />
-      </div>
+      </div>-->
     </div>
   </main>
 </template>
