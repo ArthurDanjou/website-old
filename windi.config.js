@@ -1,5 +1,4 @@
 const colors = require('windicss/colors')
-const typography = require('windicss/plugin/typography')
 
 module.exports = {
   presets: [],
@@ -11,17 +10,16 @@ module.exports = {
           css: [
             {
               a: {
-                color: theme('colors.green.400'),
+                color: theme('colors.teal.400'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
-                borderBottomColor: theme('colors.dark.200'),
+                borderBottomColor: theme('colors.gray.200'),
                 borderOpacity: '0%',
                 borderBottomWidth: '2px',
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.green.400'),
-                  color: theme('colors.black')
+                  borderBottomColor: theme('colors.teal.400'),
                 }
               }
             }
@@ -35,16 +33,15 @@ module.exports = {
                 color: theme('colors.dark.100'),
               },
               a: {
-                color: theme('colors.green.400'),
+                color: theme('colors.teal.400'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
-                borderBottomColor: theme('colors.dark.200'),
+                borderBottomColor: theme('colors.gray.700'),
                 borderBottomWidth: '2px',
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.green.400'),
-                  color: theme('colors.white')
+                  borderBottomColor: theme('colors.teal.400'),
                 }
               },
               strong: {
@@ -832,6 +829,6 @@ module.exports = {
     'disabled',
   ],
   plugins: [
-    typography
+    require('windicss/plugin/typography')
   ],
 }

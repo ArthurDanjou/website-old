@@ -19,5 +19,49 @@ body {
 }
 
 .nuxt-content-editor {
-  @apply dark:bg-dark-800 border dark:border-white border-black border-solid;
+  @apply dark:(bg-dark-800 text-white) border dark:border-white border-black border-solid;
+}
+
+//TODO remove with windicss/typography
+.nuxt-content-container {
+  p {
+    @apply text-gray-700 dark:text-gray-400
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-black dark:text-white mt-8 mb-4
+  }
+
+  ul {
+    @apply list-inside list-disc my-4 text-gray-700 dark:text-gray-400
+  }
+
+  p, li {
+    @apply text-lg
+  }
+
+  h1 {
+    @apply text-4xl
+  }
+
+  h2 {
+    @apply text-3xl
+  }
+
+  h3 {
+    @apply text-2xl
+  }
+
+  h4 {
+    @apply text-xl
+  }
+
+  h5 {
+    @apply text-lg
+  }
+
+  h6 {
+    @apply text-sm
+  }
+
 }
