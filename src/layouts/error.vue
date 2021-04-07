@@ -28,14 +28,14 @@
           </div>
         </div>
         <div>
-          <nuxt-link class="home-btn" to="/">
+          <div class="home-btn" @click="next">
             <div class="w-full py-4 px-8 md:py-8 md:px-16 font-bold hover:bg-red-500 duration-500 rounded">
               {{ $t('error.back') }}
               <svg class="inline arrow-img" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
-          </nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -43,11 +43,19 @@
 </template>
 
 <script>
+import {useRouter} from "@nuxtjs/composition-api";
+
 export default {
   name: "error",
   props: ['error'],
   head: {
     title: 'Error - Arthur Danjou'
+  },
+  setup() {
+    const router = useRouter()
+    const next = () => router.back()
+
+    return {next}
   }
 }
 </script>
