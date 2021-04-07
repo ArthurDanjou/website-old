@@ -5,11 +5,11 @@
         <h2 class="font-bold text-3xl">
           Derniers projets
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl md:w-2/3 mt-4">
           Quelques projets que j'ai realise dans ma vie de developpeur.
         </p>
       </div>
-      <div class="my-8 flex w-full space-x-8">
+      <div class="my-8 md:flex w-full md:space-x-8">
         <div v-for="project in projects">
           <Project
             :title="project.title"

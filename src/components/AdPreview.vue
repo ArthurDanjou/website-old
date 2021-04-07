@@ -1,7 +1,7 @@
 <template>
   <div class="w-full my-12">
-    <div class="space-x-12 flex items-center justify-center">
-      <nuxt-link to="/uses" class="h-84 w-1/2">
+    <div class="md:space-x-12 space-y-8 md:space-y-0 flex flex-col md:flex-row items-center justify-center">
+      <nuxt-link to="/uses" class="h-84 md:w-1/2">
         <Ad color="rose" class="h-full w-full flex flex-col justify-between">
           <div>
             ILLUSTRATION
@@ -16,7 +16,7 @@
           </div>
         </Ad>
       </nuxt-link>
-      <nuxt-link to="/contact" class="h-84 w-1/2">
+      <nuxt-link to="/contact" class="h-84 md:w-1/2">
         <Ad color="blue" class="h-full w-full flex flex-col justify-between">
           <div>
             ILLUSTRATION

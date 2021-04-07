@@ -5,11 +5,11 @@
         <h2 class="font-bold text-3xl">
           Derniers articles
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl md:w-2/3 mt-4">
           Je redige des articles concernant ma vie, le developpement et mes passions.
         </p>
       </div>
-      <div class="my-8 flex w-full space-x-6">
+      <div class="my-8 md:flex w-full md:space-x-6">
         <div v-for="post in posts">
           <Post
             :title="post.title"

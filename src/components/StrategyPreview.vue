@@ -5,15 +5,15 @@
         <h2 class="font-bold text-3xl">
           Workflow
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl md:w-2/3 mt-4">
           Je suis ce processus afin d'etre le plus productif et de donner le resultat le plus qualitatif possible.
         </p>
       </div>
-      <div class="my-8 flex flex-row-reverse w-full justify-between items-center">
-        <div class="w-1/2 flex justify-center items-center">
+      <div class="my-8 flex flex-col md:flex-row-reverse w-full justify-between items-center">
+        <div class="w-full md:w-1/2 flex justify-center items-center">
           La belle image
         </div>
-        <div class="flex justify-center 1/2">
+        <div class="flex justify-center w-full md:w-1/2">
           <div class="flex flex-col space-y-6 w-full">
             <StrategyPart
               title="#1. Brainstorming"
