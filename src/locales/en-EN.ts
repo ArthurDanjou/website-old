@@ -17,7 +17,7 @@ export default {
   },
 
   error: {
-    back: 'Go to home',
+    back: 'Go back',
     no_page: 'The page you are looking for does not exist',
     internal: 'Internal error',
     error: 'Error'
