@@ -26,6 +26,8 @@ export default {
           return 'bg-red-300'
         case 'blue':
           return 'bg-blue-300'
+        case 'rose':
+          return 'bg-rose-300'
       }
     })
 

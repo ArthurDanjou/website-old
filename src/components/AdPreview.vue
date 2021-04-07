@@ -2,7 +2,7 @@
   <div class="w-full my-12">
     <div class="space-x-12 flex items-center justify-center">
       <nuxt-link to="/uses" class="h-84 w-1/2">
-        <Ad class="h-full w-full flex flex-col justify-between">
+        <Ad color="rose" class="h-full w-full flex flex-col justify-between">
           <div>
             ILLUSTRATION
           </div>
