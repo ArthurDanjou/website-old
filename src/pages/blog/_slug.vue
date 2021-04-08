@@ -59,7 +59,7 @@
             <div class="mr-2 lining-nums">
               {{ likes }}
             </div>
-            <div class="icon-hover inline">❤</div>
+            <div class="icon-hover inline">❤️</div>
           </div>
           <a
             target="_blank"
@@ -158,7 +158,7 @@ export default defineComponent({
           liked.value = true
           likes.value = data.post.likes
           $storage.setCookie(`${slug.value}`, true, {
-            maxAge: 60 * 60 * 2
+            maxAge: 60 * 60 * 5
           })
         }
       }
