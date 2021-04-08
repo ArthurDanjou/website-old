@@ -1,11 +1,11 @@
 <template>
   <main>
     <Banner />
-    <AboutPreview />
-    <PostsPreview />
-    <ProjectsPreview />
-    <StrategyPreview />
-    <AdPreview />
+    <AboutHome />
+    <PostsHome />
+    <ProjectsHome />
+    <StrategyHome />
+    <AdHome />
   </main>
 </template>
 
