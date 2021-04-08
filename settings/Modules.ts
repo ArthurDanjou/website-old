@@ -2,9 +2,7 @@ import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
   credentials: true,
-  baseURL: process.env.NODE_ENV == 'production'
-  ? 'https://api.arthurdanjou.fr'
-  : 'http://localhost:5555',
+  baseURL: 'https://api.arthurdanjou.fr'
 }
 
 const i18n = {
