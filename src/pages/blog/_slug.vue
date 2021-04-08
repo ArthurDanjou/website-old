@@ -107,7 +107,7 @@
 import {
   computed,
   defineComponent,
-  ref,
+  ref, useAsync,
   useContext,
   useFetch,
   useMeta,
@@ -120,7 +120,6 @@ export default defineComponent({
   head: {},
   setup() {
     const {$content, i18n, $axios, app, $storage} = useContext()
-    const {title} = useMeta()
     const route = useRoute()
     const slug = computed(() => route.value.params.slug)
 
@@ -132,33 +131,35 @@ export default defineComponent({
         }) as Promise<Post>
     }, slug, 'post')
 
-    title.value = `Blog - Arthur Danjou - ${post.value?.title}`
-
-    const likes = ref(0)
-    const liked = ref(false)
-    const {fetch} = useFetch(async () => {
-      await $axios.get(`https://api.arthurdanjou.fr/posts/${slug}`).then((response) => likes.value = response.data)
+    useMeta({
+      title: `Blog - Arthur Danjou - ${post.value?.title}`
     })
 
-    fetch()
+    const liked = ref($storage.getCookie(`${slug.value}`) !== undefined)
+    const likes = ref(0)
 
-    //todo rework
-    liked.value = $storage.getLocalStorage(`blog:${slug}`) === null
+    useAsync(() => {
+      $axios.get(`/posts/${slug.value}`).then((response) => {
+        likes.value = response.data
+      })
+    })
+
     const handleLike = async () => {
-      console.log("tentative")
       if (liked.value) {
-        console.log("true")
-        liked.value = false
-        likes.value = likes.value - 1 <= 0 ? likes.value - 1 : 0
-        $storage.removeLocalStorage(`blog:${slug}`)
-        console.log("unliked")
+        const {data} = await $axios.post(`/posts/${post.value?.slug}/unlike`)
+        if (data.status === 200) {
+          liked.value = false
+          likes.value = data.post.likes
+          $storage.removeCookie(`${slug.value}`)
+        }
       } else {
-        const {data} = await $axios.post(`https://api.arthurdanjou.fr/posts/${post.value?.slug}/like`)
-        if (data.code === 200) {
+        const {data} = await $axios.post(`/posts/${post.value?.slug}/like`)
+        if (data.status === 200) {
           liked.value = true
           likes.value = data.post.likes
-          $storage.setLocalStorage(`blog:${slug}`, true)
-          console.log('liked')
+          $storage.setCookie(`${slug.value}`, true, {
+            maxAge: 60 * 60 * 2
+          })
         }
       }
     }
