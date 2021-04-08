@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full mb-10">
+  <section class="w-full mb-10">
     <slot />
-  </div>
+  </section>
 </template>
 
 <script>

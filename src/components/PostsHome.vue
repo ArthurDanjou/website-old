@@ -9,7 +9,7 @@
           Je redige des articles concernant ma vie, le developpement et mes passions.
         </p>
       </div>
-      <div class="my-8 md:flex w-full md:space-x-6">
+      <div class="my-8 lg:flex w-full lg:space-x-6">
         <div v-for="post in posts">
           <Post
             :title="post.title"

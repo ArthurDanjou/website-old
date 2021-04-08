@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
-    <div class="rounded-lg shadow-lg h-116 w-full md:w-100 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 md:mb-0">
+    <div class="rounded-lg shadow-lg h-116 w-full lg:w-100 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg"
            :style="{ backgroundImage: `url(${getBackgroundCover})` }">
       </div>
@@ -8,7 +8,7 @@
         <div>
           <div class="flex space-x-2 mb-2">
             <div v-for="tag in tags">
-              <TagPreview :content="tag" :pill="true"/>
+              <Tag :content="tag" :pill="true"/>
             </div>
           </div>
           <h1 class="text-2xl font-bold">{{ title }}</h1>
