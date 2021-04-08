@@ -22,6 +22,7 @@
             :date="post.date"
             :slug="post.slug"
             :tags="post.tags"
+            :reading_time="post.reading_time"
           />
         </div>
       </div>
