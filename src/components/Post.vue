@@ -15,7 +15,7 @@
           <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ description }}</p>
         </div>
         <div class="flex justify-between">
-          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ date }}</h5>
+          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ formatDate }}</h5>
           <h5 class="text-base text-gray-700 dark:text-gray-400">{{ reading_time }} min.</h5>
         </div>
       </div>
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import {computed} from "@nuxtjs/composition-api";
+import {computed, useContext} from "@nuxtjs/composition-api";
 
 interface PostHomeProps {
   title: string,
@@ -71,8 +71,15 @@ export default {
   setup(props: PostHomeProps) {
     const getBackgroundCover = computed(() => require(`@/assets/images/posts/${props.cover}`))
 
+    const { i18n } = useContext()
+    const formatDate = computed(() => {
+      const [first, second, third]: any = props.date.split('-')
+      return `${first} ${i18n.t(`month.${second}`)} ${third}`
+    })
+
     return {
-      getBackgroundCover
+      getBackgroundCover,
+      formatDate
     }
   }
 }
