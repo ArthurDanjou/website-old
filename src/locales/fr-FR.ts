@@ -1,6 +1,6 @@
 export default {
   header: {
-    about: 'Moi',
+    about: 'A Propos',
     blog: 'Blog',
     contact: 'Contact',
     projects: 'Projets',
