@@ -4,7 +4,7 @@
       <div>
         <img class="rounded-sm" alt="Skill Img" :src="getCoverLink">
       </div>
-      <h1 class="md:text-lg text-md font-bold text-center">{{ skill }}</h1>
+      <h1 class="md:text-lg text-md font-bold text-center text-gray-700 dark:text-gray-400">{{ skill }}</h1>
     </div>
   </div>
 </template>

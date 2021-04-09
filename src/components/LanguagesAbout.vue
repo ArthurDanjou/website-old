@@ -7,7 +7,7 @@
       </svg>
     </h3>
     <div>
-      <table class="text-base text-xl">
+      <table class="text-base text-xl text-gray-700 dark:text-gray-400">
         <tr>
           <td class="font-bold py-2 pr-4">{{ $t('about.languages.fr')}} 🇫🇷</td>
           <td class="py-2 px-4">{{ $t('about.languages.native') }}</td>

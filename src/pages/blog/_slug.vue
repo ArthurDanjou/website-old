@@ -59,7 +59,7 @@
             <div class="mr-2 lining-nums">
               {{ likes }}
             </div>
-            <div class="icon-hover inline">❤️</div>
+            <div class="icon-hover inline" :class="liked ? 'animate-bounce ease duration-500':''">❤️</div>
           </div>
           <a
             target="_blank"

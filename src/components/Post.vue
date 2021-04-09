@@ -66,7 +66,7 @@ export default {
     reading_time: {
       type: Number,
       default: 0
-    },
+    }
   },
   setup(props: PostHomeProps) {
     const getBackgroundCover = computed(() => require(`@/assets/images/posts/${props.cover}`))

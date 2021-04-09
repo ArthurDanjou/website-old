@@ -8,7 +8,7 @@
       </svg>
     </h3>
     <div>
-      <ul class="text-xl">
+      <ul class="text-xl text-gray-700 dark:text-gray-400">
         <li class="my-2">
           {{ $t('about.title.technologies') }}
           <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

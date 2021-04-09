@@ -1,5 +1,5 @@
 <template>
-  <ul class="list-disc ml-10 text-gray-600 dark:text-dark-100 text-xl">
+  <ul class="list-disc ml-10 text-gray-700 dark:text-gray-400 text-xl">
     <slot/>
   </ul>
 </template>

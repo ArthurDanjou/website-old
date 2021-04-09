@@ -117,7 +117,7 @@ export default {
     communication_tool: 'Communication tool',
     organisation_tool: 'Organisation tool',
     hosting: {
-      vps: 'VPS hosting',
+      cloud: 'Cloud Hosting',
       ndd: 'Domain name'
     },
     setup: {

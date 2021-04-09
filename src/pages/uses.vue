@@ -1,8 +1,7 @@
 <template>
-  <main class="about flex flex-col items-center">
+  <main class="about flex flex-col items-center px-5 xl:px-64">
     <PageTitle
       title="about.environment"
-      color="orange"
     >
       <svg class="inline icon" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
@@ -36,7 +35,7 @@
         <EnvListItem title="about.email_client" content="Courrier by Microsoft" link="https://www.microsoft.com/fr-fr/p/courrier-et-calendrier/9wzdncrfhvqm?activetab=pivot:overviewtab"/>
         <EnvListItem title="about.vpn_client" content="Pritunl" link="https://pritunl.com/"/>
         <EnvListItem title="about.ftp_client" content="WinSCP" link="https://winscp.net/eng/download.php"/>
-        <EnvListItem title="about.web_client" content="FireFox Developer Edition" link="https://www.mozilla.org/fr/firefox/developer/"/>
+        <EnvListItem title="about.web_client" content="Google Chrome" link="https://www.google.com/intl/fr_fr/chrome/"/>
         <EnvListItem title="about.organisation_tool" content="Notion" link="https://www.notion.so/"/>
         <EnvListItem title="about.organisation_tool" content="Trello" link="https://www.trello.com/"/>
         <EnvListItem title="about.design_tool" content="Affinity Designer" link="https://affinity.serif.com/fr/designer/"/>
@@ -52,8 +51,8 @@
         </svg>
       </EnvTitle>
       <EnvList>
-        <EnvListItem title="about.hosting.vps" content="PulseHeberg" link="https://pulseheberg.com/"/>
         <EnvListItem title="about.hosting.ndd" content="OVH" link="https://ovh.com/"/>
+        <EnvListItem title="about.hosting.cloud" content="Digital Ocean" link="https://www.digitalocean.com/"/>
       </EnvList>
     </EnvGroup>
     <EnvGroup>
@@ -65,9 +64,9 @@
       <EnvList>
         <EnvListItem title="about.setup.desk" content="Ikea"/>
         <EnvListItem title="about.setup.phone" content="Apple Iphone Xr" link="https://www.apple.com/fr/shop/buy-iphone/iphone-xr"/>
-        <EnvListItem title="about.setup.computer" content="Asus i5, 8Go Ram, GTX 950, 1To HDD"/>
-        <EnvListItem title="about.setup.screen" content="iiyama ProLite E2283HS" link="https://iiyama.com/fr/fr/produits/prolite-e2283hs-b3/"/>
-        <EnvListItem title="about.setup.keyboard" content="Microsoft"/>
+        <EnvListItem title="about.setup.computer" content="Lenovo Y520 (i5, 8Go Ram, 1To HDD, 250Go SSD)"/>
+        <EnvListItem title="about.setup.screen" content="Iiyama ProLite E2283HS" link="https://iiyama.com/fr/fr/produits/prolite-e2283hs-b3/"/>
+        <EnvListItem title="about.setup.keyboard" content="Acer"/>
         <EnvListItem title="about.setup.mouse" content="Roccat Kova" link="https://fr.roccat.org/Mice/Kova-AIMO"/>
         <EnvListItem title="about.setup.headphone" content="Apple Airpods" link="https://www.apple.com/fr/airpods/"/>
         <EnvListItem title="about.setup.microphone" content="Turtle Beach px22" link="https://www.amazon.fr/Turtle-Beach-PX22-casque-gaming/dp/B00BDS415I"/>

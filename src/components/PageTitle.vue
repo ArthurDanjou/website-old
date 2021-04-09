@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="mt-16 md:mt-32 font-bold text-2xl md:text-4xl mr-2 inline mb-4 border-b-2 border-solid border-gray-200 dark:border-gray-800"
+    class="mt-16 md:mt-32 font-bold text-2xl md:text-4xl mr-2 inline mb-4 border-b-2 border-solid border-teal-400"
   >
     {{ this.$t(title) }}
     <slot />
