@@ -16,20 +16,20 @@
         <div class="flex justify-center w-full md:w-1/2">
           <div class="flex flex-col space-y-6 w-full">
             <StrategyPart
-              title="#1. Brainstorming"
-              description="Je realise blablabla Je realise blablabla Je realise blablabla Je realise blablabla"
+              title="home.strategy.1.title"
+              description="home.strategy.1.description"
             />
             <StrategyPart
-              title="#2. Conception"
-              description="Je realise blablabla"
+              title="home.strategy.2.title"
+              description="home.strategy.2.description"
             />
             <StrategyPart
-              title="#3. Developpement"
-              description="Je realise blablabla"
+              title="home.strategy.3.title"
+              description="home.strategy.3.description"
             />
             <StrategyPart
-              title="#4. Livraison"
-              description="Je realise blablabla"
+              title="home.strategy.4.title"
+              description="home.strategy.4.description"
             />
           </div>
         </div>

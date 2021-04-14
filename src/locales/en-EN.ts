@@ -28,7 +28,7 @@ export default {
     blog: 'My Blog',
     work: 'My Work',
     contact: 'Contact me',
-    about_description: 'Learn more about me, how I work and who I am',
+    about_description: 'Learn more about me, how I projects and who I am',
     blog_description: 'I write articles about my life, development and my passions',
     work_description: 'Discover my creations to get an idea of my skills',
     contact_description: 'Find all my social networks to contact me'
@@ -40,6 +40,24 @@ export default {
       hello: 'Hello, I am',
       description: 'I am a {age} year old self-taught developer. I live in Paris 🇫🇷. I love creating more or less useful applications and software. I use modern technologies to get the best possible result ✨',
     },
+    strategy: {
+      1: {
+        title: '#1. Brainstorming',
+        description: 'Test 1'
+      },
+      2: {
+        title: '#2. Design',
+        description: 'Test 2'
+      },
+      3: {
+        title: '#3. Development',
+        description: 'Test 3'
+      },
+      4: {
+        title: '#4. Delivery',
+        description: 'Test 4'
+      }
+    }
   },
 
   blog: {
@@ -154,13 +172,13 @@ export default {
     },
     how_to: {
       title: 'How to contact me? ✉',
-      description: 'Please don\'t hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️'
+      description: 'Please don\'t hesitate to contact me if you have any questions, think we could projects together or if you just want to chat ✌️'
     },
     available: {
       title: 'Am I available? 🚩',
-      description: 'This status will be updated in real time to let you know if I am available for work.',
+      description: 'This status will be updated in real time to let you know if I am available for projects.',
       start: 'I am currently',
-      end: 'for work'
+      end: 'for projects'
     }
   },
 

@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1 class="font-bold text-2xl">
-      {{ title }}
+      {{ $t(title) }}
     </h1>
     <p class="text-gray-700 dark:text-gray-400 text-base text-justify">
-      {{ description }}
+      {{ $t(description) }}
     </p>
   </div>
 </template>

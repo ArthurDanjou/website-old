@@ -4,7 +4,7 @@
       <nuxt-link to="/uses" class="h-48 md:w-1/3">
         <Ad color="rose" class="h-full w-full flex flex-col justify-between">
           <div>
-            <h1 class="font-bold text-black text-3xl">
+            <h1 class="font-bold text-black text-4xl">
               Usages
             </h1>
             <p class="text-lg text-gray-700 mt-4">

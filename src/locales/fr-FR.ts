@@ -26,11 +26,12 @@ export default {
   part: {
     about: 'A Propos',
     blog: 'Mon Blog',
-    work: 'Mon Travail',
+    projects: 'Mes Projets',
     contact: 'Me Contacter',
+    uses: 'Mes Usages',
     about_description: 'Apprenez en plus à mon propos, comment je travaille et qui je suis',
     blog_description: 'Je rédige des articles concernant ma vie, le développement et mes passions',
-    work_description: 'Découvrez mes créations pour avoir une idée de mes compétences',
+    projects_description: 'Découvrez mes créations pour avoir une idée de mes compétences',
     contact_description: 'Retrouvez tous mes réseaux sociaux pour me contacter'
   },
 
@@ -40,6 +41,24 @@ export default {
       hello: 'Bonjour, je suis',
       description: 'Je suis un jeune développeur autodidacte de {age} ans. J\'habite à Paris 🇫🇷. J\'adore créer des applications et des logiciels plus ou moins utiles. J\'utilise des technologies modernes pour obtenir le meilleur résultat possible ✨',
     },
+    strategy: {
+      1: {
+        title: '#1. Brainstorming',
+        description: 'Test 1'
+      },
+      2: {
+        title: '#2. Conception',
+        description: 'Test 2'
+      },
+      3: {
+        title: '#3. Developpement',
+        description: 'Test 3'
+      },
+      4: {
+        title: '#4. Livraison',
+        description: 'Test 4'
+      }
+    }
   },
 
   blog: {
@@ -132,8 +151,8 @@ export default {
     }
   },
 
-  work: {
-    no_work: 'Malheureusement il n\'y a pas encore de projets disponibles. Reviens plus tard 😉',
+  projects: {
+    no_project: 'Malheureusement il n\'y a pas encore de projets disponibles. Reviens plus tard 😉',
     description: 'Voici les différents projets auxquels j\'ai pu participer dans mon passé !',
     tech_used: 'Listes des compétences utilisées',
     go_back: 'Retour en arrière'

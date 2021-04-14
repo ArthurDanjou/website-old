@@ -1,17 +1,21 @@
 <template>
   <nuxt-link :to="`/projects/${slug}`">
-    <div class="rounded-lg shadow-lg w-full md:w-72 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-4 lg:mb-0">
-      <div class="h-40 post rounded-t-lg"
-           :style="{ backgroundImage: `url(${getBackgroundCover})` }">
+    <div class="rounded-lg shadow-xl h-94 w-full lg:w-84 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
+      <div class="h-2/5 post rounded-t-lg flex justify-center">
+        <img :src="getCover" alt="Project Image" class="h-full"/>
       </div>
-      <div class="p-4 flex flex-col justify-between">
-        <h1 class="text-xl font-bold">
-          {{ title }}
-        </h1>
-        <div class="flex space-x-2 mt-2">
-          <div v-for="tag in tags">
-            <Tag :content="tag" :pill="false"/>
+      <div class="h-3/5 p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex space-x-2 mb-2">
+            <div v-for="tag in tags">
+              <Tag :content="tag" :pill="false"/>
+            </div>
           </div>
+          <h1 class="text-2xl font-bold">{{ title }}</h1>
+          <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ company }}</h5>
         </div>
       </div>
     </div>
@@ -24,11 +28,11 @@ import {computed} from "@nuxtjs/composition-api";
 
 interface ProjectProp {
   title: string,
-  description: string,
   cover: string,
   slug: string,
-  color: string,
-  url: string
+  company: string,
+  tags: Array<String>,
+  description: string,
 }
 
 export default {
@@ -46,9 +50,13 @@ export default {
       type: String,
       default: "slug"
     },
-    color: {
+    description: {
       type: String,
-      default: "red"
+      default: "Description"
+    },
+    company: {
+      type: String,
+      default: "Company"
     },
     tags: {
       type: Array,
@@ -56,10 +64,10 @@ export default {
     }
   },
   setup(props: ProjectProp) {
-    const getBackgroundCover = computed(() => require(`@/assets/images/works/artapi.png`))
+    const getCover = computed(() => require(`@/assets/images/projects/${props.cover}`))
 
     return {
-      getBackgroundCover
+      getCover
     }
   }
 }
@@ -69,6 +77,7 @@ export default {
 .project {
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   @apply bg-opacity-50;
 }
 </style>

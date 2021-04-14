@@ -1,40 +1,40 @@
 <template>
-  <main class="px-5 xl:px-64 mb-16 md:mb-32">
+  <main v-if="project" class="px-5 xl:px-64 mb-16 md:mb-32">
     <div class="w-full flex flex-col lg:flex-row items-center md:items-start mt-8 md:mt-32">
       <div class="w-full lg:w-1/2 flex flex-col items-center">
         <div class="md:mb-24">
           <div class="mb-4 flex">
-            <nuxt-link to="/work" class="back-arrow flex">
+            <nuxt-link to="/projects" class="back-arrow flex">
               <div class="duration-300 arrow">
                 <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
               </div>
               <div class="ml-2">
-                {{ $t('work.go_back') }}
+                {{ $t('projects.go_back') }}
               </div>
             </nuxt-link>
           </div>
         </div>
-        <img class="w-72 rounded-xl" :src="require(`@/assets/images/works/${work.cover}.png`)" alt="Project Img" />
+        <img class="w-72 rounded-xl" :src="require(`@/assets/images/projects/${project.cover}`)" alt="Project Img" />
         <a
           class="mt-4 py-3 px-6 rounded-full cursor-pointer duration-300 mb-10 lg:mb-0"
           :class="getColor"
-          :href="work.url"
-        >{{work.url.replace('https://', '').replace('http://', '')}}</a>
+          :href="project.url"
+        >{{project.url.replace('https://', '').replace('http://', '')}}</a>
       </div>
       <div class="w-full lg:w-1/2 ml-5 ">
-        <h1 class="text-xl lg:text-3xl font-bold">
-          {{ work.title }}
+        <h1 @click="debug" class="text-xl lg:text-3xl font-bold">
+          {{ project.title }}
         </h1>
         <p class="mt-5 mb-10 text-md lg:text-lg text-gray-900 dark:text-dark-100">
-          {{ $t(work.description) }}
+          {{ $t(project.description) }}
         </p>
         <div>
           <h3 class="text-md lg:text-lg font-bold">
-            {{ $t('work.tech_used') }}
+            {{ $t('projects.tech_used') }}
           </h3>
-          <div class="flex flex-row w-full overflow-x-auto md:overflow-x-hidden md:flex-wrap space-x-4 md:space-x-0 md:justify-start">
+          <div v-if="skills && skills.length > 0" class="flex flex-row w-full overflow-x-auto md:overflow-x-hidden md:flex-wrap space-x-4 md:space-x-0 md:justify-start">
             <div v-for="skill in skills">
               <WorkSkill
                 :skill="skill.title"
@@ -49,42 +49,55 @@
   </main>
 </template>
 
-<script>
-import WorkSkill from "~/components/WorkSkill";
+<script lang="ts">
+import {
+  computed, onUpdated, useAsync, useContext,
+  useMeta,
+  useRoute,
+  useStatic, watch, watchEffect,
+} from "@nuxtjs/composition-api";
+import {Project, Skill} from "../../../@types/types";
+import {IContentDocument} from "@nuxt/content/types/content";
 
 export default {
-  components: {WorkSkill},
-  head() {
-    return {
-      title: 'Work - Arthur Danjou'
-    }
-  },
-  data() {
-    return {
-      work: null
-    }
-  },
-  async asyncData({ params, $content, error }) {
-    const work = await $content('works', params.slug)
-      .fetch()
-      .catch(() => {
-        error({
-          statusCode: 404,
-          message: 'Work not found',
+  head: {},
+  setup() {
+    const {$content, app, i18n} = useContext()
+    const route = useRoute()
+    const slug = computed(() => route.value.params.slug)
+
+    const project = useStatic((slug) => {
+      return $content('projects', slug)
+        .fetch<Project>()
+        .catch(() => {
+          app.error({statusCode: 404, message: "Project not found"})
+        }) as Promise<Project>
+    }, slug, 'projects')
+
+    const skills = useAsync(() => {
+      return $content('skills')
+        .where({
+          slug: {
+            $in: project.value?.skills
+          }
         })
-      });
-    let skills = []
-    if (work) {
-      skills = await $content('skills').where({ slug: { $in: work.skills } }).fetch()
+        .fetch<Skill>()
+        .catch(() => {
+          app.error({statusCode: 404, message: "Skills in project not found"});
+        }) as Promise<Skill>
+    })
+
+    useMeta({
+      title: `${i18n.t('header.projects')} - Arthur Danjou - ${project.value?.title}`
+    })
+
+    const debug = () => {
+      console.log(project)
+      console.log(skills)
     }
-    return {
-      work,
-      skills
-    }
-  },
-  computed: {
-    getColor() {
-      switch (this.work.color) {
+
+    const getColor = computed(() => {
+      switch (project.value?.color) {
         case 'red':
           return 'bg-red-400 hover:bg-red-600'
         case 'orange':
@@ -134,6 +147,13 @@ export default {
         case 'coolGray':
           return 'bg-coolGray-400 hover:bg-coolGray-600'
       }
+    })
+
+    return {
+      project,
+      skills,
+      getColor,
+      debug
     }
   }
 }

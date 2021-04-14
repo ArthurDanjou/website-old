@@ -77,7 +77,12 @@
 
 <script>
 export default {
-name: "uses"
+  name: "uses",
+  head() {
+    return {
+      title: `${this.$i18n.t('header.uses')} - Arthur Danjou`
+    }
+  }
 }
 </script>
 

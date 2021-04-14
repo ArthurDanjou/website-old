@@ -13,9 +13,11 @@
         <div v-for="project in projects">
           <Project
             :title="project.title"
-            :description="project.description"
-            :color="project.color"
             :cover="project.cover"
+            :description="project.description"
+            :slug="project.slug"
+            :tags="project.tags"
+            :company="project.company"
           />
         </div>
       </div>

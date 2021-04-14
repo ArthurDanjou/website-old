@@ -32,7 +32,7 @@ const i18n = {
 
 const content = {
   apiPrefix: 'api',
-  nestedProperties: ['categories.slug'],
+  nestedProperties: ['skills.slug'],
   markdown: {
     prism: {
       theme: 'prism-themes/themes/prism-darcula.css'
