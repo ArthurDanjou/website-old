@@ -4,7 +4,6 @@
     <AboutHome />
     <PostsHome />
     <ProjectsHome />
-    <StrategyHome />
     <AdHome />
   </main>
 </template>

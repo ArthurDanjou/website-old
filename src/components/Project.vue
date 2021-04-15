@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="`/projects/${slug}`">
-    <div class="rounded-lg shadow-xl h-94 w-full lg:w-84 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
+    <div class="rounded-lg shadow-xl h-80 w-full lg:w-84 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg flex justify-center">
         <img :src="getCover" alt="Project Image" class="h-full"/>
       </div>
@@ -13,9 +13,6 @@
           </div>
           <h1 class="text-2xl font-bold">{{ title }}</h1>
           <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
-        </div>
-        <div class="flex justify-between">
-          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ company }}</h5>
         </div>
       </div>
     </div>
@@ -30,7 +27,6 @@ interface ProjectProp {
   title: string,
   cover: string,
   slug: string,
-  company: string,
   tags: Array<String>,
   description: string,
 }
@@ -53,10 +49,6 @@ export default {
     description: {
       type: String,
       default: "Description"
-    },
-    company: {
-      type: String,
-      default: "Company"
     },
     tags: {
       type: Array,

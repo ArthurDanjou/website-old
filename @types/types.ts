@@ -1,6 +1,8 @@
-interface FormData {
+interface Form {
   email: string,
-  name: string
+  name: string,
+  content: string,
+  subject: string
 }
 
 interface InfoData {
@@ -60,4 +62,4 @@ interface Project {
   skills: Array<Skill>
 }
 
-export { FormData, InfoData, Skill, Experience, Formation, Post, Tag, Project }
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project }

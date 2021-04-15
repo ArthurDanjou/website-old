@@ -2,7 +2,6 @@
   <main class="contact flex flex-col items-center px-5 xl:px-64">
     <PageTitle
       title="part.contact"
-      color="purple"
     >
       <svg class="inline-block icon" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -26,7 +25,7 @@
                    id="name"/>
           </div>
           <div class="mb-3 lg:mr-4 w-full md:w-auto">
-            <input v-model="form.name"
+            <input v-model="form.email"
                    class="select-text w-full placeholder-purple-700 dark:focus:bg-dark-800 dark:placeholder-purple-400 focus:bg-white duration-300 px-3 py-2 bg-purple-50 dark:bg-dark-900 border border-solid border-purple-700 rounded-lg"
                    type="email"
                    :placeholder="$t('contact.form.mail')"
@@ -35,7 +34,7 @@
           </div>
         </div>
         <div class="mb-3 self-center">
-          <button @click.prevent="handleForm" class="dark:text-black font-bold px-3 py-2 bg-purple-400 hover:bg-purple-500 cursor-pointer duration-300 rounded-lg btn">
+          <button @click.prevent="handleForm" @keyup.ctrl.enter="handleForm" :disabled="!isSendable" class="button dark:text-black font-bold px-3 py-2 bg-purple-400 hover:bg-purple-500 cursor-pointer duration-300 rounded-lg btn">
             {{ $t('contact.form.submit')}}
             <svg class="inline icon" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -92,46 +91,62 @@
 
 <script lang="ts">
 import {computed, ref, useAsync, useContext} from "@nuxtjs/composition-api";
-import {FormData, InfoData} from "../../@types/types";
+import {InfoData, Form} from "../../@types/types";
+import {combineObject} from "windicss/types/utils/algorithm/compileStyleSheet";
 
 export default {
   name: "contact",
   setup() {
     const {$content} = useContext()
     const info = useAsync(() => {
-      return $content('infos').fetch<InfoData>()
+      return $content('infos').fetch<InfoData>() as Promise<InfoData>
     })
 
-    const hiring_color = info && info.value?.values.hiring.color
-    const getColor = computed(() => `bg-${hiring_color}-200 text-${hiring_color}-500`)
+    const hiring_color = info && info.value?.hiring.color
+    const getColor = computed(() => {
+      switch (hiring_color) {
+        case 'green':
+          return `bg-green-200 text-green-500`
+        case 'red':
+          return `bg-red-200 text-red-500`
+      }
+    })
 
     const error = ref(false)
     const success = ref(false)
 
     const {$axios} = useContext()
-    const form = ref({} as FormData)
-    const handleForm = useAsync(
-      async () => {
-        await $axios.post('subscribers',
-          {
-            email: form.value.email,
-            name: form.value.name,
-          })
-          .then(() => {
-            success.value = true
-            setTimeout(() => {
-              success.value = false
-              form.value.email = ''
-              form.value.name = ''
-            }, 5000)
-          }).catch(() => {
-            error.value = true
-            setTimeout(() => {
-              error.value = false
-            }, 5000)
-          })
-      }
-    )
+    const form = ref<Form>({} as Form)
+    const handleForm = async () => {
+      await $axios.post('subscribers',
+        {
+          email: form.value.email,
+          name: form.value.name,
+          content: form.value.content,
+          subject: form.value.subject
+        })
+        .then(() => {
+          success.value = true
+          setTimeout(() => {
+            success.value = false
+            form.value = {} as Form
+          }, 5000)
+        }).catch(() => {
+          error.value = true
+          setTimeout(() => {
+            error.value = false
+          }, 5000)
+        })
+    }
+
+    const isSendable = computed(() => {
+      const {email, name, content, subject} = form.value
+      return isNotEmpty(email) && isNotEmpty(name)
+    })
+
+    const isNotEmpty = (object: string | undefined) => {
+      return object !== undefined && object.length > 0 && object !== "" && object !== ''
+    }
 
     return {
       info,
@@ -139,7 +154,8 @@ export default {
       handleForm,
       success,
       error,
-      form
+      form,
+      isSendable
     }
   }
 }
@@ -157,6 +173,10 @@ export default {
     &:hover {
       @apply border-b-2 border-opacity-0 dark:border-opacity-0 dark:hover:border-opacity-100 hover:border-opacity-100 border-black dark:border-white border-solid;
     }
+  }
+
+  .button:disabled {
+    @apply bg-gray-400 cursor-not-allowed
   }
 }
 </style>

@@ -1,16 +1,17 @@
 <template>
   <section class="my-16 md:my-32 w-full flex items-center justify-center">
-    <div class="text-center">
+    <div class="text-center flex flex-col items-center">
       <h1 class="text-6xl font-bold text-gray-700 dark:text-gray-400">
-        Hello I am <span class="text-black dark:text-white">Arthur Danjou</span>
+        Hello, I am <span class="text-black dark:text-white">Arthur Danjou</span> 👋,
       </h1>
-      <h3 class="my-6 text-2xl font-medium text-gray-700 dark:text-gray-400">
-        Developer and Student
-      </h3>
-      <p class="text-lg text-gray-800 mb-10 dark:text-gray-300">You can follow me on <span class="link">Twitter</span>,
+      <h2 class="my-6 text-4xl text-black dark:text-white">
+        a <strong>Web</strong> and <strong>Software Developer</strong>. <br />
+        I am also a <strong>Student</strong>.
+      </h2>
+      <p class="mt-4 text-lg text-gray-800 mb-10 dark:text-gray-300">You can follow me on <span class="link">Twitter</span>,
         <span class="link">Twitch</span>
         and <span class="link">Github</span>.
-        Here is my <nuxt-link to="/contact" class="link">Contact</nuxt-link> page.
+        Here is my <nuxt-link to="contact" class="link">Contact</nuxt-link> page.
       </p>
     </div>
   </section>
