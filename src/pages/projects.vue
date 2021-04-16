@@ -20,6 +20,7 @@
               :slug="project.slug"
               :tags="project.tags"
               :company="project.company"
+              :url="project.url"
             />
           </div>
         </div>
@@ -30,7 +31,7 @@
 
 <script lang="ts">
 import {useAsync, useContext, useMeta} from "@nuxtjs/composition-api";
-import {Project} from "../../../@types/types";
+import {Project} from "../../@types/types";
 
 export default {
   name: "index",

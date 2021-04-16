@@ -2,7 +2,7 @@
   <section v-if="info && info.age" class="w-full flex items-center justify-center my-12">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-12 md:mb-0 md:w-1/2 flex justify-center">
-        <img src="@/assets/images/Logo.jpg" alt="Logo Image" class="w-1/2 rounded-2xl border-2 border-gray-100 dark:border-transparent">
+        <img src="@/assets/images/memojies/Hey.png" alt="It's me !" class="w-1/2">
       </div>
       <div class="md:w-1/2 text-justify">
         <h2 class="text-4xl font-bold text-center md:text-justify">

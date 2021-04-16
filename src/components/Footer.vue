@@ -10,8 +10,8 @@
               <span class="link">Twitch</span>
             </a>,
             <a class="font-semibold" href="https://github.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
-              <img v-if="!isDarkMode" class="inline black" src="@/assets/images/socials/github-black.svg" alt="Github logo" height="20" width="20" />
-              <img v-else class="inline black" src="@/assets/images/socials/github-white.svg" alt="Github logo" height="20" width="20" />
+              <img v-if="!isDarkMode" class="inline" src="@/assets/images/socials/github-black.svg" alt="Github logo" height="20" width="20" />
+              <img v-else class="inline" src="@/assets/images/socials/github-white.svg" alt="Github logo" height="20" width="20" />
               <span class="link">Github</span>
             </a> &
             <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank" rel="noopener noreferrer">
@@ -71,10 +71,6 @@ export default {
 .footer {
   .link {
     @apply border-b-2 border-gray-200 hover:border-black dark:border-gray-700 dark:hover:border-white;
-  }
-
-  .black {
-    @apply fill-black dark:fill-white dark:text-white dark:stroke-black
   }
 }
 </style>

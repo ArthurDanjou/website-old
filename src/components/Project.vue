@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="`/projects/${slug}`">
-    <div class="rounded-lg shadow-xl h-80 w-full lg:w-84 text-left dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
+  <a :href="url" target="_blank" rel="noopener noreferrer">
+    <div class="rounded-lg shadow-xl h-80 w-full lg:w-84 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg flex justify-center">
         <img :src="getCover" alt="Project Image" class="h-full"/>
       </div>
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-  </nuxt-link>
+  </a>
 </template>
 
 <script lang="ts">
@@ -53,6 +53,10 @@ export default {
     tags: {
       type: Array,
       default: () => ['tags.web', 'tags.software']
+    },
+    url: {
+      type: String,
+      default: 'https://arthurdanjou.fr'
     }
   },
   setup(props: ProjectProp) {

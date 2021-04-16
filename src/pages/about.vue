@@ -13,7 +13,11 @@
     <LanguagesAbout />
     <FormationsAbout />
     <ExperiencesAbout />
-    <Button content="about.cv" link="/cv" />
+    <a href="/resume.pdf" target="_blank" class="duration-150 transform hover:scale-105">
+      <div class="text-lg cursor-pointer px-8 py-4 rounded-xl border-2 border-indigo-600 hover:(bg-indigo-600 text-white) dark:hover:text-black text-indigo-600 duration-300">
+        Télécharger mon cv
+      </div>
+    </a>
   </main>
 </template>
 

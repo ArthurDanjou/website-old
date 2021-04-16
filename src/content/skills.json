@@ -21,7 +21,7 @@
     "title": "Go",
     "color": "cyan",
     "cover": "GoLang",
-    "slug": "go"
+    "slug": "golang"
   },
   {
     "title": "NuxtJs",
@@ -33,7 +33,7 @@
     "title": "VueJs",
     "color": "emerald",
     "cover": "VueJs",
-    "slug": "vueJs"
+    "slug": "vuejs"
   },
   {
     "title": "AdonisJs",
@@ -99,7 +99,7 @@
     "title": "TailwindCss",
     "color": "teal",
     "cover": "TailwindCss",
-    "slug": "tailwind"
+    "slug": "tailwindcss"
   },
   {
     "title": "Docker",

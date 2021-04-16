@@ -1,7 +1,7 @@
 <template>
   <section class="w-full flex items-center justify-center flex-col">
-    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
-      Fill in the form or <a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">Send an email</a> 📬
+    <h2 class="text-center mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
+      Fill in the form or <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">Send an email</a> 📬
     </h2>
     <form class="w-full lg:w-1/2">
       <div class="w-full lg:flex lg:space-x-4 justify-center mb-8 lg:mb-12">
