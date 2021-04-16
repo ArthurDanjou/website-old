@@ -41,9 +41,6 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
-# TypeScript cache
-*.tsbuildinfo
-
 # Optional npm cache directory
 .npm
 
@@ -71,6 +68,9 @@ typings/
 # nuxt.js build output
 .nuxt
 
+# Nuxt generate
+dist
+
 # vuepress build output
 .vuepress/dist
 
@@ -88,10 +88,5 @@ sw.*
 
 # Vim swap files
 *.swp
-/build/
 
-/dist/
-
-# Local Netlify folder
-.netlify
-/pages/blog/preview/
+build

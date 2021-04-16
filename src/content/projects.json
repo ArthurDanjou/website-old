@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "erisium",
+    "title": "Erisium",
+    "description": "works.erisium",
+    "url": "https://erisium.com",
+    "cover": "erisium.png",
+    "color": "fuchsia"
+  },
+  {
+    "slug": "artsite",
+    "title": "ArtSite",
+    "description": "works.artsite",
+    "url": "https://arthurdanjou.fr",
+    "cover": "artsite.png",
+    "color": "trueGray"
+  },
+  {
+    "slug": "artapi",
+    "title": "ArtApi",
+    "description": "works.artapi",
+    "url": "https://api.arthurdanjou.fr",
+    "cover": "artapi.png",
+    "color": "trueGray"
+  },
+  {
+    "slug": "artclick",
+    "title": "ArtClick",
+    "description": "works.artclick",
+    "url": "https://artdanj.to",
+    "cover": "artclick.png",
+    "color": "trueGray"
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "name": "artsite",
+  "name": "nuxt-ts-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,24 +10,28 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "@nuxtjs/axios": "5.13.1",
-    "@nuxtjs/redirect-module": "0.3.1",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/composition-api": "^0.22.4",
+    "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@tailwindcss/typography": "0.4.0",
-    "nuxt": "2.15.3",
-    "nuxt-i18n": "6.22.0",
-    "prism-themes": "1.6.0",
-    "sass": "1.32.8",
-    "sass-loader": "11.0.1"
+    "@nuxtjs/universal-storage": "^0.5.7",
+    "core-js": "^3.10.0",
+    "nuxt": "^2.15.3",
+    "nuxt-i18n": "^6.22.3",
+    "prism-themes": "^1.6.0",
+    "sass": "^1.32.8",
+    "windicss": "^2.5.11"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "2.0.5",
-    "@nuxtjs/tailwindcss": "4.0.1",
-    "autoprefixer": "^10.2.5",
-    "css-loader": "5.2.0",
-    "nuxt-postcss8": "^1.1.2",
-    "postcss": "^8.2.6",
-    "tailwindcss": "^2.0.4"
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/color-mode": "^2.0.5",
+    "fibers": "^5.0.0",
+    "nuxt-vite": "^0.0.36",
+    "nuxt-windicss": "^0.5.3",
+    "sass-loader": "^10.1.1",
+    "vite-plugin-windicss": "^0.11.3",
+    "vue-windicss-preprocess": "^2.2.0"
   }
 }

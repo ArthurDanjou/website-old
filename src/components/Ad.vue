@@ -1,0 +1,43 @@
+<template>
+  <div class="rounded-3xl p-2 lg:p-8 text-center" :class="getColor">
+    <slot />
+  </div>
+</template>
+
+<script lang="ts">
+import {computed} from "@nuxtjs/composition-api";
+
+interface AdProps {
+  color: string
+}
+
+export default {
+  name: "Ad",
+  props: {
+    color: {
+      type: String,
+      default: 'red'
+    }
+  },
+  setup(props: AdProps) {
+    const getColor = computed(() => {
+      switch (props.color) {
+        case 'red':
+          return 'bg-red-300'
+        case 'blue':
+          return 'bg-blue-300'
+        case 'rose':
+          return 'bg-rose-300'
+      }
+    })
+
+    return {
+      getColor
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+
+</style>

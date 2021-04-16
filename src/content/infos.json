@@ -1,0 +1,7 @@
+{
+  "age": 18,
+  "hiring": {
+    "status": "available",
+    "color": "green"
+  }
+}

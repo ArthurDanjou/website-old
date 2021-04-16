@@ -19,7 +19,7 @@ services:
       - traefik.docker.network=proxy
       - traefik.port=443
     ports:
-    - 3333:3333
+      - 3333:3333
     networks:
       - internal
       - proxy
@@ -53,27 +53,18 @@ services:
       - internal
       - proxy
     labels:
+      - traefik.tcp.routers.sql.entrypoints=sql
       - traefik.tcp.routers.sql.rule=HostSNI(`sql.arthurdanjou.fr`)
-      - traefik.tcp.routers.sql.tls=true
-      - traefik.tcp.routers.sql.tls.certresolver=lets-encrypt
       - traefik.docker.network=proxy
-      - traefik.port=3306
     volumes:
       - "/root/mariadb/data:/var/lib/mysql"
   redis:
-    image: redis:6.0.10
+    image: redis:latest
     container_name: redis
-    command: redis-server --requirepass ${REDIS_PASSWORD}
+    command: redis-server
     ports:
       - 6379:6379
     networks:
       - internal
-      - proxy
-    labels:
-      - traefik.tcp.routers.redis.rule=HostSNI(`redis.arthurdanjou.fr`)
-      - traefik.tcp.routers.redis.tls=true
-      - traefik.tcp.routers.redis.tls.certresolver=lets-encrypt
-      - traefik.docker.network=proxy
-      - traefik.port=6379
     volumes:
       - "/root/redis/data:/data"
