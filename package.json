@@ -17,7 +17,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.7",
     "core-js": "^3.10.0",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.4",
     "nuxt-i18n": "^6.22.3",
     "prism-themes": "^1.6.0",
     "sass": "^1.32.8",
