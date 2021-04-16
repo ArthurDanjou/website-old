@@ -9,7 +9,7 @@
     </PageTitle>
     <h1 v-if="projects.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('projects.no_project') }}</h1>
     <div v-else class="flex flex-col justify-around items-center py-10 w-full">
-      <h1 class="text-xl font-bold text-center mb-8">{{ $t('projects.description') }}</h1>
+      <h1 class="text-gray-700 dark:text-gray-400 text-xl mt-4">{{ $t('projects.description') }}</h1>
       <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-y-3 md:space-y-0">
         <div class="flex py-8 w-full flex-wrap" >
           <div class="md:mx-3 my-2" v-for="project in projects">

@@ -3,12 +3,12 @@ import {NuxtOptionsHead} from "@nuxt/types/config/head";
 
 const params = {
   title: 'artsite',
-  color: '#0DA5FF',
+  color: '#00a0ff',
   image: '/images/image.jpg',
   url: 'https://arthurdanjou.fr',
   favicon: {
     type: 'image/jpg',
-    href: '/favicon.jpg',
+    href: '/favicon.png',
   },
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',

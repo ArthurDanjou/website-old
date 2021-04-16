@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-row mb-5">
     <div class="self-center flex h-3 w-3 mr-3 relative">
-      <span v-if="end === 'Today'" class="animate-ping relative inline h-3 w-3 rounded-full bg-teal-400 opacity-75"></span>
+      <span v-if="end === 'Today'" class="animate-ping relative inline h-3 w-3 rounded-full bg-indigo-600 opacity-75"></span>
       <span v-else class="inline relative h-3 w-3 rounded-full bg-gray-400 opacity-75"></span>
-      <span v-if="end === 'Today'" class="inline absolute rounded-full h-3 w-3 bg-teal-500"></span>
+      <span v-if="end === 'Today'" class="inline absolute rounded-full h-3 w-3 bg-indigo-800"></span>
       <span v-else class="inline absolute rounded-full h-3 w-3 bg-gray-500"></span>
     </div>
     <div class="leading-7">

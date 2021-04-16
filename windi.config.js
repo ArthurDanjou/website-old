@@ -19,7 +19,7 @@ module.exports = {
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.teal.400'),
+                  borderBottomColor: theme('colors.indigo.600'),
                 }
               }
             }
@@ -28,12 +28,12 @@ module.exports = {
         dark: {
           css: [
             {
-              color: theme('colors.dark.100'),
+              color: theme('colors.gray.400'),
               '[class~="lead"]': {
-                color: theme('colors.dark.100'),
+                color: theme('colors.gray.400'),
               },
               a: {
-                color: theme('colors.teal.400'),
+                color: theme('colors.indigo.600'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
                 borderBottomColor: theme('colors.gray.700'),
@@ -41,7 +41,7 @@ module.exports = {
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.teal.400'),
+                  borderBottomColor: theme('colors.indigo.600'),
                 }
               },
               strong: {

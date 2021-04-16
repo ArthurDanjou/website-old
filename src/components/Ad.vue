@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-3xl p-12 text-center shadow-md" :class="getColor">
+  <div class="rounded-3xl p-2 lg:p-8 text-center shadow-md" :class="getColor">
     <slot />
   </div>
 </template>

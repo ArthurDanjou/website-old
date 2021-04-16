@@ -25,6 +25,6 @@ export default {
 
 <style scoped lang="scss">
 .link {
-  @apply font-medium cursor-pointer border-b-2 border-gray-200 text-teal-400 hover:border-teal-400 duration-200 dark:(font-white border-gray-700) hover:dark:border-teal-400
+  @apply font-medium cursor-pointer border-b-2 border-gray-200 text-indigo-600 hover:border-indigo-600 duration-200 dark:(font-white border-gray-700) hover:dark:border-indigo-600
 }
 </style>

@@ -172,7 +172,7 @@ export default {
       success: 'Inscription confirmée pour {email} !'
     },
     how_to: {
-      title: 'Comment me contacter ? ✉',
+      title: 'Pourquoi me contacter ✉',
       description: 'N\'hésitez pas à me contacter si vous avez des questions, pensez que nous pourrions travailler ensemble ou si vous souhaitez simplement vous discuter ✌️'
     },
     available: {
