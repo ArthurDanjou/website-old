@@ -7,6 +7,14 @@ export default {
     uses: 'Uses',
   },
 
+  part: {
+    about: 'About',
+    blog: 'My blog',
+    work: 'My work',
+    contact: 'Contact me',
+    uses: 'My uses'
+  },
+
   footer: {
     find_me: 'Find me on :',
     separator: 'et by',
@@ -23,51 +31,50 @@ export default {
     error: 'Error'
   },
 
-  part: {
-    about: 'About',
-    blog: 'My Blog',
-    work: 'My Work',
-    contact: 'Contact me',
-    about_description: 'Learn more about me, how I projects and who I am',
-    blog_description: 'I write articles about my life, development and my passions',
-    work_description: 'Discover my creations to get an idea of my skills',
-    contact_description: 'Find all my social networks to contact me'
-  },
-
   home: {
-    banner: {
-      role: 'Developer & student',
-      hello: 'Hello, I am',
-      description: 'I am a {age} year old self-taught developer. I live in Paris 🇫🇷. I love creating more or less useful applications and software. I use modern technologies to get the best possible result ✨',
+    about: {
+      title: 'Who am I ?',
+      about: 'Discover my profile',
+      description: 'I am a {age} year old self-taught developer. I live in Paris 🇫🇷. I love to create more or less useful applications and software. I use modern technologies to get the best possible result ✨',
     },
-    strategy: {
-      1: {
-        title: '#1. Brainstorming',
-        description: 'Test 1'
+    banner: {
+      role: 'Web and Software Developer',
+      hello: 'Hello, I am',
+      student: {
+        main: 'but also',
+        strong: 'student'
       },
-      2: {
-        title: '#2. Design',
-        description: 'Test 2'
+      contact: {
+        follow: 'VOus can follow me on',
+        and: 'and',
+        spacer: 'or simply by',
+        contact: 'Contacting',
+        me: 'me.'
+      }
+    },
+    ad: {
+      uses: {
+        title: 'How do I work?',
+        description: 'Come discover my development environment.'
       },
-      3: {
-        title: '#3. Development',
-        description: 'Test 3'
-      },
-      4: {
-        title: '#4. Delivery',
-        description: 'Test 4'
+      contact: {
+        title: 'You have a project?',
+        description: 'Contact me by detailing your project to start our collaboration.'
       }
     }
   },
 
   blog: {
+    latest: 'Latest articles',
     read: {
       back: 'Go back',
       thanks: 'Thanks for reading to the end!',
       time: 'Reading'
     },
+    description: 'I write articles about my life, development and my passions.',
     tweet: 'I love a new post from @ArthurDanj, check it out here:',
     no_posts: 'Unfortunately there are no items available yet. Come back later 😉',
+    see_more: 'See more articles',
     tags: {
       search: 'Are you looking for a specific type of article? Test the search by tag 🏷',
       back: 'Return to all articles',
@@ -108,9 +115,11 @@ export default {
       native: 'Native',
       fluent: 'Fluent'
     },
-    cv: 'Download my CV',
-    environment: 'My Environment',
-    env: {
+    cv: 'Download my CV'
+  },
+
+  uses: {
+    title: {
       description: 'My development environment makes it possible to gain in productivity. Indeed, I organize myself in this way to always optimize my time for reflection and development. Here is a list of all my software that I use on a daily basis and my setup.',
       ide: 'Text editors',
       apps: 'Apps & Softwares',
@@ -150,29 +159,30 @@ export default {
     }
   },
 
-  work: {
-    no_work: 'Unfortunately there are no projects available yet. Come back later 😉',
-    description: 'Here are the different projects I was able to participate in in my past!',
-    tech_used: 'Lists of skills used',
-    go_back: 'Go back'
+  projects: {
+    no_project: 'Unfortunately there are no projects available yet. Come back later 😉',
+    description: 'Here are the different projects in which I have been able to participate in my life as a developer!',
+    latest: 'Latest projects',
+    see_more: 'See more projects'
   },
 
   contact: {
-    newsletter: {
-      title: 'Software & Tech Newsletter 📬',
-      description: 'Subscribe to not miss my next offers, my next articles and my new projects.',
-      unfollow: 'No spam. Unsubscribe whenever you want'
-    },
     form: {
-      name: 'Name',
-      mail: 'Mail address',
-      submit: 'Subscribe',
+      title: {
+        main: 'Fill in the form',
+        email: 'Send an email'
+      },
+      name: 'What is your name?',
+      email: 'What is your Email?',
+      subject: 'Why are you contacting me?',
+      content: 'Tell me about your project',
+      submit: 'Submit',
       error: 'Error in the form!',
-      success: 'Registration confirmed for {email}!'
+      success: 'Form successfully sent!'
     },
-    how_to: {
-      title: 'How to contact me? ✉',
-      description: 'Please don\'t hesitate to contact me if you have any questions, think we could projects together or if you just want to chat ✌️'
+    why: {
+      title: 'Why contact me ✉',
+      description: 'Please don\'t hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️'
     },
     available: {
       title: 'Am I available? 🚩',
@@ -185,7 +195,9 @@ export default {
   date: {
     today: 'Today'
   },
+
   copied: 'Copied',
+
   month: {
     '01': 'January',
     '02': 'February',
@@ -200,6 +212,7 @@ export default {
     11: 'November',
     12: 'December',
   },
+
   hiring: {
     status: {
       not_available: 'not available',
@@ -212,7 +225,9 @@ export default {
     dev: 'Dev',
     tech: 'Tech',
     software: 'Software',
-    web: 'Web'
+    web: 'Web',
+    api: 'API',
+    mc: 'MineCraft'
   },
 
   experiences: {

@@ -9,7 +9,7 @@
       </svg>
     </PageTitle>
     <p class="text-gray-700 dark:text-gray-400 text-xl mt-4">
-      Je redige des articles concernant ma vie, le developpement et mes passions.
+      {{ $t('blog.description') }}
     </p>
     <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog.no_posts') }}</h1>
     <div class="w-full" v-else>
@@ -63,7 +63,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

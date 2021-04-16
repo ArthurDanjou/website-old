@@ -1,7 +1,7 @@
 <template>
   <section class="w-full flex items-center justify-center flex-col">
     <h2 class="text-center mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
-      Fill in the form or <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">Send an email</a> 📬
+      {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
     </h2>
     <form class="w-full lg:w-1/2">
       <div class="w-full lg:flex lg:space-x-4 justify-center mb-8 lg:mb-12">
@@ -13,7 +13,7 @@
             placeholder=" "
             class="form-input-half w-full"
           />
-          <label for="name" class="form-label"> What is your name ?</label>
+          <label for="name" class="form-label">{{ $t('contact.form.name') }}</label>
         </div>
         <div class="form-div lg:w-1/2">
           <input
@@ -23,7 +23,7 @@
             placeholder=" "
             class="form-input-half w-full"
           />
-          <label for="email" class="form-label">What is your email ?</label>
+          <label for="email" class="form-label">{{ $t('contact.form.email') }}</label>
         </div>
       </div>
       <div class="form-div w-full mb-8 lg:mb-12">
@@ -34,7 +34,7 @@
           placeholder=" "
           class="form-input w-full"
         />
-        <label for="subject" class="form-label">Why are you contacting me?</label>
+        <label for="subject" class="form-label">{{ $t('contact.form.subject') }}</label>
       </div>
       <div class="form-div w-full">
           <textarea
@@ -45,12 +45,12 @@
             minlength="30"
             rows="4"
           />
-        <label for="content" class="form-label">Tell me about your project</label>
+        <label for="content" class="form-label">{{ $t('contact.form.content') }}</label>
       </div>
     </form>
     <div class="my-12">
       <div class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
-        Envoyer
+        {{ $t('contact.form.submit') }}
       </div>
     </div>
   </section>

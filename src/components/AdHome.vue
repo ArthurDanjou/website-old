@@ -8,10 +8,10 @@
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">
-              Comment je travaille ?
+              {{ $t('home.ad.uses.title') }}
             </h1>
             <h3 class="px-4 text-xl text-gray-700">
-              Venez decouvrir mon environnement de developpement
+              {{ $t('home.ad.uses.description') }}
             </h3>
           </div>
         </Ad>
@@ -23,10 +23,10 @@
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">
-              Vous avez un projet ?
+              {{ $t('home.ad.contact.title') }}
             </h1>
             <h3 class="px-4 text-lg text-gray-700">
-              Contactez moi en detaillant votre projet pour debuter notre collaboration.
+              {{ $t('home.ad.contact.description') }}
             </h3>
           </div>
         </Ad>
@@ -40,7 +40,3 @@ export default {
   name: "AdPreview"
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

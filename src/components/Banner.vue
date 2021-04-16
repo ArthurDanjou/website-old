@@ -2,16 +2,17 @@
   <section class="my-16 md:my-32 w-full flex items-center justify-center">
     <div class="text-center flex flex-col items-center">
       <h1 class="text-6xl font-bold text-gray-700 dark:text-gray-400">
-        Hello, I am <span class="text-black dark:text-white">Arthur Danjou</span> 👋,
+        {{ $t('home.banner.hello') }} <span class="text-black dark:text-white">Arthur Danjou</span> 👋,
       </h1>
       <h2 class="my-6 text-4xl text-black dark:text-white">
-        a <strong>Web</strong> and <strong>Software Developer</strong>. <br />
-        I am also a <strong>Student</strong>.
+        <strong>{{ $t('home.banner.role') }}</strong>. <br />
+        {{ $t('home.banner.student.main') }} <strong>{{ $t('home.banner.student.strong') }}</strong>.
       </h2>
-      <p class="mt-4 text-lg text-gray-800 mb-10 dark:text-gray-300">You can follow me on <span class="link">Twitter</span>,
+      <p class="mt-4 text-lg text-gray-800 mb-10 dark:text-gray-300">{{ $t('home.banner.contact.follow') }} <span class="link">Twitter</span>,
         <span class="link">Twitch</span>
-        and <span class="link">Github</span>.
-        Here is my <nuxt-link to="contact" class="link">Contact</nuxt-link> page.
+        {{ $t('home.banner.contact.and') }} <span class="link">Github</span>
+        {{ $t('home.banner.contact.spacer') }}
+        <nuxt-link to="contact" class="link">{{ $t('home.banner.contact.contact') }}</nuxt-link> {{ $t('home.banner.contact.me') }}
       </p>
     </div>
   </section>

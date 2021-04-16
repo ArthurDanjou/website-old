@@ -26,9 +26,9 @@ import {computed} from "@nuxtjs/composition-api";
 interface ProjectProp {
   title: string,
   cover: string,
-  slug: string,
   tags: Array<String>,
   description: string,
+  url: string,
 }
 
 export default {
@@ -41,10 +41,6 @@ export default {
     cover: {
       type: String,
       default: "artapi.png"
-    },
-    slug: {
-      type: String,
-      default: "slug"
     },
     description: {
       type: String,

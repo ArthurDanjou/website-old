@@ -3,10 +3,10 @@
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
-          Derniers projets
+          {{ $t('projects.latest') }}
         </h2>
         <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
-          Quelques projets que j'ai realise dans ma vie de developpeur.
+          {{ $t('projects.description') }}
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-8">
@@ -15,14 +15,13 @@
             :title="project.title"
             :cover="project.cover"
             :description="project.description"
-            :slug="project.slug"
             :tags="project.tags"
-            :company="project.company"
+            :url="project.url"
           />
         </div>
       </div>
       <div class="flex">
-        <Button content="Voir plus de projets" link="projects"/>
+        <Button content="projects.see_more" link="projects"/>
       </div>
     </div>
   </section>

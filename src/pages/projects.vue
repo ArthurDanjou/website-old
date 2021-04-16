@@ -17,9 +17,7 @@
               :title="project.title"
               :cover="project.cover"
               :description="project.description"
-              :slug="project.slug"
               :tags="project.tags"
-              :company="project.company"
               :url="project.url"
             />
           </div>
@@ -53,6 +51,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-</style>

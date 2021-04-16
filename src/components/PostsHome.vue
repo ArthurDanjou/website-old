@@ -3,10 +3,10 @@
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
-          Derniers articles
+          {{ $t('blog.latest') }}
         </h2>
         <p class="text-gray-700 dark:text-gray-400 text-xl md:w-2/3 mt-4">
-          Je redige des articles concernant ma vie, le developpement et mes passions.
+          {{ $t('blog.description') }}
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-6">
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="flex">
-        <Button content="Voir plus d'articles" link="blog"/>
+        <Button content="blog.see_more" link="blog"/>
       </div>
     </div>
   </section>

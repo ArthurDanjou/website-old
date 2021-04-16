@@ -7,6 +7,14 @@ export default {
     uses: 'Usages'
   },
 
+  part: {
+    about: 'A propos',
+    contact: 'Me contacter',
+    projects: 'Mes projets',
+    blog: 'Mon blog',
+    uses: 'Mes usages'
+  },
+
   footer: {
     find_me: 'Retrouvez moi sur :',
     separator: 'et par',
@@ -23,57 +31,50 @@ export default {
     error: 'Erreur'
   },
 
-  part: {
-    about: 'A Propos',
-    blog: 'Mon Blog',
-    projects: 'Mes Projets',
-    contact: 'Me Contacter',
-    uses: 'Mes Usages',
-    about_description: 'Apprenez en plus à mon propos, comment je travaille et qui je suis',
-    blog_description: 'Je rédige des articles concernant ma vie, le développement et mes passions',
-    projects_description: 'Découvrez mes créations pour avoir une idée de mes compétences',
-    contact_description: 'Retrouvez tous mes réseaux sociaux pour me contacter'
-  },
-
   home: {
-    banner: {
-      role: 'Développeur & étudiant',
-      hello: 'Bonjour, je suis',
+    about: {
+      title: 'Qui suis-je ?',
+      about: 'Decouvrir mon profil',
       description: 'Je suis un jeune développeur autodidacte de {age} ans. J\'habite à Paris 🇫🇷. J\'adore créer des applications et des logiciels plus ou moins utiles. J\'utilise des technologies modernes pour obtenir le meilleur résultat possible ✨',
     },
-    strategy: {
-      1: {
-        title: '#1. Brainstorming',
-        description: 'Test 1'
+    banner: {
+      role: 'Développeur Web et Logiciel',
+      hello: 'Bonjour, je suis',
+      student: {
+        main: 'Mais également',
+        strong: 'étudiant'
       },
-      2: {
-        title: '#2. Conception',
-        description: 'Test 2'
+      contact: {
+        follow: 'Vous pouvez me suivre sur',
+        and: 'et',
+        spacer: 'ou tout simplement en me',
+        contact: 'Contactant',
+        me: '.'
+      }
+    },
+    ad: {
+      uses: {
+        title: 'Comment je travaille ?',
+        description: 'Venez decouvrir mon environnement de developpement.'
       },
-      3: {
-        title: '#3. Developpement',
-        description: 'Test 3'
-      },
-      4: {
-        title: '#4. Livraison',
-        description: 'Test 4'
+      contact: {
+        title: 'Vous avez un projet ?',
+        description: 'Contactez moi en detaillant votre projet pour debuter notre collaboration.'
       }
     }
   },
 
   blog: {
+    latest: 'Derniers articles',
     read: {
       back: 'Retour en arrière',
       thanks: 'Merci d\'avoir lu jusqu\'au bout !',
       time: 'Lecture'
     },
+    description: 'Je redige des articles concernant ma vie, le developpement et mes passions.',
     tweet: 'J\'aime un nouvel article d\'@ArthurDanj, venez le découvrir ici :',
     no_posts: 'Malheureusement il n\'y a pas encore d\'articles disponibles. Reviens plus tard 😉',
-    tags: {
-      search: 'Vous recherchez un type d\'article en particulier ? Tester la recherche par tag 🏷',
-      back: 'Revenir à tous les articles',
-      current: 'Liste des articles possédant le tag \'{tag}\' :'
-    },
+    see_more: 'Voir plus d\'articles',
     pagination: {
       prev: 'Précédent',
       next: 'Suivant'
@@ -109,9 +110,11 @@ export default {
       native: 'Natal',
       fluent: 'Courant'
     },
-    cv: 'Télécharger mon CV',
-    environment: 'Mon Environnement',
-    env: {
+    cv: 'Télécharger mon CV'
+  },
+
+  uses: {
+    title: {
       description: 'Mon environnement de développement permet de gagner en productivité. En effet, je m\'organise de la sorte à toujours optimiser mon temps de réflexion et de développement. Voici donc une liste de tous mes logiciels que j\'utilise au quotidien et de mon setup.',
       ide: 'Editeurs de texte',
       apps: 'Apps & Logiciels',
@@ -153,25 +156,26 @@ export default {
 
   projects: {
     no_project: 'Malheureusement il n\'y a pas encore de projets disponibles. Reviens plus tard 😉',
-    description: 'Voici les différents projets auxquels j\'ai pu participer dans mon passé !',
-    tech_used: 'Listes des compétences utilisées',
-    go_back: 'Retour en arrière'
+    description: 'Voici les différents projets auxquels j\'ai pu participer dans ma vie de développeur !',
+    latest: 'Derniers projets',
+    see_more: 'Voir plus de projets'
   },
 
   contact: {
-    newsletter: {
-      title: 'Software & Tech Newsletter 📬',
-      description: 'Abonnez vous pour ne pas louper mes prochaines offres, mes prochains articles et mes nouveaux projets.',
-      unfollow: 'Pas de spam. Désabonnement quand vous voulez'
-    },
     form: {
-      name: 'Prénom',
-      mail: 'Adresse Mail',
-      submit: 'S\'abonner',
+      title: {
+        main: 'Remplissez le formulaire ou',
+        email: 'Envoyer un email'
+      },
+      name: 'Quel est votre prénom ?',
+      email: 'Quelle est votre adresse mail ?',
+      subject: 'Pourquoi me contactez-vous ?',
+      content: 'Racontez moi votre projet',
+      submit: 'Envoyer',
       error: 'Erreur dans le formulaire !',
-      success: 'Inscription confirmée pour {email} !'
+      success: 'Formulaire envoyé avec succès !'
     },
-    how_to: {
+    why: {
       title: 'Pourquoi me contacter ✉',
       description: 'N\'hésitez pas à me contacter si vous avez des questions, pensez que nous pourrions travailler ensemble ou si vous souhaitez simplement vous discuter ✌️'
     },
@@ -186,7 +190,9 @@ export default {
   date: {
     today: 'Aujourd\'hui'
   },
+
   copied: 'Copié',
+
   month: {
     '01': 'Janvier',
     '02': 'Février',
@@ -201,6 +207,7 @@ export default {
     11: 'Novembre',
     12: 'Décembre',
   },
+
   hiring: {
     status: {
       not_available: 'non disponible',
@@ -213,7 +220,9 @@ export default {
     dev: 'Dev',
     tech: 'Tech',
     software: 'Logiciel',
-    web: 'Web'
+    web: 'Web',
+    api: 'API',
+    mc: 'MineCraft'
   },
 
   experiences: {
