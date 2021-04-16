@@ -70,7 +70,7 @@ export default {
 <style scoped lang="scss">
 .footer {
   .link {
-    @apply border-b-2 border-gray-200 hover:border-black dark:border-gray-700 dark:hover:border-white;
+    @apply border-b-2 border-gray-200 hover:border-black dark:border-gray-700 dark:hover:border-white duration-300;
   }
 }
 </style>
