@@ -177,7 +177,7 @@ export default {
     },
     why: {
       title: 'Pourquoi me contacter ✉',
-      description: 'N\'hésitez pas à me contacter si vous avez des questions, pensez que nous pourrions travailler ensemble ou si vous souhaitez simplement vous discuter ✌️'
+      description: 'N\'hésitez pas à me contacter si vous avez des questions, pensez que nous pourrions travailler ensemble ou si vous souhaitez simplement discuter ✌️'
     },
     available: {
       title: 'Suis-je disponible ? 🚩',
