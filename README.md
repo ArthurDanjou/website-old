@@ -1,20 +1,33 @@
-# nuxt-ts-app
+# ArtSite 🌍
 
-## Build Setup
+This is my personnal website.
+Hosted version : [arthurdanjou.fr](https://arthurdanjou.fr)
 
-```bash
-# install dependencies
-$ yarn install
+## Features ✨
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+- Blog
+- Portfolio
+- Dark/Light Mode
+- Contact Form
+- Personal CV
+- Automatic working state
+- Wonderfull Mobile-Header
+- Multi-Language site
+- Connected to ArtApi (my personal api)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Tech used ⚙
 
-# generate static project
-$ yarn generate
-```
+- NuxtJs (SSR Framework)
+- VueJs (Frontend framework)
+- SCSS (Style preprocessor)
+- TailwindCss (Css framework)
+- Axios (Http request)
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Author 👤
+➡ Arthur Danjou : Developer
+- Twitter : [@ArthurDanj](https://twitter.com/ArthurDanj)
+- GitHub : [@ArthurDanjou](https://github.com/ArthurDanjou)
+
+## License 📑
+Copyright © 2020 - [@ArthurDanj](https://arthurdanjou.fr) \
+This project is [MIT](https://github.com/ArthurDanjou/artsite/blob/master/License) Licensed.
