@@ -79,6 +79,10 @@ const redirect = [
   { from: '/resume', to: '/cv' }
 ]
 
+const env = {
+  path: process.cwd()
+}
+
 export default [
   ['@nuxtjs/axios', axios],
   ['nuxt-i18n', i18n],
@@ -86,6 +90,7 @@ export default [
   ['@nuxtjs/universal-storage', storage],
   ['@nuxtjs/robots', robots],
   ['@nuxtjs/sitemap', sitemap],
-  ['@nuxtjs/redirect-module', redirect]
+  ['@nuxtjs/redirect-module', redirect],
+  ['@nuxtjs/dotenv', env]
 
 ] as NuxtOptionsModule[]

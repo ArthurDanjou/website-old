@@ -7,6 +7,7 @@ import build from './settings/Build'
 import arch from './settings/Arch'
 import plugins from './settings/Plugins'
 import css from './settings/Style'
+import configs from './settings/RuntimeConfig'
 
 export default defineNuxtConfig({
   head,
@@ -15,5 +16,6 @@ export default defineNuxtConfig({
   build,
   plugins,
   css,
-  buildModules
+  buildModules,
+  ...configs
 } as NuxtConfig)

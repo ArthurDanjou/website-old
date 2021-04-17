@@ -79,25 +79,30 @@ export default {
     const {$axios} = useContext()
     const form = ref<Form>({} as Form)
     const handleForm = async () => {
-      await $axios.post('form',
+      const {data} = await $axios.post('form',
         {
           email: form.value.email,
           name: form.value.name,
           content: form.value.content,
           subject: form.value.subject
+        }, {
+          headers: {
+            'Authorization': `Bearer ${process.env.API_TOKEN}`
+          }
         })
-        .then(() => {
-          success.value = true
-          setTimeout(() => {
-            success.value = false
-            form.value = {} as Form
-          }, 5000)
-        }).catch(() => {
-          error.value = true
-          setTimeout(() => {
-            error.value = false
-          }, 5000)
-        })
+      console.log(data)
+      if (data.status === 200) {
+        success.value = true
+        setTimeout(() => {
+          success.value = false
+          form.value = {} as Form
+        }, 5000)
+      } else {
+        error.value = true
+        setTimeout(() => {
+          error.value = false
+        }, 5000)
+      }
     }
 
     const isSendable = computed(() => {

@@ -139,21 +139,33 @@ export default defineComponent({
     const likes = ref(0)
 
     useAsync(() => {
-      $axios.get(`/posts/${slug.value}`).then((response) => {
+      $axios.get(`/posts/${slug.value}`, {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      }).then((response) => {
         likes.value = response.data
       })
     })
 
     const handleLike = async () => {
       if (liked.value) {
-        const {data} = await $axios.post(`/posts/${post.value?.slug}/unlike`)
+        const {data} = await $axios.post(`/posts/${post.value?.slug}/unlike`, {}, {
+          headers: {
+            'Authorization': `Bearer ${process.env.API_TOKEN}`
+          }
+        })
         if (data.status === 200) {
           liked.value = false
           likes.value = data.post.likes
           $storage.removeCookie(`${slug.value}`)
         }
       } else {
-        const {data} = await $axios.post(`/posts/${post.value?.slug}/like`)
+        const {data} = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
+          headers: {
+            'Authorization': `Bearer ${process.env.API_TOKEN}`
+          }
+        })
         if (data.status === 200) {
           liked.value = true
           likes.value = data.post.likes
