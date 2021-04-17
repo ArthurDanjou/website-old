@@ -1,7 +1,7 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
     <div class="rounded-lg shadow-xl h-92 w-full lg:w-84 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
-      <div class="h-1/2 post flex justify-center">
+      <div class="h-1/2 w-full post flex justify-center">
         <img :src="getCover" alt="Project Image" class="h-full rounded-t-lg"/>
       </div>
       <div class="h-1/2 p-4 flex flex-col justify-between">
