@@ -1,8 +1,8 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
     <div class="rounded-lg shadow-xl h-92 w-full lg:w-84 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
-      <div class="h-1/2 w-full post flex justify-center">
-        <img :src="getCover" alt="Project Image" class="h-full rounded-t-lg"/>
+      <div class="h-1/2 w-full h-2/5 project rounded-t-lg"
+           :style="{ backgroundImage: `url(${getCover})` }">
       </div>
       <div class="h-1/2 p-4 flex flex-col justify-between">
         <div>
@@ -69,7 +69,6 @@ export default {
 .project {
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   @apply bg-opacity-50;
 }
 </style>
