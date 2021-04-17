@@ -7,9 +7,9 @@ COPY . /usr/src/artsite
 
 RUN yarn install
 
-RUN cp .env build
-
 RUN yarn build
+
+RUN cp .env build
 
 EXPOSE 3333
 
