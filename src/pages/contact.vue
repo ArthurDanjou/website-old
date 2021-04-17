@@ -59,50 +59,9 @@ export default {
       }
     })
 
-    const error = ref(false)
-    const success = ref(false)
-
-    const {$axios} = useContext()
-    const form = ref<Form>({} as Form)
-    const handleForm = async () => {
-      await $axios.post('subscribers',
-        {
-          email: form.value.email,
-          name: form.value.name,
-          content: form.value.content,
-          subject: form.value.subject
-        })
-        .then(() => {
-          success.value = true
-          setTimeout(() => {
-            success.value = false
-            form.value = {} as Form
-          }, 5000)
-        }).catch(() => {
-          error.value = true
-          setTimeout(() => {
-            error.value = false
-          }, 5000)
-        })
-    }
-
-    const isSendable = computed(() => {
-      const {email, name, content, subject} = form.value
-      return isNotEmpty(email) && isNotEmpty(name)
-    })
-
-    const isNotEmpty = (object: string | undefined) => {
-      return object !== undefined && object.length > 0 && object !== "" && object !== ''
-    }
-
     return {
       info,
       getColor,
-      handleForm,
-      success,
-      error,
-      form,
-      isSendable
     }
   }
 }

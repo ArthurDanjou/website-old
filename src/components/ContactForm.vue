@@ -8,6 +8,7 @@
         <div class="form-div lg:w-1/2 mb-8 lg:mb-0">
           <input
             id="name"
+            v-model="form.name"
             required
             type="text"
             placeholder=" "
@@ -18,6 +19,7 @@
         <div class="form-div lg:w-1/2">
           <input
             id="email"
+            v-model="form.email"
             required
             type="email"
             placeholder=" "
@@ -29,6 +31,7 @@
       <div class="form-div w-full mb-8 lg:mb-12">
         <input
           id="subject"
+          v-model="form.subject"
           required
           type="text"
           placeholder=" "
@@ -39,6 +42,7 @@
       <div class="form-div w-full">
           <textarea
             id="content"
+            v-model="form.content"
             required
             placeholder=" "
             class="form-input w-full"
@@ -48,17 +52,71 @@
         <label for="content" class="form-label">{{ $t('contact.form.content') }}</label>
       </div>
     </form>
+    <div v-if="error" class="mt-4 px-3 py-1 rounded-full bg-red-300 font-bold text-black">
+      {{ $t('contact.form.error') }}
+    </div>
+    <div v-if="success" class="mt-4 px-3 py-1 rounded-full bg-green-300 font-bold text-black">
+      {{ $t('contact.form.success') }}
+    </div>
     <div class="my-12">
-      <div class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
+      <button :disabled="!isSendable" @click.prevent="handleForm" class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
         {{ $t('contact.form.submit') }}
-      </div>
+      </button>
     </div>
   </section>
 </template>
 
 <script lang="ts">
+import {computed, ref, useContext} from "@nuxtjs/composition-api";
+import {Form} from "../../@types/types";
+
 export default {
-  name: "ContactForm"
+  name: "ContactForm",
+  setup() {
+    const error = ref(false)
+    const success = ref(false)
+
+    const {$axios} = useContext()
+    const form = ref<Form>({} as Form)
+    const handleForm = async () => {
+      await $axios.post('form',
+        {
+          email: form.value.email,
+          name: form.value.name,
+          content: form.value.content,
+          subject: form.value.subject
+        })
+        .then(() => {
+          success.value = true
+          setTimeout(() => {
+            success.value = false
+            form.value = {} as Form
+          }, 5000)
+        }).catch(() => {
+          error.value = true
+          setTimeout(() => {
+            error.value = false
+          }, 5000)
+        })
+    }
+
+    const isSendable = computed(() => {
+      const {email, name, content, subject} = form.value
+      return isNotEmpty(email) && isNotEmpty(name) && isNotEmpty(content) && isNotEmpty(subject)
+    })
+
+    const isNotEmpty = (object: string | undefined) => {
+      return object !== undefined && object.length > 0 && object !== "" && object !== ''
+    }
+
+    return {
+      error,
+      success,
+      isSendable,
+      form,
+      handleForm
+    }
+  }
 }
 </script>
 
