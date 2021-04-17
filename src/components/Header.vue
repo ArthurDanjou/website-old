@@ -82,7 +82,7 @@
         <ul class="flex items-center">
           <li @click="changeLanguage()" class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-850">
             <div v-if="this.$i18n.locale === 'en'">
-              Fr
+              🇫🇷
             </div>
             <div v-else>
               🇬🇧
