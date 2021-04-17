@@ -45,7 +45,7 @@ export default {
         strong: 'student'
       },
       contact: {
-        follow: 'VOus can follow me on',
+        follow: 'You can follow me on',
         and: 'and',
         spacer: 'or simply by',
         contact: 'Contacting',
