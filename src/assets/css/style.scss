@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 .icon {
   transform: translate(3px, -3px);
@@ -23,7 +23,7 @@ body {
 }
 
 //TODO remove with windicss/typography
-.nuxt-content-container {
+.nuxt-content-container, .nuxt-content {
   p {
     @apply text-gray-700 dark:text-gray-400
   }
