@@ -10,7 +10,7 @@ module.exports = {
           css: [
             {
               a: {
-                color: theme('colors.teal.400'),
+                color: theme('colors.indigo.600'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
                 borderBottomColor: theme('colors.gray.200'),
