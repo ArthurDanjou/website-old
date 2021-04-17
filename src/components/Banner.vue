@@ -8,9 +8,11 @@
         <strong>{{ $t('home.banner.role') }}</strong>. <br />
         {{ $t('home.banner.student.main') }} <strong>{{ $t('home.banner.student.strong') }}</strong>.
       </h2>
-      <p class="mt-4 text-lg text-gray-800 mb-10 dark:text-gray-300">{{ $t('home.banner.contact.follow') }} <span class="link">Twitter</span>,
-        <span class="link">Twitch</span>
-        {{ $t('home.banner.contact.and') }} <span class="link">Github</span>
+      <p class="mt-4 text-lg text-gray-800 mb-10 dark:text-gray-300">{{ $t('home.banner.contact.follow') }}
+        <a href="https://twitter.com/arthurdanj" target="_blank" rel="noreferrer noopener" class="link">Twitter</a>,
+        <a href="https://twitch.tv/arthurdanjou" target="_blank" rel="noreferrer noopener" class="link">Twitch</a>
+        {{ $t('home.banner.contact.and') }}
+        <a href="https://github.com/arthurdanjou" target="_blank" rel="noreferrer noopener" class="link">Github</a>
         {{ $t('home.banner.contact.spacer') }}
         <nuxt-link to="contact" class="link">{{ $t('home.banner.contact.contact') }}</nuxt-link> {{ $t('home.banner.contact.me') }}
       </p>
