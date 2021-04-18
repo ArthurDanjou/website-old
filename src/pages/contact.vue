@@ -16,7 +16,7 @@
         {{ $t('contact.why.description') }}
       </h3>
     </section>
-    <section v-if="info && info.hiring.status && info.hiring.color" class="w-full lg:w-3/4 mb-10 mt-4 text-center">
+    <section class="w-full lg:w-3/4 mb-10 mt-4 text-center">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-100">
         {{ $t('contact.available.title') }}
       </h1>
@@ -25,7 +25,7 @@
       </h3>
       <div class="my-4 text-indigo-600">
         {{ $t('contact.available.start') }}
-        <span class="py-1 px-2 font-bold rounded-full m-0.5" :class="getColor">{{ $t('hiring.status.' + info.hiring.status) }}</span>
+        <span v-if="info && info.hiring.status && info.hiring.color" class="py-1 px-2 font-bold rounded-full m-0.5" :class="getColor">{{ $t('hiring.status.' + info.hiring.status) }}</span>
         {{ $t('contact.available.end') }}
       </div>
     </section>
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, useAsync, useContext} from "@nuxtjs/composition-api";
+import {computed, ref, useAsync, useContext, watch} from "@nuxtjs/composition-api";
 import {InfoData, Form} from "../../@types/types";
 import {combineObject} from "windicss/types/utils/algorithm/compileStyleSheet";
 
@@ -56,6 +56,7 @@ export default {
           return `bg-green-200 text-green-700`
         case 'red':
           return `bg-red-200 text-red-700`
+
       }
     })
 

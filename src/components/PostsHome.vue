@@ -1,5 +1,5 @@
 <template>
-  <section v-if="posts" class="w-full flex items-center justify-center my-20">
+  <section class="w-full flex items-center justify-center my-20">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-6">
-        <div v-for="post in posts">
+        <div v-if="posts" v-for="post in posts">
           <Post
             :title="post.title"
             :cover="post.cover"

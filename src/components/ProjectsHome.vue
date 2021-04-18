@@ -1,5 +1,5 @@
 <template>
-  <section v-if="projects" class="w-full flex items-center justify-center my-20">
+  <section class="w-full flex items-center justify-center my-20">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-8">
-        <div v-for="project in projects">
+        <div v-if="projects" v-for="project in projects">
           <Project
             :title="project.title"
             :cover="project.cover"
