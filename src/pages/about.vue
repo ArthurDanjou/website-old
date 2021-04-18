@@ -21,17 +21,14 @@
   </main>
 </template>
 
-<script lang="ts">
-
-import {useContext, useMeta} from "@nuxtjs/composition-api";
+<script>
 
 export default {
   name: "about",
-  head() {},
-  setup() {
-    const { i18n } = useContext()
-    const { title } = useMeta()
-    title.value = `${i18n.t('header.about')} - Arthur Danjou`
+  head() {
+    return {
+      title: `${this.$i18n.t('header.about')} - Arthur Danjou`
+    }
   }
 }
 </script>
