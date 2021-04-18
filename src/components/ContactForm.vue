@@ -4,15 +4,15 @@
       {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
     </h2>
     <form class="w-full lg:w-1/2">
-      <div class="w-full lg:flex lg:space-x-4 justify-center mb-8 lg:mb-12">
-        <div class="form-div lg:w-1/2 mb-8 lg:mb-0">
+      <div class="w-full lg:flex justify-center mb-8 lg:mb-12">
+        <div class="form-div lg:w-1/2 mb-8 lg:mb-0 lg:mr-4">
           <input
             id="name"
             v-model="form.name"
             required
             type="text"
             placeholder=" "
-            class="form-input-half w-full"
+            class="first-input w-full"
           />
           <label for="name" class="form-label">{{ $t('contact.form.name') }}</label>
         </div>
@@ -23,7 +23,7 @@
             required
             type="email"
             placeholder=" "
-            class="form-input-half w-full"
+            class="second-input w-full"
           />
           <label for="email" class="form-label">{{ $t('contact.form.email') }}</label>
         </div>
@@ -59,7 +59,7 @@
       {{ $t('contact.form.success') }}
     </div>
     <div class="my-12">
-      <button :disabled="!isSendable" @click.prevent="handleForm" class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
+      <button :disabled="!isSendable" :class="{'disabled': !isSendable}" @click.prevent="handleForm" class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
         {{ $t('contact.form.submit') }}
       </button>
     </div>
@@ -125,21 +125,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
-input:focus-within ~ label, textarea:focus-within ~ label,
-input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label {
+input:focus-within ~ label, input:not(:placeholder-shown) ~ label {
   @apply transform scale-75 -translate-y-6 -translate-x-7;
 }
 
-.form-input-half:focus-within ~ label,
-.form-input-half:not(:placeholder-shown) ~ label {
-  @apply transform scale-75 -translate-y-6 -translate-x-5;
+textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-6 -translate-x-6;
+}
+
+.first-input:focus-within ~ label, .first-input:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-6 -translate-x-6;
+}
+
+.second-input:focus-within ~ label, .second-input:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-6 -translate-x-7;
 }
 
 .form-div {
   @apply relative border-b border-gray-200 dark:border-gray-800 focus-within:border-black dark:focus-within:border-white
 }
 
-.form-input-half, .form-input {
+.second-input, .first-input, .form-input {
   @apply block w-full appearance-none focus:outline-none bg-transparent
 }
 
@@ -149,5 +155,9 @@ input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label 
 
 .email {
   @apply duration-300 border-b-2 border-gray-200 dark:border-gray-800 hover:(border-black dark:border-white)
+}
+
+.disabled {
+  @apply bg-gray-300 cursor-not-allowed border-gray-300 hover:text-black text-black
 }
 </style>
