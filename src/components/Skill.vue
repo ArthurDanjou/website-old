@@ -45,8 +45,8 @@ export default {
           return 'hover:bg-yellow-400'
         case 'emerald':
           return 'hover:bg-emerald-400'
-        case 'black':
-          return 'hover:bg-black dark:hover:bg-gray-500'
+        case 'purple':
+          return 'hover:bg-purple-400'
         case 'orange':
           return 'hover:bg-orange-400'
         case 'lightBlue':
