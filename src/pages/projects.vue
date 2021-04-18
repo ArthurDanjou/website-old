@@ -33,7 +33,9 @@ import {Project} from "../../@types/types";
 
 export default {
   name: "index",
-  head: {},
+  head: {
+    title: `Projects - Arthur Danjou`
+  },
   setup() {
     const { $content, i18n } = useContext()
 
