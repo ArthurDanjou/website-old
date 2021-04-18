@@ -28,21 +28,21 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext} from "@nuxtjs/composition-api";
+import {useAsync, useContext, useMeta} from "@nuxtjs/composition-api";
 import {Project} from "../../@types/types";
 
 export default {
   name: "index",
-  head() {
-    return {
-      title: `${this.$i18n.t('header.projects')} - Arthur Danjou`
-    }
-  },
+  head: {},
   setup() {
-    const { $content } = useContext()
+    const { $content, i18n } = useContext()
 
     const projects = useAsync(() => {
       return $content('projects').fetch<Project>()
+    })
+
+    useMeta( {
+      title: `${i18n.t('header.projects')} - Arthur Danjou`
     })
 
     return {
