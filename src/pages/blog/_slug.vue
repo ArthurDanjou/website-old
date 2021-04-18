@@ -36,8 +36,8 @@
         </div>
       </div>
       <div class="w-full">
-        <div class="flex justify-center w-full h-auto">
-          <img class="w-full h-auto" :src="require(`@/assets/images/posts/${post.cover}`)" alt="Cover Img" />
+        <div class="flex justify-center w-full">
+          <img class="w-full" :src="require(`@/assets/images/posts/${post.cover}`)" alt="Cover Img" />
         </div>
       </div>
       <nuxt-content
