@@ -158,7 +158,7 @@ export default {
   @apply text-gray-500 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300
 }
 
-nav .nuxt-link-exact-active {
+nav .nuxt-link-exact-active, .nuxt-link-active {
   @apply text-black dark:text-white;
 }
 
