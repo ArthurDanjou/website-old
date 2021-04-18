@@ -90,8 +90,7 @@ export default {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
         })
-      console.log(data)
-      if (data.status === 200) {
+      if (data && data.status === 200) {
         success.value = true
         setTimeout(() => {
           success.value = false
