@@ -30,10 +30,8 @@ export default {
   head() {},
   setup() {
     const { i18n } = useContext()
-
-    useMeta({
-      title: `${i18n.t('header.about')} - Arthur Danjou`
-    })
+    const { title } = useMeta()
+    title.value = `${i18n.t('header.about')} - Arthur Danjou`
   }
 }
 </script>

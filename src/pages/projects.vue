@@ -41,9 +41,8 @@ export default {
       return $content('projects').fetch<Project>()
     })
 
-    useMeta({
-      title: `${i18n.t('header.projects')} - Arthur Danjou`
-    })
+    const { title } = useMeta()
+    title.value = `${i18n.t('header.projects')} - Arthur Danjou`
 
     return {
       projects
