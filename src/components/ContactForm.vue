@@ -134,7 +134,7 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .first-input:focus-within ~ label, .first-input:not(:placeholder-shown) ~ label {
-  @apply transform scale-75 -translate-y-6 -translate-x-6;
+  @apply transform scale-75 -translate-y-6 -translate-x-5;
 }
 
 .second-input:focus-within ~ label, .second-input:not(:placeholder-shown) ~ label {
