@@ -49,7 +49,7 @@ const content = {
 
 const storage = {
   cookie: {
-    prefix: 'artsite',
+    prefix: 'artsite/',
     options: {
       path: '/'
     }
