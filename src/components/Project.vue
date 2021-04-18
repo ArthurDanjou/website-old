@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts">
-
 import {computed} from "@nuxtjs/composition-api";
 
 interface ProjectProp {

@@ -232,7 +232,7 @@ export default {
 
   experiences: {
     erisium: 'Junior Developer',
-    freelance: 'FullStack Software & Web FullStack Development',
+    freelance: 'FullStack Software & Web Development',
     idemia: 'Discovery of the IT sector & the data-center',
     lsam: 'Room cleaning - Waiter - Taking orders - Welcoming customers'
   },

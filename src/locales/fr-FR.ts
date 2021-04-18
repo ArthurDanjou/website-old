@@ -34,7 +34,7 @@ export default {
   home: {
     about: {
       title: 'Qui suis-je ?',
-      about: 'Decouvrir mon profil',
+      about: 'Découvrir mon profil',
       description: 'Je suis un jeune développeur autodidacte de {age} ans. J\'habite à Paris 🇫🇷. J\'adore créer des applications et des logiciels plus ou moins utiles. J\'utilise des technologies modernes pour obtenir le meilleur résultat possible ✨',
     },
     banner: {
@@ -55,11 +55,11 @@ export default {
     ad: {
       uses: {
         title: 'Comment je travaille ?',
-        description: 'Venez decouvrir mon environnement de developpement.'
+        description: 'Venez découvrir mon environnement de développement.'
       },
       contact: {
         title: 'Vous avez un projet ?',
-        description: 'Contactez moi en detaillant votre projet pour debuter notre collaboration.'
+        description: 'Contactez moi en détaillant votre projet pour débuter notre collaboration.'
       }
     }
   },
@@ -71,7 +71,7 @@ export default {
       thanks: 'Merci d\'avoir lu jusqu\'au bout !',
       time: 'Lecture'
     },
-    description: 'Je redige des articles concernant ma vie, le developpement et mes passions.',
+    description: 'Je rédige des articles concernant ma vie, le développement et mes passions.',
     tweet: 'J\'aime un nouvel article d\'@ArthurDanj, venez le découvrir ici :',
     no_posts: 'Malheureusement il n\'y a pas encore d\'articles disponibles. Reviens plus tard 😉',
     see_more: 'Voir plus d\'articles',
@@ -227,7 +227,7 @@ export default {
 
   experiences: {
     erisium: 'Développeur Junior',
-    freelance: 'Développement FullStack Software & Web FullStack',
+    freelance: 'Développement FullStack Web & Logiciel',
     idemia: 'Découverte du secteur IT & du data-center',
     lsam: 'Nettoyage de la salle – Serveur – Prise de commandes – Accueil des clients'
   },

@@ -6,7 +6,6 @@ reading_time: 5
 tags: ["tags.life"]
 cover: post-2.png
 date: 07-01-2021
-background: true
 ---
 ## Presentation
 Many ask me how I started development, what training did I take and why did I start?

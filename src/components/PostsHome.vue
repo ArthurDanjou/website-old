@@ -5,7 +5,7 @@
         <h2 class="font-bold text-3xl">
           {{ $t('blog.latest') }}
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl md:w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
           {{ $t('blog.description') }}
         </p>
       </div>
