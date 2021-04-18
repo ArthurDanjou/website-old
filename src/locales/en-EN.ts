@@ -181,7 +181,7 @@ export default {
       success: 'Form successfully sent!'
     },
     why: {
-      title: 'Why contact me ✉',
+      title: 'Why contact me ? 📩',
       description: 'Please don\'t hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️'
     },
     available: {
