@@ -111,7 +111,7 @@ import {
   useContext,
   useFetch,
   useMeta,
-  useRoute, useStatic
+  useRoute, useStatic, watch
 } from "@nuxtjs/composition-api";
 import {Post} from "../../../@types/types";
 
@@ -121,6 +121,7 @@ export default defineComponent({
   setup() {
     const {$content, i18n, $axios, app, $storage} = useContext()
     const route = useRoute()
+    const { title } = useMeta()
     const slug = computed(() => route.value.params.slug)
 
     const post = useStatic((slug) => {
@@ -131,8 +132,8 @@ export default defineComponent({
         }) as Promise<Post>
     }, slug, 'post')
 
-    useMeta({
-      title: `Blog - Arthur Danjou - ${post.value?.title}`
+    watch(post, () => {
+      title.value = `Blog - Arthur Danjou - ${post.value?.title || 'Loading title...'}`
     })
 
     const liked = ref($storage.getCookie(`${slug.value}`) !== undefined)
