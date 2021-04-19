@@ -1,8 +1,8 @@
 <template>
-  <section class="w-full flex items-center justify-center my-20">
+  <section v-if="projects" class="w-full flex items-center justify-center my-20">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
-        <h2 class="font-bold text-3xl">
+        <h2 @click="debug" class="font-bold text-3xl">
           {{ $t('projects.latest') }}
         </h2>
         <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-8">
-        <div v-if="projects" v-for="project in projects">
+        <div v-for="project in projects">
           <Project
             :title="project.title"
             :cover="project.cover"
@@ -32,7 +32,7 @@ import {useAsync, useContext} from "@nuxtjs/composition-api";
 import {Project} from "../../@types/types";
 
 export default {
-  name: "ProjectsPreview",
+  name: "ProjectsHome",
   setup() {
     const { $content } = useContext()
 
@@ -42,13 +42,14 @@ export default {
         .fetch<Project>()
     })
 
+    const debug = () => {
+      console.log(projects)
+    }
+
     return {
-      projects
+      projects,
+      debug
     }
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

@@ -1,8 +1,8 @@
 <template>
-  <section class="w-full flex items-center justify-center my-20">
+  <section v-if="posts" class="w-full flex items-center justify-center my-20">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
-        <h2 class="font-bold text-3xl">
+        <h2 @click="debug" class="font-bold text-3xl">
           {{ $t('blog.latest') }}
         </h2>
         <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-6">
-        <div v-if="posts" v-for="post in posts">
+        <div v-for="post in posts">
           <Post
             :title="post.title"
             :cover="post.cover"
@@ -34,24 +34,25 @@ import {useAsync, useContext} from "@nuxtjs/composition-api";
 import {Post} from "../../@types/types";
 
 export default {
-  name: "PostsPreview",
+  name: "PostsHome",
   setup() {
     const { $content, i18n } = useContext()
 
     const posts = useAsync(() => {
       return $content(`articles/${i18n.locale}`)
-        .sortBy("date", "asc")
+        .sortBy('date', 'asc')
         .limit(3)
         .fetch<Post>()
     })
 
-   return {
-      posts
-   }
+    const debug = () => {
+      console.log(posts)
+    }
+
+    return {
+      posts,
+      debug
+    }
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

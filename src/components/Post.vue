@@ -2,7 +2,7 @@
   <nuxt-link :to="`/blog/${slug}`" rel="noreferrer noopener">
     <div class="rounded-lg shadow-xl h-116 w-full lg:w-100 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg"
-           :style="{ backgroundImage: `url(${getBackgroundCover})` }">
+           :style="{ backgroundImage: `url(${getCover})` }">
       </div>
       <div class="h-3/5 p-4 flex flex-col justify-between">
         <div>
@@ -26,7 +26,7 @@
 <script lang="ts">
 import {computed, useContext} from "@nuxtjs/composition-api";
 
-interface PostHomeProps {
+interface PostProps {
   title: string,
   description: string,
   date: string,
@@ -37,7 +37,7 @@ interface PostHomeProps {
 }
 
 export default {
-  name: "PostHome",
+  name: "Post",
   props: {
     title: {
       type: String,
@@ -68,8 +68,8 @@ export default {
       default: 0
     }
   },
-  setup(props: PostHomeProps) {
-    const getBackgroundCover = computed(() => require(`~/assets/images/posts/${props.cover}`))
+  setup(props: PostProps) {
+    const getCover = computed(() => require(`~/assets/images/posts/${props.cover}`))
 
     const { i18n } = useContext()
     const formatDate = computed(() => {
@@ -78,7 +78,7 @@ export default {
     })
 
     return {
-      getBackgroundCover,
+      getCover,
       formatDate
     }
   }

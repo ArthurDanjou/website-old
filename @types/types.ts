@@ -58,8 +58,7 @@ interface Project {
   description: string,
   url: string,
   cover: string,
-  color: string,
-  skills: Array<Skill>
+  tags: Array<Tag>,
 }
 
 export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project }

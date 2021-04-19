@@ -12,7 +12,7 @@
       <h1 class="text-gray-700 dark:text-gray-400 text-xl mt-4">{{ $t('projects.description') }}</h1>
       <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-y-3 md:space-y-0">
         <div class="flex py-8 w-full flex-wrap" >
-          <div class="md:mx-3 my-2 w-full xl:w-auto" v-for="project in projects">
+          <div class="md:mx-3 my-2 w-full lg:w-auto" v-for="project in projects">
             <Project
               :title="project.title"
               :cover="project.cover"
