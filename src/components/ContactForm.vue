@@ -67,10 +67,10 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 import {Form} from "../../@types/types";
 
-export default {
+export default defineComponent({
   name: "ContactForm",
   setup() {
     const error = ref(false)
@@ -121,7 +121,7 @@ export default {
       handleForm
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

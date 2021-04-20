@@ -37,10 +37,10 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 import {Post} from "../../../@types/types";
 
-export default {
+export default defineComponent({
   name: "blog",
   head() {
     return {
@@ -61,5 +61,5 @@ export default {
       posts,
     }
   }
-}
+})
 </script>

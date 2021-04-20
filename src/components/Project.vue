@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import {computed} from "@nuxtjs/composition-api";
+import {computed, defineComponent} from "@nuxtjs/composition-api";
 
 interface ProjectProp {
   title: string,
@@ -30,7 +30,7 @@ interface ProjectProp {
   url: string,
 }
 
-export default {
+export default defineComponent({
   name: "Project",
   props: {
     title: {
@@ -61,7 +61,7 @@ export default {
       getCover
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

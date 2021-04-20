@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import {computed, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useContext} from "@nuxtjs/composition-api";
 
 interface PostProps {
   title: string,
@@ -36,7 +36,7 @@ interface PostProps {
   reading_time: number
 }
 
-export default {
+export default defineComponent({
   name: "Post",
   props: {
     title: {
@@ -82,7 +82,7 @@ export default {
       formatDate
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

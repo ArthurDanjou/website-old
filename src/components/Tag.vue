@@ -8,7 +8,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import {defineComponent} from "@nuxtjs/composition-api";
+
+export default defineComponent({
   name: "TagPreview",
   props: {
     content: {
@@ -20,5 +22,5 @@ export default {
       default: true
     }
   },
-}
+})
 </script>

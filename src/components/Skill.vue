@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import {computed} from '@nuxtjs/composition-api'
+import {computed, defineComponent} from '@nuxtjs/composition-api'
 
 interface SkillProps {
   skill: string,
@@ -18,7 +18,7 @@ interface SkillProps {
   cover: string
 }
 
-export default {
+export default defineComponent({
   name: "Skill",
   props: {
     skill: {
@@ -70,5 +70,5 @@ export default {
       getCoverLink
     }
   }
-}
+})
 </script>

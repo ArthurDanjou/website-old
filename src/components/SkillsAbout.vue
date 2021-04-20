@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 import {Skill} from "../../@types/types";
 
-export default {
+export default defineComponent({
   name: "SkillsAbout",
   setup() {
     const {$content} = useContext()
@@ -35,5 +35,5 @@ export default {
       skills
     }
   }
-}
+})
 </script>

@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import {computed, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useContext} from "@nuxtjs/composition-api";
 
 interface ExperienceProps {
   title: string,
@@ -26,7 +26,7 @@ interface ExperienceProps {
   end: string
 }
 
-export default {
+export default defineComponent({
   name: "Experience",
   props: {
     title: {
@@ -71,7 +71,7 @@ export default {
       isSameDate
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

@@ -30,29 +30,14 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext} from "@nuxtjs/composition-api";
-import {Post} from "../../@types/types";
+import {defineComponent} from "@nuxtjs/composition-api";
 
-export default {
+export default defineComponent({
   name: "PostsHome",
-  setup() {
-    const { $content, i18n } = useContext()
-
-    const posts = useAsync(() => {
-      return $content(`articles/${i18n.locale}`)
-        .sortBy('date', 'asc')
-        .limit(3)
-        .fetch<Post>()
-    })
-
-    const debug = () => {
-      console.log(posts)
-    }
-
-    return {
-      posts,
-      debug
+  props: {
+    posts: {
+      default: () => [],
     }
   }
-}
+})
 </script>

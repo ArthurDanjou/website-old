@@ -42,10 +42,10 @@
   </main>
 </template>
 
-<script>
-import {useRouter} from "@nuxtjs/composition-api";
+<script lang="ts">
+import {defineComponent, useRouter} from "@nuxtjs/composition-api";
 
-export default {
+export default defineComponent({
   name: "error",
   props: ['error'],
   head: {
@@ -57,7 +57,7 @@ export default {
 
     return {next}
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

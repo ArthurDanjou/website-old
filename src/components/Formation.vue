@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import {computed, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useContext} from "@nuxtjs/composition-api";
 
 interface FormationProps {
   title: string,
@@ -25,7 +25,7 @@ interface FormationProps {
   end: string
 }
 
-export default {
+export default defineComponent({
   name: "Formation",
   props: {
     title: {
@@ -65,7 +65,7 @@ export default {
       getEndDate
     }
   }
-}
+})
 </script>
 
 <style scoped>

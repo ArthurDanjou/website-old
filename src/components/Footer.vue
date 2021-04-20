@@ -47,9 +47,9 @@
 </template>
 
 <script>
-import {computed, ref, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 
-export default {
+export default defineComponent({
   name: "Footer",
   setup() {
     const {$colorMode} = useContext()
@@ -64,7 +64,7 @@ export default {
       isDarkMode
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

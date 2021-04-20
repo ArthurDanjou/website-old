@@ -18,10 +18,10 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 import {Formation} from "../../@types/types";
 
-export default {
+export default defineComponent({
   name: "FormationsHome",
   setup() {
     const {$content} = useContext()
@@ -36,7 +36,7 @@ export default {
       formations
     }
   }
-}
+})
 </script>
 
 <style scoped>

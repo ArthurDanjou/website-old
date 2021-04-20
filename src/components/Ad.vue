@@ -5,13 +5,13 @@
 </template>
 
 <script lang="ts">
-import {computed} from "@nuxtjs/composition-api";
+import {computed, defineComponent} from "@nuxtjs/composition-api";
 
 interface AdProps {
   color: string
 }
 
-export default {
+export default defineComponent({
   name: "Ad",
   props: {
     color: {
@@ -35,5 +35,5 @@ export default {
       getColor
     }
   }
-}
+})
 </script>

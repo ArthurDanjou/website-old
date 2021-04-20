@@ -107,9 +107,9 @@
 </template>
 
 <script lang="ts">
-import {onMounted, onUnmounted, ref, useAsync, useContext, useRouter} from "@nuxtjs/composition-api";
+import {defineComponent, onMounted, onUnmounted, ref, useAsync, useContext, useRouter} from "@nuxtjs/composition-api";
 
-export default {
+export default defineComponent({
   name: "Header",
   setup() {
     const {$colorMode} = useContext()
@@ -146,7 +146,7 @@ export default {
       changeLanguage
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">

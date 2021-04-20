@@ -1,5 +1,3 @@
-import {defineNuxtConfig} from "@nuxtjs/composition-api";
-import {NuxtConfig} from "@nuxt/types";
 import head from './settings/Head'
 import buildModules from './settings/BuildModules'
 import modules from './settings/Modules'
@@ -9,7 +7,7 @@ import plugins from './settings/Plugins'
 import css from './settings/Style'
 import configs from './settings/RuntimeConfig'
 
-export default defineNuxtConfig({
+export default {
   head,
   modules,
   ...arch,
@@ -18,4 +16,4 @@ export default defineNuxtConfig({
   css,
   buildModules,
   ...configs
-} as NuxtConfig)
+}
