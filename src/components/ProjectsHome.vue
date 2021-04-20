@@ -9,7 +9,7 @@
           {{ $t('projects.description') }}
         </p>
       </div>
-      <div class="my-8 lg:flex w-full lg:space-x-8">
+      <div class="my-8 lg:flex w-full lg:space-x-8 flex flex-wrap justify-center">
         <div v-for="project in projects">
           <Project
             :title="project.title"
