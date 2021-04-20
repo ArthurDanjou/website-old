@@ -2,7 +2,7 @@
   <section v-if="posts" class="w-full flex items-center justify-center my-20">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
-        <h2 @click="debug" class="font-bold text-3xl">
+        <h2 class="font-bold text-3xl">
           {{ $t('blog.latest') }}
         </h2>
         <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">

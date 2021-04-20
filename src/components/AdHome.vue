@@ -1,13 +1,13 @@
 <template>
   <section class="w-full my-12">
     <div class="md:space-x-12 space-y-8 md:space-y-0 flex flex-col md:flex-row items-center justify-around h-full">
-      <nuxt-link to="/env" class="md:w-1/3 h-full">
+      <nuxt-link to="/env" class="h-full md:w-2/5">
         <Ad color="rose" class="w-full flex flex-col justify-between items-center">
           <div>
             <img class="h-48" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
           </div>
           <div>
-            <h1 class="env text-black text-4xl">
+            <h1 class="font-bold text-black text-4xl">
               {{ $t('home.ad.env.title') }}
             </h1>
             <h3 class="px-4 text-xl text-gray-700">
@@ -16,7 +16,7 @@
           </div>
         </Ad>
       </nuxt-link>
-      <nuxt-link to="/contact" class="md:w-1/3 h-full">
+      <nuxt-link to="/contact" class="h-full md:w-2/5">
         <Ad color="blue" class="w-full flex flex-col justify-between items-center">
           <div>
             <img class="h-48" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
