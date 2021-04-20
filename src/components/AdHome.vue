@@ -8,7 +8,7 @@
           </div>
           <div>
             <h1 class="env text-black text-4xl">
-              {{ $t('home.ad.uses.title') }}
+              {{ $t('home.ad.env.title') }}
             </h1>
             <h3 class="px-4 text-xl text-gray-700">
               {{ $t('home.ad.env.description') }}
