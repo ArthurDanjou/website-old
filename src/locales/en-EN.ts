@@ -8,11 +8,11 @@ export default {
   },
 
   part: {
-    about: 'About',
+    about: 'About me',
     blog: 'My blog',
     work: 'My work',
     contact: 'Contact me',
-    env: 'My Environment'
+    env: 'My environment'
   },
 
   footer: {
@@ -227,7 +227,7 @@ export default {
     software: 'Software',
     web: 'Web',
     api: 'API',
-    mc: 'MineCraft'
+    mc: 'Minecraft'
   },
 
   experiences: {

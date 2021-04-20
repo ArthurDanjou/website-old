@@ -12,7 +12,7 @@ export default {
     contact: 'Me contacter',
     projects: 'Mes projets',
     blog: 'Mon blog',
-    env: 'Mon Environnement'
+    env: 'Mon environnement'
   },
 
   footer: {
@@ -222,7 +222,7 @@ export default {
     software: 'Logiciel',
     web: 'Web',
     api: 'API',
-    mc: 'MineCraft'
+    mc: 'Minecraft'
   },
 
   experiences: {
