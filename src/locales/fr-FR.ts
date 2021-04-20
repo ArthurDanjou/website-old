@@ -4,7 +4,7 @@ export default {
     blog: 'Blog',
     contact: 'Contact',
     projects: 'Projets',
-    uses: 'Usages'
+    env: 'Outils'
   },
 
   part: {
@@ -12,7 +12,7 @@ export default {
     contact: 'Me contacter',
     projects: 'Mes projets',
     blog: 'Mon blog',
-    uses: 'Mes usages'
+    env: 'Mon Environnement'
   },
 
   footer: {
@@ -53,7 +53,7 @@ export default {
       }
     },
     ad: {
-      uses: {
+      env: {
         title: 'Comment je travaille ?',
         description: 'Venez découvrir mon environnement de développement.'
       },
@@ -113,7 +113,7 @@ export default {
     cv: 'Télécharger mon CV'
   },
 
-  uses: {
+  env: {
     title: {
       description: 'Mon environnement de développement permet de gagner en productivité. En effet, je m\'organise de la sorte à toujours optimiser mon temps de réflexion et de développement. Voici donc une liste de tous mes logiciels que j\'utilise au quotidien et de mon setup.',
       ide: 'Editeurs de texte',
