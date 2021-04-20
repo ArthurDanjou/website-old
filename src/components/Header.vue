@@ -17,9 +17,9 @@
                 {{ $t('header.blog') }}
               </li>
             </nuxt-link>
-            <nuxt-link class="hidden md:inline-block" to="/uses">
+            <nuxt-link class="hidden md:inline-block" to="/env">
               <li class="nav-link">
-                {{ $t('header.uses') }}
+                {{ $t('header.env') }}
               </li>
             </nuxt-link>
             <nuxt-link class="hidden md:inline-block" to="/projects">
@@ -51,12 +51,12 @@
               {{ $t('header.blog') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/uses" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/env" class="w-1/5 nav-link-mobile">
             <li class="font-medium flex flex-col items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              {{ $t('header.uses') }}
+              {{ $t('header.env') }}
             </li>
           </nuxt-link>
           <nuxt-link to="/projects" class="w-1/5 nav-link-mobile">
