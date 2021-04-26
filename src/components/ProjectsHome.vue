@@ -28,13 +28,22 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import {Project} from "../../@types/types";
 
 export default defineComponent({
   name: "ProjectsHome",
-  props: {
-    projects: {
-      default: () => [],
+  setup() {
+    const { $content } = useContext()
+
+    const projects = useAsync(() => {
+      return $content(`projects`)
+        .limit(3)
+        .fetch<Project>()
+    }, 'projects')
+
+    return {
+      projects
     }
   }
 })

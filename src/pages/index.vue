@@ -2,8 +2,8 @@
   <main>
     <Banner />
     <AboutHome />
-    <PostsHome :posts="posts"/>
-    <ProjectsHome :projects="projects"/>
+    <PostsHome />
+    <ProjectsHome />
     <AdHome />
   </main>
 </template>
@@ -17,27 +17,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'Arthur Danjou - FullStack Web & Software Developer'
-    }
-  },
-  setup() {
-    const { $content, i18n } = useContext()
-
-    const projects = useAsync(() => {
-      return $content(`projects`)
-        .limit(3)
-        .fetch<Project>()
-    })
-
-    const posts = useAsync(() => {
-      return $content(`articles/${i18n.locale}`)
-        .sortBy('date', 'asc')
-        .limit(3)
-        .fetch<Post>()
-    })
-
-    return {
-      posts,
-      projects
     }
   }
 })
