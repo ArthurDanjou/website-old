@@ -15,6 +15,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sentry": "^5.0.3",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.9",
     "core-js": "^3.10.2",

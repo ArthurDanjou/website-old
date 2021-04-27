@@ -34,12 +34,15 @@ import {Project} from "../../@types/types";
 export default defineComponent({
   name: "ProjectsHome",
   setup() {
-    const { $content } = useContext()
+    const { $content, $sentry } = useContext()
 
     const projects = useAsync(() => {
       return $content(`projects`)
         .limit(3)
         .fetch<Project>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     }, 'projects')
 
     return {

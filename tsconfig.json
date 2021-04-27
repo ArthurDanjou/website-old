@@ -16,10 +16,11 @@
       "@/*": ["./src/*"]
     },
     "types": [
+      "@types/node",
+      "@nuxt/content",
       "@nuxt/types",
       "@nuxtjs/axios",
-      "@nuxt/content",
-      "@types/node",
+      "@nuxtjs/sentry",
       "nuxt-i18n"
     ]
   },

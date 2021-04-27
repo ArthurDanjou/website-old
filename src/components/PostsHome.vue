@@ -36,13 +36,16 @@ import {Post} from "../../@types/types";
 export default defineComponent({
   name: "PostsHome",
   setup() {
-    const { $content, i18n } = useContext()
+    const { $content, i18n, $sentry } = useContext()
 
     const posts = useAsync(() => {
       return $content(`articles/${i18n.locale}`)
         .sortBy('date', 'asc')
         .limit(3)
         .fetch<Post>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     }, 'posts')
 
     return {

@@ -31,10 +31,14 @@ export default {
     title: `Projects - Arthur Danjou`
   },
   setup() {
-    const { $content, i18n } = useContext()
+    const { $content, i18n, $sentry } = useContext()
 
     const projects = useAsync(() => {
-      return $content('projects').fetch<Project>()
+      return $content('projects')
+        .fetch<Project>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     })
 
     useMeta( {

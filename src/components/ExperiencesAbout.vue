@@ -24,12 +24,15 @@ import {Experience} from "../../@types/types";
 export default defineComponent({
   name: "ExperiencesAbout",
   setup() {
-    const {$content} = useContext()
+    const {$content, $sentry} = useContext()
 
     const experiences = useAsync(() => {
       return $content('experiences')
         .sortBy('end_date', 'desc')
         .fetch<Experience>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     })
 
     return {

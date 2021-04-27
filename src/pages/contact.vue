@@ -37,9 +37,14 @@ export default {
     title: 'Contact - Arthur Danjou'
   },
   setup() {
-    const {$content} = useContext()
+    const {$content, $sentry} = useContext()
     const info = useAsync(() => {
-      return $content('infos').fetch<InfoData>() as Promise<InfoData>
+      return ($content('infos')
+        .fetch<InfoData>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
+    )as Promise<InfoData>
     })
 
     const hiring_color = info && info.value?.hiring.color

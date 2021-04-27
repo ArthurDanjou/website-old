@@ -25,10 +25,14 @@ import {Skill} from "../../@types/types";
 export default defineComponent({
   name: "SkillsAbout",
   setup() {
-    const {$content} = useContext()
+    const {$content, $sentry} = useContext()
 
     const skills = useAsync(() => {
-      return $content('skills').fetch<Skill>()
+      return $content('skills')
+        .fetch<Skill>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     })
 
     return {

@@ -119,7 +119,7 @@ export default defineComponent({
   name: "blog",
   head: {},
   setup() {
-    const {$content, i18n, $axios, app, $storage} = useContext()
+    const {$content, i18n, $axios, app, $storage, $sentry} = useContext()
     const route = useRoute()
     const { title } = useMeta()
     const slug = computed(() => route.value.params.slug)
@@ -127,8 +127,9 @@ export default defineComponent({
     const post = useStatic((slug) => {
       return $content(`articles/${i18n.locale}`, slug)
         .fetch<Post>()
-        .catch(() => {
+        .catch((error) => {
           app.error({statusCode: 404, message: "Post not found"});
+            $sentry.captureEvent(error)
         }) as Promise<Post>
     }, slug, 'post')
 
@@ -146,6 +147,8 @@ export default defineComponent({
         }
       }).then((response) => {
         likes.value = response.data
+      }).catch((error) => {
+        $sentry.captureEvent(error)
       })
     })
 
@@ -160,6 +163,8 @@ export default defineComponent({
           liked.value = false
           likes.value = data.post.likes
           $storage.removeCookie(`${slug.value}`)
+        } else {
+          $sentry.captureEvent(data)
         }
       } else {
         const {data} = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
@@ -173,6 +178,8 @@ export default defineComponent({
           $storage.setCookie(`${slug.value}`, true, {
             maxAge: 60 * 60 * 5
           })
+        } else {
+          $sentry.captureEvent(data)
         }
       }
     }

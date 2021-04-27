@@ -26,9 +26,13 @@ import {InfoData} from "../../@types/types";
 export default defineComponent({
   name: "AboutPreview",
   setup() {
-    const {$content} = useContext()
+    const {$content, $sentry} = useContext()
     const info = useAsync(() => {
-      return $content('infos').fetch<InfoData>()
+      return $content('infos')
+        .fetch<InfoData>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     })
 
     return {

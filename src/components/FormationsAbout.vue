@@ -24,12 +24,15 @@ import {Formation} from "../../@types/types";
 export default defineComponent({
   name: "FormationsHome",
   setup() {
-    const {$content} = useContext()
+    const {$content, $sentry} = useContext()
 
     const formations = useAsync(() => {
       return $content('formations')
         .sortBy('end_date', 'desc')
         .fetch<Formation>()
+        .catch((error) => {
+          $sentry.captureEvent(error)
+        })
     })
 
     return {

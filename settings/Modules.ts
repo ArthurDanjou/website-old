@@ -83,6 +83,13 @@ const env = {
   path: process.cwd()
 }
 
+const sentry = {
+  dsn: process.env.SENTRY_DSN,
+  config: {
+
+  }
+}
+
 export default [
   ['@nuxtjs/axios', axios],
   ['nuxt-i18n', i18n],
@@ -91,6 +98,6 @@ export default [
   ['@nuxtjs/robots', robots],
   ['@nuxtjs/sitemap', sitemap],
   ['@nuxtjs/redirect-module', redirect],
-  ['@nuxtjs/dotenv', env]
-
+  ['@nuxtjs/dotenv', env],
+  ['@nuxtjs/sentry', sentry]
 ] as NuxtOptionsModule[]

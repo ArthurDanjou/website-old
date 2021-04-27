@@ -76,7 +76,7 @@ export default defineComponent({
     const error = ref(false)
     const success = ref(false)
 
-    const {$axios} = useContext()
+    const {$axios, $sentry} = useContext()
     const form = ref<Form>({} as Form)
     const handleForm = async () => {
       const {data} = await $axios.post('form',
@@ -97,6 +97,7 @@ export default defineComponent({
           form.value = {} as Form
         }, 5000)
       } else {
+        $sentry.captureEvent(data)
         error.value = true
         setTimeout(() => {
           error.value = false
