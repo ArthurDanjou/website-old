@@ -20,7 +20,7 @@
     "@nuxtjs/universal-storage": "^0.5.9",
     "core-js": "^3.11.2",
     "nuxt": "^2.15.4",
-    "nuxt-i18n": "^6.25.0",
+    "nuxt-i18n": "^6.26.0",
     "prism-themes": "^1.6.0",
     "sass": "^1.32.11",
     "windicss": "^2.5.14"
