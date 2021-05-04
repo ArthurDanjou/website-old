@@ -18,18 +18,18 @@
     "@nuxtjs/sentry": "^5.0.3",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.9",
-    "core-js": "^3.10.2",
+    "core-js": "^3.11.2",
     "nuxt": "^2.15.4",
-    "nuxt-i18n": "^6.25.0",
+    "nuxt-i18n": "^6.26.0",
     "prism-themes": "^1.6.0",
-    "sass": "^1.32.11",
+    "sass": "^1.32.12",
     "windicss": "^2.5.14"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.4",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.0.5",
-    "nuxt-windicss": "^0.5.4",
+    "nuxt-windicss": "^0.6.0",
     "sass-loader": "10.1.1"
   }
 }
