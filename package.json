@@ -22,7 +22,7 @@
     "nuxt": "^2.15.4",
     "nuxt-i18n": "^6.26.0",
     "prism-themes": "^1.6.0",
-    "sass": "^1.32.11",
+    "sass": "^1.32.12",
     "windicss": "^2.5.14"
   },
   "devDependencies": {
