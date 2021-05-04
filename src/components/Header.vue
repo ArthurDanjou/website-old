@@ -35,45 +35,47 @@
           </ul>
         </div>
         <ul class="dark:text-white dark:bg-black text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
-          <nuxt-link to="/about" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/" class="w-1/6 nav-link-mobile">
             <li class="font-medium flex flex-col items-center justify-center">
-              <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg height="32" width="32" class="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </li>
+          </nuxt-link>
+          <nuxt-link to="/about" class="w-1/6 nav-link-mobile">
+            <li class="font-medium flex flex-col items-center justify-center">
+              <svg class="inline-block" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
-              {{ $t('header.about') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/blog" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/blog" class="w-1/6 nav-link-mobile blog">
             <li class="font-medium flex flex-col items-center justify-center">
-              <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="inline-block" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
               </svg>
-              {{ $t('header.blog') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/env" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/env" class="w-1/6 nav-link-mobile">
             <li class="font-medium flex flex-col items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="inline-block" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              {{ $t('header.env') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/projects" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/projects" class="w-1/6 nav-link-mobile">
             <li class="font-medium flex flex-col items-center justify-center">
-              <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="inline-block" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              {{ $t('header.projects') }}
             </li>
           </nuxt-link>
-          <nuxt-link to="/contact" class="w-1/5 nav-link-mobile">
+          <nuxt-link to="/contact" class="w-1/6 nav-link-mobile">
             <li class="font-medium flex flex-col items-center justify-center">
-              <svg class="inline-block" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="inline-block" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              {{ $t('header.contact') }}
             </li>
           </nuxt-link>
         </ul>
@@ -158,8 +160,8 @@ export default defineComponent({
   @apply text-gray-500 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300
 }
 
-nav .nuxt-link-exact-active, nav .nuxt-link-active {
-  @apply text-black dark:text-white;
+.nuxt-link-exact-active {
+  @apply text-black text-purple-300 dark:text-white !important;
 }
 
 .navbar-bottom-items li {
