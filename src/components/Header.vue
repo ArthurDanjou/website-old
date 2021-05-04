@@ -161,7 +161,7 @@ export default defineComponent({
 }
 
 .nuxt-link-exact-active {
-  @apply text-black text-purple-300 dark:text-white !important;
+  @apply text-black dark:text-white !important;
 }
 
 .navbar-bottom-items li {
