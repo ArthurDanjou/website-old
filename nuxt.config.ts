@@ -7,7 +7,7 @@ import plugins from './settings/Plugins'
 import css from './settings/Style'
 import configs from './settings/RuntimeConfig'
 
-export default {
+const config = {
   head,
   modules,
   ...arch,
@@ -15,5 +15,7 @@ export default {
   plugins,
   css,
   buildModules,
-  ...configs
+  ...configs,
 }
+
+export default config
