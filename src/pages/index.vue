@@ -10,8 +10,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import {useAsync, useContext} from "@nuxtjs/composition-api";
-import {Post, Project} from "../../@types/types";
 
 export default Vue.extend({
   head() {

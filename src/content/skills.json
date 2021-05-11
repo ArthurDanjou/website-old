@@ -6,6 +6,18 @@
     "slug": "java"
   },
   {
+    "title": "ViteJs",
+    "color": "amber",
+    "cover": "Vite",
+    "slug": "vitejs"
+  },
+  {
+    "title": "WindiCss",
+    "color": "light-blue",
+    "cover": "Windicss",
+    "slug": "windicss"
+  },
+  {
     "title": "TypeScript",
     "color": "cyan",
     "cover": "TypeScript",

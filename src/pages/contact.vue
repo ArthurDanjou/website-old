@@ -27,9 +27,8 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, useAsync, useContext, watch} from "@nuxtjs/composition-api";
-import {InfoData, Form} from "../../@types/types";
-import {combineObject} from "windicss/types/utils/algorithm/compileStyleSheet";
+import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
+import {InfoData} from "../../@types/types";
 
 export default {
   name: "contact",
