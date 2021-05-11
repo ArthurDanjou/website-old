@@ -34,7 +34,7 @@ const windicss = {
 
 export default [
   '@nuxt/typescript-build',
-  '@nuxtjs/composition-api',
+  '@nuxtjs/composition-api/module',
   ['nuxt-windicss', windicss],
   ['@nuxtjs/color-mode', color_mode],
 ] as NuxtOptionsModule[]

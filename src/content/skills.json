@@ -6,18 +6,6 @@
     "slug": "java"
   },
   {
-    "title": "ViteJs",
-    "color": "amber",
-    "cover": "Vite.svg",
-    "slug": "vitejs"
-  },
-  {
-    "title": "WindiCss",
-    "color": "light-blue",
-    "cover": "Windicss.svg",
-    "slug": "windicss"
-  },
-  {
     "title": "TypeScript",
     "color": "cyan",
     "cover": "TypeScript.png",
@@ -52,6 +40,18 @@
     "color": "purple",
     "cover": "AdonisJs.png",
     "slug": "adonisjs"
+  },
+  {
+    "title": "ViteJs",
+    "color": "amber",
+    "cover": "Vitejs.png",
+    "slug": "vitejs"
+  },
+  {
+    "title": "WindiCss",
+    "color": "light-blue",
+    "cover": "Windicss.png",
+    "slug": "windicss"
   },
   {
     "title": "Html",
