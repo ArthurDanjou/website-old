@@ -27,7 +27,7 @@
     "windicss": "^2.5.14"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.4",
+    "@nuxt/types": "^2.15.5",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.0.5",
     "nuxt-windicss": "^0.6.0",
