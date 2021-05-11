@@ -61,6 +61,8 @@ export default defineComponent({
           return 'hover:bg-red-400'
         case 'rose':
           return 'hover:bg-rose-400'
+        case 'amber':
+          return 'hover:bg-amber-400'
       }
     })
     const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}`))
