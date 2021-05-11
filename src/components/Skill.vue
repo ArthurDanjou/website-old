@@ -63,7 +63,7 @@ export default defineComponent({
           return 'hover:bg-rose-400'
       }
     })
-    const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}.png`))
+    const getCoverLink = computed(() => require(`@/assets/images/skills/${props.cover}`))
 
     return {
       getColor,

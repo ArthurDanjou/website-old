@@ -2,121 +2,121 @@
   {
     "title": "Java",
     "color": "blueGray",
-    "cover": "Java",
+    "cover": "Java.png",
     "slug": "java"
   },
   {
     "title": "ViteJs",
     "color": "amber",
-    "cover": "Vite",
+    "cover": "Vite.svg",
     "slug": "vitejs"
   },
   {
     "title": "WindiCss",
     "color": "light-blue",
-    "cover": "Windicss",
+    "cover": "Windicss.svg",
     "slug": "windicss"
   },
   {
     "title": "TypeScript",
     "color": "cyan",
-    "cover": "TypeScript",
+    "cover": "TypeScript.png",
     "slug": "typescript"
   },
   {
     "title": "JavaScript",
     "color": "yellow",
-    "cover": "JavaScript",
+    "cover": "JavaScript.png",
     "slug": "javascript"
   },
   {
     "title": "Go",
     "color": "cyan",
-    "cover": "GoLang",
+    "cover": "GoLang.png",
     "slug": "golang"
   },
   {
     "title": "NuxtJs",
     "color": "emerald",
-    "cover": "NuxtJs",
+    "cover": "NuxtJs.png",
     "slug": "nuxtjs"
   },
   {
     "title": "VueJs",
     "color": "emerald",
-    "cover": "VueJs",
+    "cover": "VueJs.png",
     "slug": "vuejs"
   },
   {
     "title": "AdonisJs",
     "color": "purple",
-    "cover": "AdonisJs",
+    "cover": "AdonisJs.png",
     "slug": "adonisjs"
   },
   {
     "title": "Html",
     "color": "orange",
-    "cover": "Html",
+    "cover": "Html.png",
     "slug": "html"
   },
   {
     "title": "Css",
     "color": "lightBlue",
-    "cover": "Css",
+    "cover": "Css.png",
     "slug": "css"
   },
   {
     "title": "NodeJs",
     "color": "lime",
-    "cover": "NodeJs",
+    "cover": "NodeJs.png",
     "slug": "nodejs"
   },
   {
     "title": "ElectronJs",
     "color": "teal",
-    "cover": "ElectronJs",
+    "cover": "ElectronJs.png",
     "slug": "electronjs"
   },
   {
     "title": "Git",
     "color": "orange",
-    "cover": "Git",
+    "cover": "Git.png",
     "slug": "git"
   },
   {
     "title": "MariaDB",
     "color": "blue",
-    "cover": "MariaDB",
+    "cover": "MariaDB.png",
     "slug": "mariadb"
   },
   {
     "title": "RabbitMQ",
     "color": "orange",
-    "cover": "RabbitMQ",
+    "cover": "RabbitMQ.png",
     "slug": "rabbitmq"
   },
   {
     "title": "Redis",
     "color": "red",
-    "cover": "Redis",
+    "cover": "Redis.png",
     "slug": "redis"
   },
   {
     "title": "Sass",
     "color": "rose",
-    "cover": "Sass",
+    "cover": "Sass.png",
     "slug": "sass"
   },
   {
     "title": "TailwindCss",
     "color": "teal",
-    "cover": "TailwindCss",
+    "cover": "TailwindCss.png",
     "slug": "tailwindcss"
   },
   {
     "title": "Docker",
     "color": "cyan",
-    "cover": "Docker",
+    "cover": "Docker.png",
     "slug": "docker"
   }
 ]
