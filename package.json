@@ -23,7 +23,7 @@
     "nuxt-i18n": "^6.27.0",
     "prism-themes": "^1.7.0",
     "sass": "^1.32.12",
-    "windicss": "^2.5.14"
+    "windicss": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.5",
