@@ -90,6 +90,11 @@ const sentry = {
   }
 }
 
+const image = {
+  domains: ['https://arthurdanjou.fr'],
+  dir: 'static'
+}
+
 export default [
   ['@nuxtjs/axios', axios],
   ['nuxt-i18n', i18n],
@@ -99,5 +104,6 @@ export default [
   ['@nuxtjs/sitemap', sitemap],
   ['@nuxtjs/redirect-module', redirect],
   ['@nuxtjs/dotenv', env],
-  ['@nuxtjs/sentry', sentry]
+  ['@nuxtjs/sentry', sentry],
+  ['@nuxt/image', image]
 ] as NuxtOptionsModule[]

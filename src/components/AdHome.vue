@@ -1,10 +1,10 @@
 <template>
-  <section class="w-full my-12">
+  <section class="w-full my-12 h-full">
     <div class="md:space-x-12 space-y-8 md:space-y-0 flex flex-col md:flex-row items-center justify-around h-full">
-      <nuxt-link to="/env" class="h-full md:w-2/5">
+      <nuxt-link to="/env" class="block h-auto md:w-2/5">
         <Ad color="rose" class="w-full flex flex-col justify-between items-center">
           <div>
-            <img class="h-48" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
+            <nuxt-img  class="h-48" src="/memojies/Dev.png" alt="Dev Memoji" />
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">
@@ -16,10 +16,10 @@
           </div>
         </Ad>
       </nuxt-link>
-      <nuxt-link to="/contact" class="h-full md:w-2/5">
+      <nuxt-link to="/contact" class="min-h-full md:w-2/5">
         <Ad color="blue" class="w-full flex flex-col justify-between items-center">
           <div>
-            <img class="h-48" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
+            <nuxt-img  class="h-48" src="/memojies/Fiesta.png" alt="Fiesta Memoji" />
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">

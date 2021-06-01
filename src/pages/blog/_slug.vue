@@ -43,7 +43,7 @@
       <nuxt-content
         :document="post"
         class="my-6 md:my-10 w-full text-justify max-w-none
-        prose prose-sm sm:prose lg:prose-lg lg:max-w-none sm:max-w-none
+        prose prose-sm lg:prose-lg lg:max-w-none sm:max-w-none
         dark:prose-dark dark:max-w-none"
       />
       <p class="mb-3">
@@ -66,7 +66,7 @@
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
             class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
           >
-            <img class="inline img icon-hover" src="@/assets/images/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
+            <nuxt-img class="inline img icon-hover" src="/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
           </a>
           <div @click="scrollToTop"
                class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white">
@@ -113,7 +113,7 @@ import {
   useMeta,
   useRoute, useStatic, watch
 } from "@nuxtjs/composition-api";
-import {Post} from "../../../@types/types";
+import {Post} from "../../../types/types";
 
 export default defineComponent({
   name: "blog",

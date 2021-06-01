@@ -21,7 +21,6 @@ body {
   @apply dark:(bg-dark-800 text-white) border dark:border-white border-black border-solid;
 }
 
-//TODO remove with windicss/typography
 .nuxt-content-container, .nuxt-content {
   p {
     @apply text-gray-700 dark:text-gray-400

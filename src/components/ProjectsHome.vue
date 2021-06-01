@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Project} from "../../@types/types";
+import {Project} from "../../types/types";
 
 export default defineComponent({
   name: "ProjectsHome",

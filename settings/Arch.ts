@@ -31,4 +31,8 @@ const buildDir = 'build'
 
 const ssr = true
 
-export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr }
+const serverMiddleware = {
+  '/_ipx': '~/middleware/ipx.ts'
+}
+
+export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr, serverMiddleware }
