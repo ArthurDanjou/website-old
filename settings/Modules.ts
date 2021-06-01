@@ -99,5 +99,5 @@ export default [
   ['@nuxtjs/sitemap', sitemap],
   ['@nuxtjs/redirect-module', redirect],
   ['@nuxtjs/dotenv', env],
-  ['@nuxtjs/sentry', sentry]
+  ['@nuxtjs/sentry', sentry],
 ] as NuxtOptionsModule[]

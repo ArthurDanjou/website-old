@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
-import {InfoData} from "../../@types/types";
+import {InfoData} from "../../types/types";
 
 export default {
   name: "contact",

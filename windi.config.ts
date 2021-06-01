@@ -1,6 +1,8 @@
+import {defineConfig} from "windicss/helpers";
+
 const colors = require('windicss/colors')
 
-module.exports = {
+module.exports = defineConfig({
   presets: [],
   darkMode: 'class',
   theme: {
@@ -127,14 +129,8 @@ module.exports = {
       gray: colors.gray,
       coolGray: colors.coolGray,
       blueGray: colors.blueGray,
-      dark: {
-        100: 'rgb(150,150,150)',
-        200: 'rgb(112,112,112)',
-        850: '#404040',
-        700: '#272727',
-        800: '#212121',
-        900: '#121212',
-      }
+      dark: colors.dark,
+      light: colors.light
     },
     spacing: {
       px: '1px',
@@ -812,23 +808,7 @@ module.exports = {
       50: '50',
     },
   },
-  variantOrder: [
-    'first',
-    'last',
-    'odd',
-    'even',
-    'visited',
-    'checked',
-    'group-hover',
-    'group-focus',
-    'focus-within',
-    'hover',
-    'focus',
-    'focus-visible',
-    'active',
-    'disabled',
-  ],
   plugins: [
-    require('windicss/plugin/typography')
+    require('windicss/plugin/typography'),
   ],
-}
+})

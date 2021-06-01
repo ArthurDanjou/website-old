@@ -6,16 +6,16 @@
           <p class="inline">{{ $t('footer.find_me') }}
             <br class="md:hidden"/>
             <a class="font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
-              <img class="inline" src="@/assets/images/socials/twitch.svg" alt="Twitch logo" height="20" width="20" />
+              <img class="inline" src="~/assets/images/socials/twitch.svg" alt="Twitch logo" height="20" width="20" />
               <span class="link">Twitch</span>
             </a>,
             <a class="font-semibold" href="https://github.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
-              <img v-if="!isDarkMode" class="inline" src="@/assets/images/socials/github-black.svg" alt="Github logo" height="20" width="20" />
-              <img v-else class="inline" src="@/assets/images/socials/github-white.svg" alt="Github logo" height="20" width="20" />
+              <img v-if="!isDarkMode" class="inline" src="~/assets/images/socials/github-black.svg" alt="Github logo" height="20" width="20" />
+              <img v-else class="inline" src="~/assets/images/socials/github-white.svg" alt="Github logo" height="20" width="20" />
               <span class="link">Github</span>
             </a> &
             <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank" rel="noopener noreferrer">
-              <img class="inline" src="@/assets/images/socials/twitter.svg" alt="Twitter logo" height="20" width="20" />
+              <img class="inline" src="/socials/twitter.svg" alt="Twitter logo" height="" width="20" />
               <span class="link">Twitter</span>
             </a>
             <br class="md:hidden"/>
@@ -35,7 +35,7 @@
         <p>
           {{ $t('footer.credits') }}
           <a class="font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
-            <img class="inline" src="@/assets/images/socials/nuxtjs.svg" alt="NuxtJs logo" height="20" width="20" />
+            <img class="inline" src="~/assets/images/socials/nuxtjs.svg" alt="NuxtJs logo" width="20" />
             <span class="link">NuxtJs</span>
           </a>
           {{ $t('footer.credits_separator') }} <span>Arthur DANJOU</span>
@@ -46,7 +46,7 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
 import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 
 export default defineComponent({
@@ -54,7 +54,7 @@ export default defineComponent({
   setup() {
     const {$colorMode} = useContext()
     const isDarkMode = computed(() => {
-      return $colorMode.preference === 'dark' | undefined
+      return $colorMode.preference === 'dark'
     })
 
     const getDate = ref(new Date().getFullYear())

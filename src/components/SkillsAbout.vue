@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Skill} from "../../@types/types";
+import {Skill} from "../../types/types";
 
 export default defineComponent({
   name: "SkillsAbout",
