@@ -4,7 +4,7 @@
       <nuxt-link to="/env" class="block h-auto md:w-2/5">
         <Ad color="rose" class="w-full flex flex-col justify-between items-center">
           <div>
-            <img  class="h-48" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
+            <img class="h-48" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">
