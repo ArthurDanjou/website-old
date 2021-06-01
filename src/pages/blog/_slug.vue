@@ -109,11 +109,10 @@ import {
   defineComponent,
   ref, useAsync,
   useContext,
-  useFetch,
   useMeta,
   useRoute, useStatic, watch
 } from "@nuxtjs/composition-api";
-import {Post} from "../../../@types/types";
+import {Post} from "../../../types/types";
 
 export default defineComponent({
   name: "blog",
