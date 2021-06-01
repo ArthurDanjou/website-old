@@ -15,7 +15,7 @@
               <span class="link">Github</span>
             </a> &
             <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank" rel="noopener noreferrer">
-              <img class="inline" src="/socials/twitter.svg" alt="Twitter logo" height="" width="20" />
+              <img class="inline" src="/socials/twitter.svg" alt="Twitter logo" height="" width="20" height="20"/>
               <span class="link">Twitter</span>
             </a>
             <br class="md:hidden"/>
