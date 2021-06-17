@@ -222,7 +222,8 @@ export default {
     software: 'Logiciel',
     web: 'Web',
     api: 'API',
-    mc: 'Minecraft'
+    mc: 'Minecraft',
+    opensource: 'Open-Source'
   },
 
   experiences: {
@@ -251,6 +252,6 @@ export default {
     artapi: 'ArtApi est mon API personnelle connectée à mes diverses instances.',
     artsite: 'ArtSite est mon site personnel créant un point de contact unique.',
     erisium: 'Erisium est un serveur minecraft francophone de mini-jeux.',
-    artclick: 'ArtClick est mon raccourcisseur d\'url'
+    linkyjs: 'LinkyJS est mon raccourcisseur d\'url personnalisé et Open-Source'
   }
 }

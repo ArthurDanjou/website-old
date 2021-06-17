@@ -24,11 +24,11 @@
     "tags": ["tags.api"]
   },
   {
-    "slug": "artclick",
-    "title": "ArtClick",
-    "description": "works.artclick",
-    "url": "https://go.arthurdanjou.fr",
-    "cover": "artclick.png",
-    "tags": ["tags.software"]
+    "slug": "linkyjs",
+    "title": "LinkyJs",
+    "description": "works.linkyjs",
+    "url": "https://github.com/linkyjs/",
+    "cover": "linkyjs.png",
+    "tags": ["tags.software", "tags.opensource"]
   }
 ]
