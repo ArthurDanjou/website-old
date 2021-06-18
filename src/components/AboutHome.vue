@@ -24,7 +24,7 @@ import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 import {InfoData} from "../../types/types";
 
 export default defineComponent({
-  name: "AboutPreview",
+  name: "AboutHome",
   setup() {
     const {$content, $sentry} = useContext()
     const info = useAsync(() => {
