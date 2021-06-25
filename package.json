@@ -31,7 +31,7 @@
     "@nuxtjs/color-mode": "^2.0.10",
     "markdown-it-prism": "^2.1.6",
     "nuxt-vite": "^0.1.1",
-    "nuxt-windicss": "1.0.3",
+    "nuxt-windicss": "1.1.0",
     "sass-loader": "10.1.1",
     "vite-plugin-components": "^0.11.1",
     "vite-plugin-md": "^0.6.7",
