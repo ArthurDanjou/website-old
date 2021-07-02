@@ -132,6 +132,8 @@ export default {
     police: 'Police d\'Ecriture',
     console: 'Console',
     wsl_2: 'WSL 2',
+    calendar: 'Calendrier',
+    shell: 'Shell Unix',
     email_client: 'Client Email',
     vpn_client: 'Client VPN',
     ftp_client: 'Client FTP',
@@ -146,12 +148,8 @@ export default {
     setup: {
       desk: 'Bureau',
       phone: 'Téléphone',
-      computer: 'Ordinateur fixe',
-      screen: 'Ecran',
-      keyboard: 'Clavier',
-      mouse: 'Souris',
+      computer: 'Ordinateur',
       headphone: 'Ecouteurs',
-      microphone: 'Casque / Micro'
     }
   },
 

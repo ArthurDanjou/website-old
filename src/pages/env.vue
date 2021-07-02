@@ -15,8 +15,8 @@
         <EnvListItem title="env.ide.db" content="DataGrip" link="https://www.jetbrains.com/fr-fr/datagrip/"/>
         <EnvListItem title="env.ide.all" content="Jetbrains Toolbox" link="https://www.jetbrains.com/toolbox-app/"/>
         <EnvListItem title="env.police" content="Jetbrains Mono" link="https://www.jetbrains.com/lp/mono/"/>
-        <EnvListItem title="env.console" content="Terminus" link="https://github.com/Eugeny/terminus"/>
-        <EnvListItem title="env.wsl_2" content="Ubuntu 20.04" link="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab"/>
+        <EnvListItem title="env.console" content="ITerm 2" link="https://iterm2.com"/>
+        <EnvListItem title="env.shell" content="ZSH + OhMyZSH" link="https://ohmyz.sh"/>
       </EnvList>
     </EnvGroup>
     <EnvGroup>
@@ -26,16 +26,14 @@
         </svg>
       </EnvTitle>
       <EnvList>
-        <EnvListItem title="env.email_client" content="Courrier by Microsoft" link="https://www.microsoft.com/fr-fr/p/courrier-et-calendrier/9wzdncrfhvqm?activetab=pivot:overviewtab"/>
+        <EnvListItem title="env.email_client" content="Apple Mail" link="https://apps.apple.com/fr/app/mail/id1108187098"/>
+        <EnvListItem title="env.calendar" content="Apple Calendar" link="https://apps.apple.com/fr/app/calendrier/id1108185179"/>
         <EnvListItem title="env.vpn_client" content="Pritunl" link="https://pritunl.com/"/>
-        <EnvListItem title="env.ftp_client" content="WinSCP" link="https://winscp.net/eng/download.php"/>
-        <EnvListItem title="env.web_client" content="Google Chrome" link="https://www.google.com/intl/fr_fr/chrome/"/>
+        <EnvListItem title="env.web_client" content="Safari" link="https://www.apple.com/safari/"/>
         <EnvListItem title="env.organisation_tool" content="Notion" link="https://www.notion.so/"/>
-        <EnvListItem title="env.organisation_tool" content="Trello" link="https://www.trello.com/"/>
         <EnvListItem title="env.design_tool" content="Affinity Designer" link="https://affinity.serif.com/fr/designer/"/>
         <EnvListItem title="env.communication_tool" content="Slack" link="https://slack.com/intl/fr-fr/"/>
         <EnvListItem title="env.communication_tool" content="Discord" link="https://www.discord.com/"/>
-        <EnvListItem title="env.communication_tool" content="Mattermost" link="https://mattermost.com/"/>
       </EnvList>
     </EnvGroup>
     <EnvGroup>
@@ -58,12 +56,8 @@
       <EnvList>
         <EnvListItem title="env.setup.desk" content="Ikea"/>
         <EnvListItem title="env.setup.phone" content="Apple Iphone Xr" link="https://www.apple.com/fr/shop/buy-iphone/iphone-xr"/>
-        <EnvListItem title="env.setup.computer" content="Lenovo Y520 (i5, 8Go Ram, 1To HDD, 250Go SSD)"/>
-        <EnvListItem title="env.setup.screen" content="Iiyama ProLite E2283HS" link="https://iiyama.com/fr/fr/produits/prolite-e2283hs-b3/"/>
-        <EnvListItem title="env.setup.keyboard" content="Acer"/>
-        <EnvListItem title="env.setup.mouse" content="Roccat Kova" link="https://fr.roccat.org/Mice/Kova-AIMO"/>
+        <EnvListItem title="env.setup.computer" content="Apple Macbook Pro 13“ M1 16Go Ram 512Go SSD" link="https://www.apple.com/shop/buy-mac/macbook-pro/13-inch-space-gray-apple-m1-chip-with-8-core-cpu-and-8-core-gpu-512gb#"/>
         <EnvListItem title="env.setup.headphone" content="Apple Airpods" link="https://www.apple.com/fr/airpods/"/>
-        <EnvListItem title="env.setup.microphone" content="Turtle Beach px22" link="https://www.amazon.fr/Turtle-Beach-PX22-casque-gaming/dp/B00BDS415I"/>
       </EnvList>
     </EnvGroup>
   </main>

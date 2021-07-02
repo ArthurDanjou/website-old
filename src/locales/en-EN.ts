@@ -137,6 +137,8 @@ export default {
     police: 'Font',
     console: 'Console',
     wsl_2: 'WSL 2',
+    calendar: 'Calendar',
+    shell: 'Unix Shell',
     email_client: 'Email Client',
     vpn_client: 'VPN Client',
     ftp_client: 'FTP Client',
@@ -151,12 +153,8 @@ export default {
     setup: {
       desk: 'Desktop',
       phone: 'Phone',
-      computer: 'Desktop computer',
-      screen: 'Screen',
-      keyboard: 'Keyboard',
-      mouse: 'Mouse',
+      computer: 'Computer',
       headphone: 'Headphone',
-      microphone: 'Headset'
     }
   },
 
