@@ -134,7 +134,7 @@ export default defineComponent({
 
     title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
 
-    watch(post.value?.title, () => {
+    watch(post, () => {
       title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
     })
 
@@ -165,7 +165,7 @@ export default defineComponent({
           likes.value = response.data.post.likes
           $storage.removeCookie(`${slug.value}`)
         } else {
-          $sentry.captureEvent(data)
+          $sentry.captureEvent(response.data)
         }
       } else {
         const response = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
@@ -180,7 +180,7 @@ export default defineComponent({
             maxAge: 60 * 60 * 5
           })
         } else {
-          $sentry.captureEvent(data)
+          $sentry.captureEvent(response.data)
         }
       }
     }

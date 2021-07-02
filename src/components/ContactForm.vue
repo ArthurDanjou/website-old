@@ -97,7 +97,7 @@ export default defineComponent({
           form.value = {} as Form
         }, 5000)
       } else {
-        $sentry.captureEvent(data)
+        $sentry.captureEvent(response.data)
         error.value = true
         setTimeout(() => {
           error.value = false
