@@ -66,7 +66,7 @@
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
             class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
           >
-            <img class="inline img icon-hover" src="~/assets/images/socials/twitter.svg" alt="Twitter logo" height="40" width="40" />
+            <TwitterIcon />
           </a>
           <div @click="scrollToTop"
                class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white">
@@ -127,13 +127,15 @@ export default defineComponent({
       return $content(`articles/${i18n.locale}`, slug)
         .fetch<Post>()
         .catch((error) => {
-          app.error({statusCode: 404, message: "Post not found"});
-            $sentry.captureEvent(error)
+          app.error({statusCode: 404, message: "Post not found"})
+          $sentry.captureEvent(error)
         }) as Promise<Post>
     }, slug, 'post')
 
-    watch(post, () => {
-      title.value = `Blog - Arthur Danjou - ${post.value?.title || 'Loading title...'}`
+    title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
+
+    watch(post.value?.title, () => {
+      title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
     })
 
     const liked = ref($storage.getCookie(`${slug.value}`) !== undefined)
@@ -145,7 +147,7 @@ export default defineComponent({
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
       }).then((response) => {
-        likes.value = response.data
+        likes.value = response.data.likes
       }).catch((error) => {
         $sentry.captureEvent(error)
       })
@@ -153,27 +155,27 @@ export default defineComponent({
 
     const handleLike = async () => {
       if (liked.value) {
-        const {data} = await $axios.post(`/posts/${post.value?.slug}/unlike`, {}, {
+        const response = await $axios.post(`/posts/${post.value?.slug}/unlike`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
         })
-        if (data.status === 200) {
+        if (response.status === 200) {
           liked.value = false
-          likes.value = data.post.likes
+          likes.value = response.data.post.likes
           $storage.removeCookie(`${slug.value}`)
         } else {
           $sentry.captureEvent(data)
         }
       } else {
-        const {data} = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
+        const response = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
         })
-        if (data.status === 200) {
+        if (response.status === 200) {
           liked.value = true
-          likes.value = data.post.likes
+          likes.value = response.data.post.likes
           $storage.setCookie(`${slug.value}`, true, {
             maxAge: 60 * 60 * 5
           })

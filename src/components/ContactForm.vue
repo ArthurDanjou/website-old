@@ -79,7 +79,7 @@ export default defineComponent({
     const {$axios, $sentry} = useContext()
     const form = ref<Form>({} as Form)
     const handleForm = async () => {
-      const {data} = await $axios.post('form',
+      const response = await $axios.post('form',
         {
           email: form.value.email,
           name: form.value.name,
@@ -90,7 +90,7 @@ export default defineComponent({
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
         })
-      if (data && data.status === 200) {
+      if (response.status === 200) {
         success.value = true
         setTimeout(() => {
           success.value = false

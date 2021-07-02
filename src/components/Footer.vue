@@ -6,26 +6,23 @@
           <p class="inline">{{ $t('footer.find_me') }}
             <br class="md:hidden"/>
             <a class="font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
-              <img class="inline" src="~/assets/images/socials/twitch.svg" alt="Twitch logo" height="20" width="20" />
+              <TwitchIcon />
               <span class="link">Twitch</span>
             </a>,
             <a class="font-semibold" href="https://github.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
-              <img v-if="!isDarkMode" class="inline" src="~/assets/images/socials/github-black.svg" alt="Github logo" height="20" width="20" />
-              <img v-else class="inline" src="~/assets/images/socials/github-white.svg" alt="Github logo" height="20" width="20" />
+              <GithubIcon />
               <span class="link">Github</span>
             </a> &
             <a class="font-semibold" href="https://twitter.com/ArthurDanj" target="_blank" rel="noopener noreferrer">
-              <img class="inline" src="/socials/twitter.svg" alt="Twitter logo" height="" width="20" height="20"/>
+              <TwitterIcon />
               <span class="link">Twitter</span>
             </a>
             <br class="md:hidden"/>
             {{ $t('footer.separator') }}
             <a class="font-semibold" href="mailto:contact@arthurdanjou.fr" target="_blank" rel="noopener noreferrer">
-              <svg class="inline" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+              <MailIcon />
               <span class="link">Mail</span>
-              </a>
+            </a>
           </p>
           <br class="md:hidden"/>
           <span class="inline dark:text-dark-200 text-gray-600 text-xs">
@@ -35,8 +32,13 @@
         <p>
           {{ $t('footer.credits') }}
           <a class="font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
-            <img class="inline" src="~/assets/images/socials/nuxtjs.svg" alt="NuxtJs logo" width="20" />
+            <NuxtIcon />
             <span class="link">NuxtJs</span>
+          </a>
+          {{ $t('footer.credits_separator_and') }}
+          <a class="font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
+            <AdonisIcon />
+            <span class="link">AdonisJS</span>
           </a>
           {{ $t('footer.credits_separator') }} <span>Arthur DANJOU</span>
         </p>

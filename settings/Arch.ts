@@ -25,7 +25,10 @@ const server = {
   host: '0.0.0.0'
 }
 
-const components = true
+const components = [
+  'components',
+  'components/icons'
+]
 
 const buildDir = 'build'
 

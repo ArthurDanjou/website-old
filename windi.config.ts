@@ -280,7 +280,11 @@ module.exports = defineConfig({
     divideColor: (theme) => theme('borderColor'),
     divideOpacity: (theme) => theme('borderOpacity'),
     divideWidth: (theme) => theme('borderWidth'),
-    fill: { current: 'currentColor' },
+    fill: theme => ({
+      current: 'currentColor',
+      'adonis-dark': theme('colors.purple.500'),
+      'adonis-light': theme('colors.purple.800')
+    }),
     flex: {
       1: '1 1 0%',
       auto: '1 1 auto',

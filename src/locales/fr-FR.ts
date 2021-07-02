@@ -21,6 +21,7 @@ export default {
     links_click: '(Clique c\'est gratuit 🔗)',
     credits: 'Développé et conçu avec ❤ en utilisant',
     credits_separator: 'par',
+    credits_separator_and: 'et',
     copyrights: '© Copyright {date} - Tous droits réservés'
   },
 

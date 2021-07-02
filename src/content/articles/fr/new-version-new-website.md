@@ -20,6 +20,7 @@ Quelles sont les nouveautés ? Quelles sont les techniques utilisées ? Tout ser
 - Conclusion
 
 ## 1. Pourquoi une nouvelle version ?
+
 Il faut savoir que j'ai découvert pleins de nouvelles technologies concernant le développement web. 
 En effet, c'est un domaine que j'ai toujours voulu découvrir. Je me suis donc lancé il y a un an pour sortir mon site, sa première version.
 Étant nouveau dans ce domaine, le code est vite devenu compliqué à maintenir et n'est pas du tout modulable. 
@@ -28,6 +29,7 @@ De plus, ayant plus d'expérience dans ce domaine, j'ai voulu améliorer le desi
 modifiable et en améliorant le code.
 
 ## 2. Pourquoi c'était si long ?
+
 Je suis actuellement en classe de Terminale générale, c'est donc pourquoi j'ai beaucoup de devoirs qui me demandent du temps
 personnel que je préfère consacrer plutôt qu'au développement. Je suis souvent sous pression à cause de ce nouveau 
 Baccalauréat, où toutes les notes comptent pour la note finale du Baccalauréat. 
@@ -37,6 +39,7 @@ d'apprentissage avant de foncer tête baissée dans le code. J'ai cherché à ê
 pour gagner du temps, comme je n'en n'avait peu.
 
 ## 3. Que propose cette nouvelle version ?
+
 Cette nouvelle version propose beaucoup plus de fonctionnalités que la version précédente :
 
 - Un meilleur rendu mobile 📱
@@ -49,6 +52,7 @@ Cette nouvelle version propose beaucoup plus de fonctionnalités que la version 
 - Un meilleur point de contact 📌
 
 ## 4. Quelles sont les technologies utilisées ?
+
 Dans cette version, j'ai utilisé plusieurs technologies :
 
 - NuxtJs pour le rendu côté serveur
@@ -57,5 +61,6 @@ Dans cette version, j'ai utilisé plusieurs technologies :
 - NuxtJs/Content pour tout le contenu
 
 ## 5. Conclusion
+
 Pour conclure, je suis très satisfait du résultat de cette nouvelle version, de ses fonctionnalités.
 Je vous laisse visiter le reste du site et me donner votre avis !
