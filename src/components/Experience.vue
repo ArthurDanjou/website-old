@@ -1,10 +1,14 @@
 <template>
   <div class="flex flex-row mb-5">
     <div class="self-center flex h-3 w-3 mr-3 relative">
-      <span v-if="end === 'Today'" class="animate-ping relative inline h-3 w-3 rounded-full bg-indigo-600 opacity-75"></span>
-      <span v-else class="inline relative h-3 w-3 rounded-full bg-gray-400 opacity-75"></span>
-      <span v-if="end === 'Today'" class="inline absolute rounded-full h-3 w-3 bg-indigo-800"></span>
-      <span v-else class="inline absolute rounded-full h-3 w-3 bg-gray-500"></span>
+      <span
+        class="relative inline h-3 w-3 rounded-full opacity-75"
+        :class="end === 'Today' ? 'animate-ping bg-indigo-600' : 'bg-gray-400'"
+      />
+      <span
+        class="inline absolute rounded-full h-3 w-3"
+        :class="end === 'Today' ? 'bg-indigo-800' : 'bg-gray-500'"
+      />
     </div>
     <div class="leading-7">
       <p v-if="isSameDate()" class="text-base dark:text-dark-100 text-gray-800 leading-6">{{ getBeginDate }} <span class="px-3">|</span> {{location}}</p>
