@@ -68,7 +68,7 @@
 
 <script lang="ts">
 import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
-import {Form} from "../../types/types";
+import {Form} from "~/types/types";
 
 export default defineComponent({
   name: "ContactForm",

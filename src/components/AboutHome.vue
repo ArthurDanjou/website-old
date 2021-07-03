@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {InfoData} from "../../types/types";
+import {InfoData} from "~/types/types";
 
 export default defineComponent({
   name: "AboutHome",
@@ -32,7 +32,7 @@ export default defineComponent({
         .fetch<InfoData>()
         .catch((error) => {
           $sentry.captureEvent(error)
-        })
+        });
     })
 
     return {

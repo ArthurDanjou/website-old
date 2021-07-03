@@ -9,7 +9,3 @@ export default {
   name: "EnvGroup"
 }
 </script>
-
-<style scoped>
-
-</style>

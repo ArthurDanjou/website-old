@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Post} from "../../types/types";
+import {Post} from "~/types/types";
 
 export default defineComponent({
   name: "PostsHome",

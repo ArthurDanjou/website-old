@@ -5,9 +5,7 @@
         <div class="mb-4 flex">
           <nuxt-link to="/blog" class="back-arrow flex">
             <div class="duration-300 arrow">
-              <svg height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
+              <BackSpaceIcon />
             </div>
             <div class="ml-2">
               {{ $t('blog.read.back') }}
@@ -53,49 +51,46 @@
         <div class="flex items-center mb-2 md:mb-0">
           <div
             @click="handleLike"
-            class="h-16 end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-3xl p-3 border-solid border mr-2"
+            class="end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-1 border-solid border mr-2"
             :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
           >
-            <div class="mr-2 lining-nums">
+            <div class="mr-2 lining-nums leading-3">
               {{ likes }}
             </div>
-            <div class="icon-hover inline" :class="liked ? 'animate-bounce ease duration-500':''">❤️</div>
+            <div class="icon-hover inline leading-6" :class="{'heartbeat': liked}">
+              <HeartIcon :liked="liked"/>
+            </div>
           </div>
           <a
             target="_blank"
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
-            class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 justify-center items-center"
+            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
           >
-            <TwitterIcon />
+            <TwitterBlogIcon />
           </a>
-          <div @click="scrollToTop"
-               class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white">
-            <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
+          <div
+            @click="scrollToTop"
+            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+          >
+            <ArrowUpIcon />
           </div>
         </div>
         <div class="flex items-center">
-          <nuxt-link to="/contact"
-                     class="h-16 mr-2 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
+          <nuxt-link
+            to="/contact"
+            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
-            <svg class="inline icon-hover" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-            </svg>
+            <BookmarkIcon />
           </nuxt-link>
           <div
             @click="copyToClipboard"
-            class="h-16 end-blog cursor-pointer duration-300 text-3xl p-3 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white"
+            class="nd-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
-            <svg class="inline icon-hover" height="40" width="40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-            </svg>
+            <CopyIcon />
           </div>
-          <div v-if="isCopied" class="p-3 relative text-sm flex justify-center items-center text-green-500">
+          <div v-if="isCopied" class="p-2 relative text-sm flex justify-center items-center text-green-500">
             {{ $t('copied') }}
-            <svg class="inline icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
+            <CheckIcon />
           </div>
         </div>
       </div>
@@ -112,7 +107,7 @@ import {
   useMeta,
   useRoute, useStatic, watch
 } from "@nuxtjs/composition-api";
-import {Post} from "../../../types/types";
+import {Post} from "~/types/types";
 
 export default defineComponent({
   name: "blog",
@@ -245,6 +240,22 @@ export default defineComponent({
 
   .end-blog:hover .icon-hover {
     @apply transform scale-105;
+  }
+
+  .heartbeat {
+    animation: 3s ease heartbeat infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    @apply transform scale-100;
+  }
+  50% {
+    @apply transform scale-75;
+  }
+  100% {
+    @apply transform scale-100;
   }
 }
 </style>

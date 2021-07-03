@@ -4,9 +4,7 @@
       <div class="flex flex-col items-center md:mb-20">
         <div class="flex">
           <div class="h-16 w-16 mr-4">
-            <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
+            <ErrorIcon class="w-full h-full"/>
           </div>
           <div class="mb-12 lining-nums">
             <div class="mb-2">
@@ -29,11 +27,9 @@
         </div>
         <div>
           <div class="home-btn" @click="next">
-            <div class="w-full py-4 px-8 md:py-8 md:px-16 font-bold hover:bg-red-500 duration-500 rounded">
+            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:bg-indigo-600 duration-500 rounded">
+              <BackSpaceIcon class="arrow-img text-xl"/>
               {{ $t('error.back') }}
-              <svg class="inline arrow-img" height="32" width="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
             </div>
           </div>
         </div>
@@ -62,13 +58,8 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .error {
-
-  .home-btn:hover .arrow-img {
-    transform: translate(3px, 0);
-  }
-
   .arrow-img {
-    transform: translate(3px, -3px);
+    transform: translate(0, -2px);
     transition: .4s;
   }
 }

@@ -283,7 +283,10 @@ module.exports = defineConfig({
     fill: theme => ({
       current: 'currentColor',
       'adonis-dark': theme('colors.purple.500'),
-      'adonis-light': theme('colors.purple.800')
+      'adonis-light': theme('colors.purple.800'),
+      'twitter-dark': theme('colors.cyan.400'),
+      'twitter-light': theme('colors.cyan.500'),
+      'heart': theme('colors.red.500')
     }),
     flex: {
       1: '1 1 0%',
@@ -813,6 +816,6 @@ module.exports = defineConfig({
     },
   },
   plugins: [
-    require('windicss/plugin/typography'),
+    require('windicss/plugin/typography')
   ],
 })

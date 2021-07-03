@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Experience} from "../../types/types";
+import {Experience} from "~/types/types";
 
 export default defineComponent({
   name: "ExperiencesAbout",
@@ -39,7 +39,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-
-</style>

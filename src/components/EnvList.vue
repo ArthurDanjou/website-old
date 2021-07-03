@@ -9,7 +9,3 @@ export default {
 name: "EnvList"
 }
 </script>
-
-<style scoped>
-
-</style>
