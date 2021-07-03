@@ -33,7 +33,7 @@
           {{ $t('footer.credits') }}
           <a class="font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
             <NuxtIcon />
-            <span class="link">NuxtJs</span>
+            <span class="link">NuxtJS</span>
           </a>
           {{ $t('footer.credits_separator_and') }}
           <a class="font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
