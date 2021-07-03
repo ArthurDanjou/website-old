@@ -1,5 +1,5 @@
 <template>
-  <main class="about flex flex-col items-center mb-8 px-5 xl:px-64">
+  <main class="about flex flex-col items-center mb-8 px-5 xl:px-48">
     <PageTitle title="part.about"/>
     <PresentationAbout />
     <SkillsAbout />

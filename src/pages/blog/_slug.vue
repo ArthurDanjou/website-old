@@ -1,5 +1,5 @@
 <template>
-  <main v-if="post" class="blog flex flex-col items-center px-5 xl:px-84 mb-16 md:mb-32">
+  <main v-if="post" class="blog flex flex-col items-center px-5 xl:px-72 mb-16 md:mb-32">
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
       <div>
         <div class="mb-4 flex">

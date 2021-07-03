@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col items-center px-5 xl:px-64">
+  <main class="flex flex-col items-center px-5 xl:px-48">
     <PageTitle title="part.env" />
     <p class="text-gray-700 dark:text-gray-400 text-xl my-8">{{ $t('env.title.description') }}</p>
     <EnvGroup>

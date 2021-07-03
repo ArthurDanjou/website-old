@@ -25,7 +25,7 @@
             </a>
           </p>
           <br class="md:hidden"/>
-          <span class="inline dark:text-dark-200 text-gray-600 text-xs">
+          <span class="inline dark:text-gray-400 text-gray-600 text-xs">
             {{ $t('footer.links_click') }}
           </span>
         </div>

@@ -216,14 +216,39 @@
         "signature": "1e61418f41d404e744b6536af9f8c6f6674dd4d54c12335cd0c4f7eded69cf3f",
         "affectsGlobalScope": true
       },
-      "./src/locales/en-EN.ts": {
-        "version": "00175983df66cf1db25f99cceb23cd4be11bf83c4a365f2e95eb115b54a831b6",
-        "signature": "014b0d38ca1fce483425a598b43ea596205ce489455b019c866de3f047caf5fd",
+      "./node_modules/vue/types/vnode.d.ts": {
+        "version": "e4ffcf0874c04af41261bc47240f8a07e0a6c6b92ee27535037d1b84562a0a9a",
+        "signature": "e4ffcf0874c04af41261bc47240f8a07e0a6c6b92ee27535037d1b84562a0a9a",
         "affectsGlobalScope": false
       },
-      "./src/locales/fr-FR.ts": {
-        "version": "f259373370474e0abbde2ae92b11356d789efc488dd0c69a25a8b15bb160d386",
-        "signature": "d683cbf2b138f51f03066459d9f2eaff9d411070400f4f4aa05ab1854c4485e2",
+      "./node_modules/vue/types/options.d.ts": {
+        "version": "a93869a6d95326dab9f38ecbbd51081048ebfd699ac18841178ddf83de90d9f4",
+        "signature": "a93869a6d95326dab9f38ecbbd51081048ebfd699ac18841178ddf83de90d9f4",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/vue/types/plugin.d.ts": {
+        "version": "e8cc0280272ae461f8dc6eef59712323d9eea7abfd455a8d4861601f3c5a9a6f",
+        "signature": "e8cc0280272ae461f8dc6eef59712323d9eea7abfd455a8d4861601f3c5a9a6f",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/vue/types/vue.d.ts": {
+        "version": "d946d4a97ba86fd0857f7fca9c5a859b74d0df8d1f4a3cf5c4587b499c4b81b0",
+        "signature": "d946d4a97ba86fd0857f7fca9c5a859b74d0df8d1f4a3cf5c4587b499c4b81b0",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/vue/types/umd.d.ts": {
+        "version": "dc645f5824d760b61e34dff04adb5ee53b8efc3735a974c53d0ffb4e70d0f2d2",
+        "signature": "dc645f5824d760b61e34dff04adb5ee53b8efc3735a974c53d0ffb4e70d0f2d2",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/vue/types/index.d.ts": {
+        "version": "4a75e4b3cb109dcf5e977cb8ab1c8f9804073b37fa7f094785ee8014efdeabf4",
+        "signature": "4a75e4b3cb109dcf5e977cb8ab1c8f9804073b37fa7f094785ee8014efdeabf4",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@vue/composition-api/dist/index.d.ts": {
+        "version": "e16cd96abac04176f8e527b8418601a8e96856827d8612a6f8a57602671e07b0",
+        "signature": "e16cd96abac04176f8e527b8418601a8e96856827d8612a6f8a57602671e07b0",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/assert/strict.d.ts": {
@@ -504,36 +529,6 @@
       "./node_modules/@types/connect/index.d.ts": {
         "version": "81c14b89fa607b86dd726e2e3e91360cf8155ce97468404324d404a5bd65b2eb",
         "signature": "81c14b89fa607b86dd726e2e3e91360cf8155ce97468404324d404a5bd65b2eb",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/vnode.d.ts": {
-        "version": "e4ffcf0874c04af41261bc47240f8a07e0a6c6b92ee27535037d1b84562a0a9a",
-        "signature": "e4ffcf0874c04af41261bc47240f8a07e0a6c6b92ee27535037d1b84562a0a9a",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/options.d.ts": {
-        "version": "a93869a6d95326dab9f38ecbbd51081048ebfd699ac18841178ddf83de90d9f4",
-        "signature": "a93869a6d95326dab9f38ecbbd51081048ebfd699ac18841178ddf83de90d9f4",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/plugin.d.ts": {
-        "version": "e8cc0280272ae461f8dc6eef59712323d9eea7abfd455a8d4861601f3c5a9a6f",
-        "signature": "e8cc0280272ae461f8dc6eef59712323d9eea7abfd455a8d4861601f3c5a9a6f",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/vue.d.ts": {
-        "version": "d946d4a97ba86fd0857f7fca9c5a859b74d0df8d1f4a3cf5c4587b499c4b81b0",
-        "signature": "d946d4a97ba86fd0857f7fca9c5a859b74d0df8d1f4a3cf5c4587b499c4b81b0",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/umd.d.ts": {
-        "version": "dc645f5824d760b61e34dff04adb5ee53b8efc3735a974c53d0ffb4e70d0f2d2",
-        "signature": "dc645f5824d760b61e34dff04adb5ee53b8efc3735a974c53d0ffb4e70d0f2d2",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/vue/types/index.d.ts": {
-        "version": "4a75e4b3cb109dcf5e977cb8ab1c8f9804073b37fa7f094785ee8014efdeabf4",
-        "signature": "4a75e4b3cb109dcf5e977cb8ab1c8f9804073b37fa7f094785ee8014efdeabf4",
         "affectsGlobalScope": false
       },
       "./node_modules/vue-router/types/vue.d.ts": {
@@ -1131,6 +1126,396 @@
         "signature": "6f5fe6eee82ccb2fc18cf3955af4b5c8756e721244912835596b02f9a4229255",
         "affectsGlobalScope": false
       },
+      "./node_modules/@nuxtjs/composition-api/dist/index.d.ts": {
+        "version": "f80a7e07a7eb5f0b68081f85782c00666b9b6a424243db7faf4440a9cf7b7bd7",
+        "signature": "f80a7e07a7eb5f0b68081f85782c00666b9b6a424243db7faf4440a9cf7b7bd7",
+        "affectsGlobalScope": false
+      },
+      "./types/types.ts": {
+        "version": "c97a118e4aa87a6c0b6774a199a7a998f360e34812d1dccba972daa1d2f1b3fd",
+        "signature": "d51cf90c67a6741bad527a7f081e4b6bdb9656fb8160c3d823184bc76332e276",
+        "affectsGlobalScope": false
+      },
+      "./src/components/AboutHome.vue.ts": {
+        "version": "d8c24a43c172dd4d713df4282739c119d6ff2a26f9911813935f1e10e4fefab2",
+        "signature": "27c32e3e98675eec431ca36c35f3469b3d561e6d9dfd764b5a05fd31f96a6b5d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Ad.vue.ts": {
+        "version": "de88510052fbcf69ce34f7bc876f9ca3407d0786a3d1d3e9ebba28b14a88290c",
+        "signature": "e4b571096aa66999c4f8b2ac91e51a7cf186c177e304301cddc023169f7c9fdf",
+        "affectsGlobalScope": false
+      },
+      "./src/components/AdHome.vue.ts": {
+        "version": "e34e75400f7b6b5c69963c891eaf92732d147738bc828b42609eb6663cd57f72",
+        "signature": "c6e0b91e8791b5b1efdf3f1b943372b2d36c70b0563d40d6c3f27fdfa04c793f",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Banner.vue.ts": {
+        "version": "27e74b07155b67ce0db035f5cf8a1204f82e133250304297c1712613f2fc15a8",
+        "signature": "c6e0b91e8791b5b1efdf3f1b943372b2d36c70b0563d40d6c3f27fdfa04c793f",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Button.vue.ts": {
+        "version": "d55f958a8644618c65590d5e0a583e27f4a500b765d43440136ddf8499e857a7",
+        "signature": "e72525d435e5cc82e33bc246e0b5a00218ee1ecb6ce7e8a46fe350f3e75db8dc",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ContactForm.vue.ts": {
+        "version": "b3b9943163e070a428cad62fc7126dfac7902f2723c46b0bbf47b31c3438582d",
+        "signature": "d26142bad7dcc401a5347b342131758b519cb8d5c00e5d1aa175bbc14d2ffb73",
+        "affectsGlobalScope": false
+      },
+      "./src/components/EnvGroup.vue.js": {
+        "version": "d3320d14e99cc5fd8147397627ed3c9aa85f52085fdf921ede5b90f00eff42c4",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/EnvList.vue.js": {
+        "version": "63bd549b45cb5968909afc5b88782ac650aabd4db592262d99bb32c42497d440",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/EnvListItem.vue.js": {
+        "version": "908941e0111a4f43fc1147154aad965394ddc703b92dd781547646a8fc2a13b7",
+        "signature": "03c92d43d334a0646e88db79bbe1682a0105c8c75870055eab1dc1dc1d5587f5",
+        "affectsGlobalScope": false
+      },
+      "./src/components/EnvTitle.vue.js": {
+        "version": "612bd445827a1ab968a2bab0acf8ed83a77136eea220c3b7dc8490d121b5951c",
+        "signature": "0562efbe18745ab1a9a78d3f3e4114e829435f6af0dcb0120f38846984dab72c",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Experience.vue.ts": {
+        "version": "f7dac2af37c80f349760c95e105e746654251cc003f2acd2c3851f9d4e30fbee",
+        "signature": "765450a944239b18294192b583bdc6ff5b49ee5a6707d16f9b17c60cfb1b27ed",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ExperiencesAbout.vue.ts": {
+        "version": "02f91ab62a35c960b1377cceb5c2d95757b36acb5be84d35626f93025e7dec77",
+        "signature": "f949f6d4600598cf1a2922677c1442e1839cdabd20832de096b7bf9a0099c2c7",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Footer.vue.ts": {
+        "version": "7282c703373a48cfcbce64bb48d75e0de21483da957d8a8be1f851d384561450",
+        "signature": "cae803f61291b9c6156a404328d8e7b67cd03a090e66e7294ee08f5442079e97",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Formation.vue.ts": {
+        "version": "72e0aeda285170daa4670e40e8dc29f8bef8b5a94182320b6580539e8762b863",
+        "signature": "c3847420d63d1aa9e213fdf1d9eef596dbd9d13051c2d3daf6b840ba7e44b966",
+        "affectsGlobalScope": false
+      },
+      "./src/components/FormationsAbout.vue.ts": {
+        "version": "6c94f830fa3cfad14c8081887a0c2593c0acff8584dcc205ac91613fdcd814fa",
+        "signature": "41cc49f3866e41e4e637e810987c6752d9da3d4440c4283e49712dd679ebb98a",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Header.vue.ts": {
+        "version": "8b8769f0f7451c1bbc0a68b002ba4d5bcb0fdae9a52397873fb15d79538697d8",
+        "signature": "b385c042434c74d6a23ddb6ebb14629c6459cac5de66ea5fdce9a4f3b542edc0",
+        "affectsGlobalScope": false
+      },
+      "./src/components/InterestsAbout.vue.js": {
+        "version": "e5dd9c3df8d72e9ddefdddb7688d99dab944b06a7696b168622e86da87635322",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/LanguagesAbout.vue.js": {
+        "version": "bc0a01de273b02a5509eaf2184d555fa6db282739024e66cc44fc53993f42898",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/PageTitle.vue.ts": {
+        "version": "0a62819bbc0d362269fb2bddcaa54a7411d4d291b4714d503f082567bc1e6d1c",
+        "signature": "21267281fe59b49c035c916e061a5da5e4d1c92c59adca8efd6a390016826360",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Post.vue.ts": {
+        "version": "dca179bcc5670514fc5c6082386bcbc63d7aebb6ec39ba6b3ec085e8f9a12348",
+        "signature": "466c0490a033e7f198278397824c291bff73abb1ab2130f6423addbb7c911485",
+        "affectsGlobalScope": false
+      },
+      "./src/components/PostsHome.vue.ts": {
+        "version": "5ea4bd18e7bf761a64a0d490bbabec5e9e4e8d70592380a248fc32f89f13eae7",
+        "signature": "0f3bc884abced4ab69e47844cd1da2d1b87022eb69ab3ea0b9e3bb5a867fd720",
+        "affectsGlobalScope": false
+      },
+      "./src/components/PresentationAbout.vue.js": {
+        "version": "a5e87c29a321f8fd51d8578a4e9b93f4052a8978de49d635e745987271a017a6",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Project.vue.ts": {
+        "version": "6a5298f63666fe90292eb5f7f74acaf72d4a8536bbf4e3dbfb39f50ddd5bd60e",
+        "signature": "7a33598a183cfe23458d74005c48c0a16893aeeaba2878ef7f9e0c2a1f59df7b",
+        "affectsGlobalScope": false
+      },
+      "./src/components/ProjectsHome.vue.ts": {
+        "version": "b9f9b7535f7597e957277a02b1ace919f731d16e7e171dbddb0990a317d3f44a",
+        "signature": "d4fb6b4d30d9e8b94c986fdebf22e8505cb9f26ac32ef911a455e3c46e2af178",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Skill.vue.ts": {
+        "version": "50dd73e75a76b8f80d60afb53ed261faa6fcc9454dc79b29285a49606e56b791",
+        "signature": "8c9d6ac56fe4cf35eaa97d43c0f9386e5cad92d9904764a41b0ba3ac8f3eba7b",
+        "affectsGlobalScope": false
+      },
+      "./src/components/SkillsAbout.vue.ts": {
+        "version": "cb6906d6d3b06a4c74f04b4ebe5e57aa695a85a6fe94d7b6532b42e22daaea15",
+        "signature": "a0dd19ef7769c3026fc8e412437b69d8453d593b2387e0bd389fd277cb481413",
+        "affectsGlobalScope": false
+      },
+      "./src/components/Tag.vue.ts": {
+        "version": "75ff79ceeb7992de3cdcbd353209c843b60521871281e5eca179ef1c7d6b04ef",
+        "signature": "1d01c59aebedf2dded394cddf9487ff8920ccfed3f9300e765b0d99b3f0b9fcc",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/AdonisIcon.vue.ts": {
+        "version": "652da707b1866d66bdfe9b41b7c487fb46b9bbb482ad78fc668022aa951e5394",
+        "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/ArrowUpIcon.vue.js": {
+        "version": "f552a7ba97b5cd671a64ee054d0f3004cdba8f513090263fec93d11bf1ef1379",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/BackSpaceIcon.vue.js": {
+        "version": "eea069b2217e7ceadd47fc0de1cf97db5dbae37876a6d0bb8d4684f7bcd18d3c",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/BookIcon.vue.ts": {
+        "version": "8b0a44d8332783b1a0155407cb9444b1b4dd050849800a3b387e021cc98a3cb2",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/BookmarkIcon.vue.js": {
+        "version": "e7c9e7012dfa0424e75bbd6b3b29b85750fbaceb9f369699cbadece9d30cfebc",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/BundleIcon.vue.js": {
+        "version": "e4070c50517ff7e474c7025a9f667f925552042d0925b61cc4e48e89a46318d4",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/CheckIcon.vue.js": {
+        "version": "bc4a1badff8186ee090494b23fbc2e5b0d6dbc9772402f1a5bb35f533da40420",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/CloudIcon.vue.js": {
+        "version": "cf7ae70df20b01cd540d396fd61577a712f9f73a43f6b963e6824fda3f811f86",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/ComputerIcon.vue.ts": {
+        "version": "e4b71e816b13dfcab2ad12ac4d17d9c390cc42322b2c1dd342b4310c30443d9f",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/ContactIcon.vue.ts": {
+        "version": "763b60ba37b83ed8f41c58ea9f06f688682f43673a5508c303b0dd9a3fd0f51c",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/CopyIcon.vue.js": {
+        "version": "eb6c87cd03f3ffb8077dac2bfdd5848f53059b0ea6a4d0e227e845d5f9e88f21",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/CpuIcon.vue.js": {
+        "version": "54207168a806e5b5bfd5a20098a1fc0f6250932bc8f693da2b264293c5f4b6e1",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/CubeIcon.vue.js": {
+        "version": "0a2291bb3c5a1e6b8edc830fb31fbab95c5e3daa6dd0cf539ad4fecb94cb002d",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/DegreeHatIcon.vue.js": {
+        "version": "383d5d3232bd96471ae9a51e9b7aa56f3d4f2af503369cccfc63e3bc327c7f25",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/DevelopmentIcon.vue.js": {
+        "version": "e92f9bdb23ad5451db5ecd47e97dc6c27182897aee092c3d5d632a5c712a0afb",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/ErrorIcon.vue.js": {
+        "version": "d430167ff591de68086092d7cda913dc9fe7fcf68d519e81f63984d71e84c6cb",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/FireIcon.vue.js": {
+        "version": "06815770f76033527bd67300ced9500fc86e70c6125f200207babb3d711d9515",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/GithubIcon.vue.ts": {
+        "version": "652da707b1866d66bdfe9b41b7c487fb46b9bbb482ad78fc668022aa951e5394",
+        "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/HeartIcon.vue.ts": {
+        "version": "a710c7ad19eedd7734c40cc08913756424edfd64589598c514a17f650c83cce4",
+        "signature": "46cd62d67b2e0d5ccf33a860c6b4227a1e3b2886a35306ff5d04c812e5878779",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/HomeIcon.vue.ts": {
+        "version": "b01f2001f7a4150a61a03574e4a8eac4cba9824a278c87144c3d281d9dcf534b",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/InfiniteIcon.vue.js": {
+        "version": "cd4587f68fd97e5d76c7fd573a7c22d745b9b68181835608c369d0a13ea40381",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/LampIcon.vue.js": {
+        "version": "2023bd2b1a3950c16435d9f1daef22b21280a558361d7e46b05334a0fa2ce4cf",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/LightbulbIcon.vue.ts": {
+        "version": "6b9604e3a4987a90f35b679b235766c3a9dd13090926c48612dfc9dc80f7cf85",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/MailIcon.vue.ts": {
+        "version": "652da707b1866d66bdfe9b41b7c487fb46b9bbb482ad78fc668022aa951e5394",
+        "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/MathsIcon.vue.js": {
+        "version": "ed6f338d7f2edec3860644ec8b6a13b906c72b3d0bed2dc8df1d7d036b729634",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/MoonIcon.vue.js": {
+        "version": "e1d7996b5cce962368a3bc834aa76e5ab98b0d304245624d1af181a8e882457c",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/MotorcycleIcon.vue.js": {
+        "version": "cf05ae71fcca070f8e301f2089aa44fbfc915cd6b487ac4b042c87b1f2f7296f",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/NuxtIcon.vue.js": {
+        "version": "16275cef10a348c2f028bd66a3e849fc2ca4ec1891644363047104cf2e81b687",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/PlaneIcon.vue.js": {
+        "version": "acbfb3c2e6f69d0d8b449ef99df1d4d9d0d9db51a750be93cbaa177d17a95b0c",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/PresentationIcon.vue.js": {
+        "version": "326a768a8ec92502481485305263bf4d916e263b5f676c0eaa680bbdbf3de2fb",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/ServerIcon.vue.js": {
+        "version": "056ae46bb3bf3ef1758ca65f0a92b203f9f917c48840906f4dfccd7633082cec",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/SunIcon.vue.js": {
+        "version": "303464a07f0d75c66de7de93295312d0d06d2000a6ed8bab5a3c2925d0f025be",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/TranslateIcon.vue.js": {
+        "version": "5730c200e5fb2583b5786b443e9dbd46e697ce8dac9133393d8a9ddd63af677d",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/TwitchIcon.vue.ts": {
+        "version": "acb5c40529757366efc8a2eaa0b511045a3cf6c3d5b71fb524f57b5570908f0c",
+        "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/TwitterBlogIcon.vue.js": {
+        "version": "12c0e293587635e2bb97bb3330637aa84e9efe0bf32f2a6269fe70c35b9b32d5",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/TwitterIcon.vue.ts": {
+        "version": "7ea35ed68ad1d68337d531bf68a991294e2f5ed0361c028fc0169f480ce8df45",
+        "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/UserIcon.vue.ts": {
+        "version": "a5db309091431f6a15fc4804944056d1d450dfe83bbce49ca6658103cfe2983a",
+        "signature": "2b052cfa4996206110782bf2598cc89455a9d451301bd7fbf1bab46022914994",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/VialIcon.vue.js": {
+        "version": "c4b6a0497ae3f855a129804f1bff727fa7b4b4bb779f79a6b32eb94eb1a85bb9",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
+        "affectsGlobalScope": false
+      },
+      "./src/layouts/default.vue.js": {
+        "version": "450f0af4f4c1ecc4c7180f2e364c8a59bfed69dd350fb6b47bce8641c2a37786",
+        "signature": "e82bc945141f3b9504914d697ded0e8fa71e51328a6d13efbe7350a81913cff1",
+        "affectsGlobalScope": false
+      },
+      "./src/layouts/error.vue.ts": {
+        "version": "2bc7831204ffc8cfc280f12e3cbe239b56bffe9d9922015e66063e04902a0d97",
+        "signature": "28a0a2144da61568bf635164ec1a72a1eaf706593cd59672bcfbfc28938e2505",
+        "affectsGlobalScope": false
+      },
+      "./src/locales/en-EN.ts": {
+        "version": "00175983df66cf1db25f99cceb23cd4be11bf83c4a365f2e95eb115b54a831b6",
+        "signature": "014b0d38ca1fce483425a598b43ea596205ce489455b019c866de3f047caf5fd",
+        "affectsGlobalScope": false
+      },
+      "./src/locales/fr-FR.ts": {
+        "version": "f259373370474e0abbde2ae92b11356d789efc488dd0c69a25a8b15bb160d386",
+        "signature": "d683cbf2b138f51f03066459d9f2eaff9d411070400f4f4aa05ab1854c4485e2",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/about.vue.js": {
+        "version": "9fa0e94b7aecad7f03c6e7e1dcf22d91248c4a69643d7dac9f22730f4b53779d",
+        "signature": "58ef7eac2be6e374879739b74110c4f11787cec4debeffe3dc818a65b00cba6f",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/contact.vue.ts": {
+        "version": "fb534e119fa53254e57226b147fe2ddda80afd7fa414d0b5e7f6176e7d586df6",
+        "signature": "caaa31ae3bd3dfdf5251b928034688a640d4c61a1aee4242fa59fcfc5c4312ec",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/env.vue.js": {
+        "version": "28725573ea76656212249f1d4378c2e7b5a9a187c3d53c5eab77b47617ced8e4",
+        "signature": "58ef7eac2be6e374879739b74110c4f11787cec4debeffe3dc818a65b00cba6f",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/index.vue.ts": {
+        "version": "ac2718401288dca55731ded863bbcb727c8716871a2d4b8cfb4cd1af30989d04",
+        "signature": "839de817db51952a2a9db64b310d2272d38af4df72a0bfa1bb5155167c4f478b",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/projects.vue.ts": {
+        "version": "2c50571c4018ce49b62ac1706f0510afea9f2101633dee5ad8351630be0780ff",
+        "signature": "fe37244b441959c7d236be415bbb4519b3b681c2d77550a398bbfb3fab53f5a3",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/blog/_slug.vue.ts": {
+        "version": "a37a69784b11bd35df2ab458993103f66690c0277c96792bce9d2108695c86ee",
+        "signature": "c5d8c00ebc6ec0bf117ce95637f6e04276a5980d55ca55ddda3d58ef72d8b5e6",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/blog/index.vue.ts": {
+        "version": "10dfb85d8089dd71251226496e5eae2cf2f6d5b6a830fd823328d1f43399e4fc",
+        "signature": "c520249b635aae9eb969534bc0a03d35fcc6929c47112835a8b6ecf0c87c3bf0",
+        "affectsGlobalScope": false
+      },
       "./src/plugins/i18n.ts": {
         "version": "3d493e3ec493e872d8e3eb60dd5ada8010d351d4690f8bd8d0675a98d1a574e8",
         "signature": "00461521f3831fd1e832da5a2cf5d9f52d561685cc36b6bdc06bc2e729312bcf",
@@ -1226,20 +1611,10 @@
         "signature": "d01a657760f1146a174ca8b7bc972bfc9747c8d261e34ea6f280e098f23a6af5",
         "affectsGlobalScope": false
       },
-      "./types/types.ts": {
-        "version": "c97a118e4aa87a6c0b6774a199a7a998f360e34812d1dccba972daa1d2f1b3fd",
-        "signature": "d51cf90c67a6741bad527a7f081e4b6bdb9656fb8160c3d823184bc76332e276",
-        "affectsGlobalScope": false
-      },
       "./types/vue-shim.d.ts": {
         "version": "cf7bc13b3c0884e78688438289f2b71345cd3890cc1b73ef2771ec3e2d5ba9a2",
         "signature": "cf7bc13b3c0884e78688438289f2b71345cd3890cc1b73ef2771ec3e2d5ba9a2",
         "affectsGlobalScope": false
-      },
-      "./tsconfig.json": {
-        "version": "75727fc24483a43b81d3ee77addc6dd0a9690b13dad2af859fe20f647a1625b0",
-        "signature": "48604e44e2cafa9a3f5454fcea8eda16487e6cea64931b14e86c63935d361131",
-        "affectsGlobalScope": true
       },
       "./node_modules/@lokidb/loki/types/loki/src/event_emitter.d.ts": {
         "version": "0cd900527660e469edc444f5ce83934794cd20ae035b905ed350779821e08b68",
@@ -1964,16 +2339,6 @@
       "./node_modules/@nuxtjs/sentry/types/index.d.ts": {
         "version": "eb9c1892197a73f4b9d3a6f124a254eeb9f26e0e650341ed7c2fe7fb406bda9d",
         "signature": "eb9c1892197a73f4b9d3a6f124a254eeb9f26e0e650341ed7c2fe7fb406bda9d",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@vue/composition-api/dist/index.d.ts": {
-        "version": "e16cd96abac04176f8e527b8418601a8e96856827d8612a6f8a57602671e07b0",
-        "signature": "e16cd96abac04176f8e527b8418601a8e96856827d8612a6f8a57602671e07b0",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@nuxtjs/composition-api/dist/index.d.ts": {
-        "version": "f80a7e07a7eb5f0b68081f85782c00666b9b6a424243db7faf4440a9cf7b7bd7",
-        "signature": "f80a7e07a7eb5f0b68081f85782c00666b9b6a424243db7faf4440a9cf7b7bd7",
         "affectsGlobalScope": false
       },
       "./node_modules/nuxt-i18n/types/vue.d.ts": {
@@ -4586,6 +4951,303 @@
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
       ],
+      "./src/components/AboutHome.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Ad.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/AdHome.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Banner.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Button.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/ContactForm.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/EnvGroup.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/EnvList.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/EnvListItem.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/EnvTitle.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Experience.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/ExperiencesAbout.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Footer.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Formation.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/FormationsAbout.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Header.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/InterestsAbout.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/LanguagesAbout.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/PageTitle.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Post.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/PostsHome.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/PresentationAbout.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/Project.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/ProjectsHome.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Skill.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/SkillsAbout.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Tag.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/AdonisIcon.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/ArrowUpIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/BackSpaceIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/BookIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/BookmarkIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/BundleIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/CheckIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/CloudIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/ComputerIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/ContactIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/CopyIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/CpuIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/CubeIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/DegreeHatIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/DevelopmentIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/ErrorIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/FireIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/GithubIcon.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/HeartIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/HomeIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/InfiniteIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/LampIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/LightbulbIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/MailIcon.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/MathsIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/MoonIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/MotorcycleIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/NuxtIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/PlaneIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/PresentationIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/ServerIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/SunIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/TranslateIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/TwitchIcon.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/TwitterBlogIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/TwitterIcon.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/UserIcon.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/components/icons/VialIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/layouts/default.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/layouts/error.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
       "./src/locales/en-EN.ts": [
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
@@ -4593,6 +5255,43 @@
       "./src/locales/fr-FR.ts": [
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/pages/about.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/pages/blog/_slug.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/blog/index.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/contact.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/env.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/pages/index.vue.ts": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/pages/projects.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts",
+        "./types/types.ts"
       ],
       "./src/plugins/i18n.ts": [
         "./node_modules/@nuxt/types/index.d.ts",
@@ -4604,10 +5303,6 @@
         "./node_modules/@types/node/timers/promises.d.ts"
       ],
       "./src/store/index.ts": [
-        "./node_modules/@types/node/timers.d.ts",
-        "./node_modules/@types/node/timers/promises.d.ts"
-      ],
-      "./tsconfig.json": [
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
       ],
@@ -7165,6 +7860,132 @@
       "./settings/Modules.ts": [
         "./node_modules/@nuxt/types/config/module.d.ts"
       ],
+      "./src/components/AboutHome.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Ad.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/ContactForm.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/Experience.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue-i18n/types/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/ExperiencesAbout.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Footer.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/Formation.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue-i18n/types/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/FormationsAbout.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Header.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/Post.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/PostsHome.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Project.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/ProjectsHome.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Skill.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/SkillsAbout.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/components/Tag.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/icons/AdonisIcon.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/icons/GithubIcon.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/icons/MailIcon.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/icons/TwitchIcon.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/components/icons/TwitterIcon.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/layouts/error.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
+      "./src/pages/blog/_slug.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/blog/index.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/contact.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./types/types.ts"
+      ],
+      "./src/pages/index.vue.ts": [
+        "./node_modules/vue/types/index.d.ts",
+        "./node_modules/vue/types/vue.d.ts"
+      ],
+      "./src/pages/projects.vue.ts": [
+        "./node_modules/@nuxt/content/types/content.d.ts",
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./types/types.ts"
+      ],
       "./src/plugins/i18n.ts": [
         "./node_modules/@nuxt/types/index.d.ts"
       ],
@@ -7585,12 +8406,85 @@
       "./settings/Plugins.ts",
       "./settings/RuntimeConfig.ts",
       "./settings/Style.ts",
+      "./src/components/AboutHome.vue.ts",
+      "./src/components/Ad.vue.ts",
+      "./src/components/AdHome.vue.ts",
+      "./src/components/Banner.vue.ts",
+      "./src/components/Button.vue.ts",
+      "./src/components/ContactForm.vue.ts",
+      "./src/components/EnvGroup.vue.js",
+      "./src/components/EnvList.vue.js",
+      "./src/components/EnvListItem.vue.js",
+      "./src/components/EnvTitle.vue.js",
+      "./src/components/Experience.vue.ts",
+      "./src/components/ExperiencesAbout.vue.ts",
+      "./src/components/Footer.vue.ts",
+      "./src/components/Formation.vue.ts",
+      "./src/components/FormationsAbout.vue.ts",
+      "./src/components/Header.vue.ts",
+      "./src/components/InterestsAbout.vue.js",
+      "./src/components/LanguagesAbout.vue.js",
+      "./src/components/PageTitle.vue.ts",
+      "./src/components/Post.vue.ts",
+      "./src/components/PostsHome.vue.ts",
+      "./src/components/PresentationAbout.vue.js",
+      "./src/components/Project.vue.ts",
+      "./src/components/ProjectsHome.vue.ts",
+      "./src/components/Skill.vue.ts",
+      "./src/components/SkillsAbout.vue.ts",
+      "./src/components/Tag.vue.ts",
+      "./src/components/icons/AdonisIcon.vue.ts",
+      "./src/components/icons/ArrowUpIcon.vue.js",
+      "./src/components/icons/BackSpaceIcon.vue.js",
+      "./src/components/icons/BookIcon.vue.ts",
+      "./src/components/icons/BookmarkIcon.vue.js",
+      "./src/components/icons/BundleIcon.vue.js",
+      "./src/components/icons/CheckIcon.vue.js",
+      "./src/components/icons/CloudIcon.vue.js",
+      "./src/components/icons/ComputerIcon.vue.ts",
+      "./src/components/icons/ContactIcon.vue.ts",
+      "./src/components/icons/CopyIcon.vue.js",
+      "./src/components/icons/CpuIcon.vue.js",
+      "./src/components/icons/CubeIcon.vue.js",
+      "./src/components/icons/DegreeHatIcon.vue.js",
+      "./src/components/icons/DevelopmentIcon.vue.js",
+      "./src/components/icons/ErrorIcon.vue.js",
+      "./src/components/icons/FireIcon.vue.js",
+      "./src/components/icons/GithubIcon.vue.ts",
+      "./src/components/icons/HeartIcon.vue.ts",
+      "./src/components/icons/HomeIcon.vue.ts",
+      "./src/components/icons/InfiniteIcon.vue.js",
+      "./src/components/icons/LampIcon.vue.js",
+      "./src/components/icons/LightbulbIcon.vue.ts",
+      "./src/components/icons/MailIcon.vue.ts",
+      "./src/components/icons/MathsIcon.vue.js",
+      "./src/components/icons/MoonIcon.vue.js",
+      "./src/components/icons/MotorcycleIcon.vue.js",
+      "./src/components/icons/NuxtIcon.vue.js",
+      "./src/components/icons/PlaneIcon.vue.js",
+      "./src/components/icons/PresentationIcon.vue.js",
+      "./src/components/icons/ServerIcon.vue.js",
+      "./src/components/icons/SunIcon.vue.js",
+      "./src/components/icons/TranslateIcon.vue.js",
+      "./src/components/icons/TwitchIcon.vue.ts",
+      "./src/components/icons/TwitterBlogIcon.vue.js",
+      "./src/components/icons/TwitterIcon.vue.ts",
+      "./src/components/icons/UserIcon.vue.ts",
+      "./src/components/icons/VialIcon.vue.js",
+      "./src/layouts/default.vue.js",
+      "./src/layouts/error.vue.ts",
       "./src/locales/en-EN.ts",
       "./src/locales/fr-FR.ts",
+      "./src/pages/about.vue.js",
+      "./src/pages/blog/_slug.vue.ts",
+      "./src/pages/blog/index.vue.ts",
+      "./src/pages/contact.vue.ts",
+      "./src/pages/env.vue.js",
+      "./src/pages/index.vue.ts",
+      "./src/pages/projects.vue.ts",
       "./src/plugins/i18n.ts",
       "./src/plugins/main.ts",
       "./src/store/index.ts",
-      "./tsconfig.json",
       "./types/index.d.ts",
       "./types/types.ts",
       "./types/vue-shim.d.ts"
@@ -9269,6 +10163,10 @@
         1
       ],
       [
+        "./src/components/icons/BackSpaceIcon.vue.js",
+        1
+      ],
+      [
         "./src/components/icons/BookIcon.vue.ts",
         1
       ],
@@ -9314,6 +10212,10 @@
       ],
       [
         "./src/components/icons/DevelopmentIcon.vue.js",
+        1
+      ],
+      [
+        "./src/components/icons/ErrorIcon.vue.js",
         1
       ],
       [

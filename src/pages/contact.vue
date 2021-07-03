@@ -1,8 +1,8 @@
 <template>
-  <main class="contact flex flex-col items-center px-5 xl:px-64">
+  <main class="contact flex flex-col items-center px-5 xl:px-48">
     <PageTitle title="part.contact" />
     <section class="w-full lg:w-3/4 mb-10 mt-4 text-center">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-100">
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.why.title') }}
       </h1>
       <h3 class="text-md md:text-lg">
@@ -10,7 +10,7 @@
       </h3>
     </section>
     <section class="w-full lg:w-3/4 mb-10 mt-4 text-center">
-      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-dark-100">
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.available.title') }}
       </h1>
       <h3 class="text-lg md:text-lg">
