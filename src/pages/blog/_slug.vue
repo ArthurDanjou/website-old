@@ -16,20 +16,20 @@
       <h1 class="text-3xl md:text-5xl font-bold">
         {{ post.title }}
       </h1>
-      <h3 class="text-xl text-gray-800 dark:text-dark-100 my-4 md:mt-8">
+      <h3 class="text-xl text-gray-800 dark:text-gray-300 my-4 md:mt-8">
         {{ post.description }}
       </h3>
       <div class="flex flex-row justify-between w-full md:w-2/3 mb-12">
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">Date</p>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">Date</p>
           <p>{{ formatDate }}</p>
         </div>
         <div>
-          <p class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">{{ $t('blog.read.time') }}</p>
+          <p class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">{{ $t('blog.read.time') }}</p>
           <p>{{ post.reading_time }} min</p>
         </div>
         <div>
-          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-dark-100">Tags</p>
+          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">Tags</p>
           <p>{{ formatTags }}</p>
         </div>
       </div>

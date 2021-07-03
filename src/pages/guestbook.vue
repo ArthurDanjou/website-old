@@ -1,30 +1,20 @@
 <template>
   <main v-if="guestbook_messages" class="flex flex-col mb-8 px-5 xl:px-64">
     <PageTitle class="self-center" title="part.guestbook"/>
-    <section @click="log" class="flex flex-col 2xl:flex-row items-center py-8">
+    <section class="flex flex-col 2xl:flex-row items-center py-8">
       <div class="ml-2 text-lg leading-6 text-justify dark:text-gray-400 text-gray-700">
         <p>{{ $t('guestbook.description') }}</p>
       </div>
     </section>
-    <section class="md:w-2/3 p-6 border border-indigo-300 dark:border-indigo-700 rounded-lg text-justify">
-      <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('guestbook.signin') }}</h1>
-      <h3 class="text-gray-500 dark:text-gray-400">{{ $t('guestbook.share') }}</h3>
-      <div class="flex space-x-4 my-3">
-        <div class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-          <GoogleIcon />
-        </div>
-        <div class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-          <GithubIcon />
-        </div>
-        <div class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-          <TwitterIcon />
-        </div>
+    <GuestBookLogin />
+    <section class="flex flex-col py-8">
+      <div v-for="message in guestbook_messages">
+        <GuestbookMessage
+          :message="message.message"
+          :author="message.user.username"
+          :date="message.created_at"
+        />
       </div>
-      <p class="text-sm text-gray-700 dark:text-gray-300">{{ $t('guestbook.infos') }}</p>
-    </section>
-    <section class="flex flex-col 2xl:flex-row justify-center items-center py-8">
-      FETCH messages
-      {{ guestbook_messages }}
     </section>
   </main>
 </template>
@@ -46,7 +36,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $axios } = useContext()
+    const { $axios, $sentry } = useContext()
     const guestbook_messages = ref([])
 
     useAsync(async () => {
@@ -59,17 +49,12 @@ export default defineComponent({
           guestbook_messages.value = response.data.guestbook_messages
         })
         .catch(error => {
-          console.log("error", error)
+          $sentry.captureEvent(error)
         })
     })
 
-    const log = () => {
-      console.log(guestbook_messages)
-    }
-
     return {
-      guestbook_messages,
-      log
+      guestbook_messages
     }
   }
 })
