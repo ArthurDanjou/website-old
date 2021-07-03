@@ -103,7 +103,9 @@ export default {
       startups: 'Startups & Entreprises innovantes',
       sysadmin: 'Administration système',
       trips: 'Voyage',
-      moto: 'Moto'
+      moto: 'Moto',
+      cloud: 'Cloud Computing',
+      maths: 'Mathématiques'
     },
     languages: {
       fr: 'Français',

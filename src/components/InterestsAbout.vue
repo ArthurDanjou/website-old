@@ -34,7 +34,14 @@
           {{ $t('about.interests.moto') }}
           <MotorcycleIcon />
         </li>
-        <!-- todo add cloud -->
+        <li class="my-2">
+          {{ $t('about.interests.cloud') }}
+          <CloudIcon />
+        </li>
+        <li class="my-2">
+          {{ $t('about.interests.maths') }}
+          <MathsIcon />
+        </li>
       </ul>
     </div>
   </section>
