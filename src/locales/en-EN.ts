@@ -5,21 +5,23 @@ export default {
     contact: 'Contact',
     projects: 'Projects',
     env: 'Tools',
+    guestbook: 'Guestbook'
   },
 
   part: {
     about: 'About me',
     blog: 'My blog',
-    work: 'My work',
+    projects: 'My projects',
     contact: 'Contact me',
-    env: 'My environment'
+    env: 'My environment',
+    guestbook: 'My guestbook'
   },
 
   footer: {
     find_me: 'Find me on :',
     separator: 'et by',
-    links_click: '(Clic it\'s free 🔗)',
-    credits: 'Developed and designed with ❤ using',
+    links_click: "(Clic it's free 🔗)",
+    credits: 'Developed and designed with ❤️ using',
     credits_separator: 'by',
     credits_separator_and: 'and',
     copyrights: '© Copyright {date} - All rights reserved'
@@ -76,11 +78,6 @@ export default {
     tweet: 'I love a new post from @ArthurDanj, check it out here:',
     no_posts: 'Unfortunately there are no items available yet. Come back later 😉',
     see_more: 'See more articles',
-    tags: {
-      search: 'Are you looking for a specific type of article? Test the search by tag 🏷',
-      back: 'Return to all articles',
-      current: 'List of articles with the tag \'{tag}\':'
-    },
     pagination: {
       prev: 'Previous',
       next: 'Next'
@@ -183,7 +180,7 @@ export default {
     },
     why: {
       title: 'Why contact me ? 📩',
-      description: 'Please don\'t hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️'
+      description: "Please don't hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️"
     },
     available: {
       title: 'Am I available? 🚩',

@@ -1211,6 +1211,11 @@
         "signature": "41cc49f3866e41e4e637e810987c6752d9da3d4440c4283e49712dd679ebb98a",
         "affectsGlobalScope": false
       },
+      "./src/components/GuestbookMessage.vue.ts": {
+        "version": "b35fdb94788a7f64722e7af3e2ed0cb9c4ca468dc9470d47296cc9cf1a3311fa",
+        "signature": "ea60b98eabe957956fc074785c9d219366ad842c3e3ee9dc5df6a53f986f7cf0",
+        "affectsGlobalScope": false
+      },
       "./src/components/Header.vue.ts": {
         "version": "8b8769f0f7451c1bbc0a68b002ba4d5bcb0fdae9a52397873fb15d79538697d8",
         "signature": "b385c042434c74d6a23ddb6ebb14629c6459cac5de66ea5fdce9a4f3b542edc0",
@@ -1233,7 +1238,7 @@
       },
       "./src/components/Post.vue.ts": {
         "version": "dca179bcc5670514fc5c6082386bcbc63d7aebb6ec39ba6b3ec085e8f9a12348",
-        "signature": "466c0490a033e7f198278397824c291bff73abb1ab2130f6423addbb7c911485",
+        "signature": "5d8ad8830b37830e2c821c2b7a97733575bc2b99a057ce6adf7e93873be7e04a",
         "affectsGlobalScope": false
       },
       "./src/components/PostsHome.vue.ts": {
@@ -1332,7 +1337,7 @@
         "affectsGlobalScope": false
       },
       "./src/components/icons/CubeIcon.vue.js": {
-        "version": "0a2291bb3c5a1e6b8edc830fb31fbab95c5e3daa6dd0cf539ad4fecb94cb002d",
+        "version": "3a1b5666d206bb50abf856bc6edadf448982dfa8491b195a3d1f9f58f5de4e37",
         "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
         "affectsGlobalScope": false
       },
@@ -1359,6 +1364,11 @@
       "./src/components/icons/GithubIcon.vue.ts": {
         "version": "652da707b1866d66bdfe9b41b7c487fb46b9bbb482ad78fc668022aa951e5394",
         "signature": "a2f055dfdc3a78e2aceee5f28ed62872a3be229ce9ee4bf0e5f500e997fcb9c4",
+        "affectsGlobalScope": false
+      },
+      "./src/components/icons/GoogleIcon.vue.js": {
+        "version": "3bfaee4bc5f4db59f5c509316a7861cb2f9177b5738f015d07ed30b3e3d7fa07",
+        "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
         "affectsGlobalScope": false
       },
       "./src/components/icons/HeartIcon.vue.ts": {
@@ -1407,7 +1417,7 @@
         "affectsGlobalScope": false
       },
       "./src/components/icons/NuxtIcon.vue.js": {
-        "version": "16275cef10a348c2f028bd66a3e849fc2ca4ec1891644363047104cf2e81b687",
+        "version": "08c6be4fd339468ac0e56106f44d7f826f24d8e939dbe8640be8323dad6bddb5",
         "signature": "5fc7fac59487f95c172b48cae722157286049a7af2ec9a47fdb6b9ddf9dea13d",
         "affectsGlobalScope": false
       },
@@ -1472,13 +1482,13 @@
         "affectsGlobalScope": false
       },
       "./src/locales/en-EN.ts": {
-        "version": "00175983df66cf1db25f99cceb23cd4be11bf83c4a365f2e95eb115b54a831b6",
-        "signature": "014b0d38ca1fce483425a598b43ea596205ce489455b019c866de3f047caf5fd",
+        "version": "198cdc2a2d0b8382052d8cccbdecfdf030f8b2b23294be472b29a5f565dccd50",
+        "signature": "74445e9c1bde1a2802259af3293b5a159a1aa1e5d94f0b570168578e9ad1a3ef",
         "affectsGlobalScope": false
       },
       "./src/locales/fr-FR.ts": {
-        "version": "f259373370474e0abbde2ae92b11356d789efc488dd0c69a25a8b15bb160d386",
-        "signature": "d683cbf2b138f51f03066459d9f2eaff9d411070400f4f4aa05ab1854c4485e2",
+        "version": "1b55bcef44b00fb15ad7653f80727dce16328e3b45ba9f2afbd2a69d72fd8b0b",
+        "signature": "628dd954064d33d42350affba8c1616aee7d43c88f79b6aa4ce98a797e34558f",
         "affectsGlobalScope": false
       },
       "./src/pages/about.vue.js": {
@@ -1487,13 +1497,18 @@
         "affectsGlobalScope": false
       },
       "./src/pages/contact.vue.ts": {
-        "version": "fb534e119fa53254e57226b147fe2ddda80afd7fa414d0b5e7f6176e7d586df6",
-        "signature": "caaa31ae3bd3dfdf5251b928034688a640d4c61a1aee4242fa59fcfc5c4312ec",
+        "version": "f8143168ba831b37c8cdcb0fff0faef312be7e21cb1fd2fc2a02697eae55d254",
+        "signature": "fb9776504148be70605ec2bff4085976fe38581d877e98aa81aecbd14e311d72",
         "affectsGlobalScope": false
       },
       "./src/pages/env.vue.js": {
         "version": "28725573ea76656212249f1d4378c2e7b5a9a187c3d53c5eab77b47617ced8e4",
         "signature": "58ef7eac2be6e374879739b74110c4f11787cec4debeffe3dc818a65b00cba6f",
+        "affectsGlobalScope": false
+      },
+      "./src/pages/guestbook.vue.ts": {
+        "version": "19675f064728c2814c259a3f4f726d2b19d58bb4b7a850196a3b8a77f80adbd5",
+        "signature": "5813f05febeb5796bf1729625b5a514348b0b10076b89c2f52cb3322b26438d7",
         "affectsGlobalScope": false
       },
       "./src/pages/index.vue.ts": {
@@ -1502,8 +1517,8 @@
         "affectsGlobalScope": false
       },
       "./src/pages/projects.vue.ts": {
-        "version": "2c50571c4018ce49b62ac1706f0510afea9f2101633dee5ad8351630be0780ff",
-        "signature": "fe37244b441959c7d236be415bbb4519b3b681c2d77550a398bbfb3fab53f5a3",
+        "version": "4631cd0ddb2ded8d07af291a70a314dcc2dd7ccbfd01855bc4e71573bc3e4f20",
+        "signature": "d4fb6b4d30d9e8b94c986fdebf22e8505cb9f26ac32ef911a455e3c46e2af178",
         "affectsGlobalScope": false
       },
       "./src/pages/blog/_slug.vue.ts": {
@@ -1512,8 +1527,8 @@
         "affectsGlobalScope": false
       },
       "./src/pages/blog/index.vue.ts": {
-        "version": "10dfb85d8089dd71251226496e5eae2cf2f6d5b6a830fd823328d1f43399e4fc",
-        "signature": "c520249b635aae9eb969534bc0a03d35fcc6929c47112835a8b6ecf0c87c3bf0",
+        "version": "a1d6655edf29e3c81d207393186980467ba52b8ae6fd02cb856ad85eae2aec00",
+        "signature": "0f3bc884abced4ab69e47844cd1da2d1b87022eb69ab3ea0b9e3bb5a867fd720",
         "affectsGlobalScope": false
       },
       "./src/plugins/i18n.ts": {
@@ -5023,6 +5038,11 @@
         "./node_modules/@types/node/timers/promises.d.ts",
         "./types/types.ts"
       ],
+      "./src/components/GuestbookMessage.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
       "./src/components/Header.vue.ts": [
         "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
         "./node_modules/@types/node/timers.d.ts",
@@ -5156,6 +5176,10 @@
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
       ],
+      "./src/components/icons/GoogleIcon.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
       "./src/components/icons/HeartIcon.vue.ts": [
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
@@ -5279,6 +5303,11 @@
         "./types/types.ts"
       ],
       "./src/pages/env.vue.js": [
+        "./node_modules/@types/node/timers.d.ts",
+        "./node_modules/@types/node/timers/promises.d.ts"
+      ],
+      "./src/pages/guestbook.vue.ts": [
+        "./node_modules/@nuxtjs/composition-api/dist/index.d.ts",
         "./node_modules/@types/node/timers.d.ts",
         "./node_modules/@types/node/timers/promises.d.ts"
       ],
@@ -7900,6 +7929,10 @@
         "./node_modules/vue/types/index.d.ts",
         "./types/types.ts"
       ],
+      "./src/components/GuestbookMessage.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
       "./src/components/Header.vue.ts": [
         "./node_modules/@vue/composition-api/dist/index.d.ts",
         "./node_modules/vue/types/index.d.ts"
@@ -7977,6 +8010,10 @@
         "./node_modules/@vue/composition-api/dist/index.d.ts",
         "./types/types.ts"
       ],
+      "./src/pages/guestbook.vue.ts": [
+        "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts"
+      ],
       "./src/pages/index.vue.ts": [
         "./node_modules/vue/types/index.d.ts",
         "./node_modules/vue/types/vue.d.ts"
@@ -7984,6 +8021,7 @@
       "./src/pages/projects.vue.ts": [
         "./node_modules/@nuxt/content/types/content.d.ts",
         "./node_modules/@vue/composition-api/dist/index.d.ts",
+        "./node_modules/vue/types/index.d.ts",
         "./types/types.ts"
       ],
       "./src/plugins/i18n.ts": [
@@ -8421,6 +8459,7 @@
       "./src/components/Footer.vue.ts",
       "./src/components/Formation.vue.ts",
       "./src/components/FormationsAbout.vue.ts",
+      "./src/components/GuestbookMessage.vue.ts",
       "./src/components/Header.vue.ts",
       "./src/components/InterestsAbout.vue.js",
       "./src/components/LanguagesAbout.vue.js",
@@ -8451,6 +8490,7 @@
       "./src/components/icons/ErrorIcon.vue.js",
       "./src/components/icons/FireIcon.vue.js",
       "./src/components/icons/GithubIcon.vue.ts",
+      "./src/components/icons/GoogleIcon.vue.js",
       "./src/components/icons/HeartIcon.vue.ts",
       "./src/components/icons/HomeIcon.vue.ts",
       "./src/components/icons/InfiniteIcon.vue.js",
@@ -8480,6 +8520,7 @@
       "./src/pages/blog/index.vue.ts",
       "./src/pages/contact.vue.ts",
       "./src/pages/env.vue.js",
+      "./src/pages/guestbook.vue.ts",
       "./src/pages/index.vue.ts",
       "./src/pages/projects.vue.ts",
       "./src/plugins/i18n.ts",
@@ -10107,6 +10148,10 @@
         1
       ],
       [
+        "./src/components/GuestbookMessage.vue.ts",
+        1
+      ],
+      [
         "./src/components/Header.vue.ts",
         1
       ],
@@ -10227,6 +10272,10 @@
         1
       ],
       [
+        "./src/components/icons/GoogleIcon.vue.js",
+        1
+      ],
+      [
         "./src/components/icons/HeartIcon.vue.ts",
         1
       ],
@@ -10343,6 +10392,10 @@
         1
       ],
       [
+        "./src/pages/guestbook.vue.ts",
+        1
+      ],
+      [
         "./src/pages/index.vue.ts",
         1
       ],
@@ -10360,10 +10413,6 @@
       ],
       [
         "./src/store/index.ts",
-        1
-      ],
-      [
-        "./tsconfig.json",
         1
       ],
       [

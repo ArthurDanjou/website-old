@@ -5,7 +5,8 @@
       stroke="currentColor"
       stroke-width="2"
       stroke-linecap="round"
-      stroke-linejoin="round">
+      stroke-linejoin="round"
+    >
       <path d="M6 17.6l-2-1.1V14"/>
       <path d="M4 10V7.5l2-1.1"/>
       <path d="M10 4.1L12 3l2 1.1"/>

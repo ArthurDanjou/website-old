@@ -1,9 +1,9 @@
 <template>
-  <section class="w-full flex items-center justify-center flex-col">
-    <h2 class="text-center mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
+  <section class="w-full flex justify-center flex-col">
+    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
       {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
     </h2>
-    <form class="w-full lg:w-1/2">
+    <form class="w-full">
       <div class="w-full lg:flex justify-center mb-8 lg:mb-12">
         <div class="form-div lg:w-1/2 mb-8 lg:mb-0 lg:mr-4">
           <input

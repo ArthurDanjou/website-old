@@ -22,16 +22,18 @@
 </template>
 
 <script lang="ts">
-import {useAsync, useContext, useMeta} from "@nuxtjs/composition-api";
-import {Project} from "../../types/types";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import {Project} from "~/types/types";
 
-export default {
+export default defineComponent({
   name: "index",
-  head: {
-    title: `Projects - Arthur Danjou`
+  head() {
+    return {
+      title: `${this.$i18n.t('header.projects')} - Arthur Danjou`
+    }
   },
   setup() {
-    const { $content, i18n, $sentry } = useContext()
+    const { $content, $sentry } = useContext()
 
     const projects = useAsync(() => {
       return $content('projects')
@@ -41,13 +43,9 @@ export default {
         })
     })
 
-    useMeta( {
-      title: `${i18n.t('header.projects')} - Arthur Danjou`
-    })
-
     return {
       projects
     }
   }
-}
+})
 </script>

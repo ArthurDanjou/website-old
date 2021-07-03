@@ -1,7 +1,7 @@
 <template>
-  <main class="contact flex flex-col items-center px-5 xl:px-48">
-    <PageTitle title="part.contact" />
-    <section class="w-full lg:w-3/4 mb-10 mt-4 text-center">
+  <main class="contact flex flex-col px-5 xl:px-64">
+    <PageTitle class="self-center" title="part.contact" />
+    <section class="w-full lg:w-3/4 mb-10 mt-4 text-justify">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.why.title') }}
       </h1>
@@ -9,7 +9,7 @@
         {{ $t('contact.why.description') }}
       </h3>
     </section>
-    <section class="w-full lg:w-3/4 mb-10 mt-4 text-center">
+    <section class="w-full lg:w-3/4 mb-10 mt-4 text-justify">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.available.title') }}
       </h1>
@@ -22,13 +22,13 @@
         {{ $t('contact.available.end') }}
       </div>
     </section>
-    <ContactForm />
+    <ContactForm class="w-full"/>
   </main>
 </template>
 
 <script lang="ts">
 import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
-import {InfoData} from "../../types/types";
+import {InfoData} from "~/types/types";
 
 export default {
   name: "contact",

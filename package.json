@@ -17,6 +17,7 @@
     "@nuxtjs/sentry": "^5.1.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.9",
+    "axios": "^0.21.1",
     "core-js": "^3.14.0",
     "nuxt": "^2.15.7",
     "nuxt-i18n": "^6.27.1",

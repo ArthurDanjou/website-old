@@ -13,8 +13,8 @@
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round">
-      </path>
+        stroke-linejoin="round"
+      />
     </g>
   </svg>
 </template>
