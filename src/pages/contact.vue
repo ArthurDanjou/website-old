@@ -1,5 +1,5 @@
 <template>
-  <main class="contact flex flex-col px-5 xl:px-64">
+  <main class="contact flex flex-col px-4 xl:px-64">
     <PageTitle class="self-center" title="part.contact" />
     <section class="w-full lg:w-3/4 mb-10 mt-4 text-justify">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">

@@ -1,5 +1,5 @@
 <template>
-  <main v-if="guestbook_messages" class="flex flex-col mb-8 px-5 xl:px-64">
+  <main v-if="guestbook_messages" class="flex flex-col mb-8 px-4 xl:px-64">
     <PageTitle class="self-center" title="part.guestbook"/>
     <section class="flex flex-col 2xl:flex-row items-center py-8">
       <div class="ml-2 text-lg leading-6 text-justify dark:text-gray-400 text-gray-700">

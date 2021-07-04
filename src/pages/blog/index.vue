@@ -1,5 +1,5 @@
 <template>
-  <main v-if="posts" class="blog flex flex-col items-center w-full px-5 xl:px-16">
+  <main v-if="posts" class="blog flex flex-col items-center w-full px-4 xl:px-16">
     <PageTitle title="part.blog" />
     <p class="text-gray-700 dark:text-gray-400 text-xl mt-4">
       {{ $t('blog.description') }}
