@@ -6,7 +6,7 @@
         <p>{{ $t('guestbook.description') }}</p>
       </div>
     </section>
-    <GuestBookLogin />
+    <GuestBookForm />
     <section class="flex flex-col py-8">
       <div v-for="message in guestbook_messages">
         <GuestbookMessage
@@ -21,12 +21,6 @@
 
 <script lang="ts">
 import {defineComponent, ref, useAsync, useContext} from "@nuxtjs/composition-api";
-
-interface GuestbookMessage {
-  message: string,
-  author: string,
-  date: string
-}
 
 export default defineComponent({
   name: "guestbook",

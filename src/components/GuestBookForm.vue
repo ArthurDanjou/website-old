@@ -49,7 +49,7 @@ import {defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 import {GuestbookForm} from "~/types/types";
 
 export default defineComponent({
-  name: "GuestBookLogin",
+  name: "GuestBookForm",
   setup() {
     const { $axios, $sentry } = useContext()
 
@@ -86,7 +86,7 @@ export default defineComponent({
         form.value.message = ''
         success.value = true
       } else {
-        console.log(response.data)
+        $sentry.captureEvent(response.data)
         error.value = true
         setTimeout(() => {
           error.value = false
