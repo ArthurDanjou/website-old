@@ -59,7 +59,12 @@
       {{ $t('contact.form.success') }}
     </div>
     <div class="my-12">
-      <button :disabled="!isSendable" :class="{'disabled': !isSendable}" @click.prevent="handleForm" class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
+      <button
+        :disabled="!isSendable"
+        :class="{'disabled': !isSendable}"
+        @click.prevent="handleForm"
+        class="font-bold px-8 py-4 border-2 rounded-xl border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer"
+      >
         {{ $t('contact.form.submit') }}
       </button>
     </div>

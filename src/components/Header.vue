@@ -7,31 +7,24 @@
       </nuxt-link>
       <nav class="right">
         <div class="flex flex-col md:flex-row items-center">
-          <ul class="flex text-lg">
-            <nuxt-link class="hidden md:inline-block" to="/about">
-              <li class="nav-link text-gray-500 dark:text-gray-400" :class="{'text-black dark:text-white': isWindow('/about')}">
-                {{ $t('header.about') }}
-              </li>
+          <div class="flex text-lg">
+            <nuxt-link class="nav-link hidden md:inline-block" to="/about">
+              {{ $t('header.about') }}
             </nuxt-link>
-            <nuxt-link class="hidden md:inline-block" to="/blog">
-              <li class="nav-link text-gray-500 dark:text-gray-400" :class="{'text-black dark:text-white': isWindow('/blog')}">
-                {{ $t('header.blog') }}
-              </li>
+            <nuxt-link class="nav-link hidden md:inline-block" to="/blog">
+              {{ $t('header.blog') }}
             </nuxt-link>
-            <nuxt-link class="hidden md:inline-block" to="/projects">
-              <li class="nav-link text-gray-500 dark:text-gray-400" :class="{'text-black dark:text-white': isWindow('/projects')}">
-                {{ $t('header.projects') }}
-              </li>
+            <nuxt-link class="nav-link hidden md:inline-block" to="/projects">
+              {{ $t('header.projects') }}
             </nuxt-link>
-            <nuxt-link class="hidden md:inline-block" to="/contact">
-              <li class="nav-link text-gray-500 dark:text-gray-400" :class="{'text-black dark:text-white': isWindow('/projects')}">
-                {{ $t('header.contact') }}
-              </li>
+            <nuxt-link class="nav-link hidden md:inline-block" to="/contact">
+              {{ $t('header.contact') }}
             </nuxt-link>
-          </ul>
+          </div>
         </div>
         <ul
-          class="dark:text-white dark:bg-black text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items">
+          class="dark:text-white dark:bg-black text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items"
+        >
           <nuxt-link to="/" class="w-1/5">
             <li class="h-full w-full font-medium flex flex-col items-center justify-center">
               <HomeIcon :active="isWindow('')"/>
@@ -140,7 +133,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .nav-link {
-  @apply hover:dark:text-white font-medium hover:text-black mx-4 cursor-pointer duration-300
+  @apply font-medium cursor-pointer duration-300 mx-4 border-b-2 border-transparent hover:(border-indigo-600);
 }
 
 .navbar-bottom-items li {

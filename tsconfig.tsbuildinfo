@@ -1162,7 +1162,7 @@
         "affectsGlobalScope": false
       },
       "./src/components/ContactForm.vue.ts": {
-        "version": "b3b9943163e070a428cad62fc7126dfac7902f2723c46b0bbf47b31c3438582d",
+        "version": "766eb48f3d0995f6ef55606fcb49912b42ec9dc2e7567418bb3dd88f4c2e4ecd",
         "signature": "d26142bad7dcc401a5347b342131758b519cb8d5c00e5d1aa175bbc14d2ffb73",
         "affectsGlobalScope": false
       },
@@ -1222,7 +1222,7 @@
         "affectsGlobalScope": false
       },
       "./src/components/Header.vue.ts": {
-        "version": "64878f61fbde0a8d160ad19482a5b168d2f705ac1339405a20ce52c37ce22f82",
+        "version": "ff62dc9ee1f6df06c998324067ae193de46fe71f0540284aeb2f98bac67e1ba2",
         "signature": "a3ba6e4e90dedc9e3199dd5d1cad9c90318ca98c2a5a2c61edb4bbef88126797",
         "affectsGlobalScope": false
       },
