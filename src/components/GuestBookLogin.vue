@@ -26,7 +26,11 @@ export default defineComponent({
     const { $axios } = useContext()
 
     const loginWithGithub = () => {
-      return $axios.get('/auth/github').then((response) => {
+      return $axios.get('/auth/github',{
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      }).then((response) => {
         console.log(response)
       })
     }
