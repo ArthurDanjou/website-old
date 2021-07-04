@@ -58,7 +58,7 @@
     <div v-if="success" class="mt-4 px-3 py-1 rounded-full bg-green-300 font-bold text-black">
       {{ $t('contact.form.success') }}
     </div>
-    <div class="my-12">
+    <div class="my-12 flex justify-center">
       <button
         :disabled="!isSendable"
         :class="{'disabled': !isSendable}"
@@ -160,7 +160,7 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .email {
-  @apply duration-300 border-b-2 border-gray-200 dark:border-gray-800 hover:(border-black dark:border-white)
+  @apply duration-300 border-b-3 border-gray-200 dark:border-gray-800 hover:border-indigo-600
 }
 
 .disabled {
