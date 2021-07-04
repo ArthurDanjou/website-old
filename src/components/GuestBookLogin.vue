@@ -25,24 +25,28 @@ export default defineComponent({
   setup() {
     const { $axios } = useContext()
 
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json'
+    }
+
     const loginWithGithub = () => {
-      return $axios.get('/auth/github',{
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      }).then((response) => {
+      return $axios.get('/auth/github',{headers})
+        .then((response) => {
         console.log(response)
       })
     }
 
     const loginWithGoogle = () => {
-      return $axios.get('/auth/google').then((response) => {
+      return $axios.get('/auth/google', {headers})
+        .then((response) => {
         console.log(response)
       })
     }
 
     const loginWithTwitter = () => {
-      return $axios.get('/auth/twitter').then((response) => {
+      return $axios.get('/auth/twitter', {headers})
+        .then((response) => {
         console.log(response)
       })
     }
