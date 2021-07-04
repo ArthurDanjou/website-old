@@ -5,7 +5,7 @@
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.why.title') }}
       </h1>
-      <h3 class="text-md md:text-lg">
+      <h3 class="text-xl md:text-xl">
         {{ $t('contact.why.description') }}
       </h3>
     </section>
@@ -13,10 +13,10 @@
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.available.title') }}
       </h1>
-      <h3 class="text-lg md:text-lg">
+      <h3 class="text-lg md:text-xl">
         {{ $t('contact.available.description') }}
       </h3>
-      <div class="my-4 text-indigo-600">
+      <div class="text-lg md:text-xl my-4 text-indigo-600">
         {{ $t('contact.available.start') }}
         <span v-if="info && info.hiring.status && info.hiring.color" class="py-1 px-2 font-bold rounded-full m-0.5" :class="getColor">{{ $t('hiring.status.' + info.hiring.status) }}</span>
         {{ $t('contact.available.end') }}
