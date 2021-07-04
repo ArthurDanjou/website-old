@@ -26,15 +26,16 @@ export default defineComponent({
     const { $axios } = useContext()
 
     const headers = {
-      'Access-Control-Allow-Origin': 'arthurdanjou.fr',
-      'Content-Type': 'application/json'
+      'Access-Control-Allow-Origin': 'dev.arthurdanjou.fr',
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
 
     const loginWithGithub = () => {
-      return $axios.get('/auth/github',{headers})
+      $axios.get('/auth/github', {headers})
         .then((response) => {
-        console.log(response)
-      })
+          console.log(response)
+        })
     }
 
     const loginWithGoogle = () => {
