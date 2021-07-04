@@ -27,7 +27,7 @@
         </div>
         <div>
           <div class="home-btn" @click="next">
-            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:bg-indigo-600 duration-500 rounded">
+            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:(bg-indigo-600 text-white) duration-500 rounded">
               <BackSpaceIcon class="arrow-img text-xl"/>
               {{ $t('error.back') }}
             </div>
@@ -59,8 +59,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .error {
   .arrow-img {
-    transform: translate(0, -2px);
-    transition: .4s;
+    transform: translate(0, -1.5px);
   }
 }
 </style>
