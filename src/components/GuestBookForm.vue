@@ -1,5 +1,5 @@
 <template>
-  <section class="p-6 border border-indigo-300 dark:border-indigo-700 rounded-lg text-justify">
+  <section class="p-6 border border-indigo-600 bg-indigo-100 dark:border-indigo-700 rounded-lg text-justify">
     <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('guestbook.signin') }}</h1>
     <h3 class="text-gray-500 dark:text-gray-400">{{ $t('guestbook.share') }}</h3>
     <div class="hidden flex space-x-4 my-3">
@@ -54,7 +54,7 @@ export default defineComponent({
     const { $axios, $sentry } = useContext()
 
     const headers = {
-      'Access-Control-Allow-Origin': 'https://arthurdanjou.fr',
+      'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json'
     }
 
