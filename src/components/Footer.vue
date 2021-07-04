@@ -17,13 +17,13 @@
       </div>
       <div class="flex space-x-4">
         <nuxt-link class="link font-semibold" to="env">
-          <span>Tools</span>,
+          <span>{{ $t('header.env') }}</span>,
         </nuxt-link>
         <nuxt-link class="link font-semibold" to="guestbook">
-          <span>Guestbook</span>,
+          <span>{{ $t('header.guestbook') }}</span>,
         </nuxt-link>
         <nuxt-link class="link font-semibold" to="contact">
-          <span>Contact</span>
+          <span>{{ $t('header.contact') }}</span>
         </nuxt-link>
       </div>
     </div>

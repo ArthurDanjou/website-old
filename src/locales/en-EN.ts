@@ -18,9 +18,6 @@ export default {
   },
 
   footer: {
-    find_me: 'Find me on :',
-    separator: 'et by',
-    links_click: "(Clic it's free 🔗)",
     credits: 'Developed and designed with ❤️ using',
     credits_separator: 'by',
     credits_separator_and: 'and',
@@ -188,6 +185,14 @@ export default {
       start: 'I am currently',
       end: 'for projects'
     }
+  },
+
+  guestbook: {
+    description: "Leave a comment below. It can be anything and everything - an appreciation, a message, a joke, etc.",
+    signin: "Sign the guestbook",
+    share: 'Share a message to future visitors to this site.',
+    login: 'Login',
+    infos: 'Your information is only used to display your name and reply by email.'
   },
 
   date: {

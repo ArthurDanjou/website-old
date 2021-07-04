@@ -18,9 +18,6 @@ export default {
   },
 
   footer: {
-    find_me: 'Retrouvez moi sur :',
-    separator: 'et par',
-    links_click: "(Clique c'est gratuit 🔗)",
     credits: 'Développé et conçu avec ❤️ en utilisant',
     credits_separator: 'par',
     credits_separator_and: 'et',
@@ -193,9 +190,9 @@ export default {
   guestbook: {
     description: "Laissez un commentaire ci-dessous. Cela peut être tout et n'importe quoi - une appréciation, un message, une blague, etc...",
     signin: "Signer le livre d'or",
-    share: 'Partagez un message aux futurs visiteurs de  ce site.',
+    share: 'Partagez un message aux futurs visiteurs de ce site.',
     login: 'Connexion',
-    infos: 'Vos informations ne sont utilisées uniquement pour afficher votre nom et votre email.'
+    infos: 'Vos informations ne sont utilisées que pour afficher votre nom et répondre par e-mail.'
   },
 
   date: {
