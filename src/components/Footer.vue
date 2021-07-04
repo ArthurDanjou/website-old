@@ -1,7 +1,7 @@
 <template>
   <footer class="footer w-full border-t-2 border-solid border-gray-200 px-4 xl:px-32 dark:border-gray-800 mb-20 md:mb-0">
     <div class="flex flex-col md:flex-row justify-between pt-4 items-center">
-      <div class="inline flex space-x-4 mb-4">
+      <div class="inline flex space-x-4 mb-4 md:mb-0">
         <a class="link font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
           <TwitchIcon /> <span>Twitch</span>,
         </a>
