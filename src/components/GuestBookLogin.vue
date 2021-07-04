@@ -36,11 +36,15 @@ export default defineComponent({
     }
 
     const loginWithGoogle = () => {
-
+      return $axios.get('/auth/google').then((response) => {
+        console.log(response)
+      })
     }
 
     const loginWithTwitter = () => {
-
+      return $axios.get('/auth/twitter').then((response) => {
+        console.log(response)
+      })
     }
 
     return  {
