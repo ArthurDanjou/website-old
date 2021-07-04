@@ -53,12 +53,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped lang="scss">
-.icon-parent svg {
-  @apply duration-300;
-}
-.icon-parent:hover svg {
-  @apply transform scale-110;
-}
-</style>
