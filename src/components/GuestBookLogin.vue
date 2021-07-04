@@ -26,7 +26,7 @@ export default defineComponent({
     const { $axios } = useContext()
 
     const headers = {
-      'Access-Control-Allow-Origin': 'dev.arthurdanjou.fr',
+      'Access-Control-Allow-Origin': 'https://dev.arthurdanjou.fr',
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
