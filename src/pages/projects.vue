@@ -1,5 +1,5 @@
 <template>
-  <main v-if="projects" class="work flex flex-col items-center px-4 xl:px-48">
+  <main v-if="projects" class="work flex flex-col items-center px-4 xl:px-32">
     <PageTitle title="part.projects" />
     <h1 v-if="projects.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('projects.no_project') }}</h1>
     <div v-else class="flex flex-col justify-around items-center py-10 w-full">
