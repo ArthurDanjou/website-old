@@ -172,8 +172,8 @@ export default {
       subject: 'Why are you contacting me?',
       content: 'Tell me about your project',
       submit: 'Submit',
-      error: 'Error in the form!',
-      success: 'Form successfully sent!'
+      error: 'Error while sending the form ❌',
+      success: 'Thank you for your message 😉'
     },
     why: {
       title: 'Why contact me ? 📩',
@@ -192,7 +192,11 @@ export default {
     signin: "Sign the guestbook",
     share: 'Share a message to future visitors to this site.',
     login: 'Login',
-    infos: 'Your information is only used to display your name and reply by email.'
+    infos: 'Your information is only used to display your name and reply by email.',
+    placeholder: 'Your message...',
+    sign: 'Sign',
+    error: 'Error while sending your message ❌',
+    success: 'Thank you for your message 😉'
   },
 
   date: {

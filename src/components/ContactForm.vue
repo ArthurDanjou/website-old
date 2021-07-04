@@ -52,10 +52,10 @@
         <label for="content" class="form-label">{{ $t('contact.form.content') }}</label>
       </div>
     </form>
-    <div v-if="error" class="mt-4 px-3 py-1 rounded-full bg-red-300 font-bold text-black">
+    <div v-if="error" class="mt-2 py-1 text-red-400 text-sm">
       {{ $t('contact.form.error') }}
     </div>
-    <div v-if="success" class="mt-4 px-3 py-1 rounded-full bg-green-300 font-bold text-black">
+    <div v-if="success" class="mt-2 py-1 text-green-400 text-sm">
       {{ $t('contact.form.success') }}
     </div>
     <div class="my-12 flex justify-center">

@@ -61,4 +61,8 @@ interface Project {
   tags: Array<Tag>,
 }
 
-export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project }
+interface GuestbookForm {
+  message: string
+}
+
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm }

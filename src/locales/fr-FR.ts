@@ -172,8 +172,8 @@ export default {
       subject: 'Pourquoi me contactez-vous ?',
       content: 'Racontez moi votre projet',
       submit: 'Envoyer',
-      error: 'Erreur dans le formulaire !',
-      success: 'Formulaire envoyé avec succès !'
+      error: "Erreur lors de l'envoi du formulaire ❌",
+      success: 'Merci pour votre message 😉'
     },
     why: {
       title: 'Pourquoi me contacter ? 📩',
@@ -192,7 +192,11 @@ export default {
     signin: "Signer le livre d'or",
     share: 'Partagez un message aux futurs visiteurs de ce site.',
     login: 'Connexion',
-    infos: 'Vos informations ne sont utilisées que pour afficher votre nom et répondre par e-mail.'
+    infos: 'Vos informations ne sont utilisées que pour afficher votre nom et répondre par e-mail.',
+    placeholder: 'Votre message...',
+    sign: 'Signer',
+    error: "Erreur lors de l'envoi de votre message ❌",
+    success: 'Merci pour votre message 😉'
   },
 
   date: {
