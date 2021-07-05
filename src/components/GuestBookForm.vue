@@ -53,21 +53,31 @@ export default defineComponent({
   setup() {
     const { $axios, $sentry } = useContext()
 
-    const headers = {
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json'
-    }
-
     const loginWithGithub = () => {
-      $axios.get('/auth/github', {headers: headers})
+      $axios.get('/auth/github', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
     }
 
     const loginWithGoogle = () => {
-      return $axios.get('/auth/google', {headers})
+      return $axios.get('/auth/google', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
     }
 
     const loginWithTwitter = () => {
-      $axios.get('/auth/twitter', {headers})
+      $axios.get('/auth/twitter', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
     }
 
     const error = ref(false)
