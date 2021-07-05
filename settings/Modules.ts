@@ -2,7 +2,11 @@ import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
   credentials: true,
-  baseURL: 'https://api.arthurdanjou.fr'
+  baseURL: 'https://api.arthurdanjou.fr',
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json'
+  }
 }
 
 const i18n = {

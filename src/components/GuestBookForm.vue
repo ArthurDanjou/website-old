@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="my-3">
-      <form v-if="!success" class="relative">
+      <form v-if="!success" class="relative right-0 top-0">
         <input
           required
           :placeholder="$t('guestbook.placeholder')"
@@ -58,6 +58,10 @@ export default defineComponent({
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json'
+        },
+        proxy: {
+          host: 'https://api.arthurdanjou.fr',
+          port: 80
         }
       })
     }
