@@ -51,26 +51,26 @@
         <div class="flex items-center mb-2 md:mb-0">
           <div
             @click="handleLike"
-            class="end-blog flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-1 border-solid border mr-2"
+            class="icon-hover flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-1 border-solid border mr-2"
             :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
           >
             <div class="mr-2 lining-nums leading-3">
               {{ likes }}
             </div>
-            <div class="icon-hover inline leading-6" :class="{'heartbeat': liked}">
+            <div class="inline leading-6" :class="{'animate-pulse heartbeat': liked}">
               <HeartIcon :liked="liked"/>
             </div>
           </div>
           <a
             target="_blank"
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
-            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
+            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
           >
             <TwitterBlogIcon />
           </a>
           <div
             @click="scrollToTop"
-            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <ArrowUpIcon />
           </div>
@@ -78,13 +78,13 @@
         <div class="flex items-center">
           <nuxt-link
             to="/contact"
-            class="mr-2 end-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <BookmarkIcon />
           </nuxt-link>
           <div
             @click="copyToClipboard"
-            class="nd-blog cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-400 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <CopyIcon />
           </div>
@@ -234,28 +234,12 @@ export default defineComponent({
     transform: translate(3px, -1px);
   }
 
-  .end-blog .icon-hover {
+  .icon-hover svg {
     @apply duration-300
   }
 
-  .end-blog:hover .icon-hover {
-    @apply transform scale-105;
-  }
-
-  .heartbeat {
-    animation: 3s ease heartbeat infinite;
-  }
-}
-
-@keyframes heartbeat {
-  0% {
-    @apply transform scale-100;
-  }
-  50% {
-    @apply transform scale-75;
-  }
-  100% {
-    @apply transform scale-100;
+  .icon-hover:hover svg {
+    transform: scale(1.05);
   }
 }
 </style>

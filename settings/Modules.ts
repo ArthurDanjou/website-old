@@ -2,11 +2,7 @@ import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
   credentials: true,
-  baseURL: 'https://api.arthurdanjou.fr',
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json'
-  }
+  baseURL: 'https://api.arthurdanjou.fr'
 }
 
 const i18n = {
@@ -35,7 +31,6 @@ const i18n = {
 }
 
 const content = {
-  apiPrefix: 'api',
   nestedProperties: ['skills.slug'],
   markdown: {
     prism: {

@@ -34,7 +34,7 @@ export default defineComponent({
     const guestbook_messages = ref([])
 
     useAsync(async () => {
-      await $axios.get('guestbook', {
+      await $axios.get('/guestbook', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }

@@ -60,9 +60,12 @@ export default defineComponent({
           'Content-Type': 'application/json'
         },
         proxy: {
-          host: 'https://api.arthurdanjou.fr',
-          port: 80
-        }
+          protocol: 'https',
+          host: '127.0.0.1',
+          port: 80,
+        },
+      }).then((response) => {
+        console.log(response.headers, response.data, response.status, response.request)
       })
     }
 
@@ -89,7 +92,7 @@ export default defineComponent({
     const form = ref<GuestbookForm>({} as GuestbookForm)
 
     const handleForm = async () => {
-      const response = await $axios.post('/guestbook', {
+      const response = await $axios.post('/api/guestbook', {
         message: form.value.message
       },  {
         headers: {
