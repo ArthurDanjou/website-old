@@ -22,7 +22,7 @@ declare module '@nuxt/types' {
     $axios: NuxtAxiosInstance,
     i18n: VueI18n & IVueI18n
     $colorMode: ColorModeInstance,
-    $app: NuxtApp,
+    app: NuxtApp,
     $storage: NuxtStorage
   }
 }

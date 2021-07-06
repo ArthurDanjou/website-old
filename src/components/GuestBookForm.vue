@@ -3,13 +3,13 @@
     <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('guestbook.signin') }}</h1>
     <h3 class="text-gray-500 dark:text-gray-400">{{ $t('guestbook.share') }}</h3>
     <div class="flex space-x-4 my-3">
-      <div @click="loginWithGoogle" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
+      <div @click="login('github')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
         <GoogleIcon />
       </div>
-      <div @click="loginWithGithub" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
+      <div @click="login('google')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
         <GithubIcon />
       </div>
-      <div @click="loginWithTwitter" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
+      <div @click="login('twitter')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
         <TwitterIcon />
       </div>
     </div>
@@ -45,46 +45,32 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, ref, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 import {GuestbookForm} from "~/types/types";
 
 export default defineComponent({
   name: "GuestBookForm",
   setup() {
-    const { $axios, $sentry } = useContext()
+    const { $axios, $sentry, app } = useContext()
 
-    const loginWithGithub = () => {
-      $axios.get('/auth/github', {
+    const login = async (driver: 'github' | 'google' | 'twitter') => {
+      const response = await $axios.get(`/auth/${driver}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json'
         },
         proxy: {
           protocol: 'https',
-          host: '127.0.0.1',
+          host: 'https://api.arthurdanjou.fr',
           port: 80,
         },
-      }).then((response) => {
-        console.log(response.headers, response.data, response.status, response.request)
       })
-    }
-
-    const loginWithGoogle = () => {
-      return $axios.get('/auth/google', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-        }
-      })
-    }
-
-    const loginWithTwitter = () => {
-      $axios.get('/auth/twitter', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-        }
-      })
+      if (response.status === 200) {
+        await hasAlreadySignMessage(response.data.user.id)
+      } else {
+        $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
+      }
     }
 
     const error = ref(false)
@@ -92,7 +78,7 @@ export default defineComponent({
     const form = ref<GuestbookForm>({} as GuestbookForm)
 
     const handleForm = async () => {
-      const response = await $axios.post('/api/guestbook', {
+      const response = await $axios.post('/guestbook', {
         message: form.value.message
       },  {
         headers: {
@@ -111,14 +97,35 @@ export default defineComponent({
       }
     }
 
+    const alreadySent = ref(false)
+    const hasAlreadySignMessage = async (id: number) => {
+      const response = await $axios.get(`/guestbook/${id}`, {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        switch (response.data.data) {
+          case 0:
+            alreadySent.value = false
+            break
+          case 1:
+            alreadySent.value = true
+            break
+        }
+      } else {
+        $sentry.captureEvent(response.data)
+      }
+    }
+
     return  {
-      loginWithGithub,
-      loginWithTwitter,
-      loginWithGoogle,
+      login,
       form,
       success,
       error,
-      handleForm
+      alreadySent,
+      handleForm,
+      hasAlreadySignMessage
     }
   }
 })

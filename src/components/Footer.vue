@@ -16,14 +16,17 @@
         </a>
       </div>
       <div class="flex space-x-4">
-        <nuxt-link class="link font-semibold" to="env">
+        <nuxt-link class="link font-semibold" to="/env">
           <span>{{ $t('header.env') }}</span>,
         </nuxt-link>
-        <nuxt-link class="link font-semibold" to="guestbook">
+        <nuxt-link class="link font-semibold" to="/guestbook">
           <span>{{ $t('header.guestbook') }}</span>,
         </nuxt-link>
-        <nuxt-link class="link font-semibold" to="contact">
+        <nuxt-link class="link font-semibold" to="/contact">
           <span>{{ $t('header.contact') }}</span>
+        </nuxt-link>
+        <nuxt-link class="link font-semibold" to="/newsletter">
+          <span>{{ $t('header.newsletter') }}</span>
         </nuxt-link>
       </div>
     </div>

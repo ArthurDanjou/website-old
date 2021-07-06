@@ -5,7 +5,8 @@ export default {
     contact: 'Contact',
     projects: 'Projets',
     env: 'Outils',
-    guestbook: "Livre d'or"
+    guestbook: "Livre d'or",
+    newsletter: 'Newsletter'
   },
 
   part: {
