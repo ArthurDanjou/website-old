@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer w-full border-t-2 border-solid border-gray-200 px-4 xl:px-32 dark:border-gray-800 mb-20 md:mb-0">
-    <div class="flex flex-col md:flex-row justify-between pt-4 items-center">
+  <footer class="footer w-full border-t-2 border-solid border-gray-200 px-4 xl:px-32 dark:border-gray-800 mb-22 md:mb-0">
+    <div class="flex flex-col-reverse md:flex-row justify-between pt-4 items-center">
       <div class="inline flex space-x-4 mb-4 md:mb-0">
         <a class="link font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">
           <TwitchIcon /> <span>Twitch</span>,
@@ -23,7 +23,7 @@
           <span>{{ $t('header.guestbook') }}</span>,
         </nuxt-link>
         <nuxt-link class="link font-semibold" to="/contact">
-          <span>{{ $t('header.contact') }}</span>
+          <span>{{ $t('header.contact') }}</span>,
         </nuxt-link>
         <nuxt-link class="link font-semibold" to="/newsletter">
           <span>{{ $t('header.newsletter') }}</span>
