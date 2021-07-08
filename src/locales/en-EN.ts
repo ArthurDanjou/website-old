@@ -15,7 +15,8 @@ export default {
     projects: 'My projects',
     contact: 'Contact me',
     env: 'My environment',
-    guestbook: 'My guestbook'
+    guestbook: 'My guestbook',
+    newsletter: 'My newsletter'
   },
 
   footer: {
@@ -198,6 +199,20 @@ export default {
     sign: 'Sign',
     error: 'Error while sending your message ❌',
     success: 'Thank you for your message 😉'
+  },
+
+  newsletter: {
+    description: 'My newsletter provides a behind-the-scenes look into what I\'m working on and writing about. I frequently share some of my favorite articles I\'ve read, as well as anything fascinating about technology.',
+    title: 'Subscribe to my newsletter',
+    subtitle: 'Get emails from me about web development, tech, and early access to new articles.',
+    placeholder: 'elon@tesla.com',
+    subscribe: 'Subscribe',
+    error: 'Error during your subscription ❌',
+    success: 'Thank you for your subscription 😉',
+    count: '{count} subscriber(s)',
+    infos: 'Your information is only used to receive new emails from me.',
+    no_spam: 'No spam.',
+    exist: "The email address is already subscribed 👍"
   },
 
   date: {

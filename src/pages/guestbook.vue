@@ -30,7 +30,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $axios, $sentry } = useContext()
+    const { $axios, $sentry, app } = useContext()
     const guestbook_messages = ref([])
 
     useAsync(async () => {
@@ -43,6 +43,7 @@ export default defineComponent({
           guestbook_messages.value = response.data.guestbook_messages
         })
         .catch(error => {
+          app.error({statusCode: 500})
           $sentry.captureEvent(error)
         })
     })

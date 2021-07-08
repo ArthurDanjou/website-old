@@ -145,6 +145,7 @@ export default defineComponent({
         likes.value = response.data.likes
       }).catch((error) => {
         $sentry.captureEvent(error)
+        app.error({statusCode: 500})
       })
     })
 
@@ -161,6 +162,7 @@ export default defineComponent({
           $storage.removeCookie(`${slug.value}`)
         } else {
           $sentry.captureEvent(response.data)
+          app.error({statusCode: 500})
         }
       } else {
         const response = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
@@ -176,6 +178,7 @@ export default defineComponent({
           })
         } else {
           $sentry.captureEvent(response.data)
+          app.error({statusCode: 500})
         }
       }
     }

@@ -15,7 +15,8 @@ export default {
     projects: 'Mes projets',
     blog: 'Mon blog',
     env: 'Mon environnement',
-    guestbook: "Mon livre d'or"
+    guestbook: "Mon livre d'or",
+    newsletter: 'Ma newsletter'
   },
 
   footer: {
@@ -198,6 +199,20 @@ export default {
     sign: 'Signer',
     error: "Erreur lors de l'envoi de votre message ❌",
     success: 'Merci pour votre message 😉'
+  },
+
+  newsletter: {
+    description: 'Ma newsletter fournit un aperçu des coulisses de ce sur quoi je travaille et sur quoi j\'écris. Je partage fréquemment certains de mes articles préférés que j\'ai lus, ainsi que tout ce qui est fascinant sur la technologie.',
+    title: 'Abonnez-vous à ma newsletter',
+    subtitle: "Recevez des e-mails de ma part sur le développement Web, la technologie et l'accès anticipé aux nouveaux articles.",
+    placeholder: 'elon@tesla.com',
+    subscribe: "S'abonner",
+    error: "Erreur lors de votre abonnement ❌",
+    success: 'Merci pour votre abonnement 😉',
+    count: '{count} abonné(s)',
+    infos: 'Vos informations ne sont utilisées uniquement pour recevoir de nouveaux mails de ma part.',
+    no_spam: 'Pas de spam.',
+    exist: "L'adresse email est déjà abonnée 👍"
   },
 
   date: {

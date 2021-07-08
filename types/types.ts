@@ -65,4 +65,8 @@ interface GuestbookForm {
   message: string
 }
 
-export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm }
+interface NewsletterForm {
+  email: string
+}
+
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm }
