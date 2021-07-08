@@ -25,7 +25,7 @@
           <button
             @click.prevent="handleForm"
             v-if="form.message && form.message.length > 0"
-            class="button flex items-center justify-center px-8 py-1 font-bold bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded hover:bg-gray-300 duration-300"
+            class="button flex items-center justify-center px-8 py-1 font-bold bg-gray-100 dark:bg-gray-700 hover:dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded hover:bg-gray-300 duration-300"
           >
             {{ $t('guestbook.sign') }}
           </button>
@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, ref, useContext} from "@nuxtjs/composition-api";
 import {GuestbookForm} from "~/types/types";
 
 export default defineComponent({
@@ -56,10 +56,6 @@ export default defineComponent({
 
     const login = async (driver: 'github' | 'google' | 'twitter') => {
       const response = await $axios.get(`/auth/${driver}`, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-        },
         proxy: {
           protocol: 'https',
           host: 'https://api.arthurdanjou.fr',
