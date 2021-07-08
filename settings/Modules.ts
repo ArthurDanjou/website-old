@@ -4,7 +4,7 @@ const axios = {
   credentials: true,
   baseURL: 'https://api.arthurdanjou.fr',
   headers: {
-    'Access-Control-Allow-Origin': 'https://arthurdanjou.fr',
+    'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
     'Accept': '*/*'
   },
