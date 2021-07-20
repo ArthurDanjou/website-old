@@ -67,8 +67,6 @@ export default defineComponent({
       $axios.get('/subscribers', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`,
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
         }
       }).then((response) => {
         if (response.status === 200) {

@@ -19,9 +19,9 @@
         <nuxt-link class="link font-semibold" to="/env">
           <span>{{ $t('header.env') }}</span>,
         </nuxt-link>
-        <nuxt-link class="link font-semibold" to="/guestbook">
+        <!--<nuxt-link class="link font-semibold" to="/guestbook">
           <span>{{ $t('header.guestbook') }}</span>,
-        </nuxt-link>
+        </nuxt-link>-->
         <nuxt-link class="link font-semibold" to="/contact">
           <span>{{ $t('header.contact') }}</span>,
         </nuxt-link>

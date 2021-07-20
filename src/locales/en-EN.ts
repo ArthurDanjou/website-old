@@ -198,7 +198,11 @@ export default {
     placeholder: 'Your message...',
     sign: 'Sign',
     error: 'Error while sending your message ❌',
-    success: 'Thank you for your message 😉'
+    success: 'Thank you for your message 😉',
+    form: {
+      placeholder: 'tim@apple.com',
+      error: 'Error while logging ❌',
+    }
   },
 
   newsletter: {

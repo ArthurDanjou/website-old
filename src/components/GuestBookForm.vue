@@ -2,18 +2,30 @@
   <section class="p-6 border border-indigo-600 dark:border-indigo-700 rounded-lg text-justify">
     <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('guestbook.signin') }}</h1>
     <h3 class="text-gray-500 dark:text-gray-400">{{ $t('guestbook.share') }}</h3>
-    <div class="flex space-x-4 my-3">
-      <div @click="login('github')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-        <GoogleIcon />
-      </div>
-      <div @click="login('google')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-        <GithubIcon />
-      </div>
-      <div @click="login('twitter')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
-        <TwitterIcon />
+    <div v-if="!success && !error" class="my-3">
+      <form v-if="!success" class="relative">
+        <input
+          required
+          type="email"
+          :placeholder="$t('guestbook.form.placeholder')"
+          v-model="email"
+          class="pl-4 pr-32 py-2 mt-1 block w-full border-gray-300 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+        >
+        <button
+          @click.prevent="login"
+          v-if="email && email.length > 0"
+          class="button flex items-center justify-center px-8 py-1 font-bold bg-gray-100 dark:bg-gray-700 hover:dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded hover:bg-gray-300 duration-300"
+        >
+          {{ $t('guestbook.login') }}
+        </button>
+      </form>
+      <div class="flex">
+        <div v-if="error" class="py-1 text-red-400 text-sm">
+          {{ $t('guestbook.form.error') }}
+        </div>
       </div>
     </div>
-    <div class="my-3">
+    <div v-else class="my-3">
       <form v-if="!success" class="relative">
         <input
           required
@@ -54,13 +66,10 @@ export default defineComponent({
   setup() {
     const { $axios, $sentry, app } = useContext()
 
-    const login = async (driver: 'github' | 'google' | 'twitter') => {
-      const response = await $axios.get(`/auth/${driver}`, {
-        proxy: {
-          protocol: 'https',
-          host: 'https://api.arthurdanjou.fr',
-          port: 80,
-        },
+    const email = ref('')
+    const login = async () => {
+      const response = await $axios.post('/guestbook/login', {
+        email: email.value
       })
       if (response.status === 200) {
         await hasAlreadySignMessage(response.data.user.id)
@@ -122,7 +131,8 @@ export default defineComponent({
       error,
       alreadySent,
       handleForm,
-      hasAlreadySignMessage
+      hasAlreadySignMessage,
+      email
     }
   }
 })
