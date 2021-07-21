@@ -55,11 +55,7 @@ export default defineComponent({
     const { $axios, $sentry, app } = useContext()
 
     const login = async (driver: 'github' | 'google' | 'twitter') => {
-      const response = await $axios.get(`/api/auth/${driver}`, {
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      })
+      const response = await $axios.get(`/api/auth/${driver}`)
       if (response.status === 200) {
         await hasAlreadySignMessage(response.data.user.id)
       } else {
