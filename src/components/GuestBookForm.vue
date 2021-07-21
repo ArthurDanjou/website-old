@@ -2,7 +2,7 @@
   <section class="p-6 border border-indigo-600 dark:border-indigo-700 rounded-lg text-justify">
     <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('guestbook.signin') }}</h1>
     <h3 class="text-gray-500 dark:text-gray-400">{{ $t('guestbook.share') }}</h3>
-    <div v-if="!success && !error" class="flex space-x-4 my-3">
+    <div v-if="!loginRef" class="flex space-x-4 my-3">
       <div @click="login('google')" class="icon-parent flex justify-center items-center p-2 border border-black dark:border-white duration-300 cursor-pointer">
         <GoogleIcon />
       </div>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div v-else class="my-3">
-      <form v-if="!success" class="relative">
+      <form class="relative">
         <input
           required
           type="text"
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <p class="text-sm text-gray-700 dark:text-gray-300">{{ $t('guestbook.infos') }}</p>
+    <p class="text-sm text-gray-400 dark:text-gray-600">{{ $t('guestbook.infos') }}</p>
   </section>
 </template>
 
@@ -54,9 +54,18 @@ export default defineComponent({
   setup() {
     const { $axios, $sentry, app } = useContext()
 
+    const loginRef = ref(false)
     const login = async (driver: 'github' | 'google' | 'twitter') => {
-      const response = await $axios.get(`/api/auth/${driver}`)
+      const response = await $axios.get(`/api/auth/${driver}`, {
+        headers: {
+          'Access-Control-Allow-Origin': 'https://arthurdanjou.fr',
+          'Accept': '*/*',
+          'Origin': 'https://arthurdanjou.fr',
+          'host': 'https://arthurdanjou.fr'
+        }
+      })
       if (response.status === 200) {
+        loginRef.value = true
         await hasAlreadySignMessage(response.data.user.id)
       } else {
         $sentry.captureEvent(response.data)
@@ -70,7 +79,8 @@ export default defineComponent({
 
     const handleForm = async () => {
       const response = await $axios.post('/api/guestbook', {
-        message: form.value.message
+        message: form.value.message,
+        email: 'contact@arthurdanjou.fr'
       },  {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
@@ -96,7 +106,7 @@ export default defineComponent({
         }
       })
       if (response.status === 200) {
-        switch (response.data.data) {
+        switch (response.data.signed) {
           case 0:
             alreadySent.value = false
             break
@@ -115,6 +125,7 @@ export default defineComponent({
       success,
       error,
       alreadySent,
+      loginRef,
       handleForm,
       hasAlreadySignMessage
     }

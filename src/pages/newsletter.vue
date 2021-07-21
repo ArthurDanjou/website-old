@@ -64,7 +64,7 @@ export default defineComponent({
     const subscribersCount = ref(0)
 
     useAsync(() => {
-      $axios.get('/subscribers', {
+      $axios.get('/api/subscribers', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`,
         }
@@ -84,7 +84,7 @@ export default defineComponent({
     const form = ref<NewsletterForm>({} as NewsletterForm)
 
     const handleForm = () => {
-      $axios.post('/subscribers', {
+      $axios.post('/api/subscribers', {
         email: form.value.email
       },  {
         headers: {

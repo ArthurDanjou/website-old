@@ -1,14 +1,14 @@
 <template>
   <div class="my-6">
-    <div class="text-justify leading-6">
+    <div class="text-justify leading-6 text-black dark:text-white">
       {{ message }}
     </div>
     <div class="flex mt-3">
-      <div class="text-gray-600">
+      <div class="text-gray-600 dark:text-gray-300">
         {{ author }}
       </div>
-      <div class="text-gray-200 px-3">/</div>
-      <div class="text-gray-400 lining-nums">
+      <div class="text-gray-200 px-3 dark:text-gray-700">/</div>
+      <div class="text-gray-400 dark:text-gray-500 lining-nums">
         {{ formatDateAndTime }}
       </div>
     </div>
