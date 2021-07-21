@@ -198,11 +198,7 @@ export default {
     placeholder: 'Votre message...',
     sign: 'Signer',
     error: "Erreur lors de l'envoi de votre message ❌",
-    success: 'Merci pour votre message 😉',
-    form: {
-      placeholder: 'tim@apple.com',
-      error: 'Erreur lors de la connexion ❌',
-    }
+    success: 'Merci pour votre message 😉'
   },
 
   newsletter: {

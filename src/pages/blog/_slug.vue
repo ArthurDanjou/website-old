@@ -137,7 +137,7 @@ export default defineComponent({
     const likes = ref(0)
 
     useAsync(() => {
-      $axios.get(`/posts/${slug.value}`, {
+      $axios.get(`/api/posts/${slug.value}`, {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
@@ -151,7 +151,7 @@ export default defineComponent({
 
     const handleLike = async () => {
       if (liked.value) {
-        const response = await $axios.post(`/posts/${post.value?.slug}/unlike`, {}, {
+        const response = await $axios.post(`/api/posts/${post.value?.slug}/unlike`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
@@ -165,7 +165,7 @@ export default defineComponent({
           app.error({statusCode: 500})
         }
       } else {
-        const response = await $axios.post(`/posts/${post.value?.slug}/like`, {}, {
+        const response = await $axios.post(`/api/posts/${post.value?.slug}/like`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }

@@ -34,4 +34,11 @@ const buildDir = 'build'
 
 const ssr = true
 
-export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr }
+const proxy = {
+  '/api': {
+    target: "https://api.arthurdanjou.fr",
+    pathRewrite: { "^/api": "" }
+  }
+}
+
+export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr, proxy }

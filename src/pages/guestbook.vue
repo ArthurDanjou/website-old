@@ -34,15 +34,10 @@ export default defineComponent({
     const guestbook_messages = ref([])
 
     useAsync(async () => {
-      await $axios.get('guestbook', {
+      await $axios.get('/api/guestbook', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
-        },
-        proxy: {
-          protocol: 'https',
-          host: 'https://api.arthurdanjou.fr',
-          port: 80,
-        },
+        }
       })
         .then(response => {
           guestbook_messages.value = response.data.guestbook_messages

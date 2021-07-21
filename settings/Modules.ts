@@ -1,11 +1,8 @@
 import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
-  baseURL: 'https://api.arthurdanjou.fr',
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': '*/*'
-  },
+  proxy: true,
+  credentials: true
 }
 
 const i18n = {
@@ -86,10 +83,7 @@ const env = {
 }
 
 const sentry = {
-  dsn: process.env.SENTRY_DSN,
-  config: {
-
-  }
+  dsn: process.env.SENTRY_DSN
 }
 
 export default [
