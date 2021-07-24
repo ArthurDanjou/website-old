@@ -186,7 +186,11 @@ export default {
       description: 'Ce status sera mis à jour en temps réel pour vous indiquer si je suis disponible pour du travail.',
       start: 'Je suis actuellement',
       end: 'pour du travail'
+    },
+    services: {
+      title: 'Voici la liste de services proposés 🛍'
     }
+
   },
 
   guestbook: {

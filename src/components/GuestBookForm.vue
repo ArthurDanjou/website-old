@@ -60,8 +60,6 @@ export default defineComponent({
         headers: {
           'Access-Control-Allow-Origin': 'https://arthurdanjou.fr',
           'Accept': '*/*',
-          'Origin': 'https://arthurdanjou.fr',
-          'host': 'https://arthurdanjou.fr'
         }
       })
       if (response.status === 200) {

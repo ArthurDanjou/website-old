@@ -11,6 +11,14 @@
     </section>
     <section class="w-full lg:w-3/4 mb-10 mt-4 text-justify">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
+        {{ $t('contact.services.title') }}
+      </h1>
+      <div>
+
+      </div>
+    </section>
+    <section class="w-full lg:w-3/4 mb-10 mt-4 text-justify">
+      <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.available.title') }}
       </h1>
       <h3 class="text-lg md:text-xl">
