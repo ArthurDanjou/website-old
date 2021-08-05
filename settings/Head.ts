@@ -2,7 +2,7 @@
 import {NuxtOptionsHead} from "@nuxt/types/config/head";
 
 const params = {
-  title: 'artsite',
+  title: 'arthurdanjou.fr - Web & Software Developer',
   color: '#00a0ff',
   image: '/images/memojies/Hey.png',
   url: 'https://arthurdanjou.fr',

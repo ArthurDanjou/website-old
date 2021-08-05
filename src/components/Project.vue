@@ -39,7 +39,7 @@ export default defineComponent({
     },
     cover: {
       type: String,
-      default: "artapi.png"
+      default: "athena.png"
     },
     description: {
       type: String,

@@ -5,25 +5,25 @@
       <nuxt-link to="/">
         <img src="~/assets/images/logo-header.png" alt="Logo Circle" class="h-10 left cursor-pointer duration-500"/>
       </nuxt-link>
-      <nav class="right">
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="flex text-lg">
-            <nuxt-link class="nav-link hidden md:inline-block" to="/about">
-              {{ $t('header.about') }}
-            </nuxt-link>
-            <nuxt-link class="nav-link hidden md:inline-block" to="/blog">
-              {{ $t('header.blog') }}
-            </nuxt-link>
-            <nuxt-link class="nav-link hidden md:inline-block" to="/projects">
-              {{ $t('header.projects') }}
-            </nuxt-link>
-            <nuxt-link class="nav-link hidden md:inline-block" to="/contact">
-              {{ $t('header.contact') }}
-            </nuxt-link>
-          </div>
+      <nav class="right flex flex-col md:flex-row items-center hidden md:inline-block">
+        <div class="flex text-lg">
+          <nuxt-link class="nav-link" to="/about">
+            {{ $t('header.about') }}
+          </nuxt-link>
+          <nuxt-link class="nav-link" to="/blog">
+            {{ $t('header.blog') }}
+          </nuxt-link>
+          <nuxt-link class="nav-link" to="/projects">
+            {{ $t('header.projects') }}
+          </nuxt-link>
+          <nuxt-link class="nav-link" to="/contact">
+            {{ $t('header.contact') }}
+          </nuxt-link>
         </div>
+      </nav>
+      <div class="w-full z-50 fixed bottom-0 left-0 md:hidden">
         <ul
-          class="dark:text-white dark:bg-black text-sm z-50 bg-white md:hidden fixed bottom-0 left-0 w-full flex items-center justify-around h-20 border-t border-gray-200 border-solid navbar-bottom-items"
+          class="bg-gray-300 dark:bg-gray-700 m-4 rounded-xl dark:text-white text-sm flex items-center justify-around h-20 navbar-bottom-items"
         >
           <nuxt-link to="/" class="w-1/5">
             <li class="h-full w-full font-medium flex flex-col items-center justify-center">
@@ -51,7 +51,7 @@
             </li>
           </nuxt-link>
         </ul>
-      </nav>
+      </div>
       <div>
         <ul class="flex items-center">
           <li @click="changeLanguage()"

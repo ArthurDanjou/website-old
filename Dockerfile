@@ -1,9 +1,9 @@
 FROM node:15.8.0-alpine3.10
 
-RUN mkdir -p /usr/src/artsite
-WORKDIR /usr/src/artsite
+RUN mkdir -p /usr/src/ares
+WORKDIR /usr/src/ares
 
-COPY . /usr/src/artsite
+COPY . /usr/src/ares
 
 RUN yarn install
 

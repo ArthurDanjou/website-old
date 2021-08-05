@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer w-full border-t-2 border-solid border-gray-200 px-4 xl:px-32 dark:border-gray-800 mb-22 md:mb-0">
+  <footer class="footer w-full border-t-2 border-solid border-gray-200 px-4 xl:px-32 dark:border-gray-800 mb-26 md:mb-0">
     <div class="flex flex-col-reverse md:flex-row justify-between pt-4 items-center">
       <div class="inline flex space-x-4">
         <a class="link font-semibold" href="https://twitch.com/ArthurDanjou" target="_blank" rel="noopener noreferrer">

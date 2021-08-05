@@ -8,19 +8,19 @@
     "tags": ["tags.mc"]
   },
   {
-    "slug": "artsite",
-    "title": "ArtSite",
-    "description": "works.artsite",
+    "slug": "ares",
+    "title": "ares",
+    "description": "works.ares",
     "url": "https://arthurdanjou.fr",
-    "cover": "artsite.png",
+    "cover": "ares.png",
     "tags": ["tags.web"]
   },
   {
-    "slug": "artapi",
-    "title": "ArtApi",
-    "description": "works.artapi",
-    "url": "https://api.arthurdanjou.fr",
-    "cover": "artapi.png",
+    "slug": "athena",
+    "title": "Athena",
+    "description": "works.athena",
+    "url": "https://athena.arthurdanjou.fr",
+    "cover": "athena.png",
     "tags": ["tags.api"]
   },
   {

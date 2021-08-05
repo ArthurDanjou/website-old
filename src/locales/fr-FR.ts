@@ -281,8 +281,8 @@ export default {
   },
 
   works: {
-    artapi: 'ArtApi est mon API personnelle connectée à mes diverses instances.',
-    artsite: 'ArtSite est mon site personnel créant un point de contact unique.',
+    athena: 'Athena est mon API personnelle connectée à mes diverses instances.',
+    ares: 'Ares est mon site personnel créant un point de contact unique.',
     erisium: 'Erisium est un serveur minecraft francophone de mini-jeux.',
     linkyjs: "LinkyJS est mon raccourcisseur d'url personnalisé et Open-Source."
   }

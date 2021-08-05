@@ -1,4 +1,4 @@
-# ArtSite 🌍
+# Arès 🌍
 
 This is my personnal website.
 Hosted version : [arthurdanjou.fr](https://arthurdanjou.fr)
@@ -13,7 +13,7 @@ Hosted version : [arthurdanjou.fr](https://arthurdanjou.fr)
 - Automatic working state
 - Wonderfull Mobile-Header
 - Multi-Language site
-- Connected to ArtApi (my personal api)
+- Connected to [Athena](https://github.com/arthurdanjou/athena) (my personal api)
 
 ## Tech used ⚙
 
@@ -30,4 +30,4 @@ Hosted version : [arthurdanjou.fr](https://arthurdanjou.fr)
 
 ## License 📑
 Copyright © 2020 - [@ArthurDanj](https://arthurdanjou.fr) \
-This project is [MIT](https://github.com/ArthurDanjou/artsite/blob/master/License) Licensed.
+This project is [MIT](https://github.com/ArthurDanjou/ares/blob/master/License) Licensed.

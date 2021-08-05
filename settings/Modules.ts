@@ -48,7 +48,7 @@ const content = {
 
 const storage = {
   cookie: {
-    prefix: 'artsite/',
+    prefix: 'arthurdanjou.fr/',
     options: {
       path: '/'
     }
@@ -70,7 +70,7 @@ const robots = {
 }
 
 const redirect = [
-  { from: '/source', to: 'https://github.com/arthurdanjou/artsite' },
+  { from: '/source', to: 'https://github.com/arthurdanjou/ares' },
   { from: '/twitter', to: 'https://twitter.com/arthurdanj' },
   { from: '/github', to: 'https://github.com/arthurdanjou/' },
   { from: '/shelf', to: '/blog' },
