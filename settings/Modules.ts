@@ -2,7 +2,8 @@ import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
   proxy: true,
-  credentials: true
+  credentials: true,
+  proxyHeaders: true
 }
 
 const i18n = {
