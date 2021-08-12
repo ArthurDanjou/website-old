@@ -1,6 +1,6 @@
 <template>
-  <header class="dark:bg-black dark:text-white fixed z-50 top-0 left-0 bg-white w-full duration-400"
-          :class="scrollPosition > 50 ? ' shadow-md dark:shadow-white h-16 lg:h-20' : 'h-20 lg:h-24'">
+  <header class="hidden md:block dark:bg-black dark:text-white sticky z-50 top-0 left-0 bg-white w-full duration-400"
+          :class="scrollPosition > 65 ? ' shadow-md dark:shadow-white h-16 lg:h-20' : 'h-20 lg:h-24'">
     <div class="header-container z-index-50 flex justify-between items-center h-full px-5 xl:px-32">
       <nuxt-link to="/">
         <img src="~/assets/images/logo-header.png" alt="Logo Circle" class="h-10 left cursor-pointer duration-500"/>
@@ -21,37 +21,6 @@
           </nuxt-link>
         </div>
       </nav>
-      <div class="w-full z-50 fixed bottom-0 left-0 md:hidden">
-        <ul
-          class="bg-gray-300 dark:bg-gray-700 m-4 rounded-xl dark:text-white text-sm flex items-center justify-around h-20 navbar-bottom-items"
-        >
-          <nuxt-link to="/" class="w-1/5">
-            <li class="h-full w-full font-medium flex flex-col items-center justify-center">
-              <HomeIcon :active="isWindow('')"/>
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/about" class="w-1/5">
-            <li class="font-medium flex flex-col items-center justify-center">
-              <UserIcon :active="isWindow('/about')"/>
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/blog" class="w-1/5">
-            <li class="font-medium flex flex-col items-center justify-center">
-              <BookIcon :active="isWindow('/blog')"/>
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/projects" class="w-1/5">
-            <li class="font-medium flex flex-col items-center justify-center">
-              <LightbulbIcon :active="isWindow('/projects')"/>
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/contact" class="w-1/5">
-            <li class="font-medium flex flex-col items-center justify-center">
-              <ContactIcon :active="isWindow('/contact')"/>
-            </li>
-          </nuxt-link>
-        </ul>
-      </div>
       <div>
         <ul class="flex items-center">
           <li @click="changeLanguage()"
@@ -75,14 +44,13 @@
 
 <script lang="ts">
 import {
-  computed,
   defineComponent,
   onMounted,
   onUnmounted,
   ref,
   useAsync,
   useContext,
-  useRouter, watch
+  useRouter
 } from "@nuxtjs/composition-api";
 
 export default defineComponent({
@@ -115,17 +83,11 @@ export default defineComponent({
       }
     })
 
-    const isWindow = (loc: string) => {
-      if (loc === '') return $router.currentRoute.path === "/"
-      else return $router.currentRoute.path.includes(loc)
-    }
-
     return {
       scrollPosition,
       changeColorMode,
       updateScroll,
       changeLanguage,
-      isWindow
     }
   }
 })

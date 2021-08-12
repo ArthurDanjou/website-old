@@ -3,6 +3,7 @@ import VueI18n, {IVueI18n} from "vue-i18n";
 import {ColorModeInstance} from "@nuxtjs/color-mode/types/color-mode";
 import {NuxtApp} from "@nuxt/types/app";
 import {NuxtStorage} from "@nuxtjs/universal-storage";
+import {NuxtOptionsRouter} from "@nuxt/types/config/router";
 
 declare module 'vue/types/vue' {
 

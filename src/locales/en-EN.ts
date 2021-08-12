@@ -1,12 +1,18 @@
 export default {
   header: {
+    home: 'Home',
     about: 'About',
     blog: 'Blog',
     contact: 'Contact',
     projects: 'Projects',
     env: 'Tools',
     guestbook: 'Guestbook',
-    newsletter: 'Newsletter'
+    newsletter: 'Newsletter',
+    services: 'Services'
+  },
+
+  sidebar: {
+    close: 'Close the menu'
   },
 
   part: {

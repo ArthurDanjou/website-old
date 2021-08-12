@@ -69,4 +69,14 @@ interface NewsletterForm {
   email: string
 }
 
-export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm }
+interface Translation {
+  code: string,
+  english: string,
+  french: string
+}
+
+interface State {
+  opened: boolean
+}
+
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm, Translation, State }
