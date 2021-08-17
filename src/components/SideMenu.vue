@@ -161,7 +161,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .cross:hover svg {
   @apply transform scale-140;
 }

@@ -1,5 +1,4 @@
 import axios from "axios";
-import {Translation} from "~/types/types";
 
 const translations = {
   header: {
@@ -67,6 +66,11 @@ const translations = {
         spacer: 'ou tout simplement en me',
         contact: 'Contactant',
         me: '.'
+      },
+      color: {
+        develop: 'Développer.',
+        publish: 'Publier.',
+        improve: 'Améliorer.'
       }
     },
     ad: {

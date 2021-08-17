@@ -9,9 +9,9 @@
         {{ $t('home.banner.student.main') }} <strong>{{ $t('home.banner.student.strong') }}</strong>.
       </h2>
       <div class="select-none mt-4 text-5xl text-gray-800 mb-10 dark:text-gray-300">
-        <span id="develop" class="color blue">Develop.</span>
-        <span id="publish" class="color">Publish.</span>
-        <span id="improve" class="color">Improve.</span>
+        <span id="develop" class="color blue">{{ $t('home.banner.color.develop') }}</span>
+        <span id="publish" class="color">{{ $t('home.banner.color.publish') }}</span>
+        <span id="improve" class="color">{{ $t('home.banner.color.improve') }}</span>
       </div>
     </div>
   </section>

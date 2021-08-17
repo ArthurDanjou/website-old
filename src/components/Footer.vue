@@ -156,13 +156,17 @@ export default defineComponent({
       @apply border-indigo-600
     }
   }
-  .link {
-    a {
-      @apply border-b-2 border-transparent duration-300;
+  .link-active a {
+    @apply text-indigo-600;
+  }
 
-      &:hover {
-        @apply border-indigo-600;
-      }
+  .social-links a {
+    svg {
+      @apply h-6 w-6 duration-300
+    }
+
+    &:hover svg {
+      @apply transform hover:scale-120
     }
   }
 }

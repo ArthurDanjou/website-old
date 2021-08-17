@@ -60,6 +60,11 @@ const translations = {
         spacer: 'or simply by',
         contact: 'Contacting',
         me: 'me.'
+      },
+      color: {
+        develop: 'Develop.',
+        publish: 'Publish.',
+        improve: 'Improve.'
       }
     },
     ad: {
