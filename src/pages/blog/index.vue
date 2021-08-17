@@ -51,7 +51,7 @@ export default defineComponent({
         .catch((error) => {
           $sentry.captureEvent(error)
         })
-    })
+    }, 'posts')
 
     return {
       posts,

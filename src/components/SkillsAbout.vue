@@ -31,7 +31,7 @@ export default defineComponent({
         .catch((error) => {
           $sentry.captureEvent(error)
         })
-    })
+    }, 'skills')
 
     return {
       skills

@@ -30,6 +30,10 @@ import {State} from "~/types/types";
 
 const PAGE_TYPE = {
   projects: 1,
+  services: 2,
+  env: 3,
+  about: 4,
+  guestbook: 5
 }
 
 export default defineComponent({

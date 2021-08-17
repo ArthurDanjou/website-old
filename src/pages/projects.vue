@@ -41,7 +41,7 @@ export default defineComponent({
         .catch((error) => {
           $sentry.captureEvent(error)
         })
-    })
+    }, 'projects')
 
     return {
       projects

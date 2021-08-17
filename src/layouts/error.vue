@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="mt-12 mb-4 w-full text-center">
-          <div class="home-btn" @click="next">
+          <div class="home-btn" @click="back">
             <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:(bg-indigo-600 text-white) duration-500 rounded">
               <BackSpaceIcon class="arrow-img text-xl"/>
               {{ $t('error.back') }}
@@ -48,10 +48,10 @@ export default defineComponent({
     title: 'Error - Arthur Danjou'
   },
   setup() {
-    const router = useRouter()
-    const next = () => router.back()
-
-    return {next}
+    const back = () => useRouter().back()
+    return {
+      back
+    }
   }
 })
 </script>

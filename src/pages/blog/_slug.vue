@@ -134,20 +134,20 @@ export default defineComponent({
     })
 
     const liked = ref($storage.getCookie(`${slug.value}`) !== undefined)
-    const likes = ref(0)
 
-    useAsync(() => {
-      $axios.get(`/api/posts/${slug.value}`, {
+    const likes = useAsync(async () => {
+      const response = await $axios.get(`/api/posts/${slug.value}`, {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
-      }).then((response) => {
-        likes.value = response.data.likes
-      }).catch((error) => {
-        $sentry.captureEvent(error)
-        app.error({statusCode: 500})
       })
-    })
+      if (response.status === 200) {
+        return response.data.likes
+      } else {
+        $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
+      }
+    }, 'likes')
 
     const handleLike = async () => {
       if (liked.value) {

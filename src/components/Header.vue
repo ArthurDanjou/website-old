@@ -75,7 +75,7 @@ export default defineComponent({
       window.removeEventListener('scroll', updateScroll)
     })
 
-    const {i18n} = useContext()
+    const {i18n, } = useContext()
     const $router = useRouter()
     const changeLanguage = () => useAsync(() => {
       i18n.setLocale(i18n.locale === 'fr' ? 'en' : 'fr')

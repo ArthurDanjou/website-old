@@ -24,23 +24,22 @@ export default {
   name: "Announcement",
   setup() {
     const {$axios, $sentry} = useContext()
-    const announce = ref<Announce>()
 
-    useAsync(async () => {
+    const announce = useAsync(async () => {
       const response = await $axios.get('/api/announces', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
       })
       if (response.status === 200) {
-        announce.value = response.data.announce
+        return response.data.announce
       } else {
         $sentry.captureEvent(response.data)
       }
-    })
+    }, 'announce')
 
     const getBackgroundColor = computed(() => {
-      switch (announce.value!.color) {
+      switch (announce.value.color) {
         case 'black': {
           return 'bg-black text-white dark:(bg-white text-black)'
         }
@@ -48,7 +47,7 @@ export default {
     })
 
     const getHoverColor = computed(() => {
-      switch (announce.value!.hover_color) {
+      switch (announce.value.hover_color) {
         case 'gray': {
           return 'hover:bg-gray-800 dark:hover:bg-gray-300'
         }

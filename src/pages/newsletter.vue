@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <p class="text-sm text-gray-700 dark:text-gray-300">{{ $t('newsletter.count', { count: subscribersCount }) }}</p>
+      <p class="text-sm text-gray-700 dark:text-gray-300">{{ $t('newsletter.count', { count: subscribers }) }}</p>
       <p class="text-sm text-gray-700 dark:text-gray-300">{{ $t('newsletter.infos') }} <strong>{{ $t('newsletter.no_spam') }}</strong></p>
     </section>
   </main>
@@ -61,22 +61,20 @@ export default defineComponent({
   },
   setup() {
     const { $axios, $sentry, app } = useContext()
-    const subscribersCount = ref(0)
 
-    useAsync(() => {
-      $axios.get('/api/subscribers', {
+    const subscribers = useAsync(async () => {
+      const response = await $axios.get('/api/subscribers', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`,
         }
-      }).then((response) => {
-        if (response.status === 200) {
-          subscribersCount.value = response.data.count
-        }
-      }).catch((error) => {
-        $sentry.captureEvent(error)
-        app.error({statusCode: 500})
       })
-    })
+      if (response.status === 200) {
+        return response.data.count
+      } else {
+        $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
+      }
+    }, 'subscribers')
 
     const error = ref(false)
     const success = ref(false)
@@ -110,7 +108,7 @@ export default defineComponent({
     }
 
     return {
-      subscribersCount,
+      subscribers,
       error,
       success,
       form,

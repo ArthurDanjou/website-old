@@ -1,5 +1,5 @@
 <template>
-  <section v-if="info && info.age" class="w-full flex items-center justify-center my-12">
+  <section v-if="age" class="w-full flex items-center justify-center my-12">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-12 md:mb-0 w-full md:w-1/2 flex justify-center">
         <img src="~/assets/images/memojies/Hat.png" alt="It's me !" class="xl:w-1/2" />
@@ -9,7 +9,7 @@
           {{ $t('home.about.title') }}
         </h2>
         <p class="text-xl my-6 text-gray-700 dark:text-gray-400">
-          {{ $t('home.about.description', {age: info.age}) }}
+          {{ $t('home.about.description', {age: age}) }}
         </p>
         <div class="flex justify-center md:justify-start">
           <Button content="home.about.about" link="about"/>
@@ -26,17 +26,22 @@ import {InfoData} from "~/types/types";
 export default defineComponent({
   name: "AboutHome",
   setup() {
-    const {$content, $sentry} = useContext()
-    const info = useAsync(() => {
-      return $content('infos')
-        .fetch<InfoData>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        });
+    const {$axios, $sentry} = useContext()
+    const age = useAsync(async () => {
+      const response = await $axios.get('/api/informations', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.informations.age
+      } else {
+        $sentry.captureEvent(response.data)
+      }
     }, 'infos')
 
     return {
-      info
+      age
     }
   }
 })

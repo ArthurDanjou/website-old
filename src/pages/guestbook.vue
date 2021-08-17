@@ -20,7 +20,8 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, ref, useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import GuestbookMessage from "@/components/GuestbookMessage.vue";
 
 export default defineComponent({
   name: "guestbook",
@@ -31,22 +32,20 @@ export default defineComponent({
   },
   setup() {
     const { $axios, $sentry, app } = useContext()
-    const guestbook_messages = ref([])
 
-    useAsync(async () => {
-      await $axios.get('/api/guestbook', {
+    const guestbook_messages = useAsync<typeof GuestbookMessage[]>(async () => {
+      const response = await $axios.get('/api/guestbook', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
       })
-        .then(response => {
-          guestbook_messages.value = response.data.guestbook_messages
-        })
-        .catch(error => {
-          app.error({statusCode: 500})
-          $sentry.captureEvent(error)
-        })
-    })
+      if (response.status === 200) {
+        return response.data.guestbook_messages
+      } else {
+        app.error({statusCode: 500})
+        $sentry.captureEvent(response.data)
+      }
+    }, 'guestbook_messages')
 
     return {
       guestbook_messages

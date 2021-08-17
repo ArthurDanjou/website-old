@@ -123,23 +123,19 @@ export default defineComponent({
 
     const getDate = ref(new Date().getFullYear())
 
-    const hiring_message = ref("")
-    useAsync(async () => {
+    const hiring_message = useAsync(async () => {
       const request = await $axios.get('/api/informations', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
       })
       if (request.status === 200) {
-        hiring_message.value = request.data.informations.translation.code
+        return request.data.informations.translation.code
       } else {
         app.error({statusCode: 500})
         $sentry.captureEvent(request.data)
       }
-    })
-
-    const store = useStore<State>()
-    const route = computed(() => store.state.route)
+    }, 'hiring_message')
 
     return {
       getDate,

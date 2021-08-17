@@ -5,7 +5,7 @@
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400">
         {{ $t('contact.why.title') }}
       </h1>
-      <h3 class="text-xl md:text-xl">
+      <h3 class="text-lg">
         {{ $t('contact.why.description') }}
       </h3>
     </section>
@@ -14,41 +14,10 @@
 </template>
 
 <script lang="ts">
-import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
-import {InfoData} from "~/types/types";
-
 export default {
   name: "contact",
   head: {
     title: 'Contact - Arthur Danjou'
-  },
-  setup() {
-    const {$content, $sentry} = useContext()
-    const info = useAsync(() => {
-      return ($content('infos')
-        .fetch<InfoData>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
-    )as Promise<InfoData>
-    })
-
-    const hiring_color = info && info.value?.hiring.color
-    const getColor = computed(() => {
-      switch (hiring_color) {
-        case 'green':
-          return `bg-green-200 text-green-700`
-        case 'red':
-          return `bg-red-200 text-red-700`
-        default:
-          return 'bg-green-200 text-green-700'
-      }
-    })
-
-    return {
-      info,
-      getColor,
-    }
   }
 }
 </script>
