@@ -58,7 +58,6 @@ export default defineComponent({
     const login = async (driver: 'github' | 'google' | 'twitter') => {
       const response = await $axios.get(`/api/auth/${driver}`, {
         headers: {
-          'Access-Control-Allow-Origin': 'https://arthurdanjou.fr',
           'Accept': '*/*',
         }
       })
