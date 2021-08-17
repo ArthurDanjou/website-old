@@ -8,19 +8,19 @@
     "end_date": "Today"
   },
   {
+    "slug": "bac",
+    "title": "formations.bac.title",
+    "description": "formations.bac.description",
+    "location": "France",
+    "begin_date": "09-2020",
+    "end_date": "07-2021 "
+  },
+  {
     "slug": "dnb",
     "title": "formations.dnb.title",
     "description": "formations.dnb.description",
     "location": "France",
     "begin_date": "09-2017",
     "end_date": "09-2018"
-  },
-  {
-    "slug": "bac",
-    "title": "formations.bac.title",
-    "description": "formations.bac.description",
-    "location": "France",
-    "begin_date": "09-2020",
-    "end_date": "Today"
   }
 ]

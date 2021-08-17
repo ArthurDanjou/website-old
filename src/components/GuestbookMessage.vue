@@ -49,7 +49,7 @@ export default defineComponent({
       const month = realMonth.toString().length == 2 ? realMonth.toString() : `0${realMonth.toString()}`
       const minutes = date.getMinutes().toString().length == 2 ? date.getMinutes() : `0${date.getMinutes()}`
       const hours = date.getHours().toString().length == 2 ? date.getHours() : `0${date.getHours()}`
-      return `${date.getDate()} ${i18n.t(`month.${month}`)} ${date.getFullYear()} at ${hours}:${minutes}`
+      return `${date.getDate()} ${i18n.t(`month.${month}`)} ${date.getFullYear()} ${i18n.t('guestbook.at')} ${hours}:${minutes}`
     })
 
     return {

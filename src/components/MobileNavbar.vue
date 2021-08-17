@@ -1,41 +1,31 @@
 <template>
   <div
-    class="w-full z-100 fixed bottom-0 left-0 md:hidden duration-500"
-    :class="{'opened': isOpened}"
+    class="xl:hidden fixed z-50 top-auto bottom-0 w-full md:w-2/3 md:left-1/2 p-4 transition-all duration-500 transform md:-translate-x-1/2"
+    :class="{'-translate-y-8 translate-x-9/12 sm:translate-x-1/2 xl:translate-x-0': opened}"
   >
-    <ul
-      class="bg-gray-200 dark:bg-gray-800 m-4 rounded-3xl dark:text-white text-sm flex items-center justify-around h-20 navbar-bottom-items"
-    >
-      <nuxt-link to="/" class="w-1/5">
-        <li class="h-full w-full font-medium flex flex-col items-center justify-center">
-          <HomeIcon :active="isWindow('')"/>
-          {{ debug }}
-        </li>
+    <nav class="flex justify-evenly py-4 bg-gray-200 dark:bg-gray-700 rounded-3xl dark:text-white text-sm overflow-hidden">
+      <nuxt-link to="/" class="relative font-medium">
+        <HomeIcon :active="isWindow('')"/>
       </nuxt-link>
-      <nuxt-link to="/about" class="w-1/5">
-        <li class="font-medium flex flex-col items-center justify-center">
-          <UserIcon :active="isWindow('/about')"/>
-        </li>
+      <nuxt-link to="/about" class="relative font-medium">
+        <UserIcon :active="isWindow('/about')"/>
       </nuxt-link>
-      <nuxt-link to="/blog" class="w-1/5">
-        <li class="font-medium flex flex-col items-center justify-center">
-          <BookIcon :active="isWindow('/blog')"/>
-        </li>
+      <nuxt-link to="/blog" class="relative font-medium">
+        <BookIcon :active="isWindow('/blog')"/>
       </nuxt-link>
-      <nuxt-link to="/projects" class="w-1/5">
-        <li class="font-medium flex flex-col items-center justify-center">
-          <LightbulbIcon :active="isWindow('/projects')"/>
-        </li>
+      <nuxt-link to="/projects" class="relative font-medium">
+        <LightbulbIcon :active="isWindow('/projects')"/>
       </nuxt-link>
-      <li @click='toggleMenu' class="w-1/5 flex flex-col items-center justify-center cursor-pointer">
-        <MenuIcon :type="getMenuIconType"/>
-      </li>
-    </ul>
+      <button @click.prevent='toggleMenu' class="font-medium cursor-pointer">
+        <CrossIcon v-if="opened" />
+        <MenuIcon v-else :type="getMenuIconType"/>
+      </button>
+    </nav>
   </div>
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, useRouter, useStore} from "@nuxtjs/composition-api";
+import {computed, defineComponent, ref, useRouter, useStore, watch} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
 
 const PAGE_TYPE = {
@@ -44,44 +34,43 @@ const PAGE_TYPE = {
 
 export default defineComponent({
   name: "MobileNavbar",
-  setup() {
-    const $router = useRouter()
-    const debug = computed(() => $router.currentRoute.path)
-
-    const isWindow = (loc: string) => {
-      if (loc === '') return $router.currentRoute.path === "/"
-      else return $router.currentRoute.path.includes(loc)
-    }
-
-    const getMenuIconType = computed(() => PAGE_TYPE[$router.currentRoute.path.split('/')[1]] || 0)
-
+  setup () {
     const store = useStore<State>()
-    const toggleMenu = () => {
-      window.scrollTo({
-        top: 0,
-      })
-      store.commit('TOGGLE_OPENED', !store.state.opened)
+    const route = computed(() => store.state.route)
+    const isWindow = (loc: string) => {
+      if (loc === '') return route.value === "/"
+      else return route.value.includes(loc)
     }
 
+    const getMenuIconType = computed(() => PAGE_TYPE[route.value.split('/')[1]] || 0)
+
+    const toggleMenu = () => {
+      store.commit('TOGGLE_OPENED', !store.state.opened)
+      if (store.state.opened) {
+        setTimeout(() => document.getElementById('nav')!.classList.add('z-50'), 300)
+      } else {
+        document.getElementById('nav')!.classList.remove('z-50')
+        setTimeout(() => {
+          document.getElementById('slider')!.style.maxHeight = 'none'
+        }, 100)
+      }
+    }
+
+    const $router = useRouter()
     $router.afterEach(() => {
       store.commit('TOGGLE_OPENED', false)
+      document.getElementById('nav')!.classList.remove('z-50')
+      setTimeout(() => {
+        document.getElementById('slider')!.style.maxHeight = 'none'
+      }, 100)
     })
-
-    const isOpened = computed(() => store.state.opened)
 
     return {
       isWindow,
       toggleMenu,
-      isOpened,
-      getMenuIconType,
-      debug
+      opened: computed(() => store.state.opened),
+      getMenuIconType
     }
   }
 })
 </script>
-
-<style scoped lang="scss">
-.opened {
-  @apply transform translate-x-9/12 scale-90 -translate-y-10 duration-500;
-}
-</style>

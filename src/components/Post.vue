@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/blog/${slug}`" rel="noreferrer noopener">
+  <nuxt-link :to="`/blog/${slug}`">
     <div class="rounded-lg dark:shadow-white shadow-xl h-116 w-full lg:w-100 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg"
            :style="{ backgroundImage: `url(${getCover})` }">

@@ -1,28 +1,24 @@
 <template>
   <div
     v-if="announce"
-    class="h-12 flex justify-center items-center"
-    :class="[getBackgroundColor, getHoverColor]"
+    class="p-4 duration-300 flex justify-center items-center text-center"
+    :class="[getHoverColor, getBackgroundColor]"
   >
-    {{ announce.translation.code }}
+    {{ $t(announce.message.code) }}
     <img
       v-if="announce.file"
       :src="`https://athena.arthurdanjou.fr/files/${announce.file}`"
       alt="Announce Cover File"
     >
   </div>
+  <div v-else class="p-4 duration-300 flex justify-center items-center text-center bg-black dark:bg-white text-white dark:text-black">
+    {{ $t('loading') }}
+  </div>
 </template>
 
 <script lang="ts">
 import {computed, ref, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Translation} from "~/types/types";
-
-interface Announce {
-  color: string,
-  hover_color: string,
-  translation: Translation
-  file: null
-}
+import {Announce} from "~/types/types";
 
 export default {
   name: "Announcement",
@@ -52,9 +48,9 @@ export default {
     })
 
     const getHoverColor = computed(() => {
-      switch (announce.value!.color) {
+      switch (announce.value!.hover_color) {
         case 'gray': {
-          return 'hover:bg-gray-600'
+          return 'hover:bg-gray-800 dark:hover:bg-gray-300'
         }
       }
     })
@@ -62,7 +58,7 @@ export default {
     return {
       announce,
       getBackgroundColor,
-      getHoverColor
+      getHoverColor,
     }
   }
 }

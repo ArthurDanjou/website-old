@@ -1,4 +1,7 @@
-export default {
+import axios from "axios";
+import {Translation} from "~/types/types";
+
+const translations = {
   header: {
     home: 'Accueil',
     about: 'A Propos',
@@ -15,6 +18,10 @@ export default {
     close: 'Fermer le menu'
   },
 
+  services: {
+    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait'
+  },
+
   part: {
     about: 'A propos',
     contact: 'Me contacter',
@@ -22,14 +29,16 @@ export default {
     blog: 'Mon blog',
     env: 'Mon environnement',
     guestbook: "Mon livre d'or",
-    newsletter: 'Ma newsletter'
+    newsletter: 'Ma newsletter',
+    services: 'Mes services'
   },
 
   footer: {
-    credits: 'Développé et conçu avec ❤️ en utilisant',
-    credits_separator: 'par',
-    credits_separator_and: 'et',
-    copyrights: '© Copyright {date} - Tous droits réservés'
+    description: 'Développeur Web et Logiciel, mais également étudiant en Mathématiques et en Physique. Je développe des sites internet',
+    links: 'Liens rapides',
+    credits: 'Développé avec',
+    credits_separator: 'et',
+    copyrights: '© {date} Arthur Danjou - Tous droits réservés'
   },
 
   error: {
@@ -208,7 +217,8 @@ export default {
     placeholder: 'Votre message...',
     sign: 'Signer',
     error: "Erreur lors de l'envoi de votre message ❌",
-    success: 'Merci pour votre message 😉'
+    success: 'Merci pour votre message 😉',
+    at: 'à'
   },
 
   newsletter: {
@@ -291,5 +301,24 @@ export default {
     ares: 'Ares est mon site personnel créant un point de contact unique.',
     erisium: 'Erisium est un serveur minecraft francophone de mini-jeux.',
     linkyjs: "LinkyJS est mon raccourcisseur d'url personnalisé et Open-Source."
+  },
+
+  loading: 'Chargement...'
+}
+
+export default async function () {
+  let informations = {}
+  const response = await axios.get('https://athena.arthurdanjou.fr/translations', {
+    headers: {
+      authorization: `Bearer ${process.env.API_TOKEN}`
+    }
+  })
+  response.data.translations.map(({ code, french }: any) => {
+    informations = { ...informations, [code]: french }
+  })
+
+  return {
+    ...informations,
+    ...translations
   }
 }

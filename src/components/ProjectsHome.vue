@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="my-8 lg:flex w-full lg:space-x-8 flex flex-wrap justify-center">
-        <div v-for="project in projects">
+        <div v-for="project in projects" class="mb-4">
           <Project
             :title="project.title"
             :cover="project.cover"

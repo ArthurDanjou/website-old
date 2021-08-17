@@ -76,7 +76,15 @@ interface Translation {
 }
 
 interface State {
-  opened: boolean
+  opened: boolean,
+  route: string
 }
 
-export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm, Translation, State }
+interface Announce {
+  color: string,
+  hover_color: string,
+  translation: Translation
+  file: null
+}
+
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm, Translation, State, Announce }

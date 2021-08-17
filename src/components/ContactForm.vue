@@ -84,7 +84,7 @@ export default defineComponent({
     const {$axios, $sentry} = useContext()
     const form = ref<Form>({} as Form)
     const handleForm = async () => {
-      const response = await $axios.post('form',
+      const response = await $axios.post('/api/form',
         {
           email: form.value.email,
           name: form.value.name,

@@ -89,7 +89,7 @@ const sentry = {
 
 export default [
   ['@nuxtjs/axios', axios],
-  ['nuxt-i18n', i18n],
+  ['@nuxtjs/i18n', i18n],
   ['@nuxt/content', content],
   ['@nuxtjs/universal-storage', storage],
   ['@nuxtjs/robots', robots],

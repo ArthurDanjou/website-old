@@ -33,7 +33,7 @@ export default defineComponent({
         .catch((error) => {
           $sentry.captureEvent(error)
         });
-    })
+    }, 'infos')
 
     return {
       info

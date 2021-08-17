@@ -4,7 +4,7 @@
       <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 12h18"/>
         <path d="M3 6h18"/>
-        <path d="M3 18h18/"/>
+        <path d="M3 18h18"/>
       </g>
     </svg>
     <svg v-else-if="type === 1" class="inline" width="2.5em" height="2.5em" viewBox="0 0 48 48" focusable="false">

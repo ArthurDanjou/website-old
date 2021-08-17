@@ -1,7 +1,12 @@
 <template>
-  <div class="md:hidden w-full min-w-screen">
-    <div class="bg-gray-100 dark:bg-gray-900 min-h-screen duration-500 absolute top-0 left-0 right-0 py-4 pr-20 pl-4 flex items-center">
-      <nav class="w-auto">
+  <div class="relative w-full min-w-screen xl:overflow-auto">
+    <div
+      class="min-h-screen bg-gray-100 dark:bg-gray-900 xl:hidden pl-4 pr-20 py-4 transition-all duration-500 duration-500 absolute top-0 left-0 right-0 flex items-center"
+    >
+      <nav
+        id="nav"
+        class="w-auto"
+      >
         <div class="mb-8">
           <div class="flex justify-between mb-4">
             <div @click="closeMenu" class="flex justify-center items-center cursor-pointer cross text-sm">
@@ -26,10 +31,7 @@
               </ul>
             </div>
           </div>
-          <nuxt-link class="profile ml-4 flex items-center" to="/">
-            <img class="h-12 w-12 duration-500" src="@/assets/images/photo-rounded.png" alt="Photo of me" />
-            <h1 class="ml-4 font-bold text-lg">Arthur Danjou</h1>
-          </nuxt-link>
+          <Logo />
         </div>
         <div class="w-auto flex">
           <div class="flex flex-col ml-4 mb-8 space-y-1.5 font-bold text-lg">
@@ -38,7 +40,7 @@
                 {{ $t('header.home') }}
               </nuxt-link>
             </div>
-            <div class="nav-link" :class="{ 'link-active': isWindow('') }">
+            <div class="nav-link" :class="{ 'link-active': isWindow('about') }">
               <nuxt-link to="/about">
                 {{ $t('header.about') }}
               </nuxt-link>
@@ -68,6 +70,11 @@
                 {{ $t('header.guestbook') }}
               </nuxt-link>
             </div>
+            <div class="nav-link" :class="{ 'link-active': isWindow('newsletter') }">
+              <nuxt-link to="/newsletter">
+                {{ $t('header.newsletter') }}
+              </nuxt-link>
+            </div>
             <div class="nav-link" :class="{ 'link-active': isWindow('contact') }">
               <nuxt-link to="/contact">
                 {{ $t('header.contact') }}
@@ -75,7 +82,7 @@
             </div>
           </div>
         </div>
-        <div class="social-links flex justify-between space-x-1">
+        <div class="social-links flex justify-between space-x-0.5">
           <a target="_blank" href="https://twitter.com/ArthurDanj" rel="noopener noreferrer">
             <TwitterIcon />
           </a>
@@ -101,7 +108,14 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, useAsync, useContext, useRouter, useStore} from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  useAsync,
+  useContext,
+  useRouter,
+  useStore
+} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
 
 export default defineComponent({
@@ -121,21 +135,27 @@ export default defineComponent({
       }
     })
 
-    const isWindow = (loc: string) => {
-      if (loc === '') return $router.currentRoute.path === "/"
-      else return $router.currentRoute.path.includes(loc)
-    }
-
     const store = useStore<State>()
     const closeMenu = () => {
       store.commit('TOGGLE_OPENED', false)
+      document.getElementById('nav')!.classList.remove('z-50')
+      setTimeout(() => {
+        document.getElementById('slider')!.style.maxHeight = 'none'
+      }, 100)
+    }
+
+    const route = computed(() => store.state.route)
+    const isWindow = (loc: string) => {
+      if (loc === '') return route.value === "/"
+      else return route.value.includes(loc)
     }
 
     return {
-      isWindow,
       changeColorMode,
       changeLanguage,
-      closeMenu
+      closeMenu,
+      opened: computed(() => store.state.opened),
+      isWindow
     }
   }
 })
@@ -146,11 +166,7 @@ export default defineComponent({
   @apply transform scale-140;
 }
 
-.profile:hover img {
-  @apply transform rotate-360;
-}
-
-.nav-link a, .link-active a {
+.nav-link a {
   @apply duration-300 border-b-2 border-transparent;
 
   &:hover {
@@ -158,9 +174,13 @@ export default defineComponent({
   }
 }
 
+.link-active a {
+  @apply text-indigo-600;
+}
+
 .social-links a {
   svg {
-    @apply h-8 w-8 duration-300
+    @apply h-6 w-6 duration-300
   }
 
   &:hover svg {

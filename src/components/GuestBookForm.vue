@@ -98,7 +98,7 @@ export default defineComponent({
 
     const alreadySent = ref(false)
     const hasAlreadySignMessage = async (id: number) => {
-      const response = await $axios.get(`/guestbook/${id}`, {
+      const response = await $axios.get(`/api/guestbook/${id}`, {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }

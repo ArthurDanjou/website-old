@@ -1,4 +1,6 @@
-export default {
+import axios from "axios";
+
+const translations = {
   header: {
     home: 'Home',
     about: 'About',
@@ -204,7 +206,8 @@ export default {
     placeholder: 'Your message...',
     sign: 'Sign',
     error: 'Error while sending your message ❌',
-    success: 'Thank you for your message 😉'
+    success: 'Thank you for your message 😉',
+    at: 'at'
   },
 
   newsletter: {
@@ -287,5 +290,24 @@ export default {
     ares: 'Ares is my personal website creating a single point of contact',
     erisium: 'Erisium is a french minecraft mini-game server.',
     linkyjs: 'LinkyJS is my custom and Open-Source url shortener'
+  },
+
+  loading: 'Loading...'
+}
+
+export default async function () {
+  let informations = {}
+  const response = await axios.get('https://athena.arthurdanjou.fr/translations', {
+    headers: {
+      authorization: `Bearer ${process.env.API_TOKEN}`
+    }
+  })
+  response.data.translations.map(({ code, english }: any) => {
+    informations = { ...informations, [code]: english }
+  })
+
+  return {
+    ...informations,
+    ...translations
   }
 }
