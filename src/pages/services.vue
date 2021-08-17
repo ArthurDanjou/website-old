@@ -9,7 +9,12 @@
 import {defineComponent} from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  name: "services"
+  name: "services",
+  head() {
+    return {
+      title: `${this.$i18n.t('header.services')} - Arthur Danjou`
+    }
+  },
 })
 </script>
 
