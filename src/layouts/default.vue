@@ -16,7 +16,7 @@
         >
           <Announcement />
           <Header />
-          <Nuxt class="z-10 pt-16 lg:pt-24 content"/>
+          <Nuxt class="z-10 pt-16 content"/>
           <Footer />
         </div>
       </div>

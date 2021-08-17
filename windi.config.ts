@@ -1,5 +1,4 @@
 import {defineConfig} from "windicss/helpers";
-
 const colors = require('windicss/colors')
 
 module.exports = defineConfig({
@@ -320,9 +319,9 @@ module.exports = defineConfig({
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: ['raleway', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      serif: ['Raleway', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
-        'raleway',
+        'Raleway',
         'ui-monospace',
         'SFMono-Regular',
         'Menlo',
@@ -332,6 +331,7 @@ module.exports = defineConfig({
         '"Courier New"',
         'monospace',
       ],
+      color: ['Roboto', 'serif']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
