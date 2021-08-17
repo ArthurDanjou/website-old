@@ -5,7 +5,7 @@
       <div
         id="slider"
         class="relative xl:static shadow-2xl transform transition-all duration-500 overflow-hidden xl:overflow-visible"
-        :class="{'rounded-lg xl:rounded-none scale-90 md:scale-70 lg:scale-60 xl:scale-100 translate-x-9/12 sm:translate-x-4/12 lg:translate-x-3/12 xl:translate-x-0': opened}"
+        :class="{'rounded-lg xl:rounded-none scale-95 md:scale-70 lg:scale-60 xl:scale-100 translate-x-9/12 sm:translate-x-4/12 lg:translate-x-3/12 xl:translate-x-0': opened}"
         :style="opened ? `max-height: ${height}px` : 'max-height: none'"
         :tabindex="opened ? -1 : 0"
       >
