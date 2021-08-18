@@ -43,47 +43,47 @@
             </h1>
           <div class="flex flex-col mb-8 space-y-2 lg:space-y-4 font-medium">
               <div class="link">
-                <nuxt-link to="/">
+                <nuxt-link to="/" :class="{'link-active': isWindow('')}">
                   {{ $t('header.home') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/about">
+                <nuxt-link to="/about" :class="{'link-active': isWindow('about')}">
                   {{ $t('header.about') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/blog">
+                <nuxt-link to="/blog" :class="{'link-active': isWindow('blog')}">
                   {{ $t('header.blog') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/projects">
+                <nuxt-link to="/projects" :class="{'link-active': isWindow('projects')}">
                   {{ $t('header.projects') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/services">
+                <nuxt-link to="/services" :class="{'link-active': isWindow('services')}">
                   {{ $t('header.services') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/env">
+                <nuxt-link to="/env" :class="{'link-active': isWindow('env')}">
                   {{ $t('header.env') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/guestbook">
+                <nuxt-link to="/guestbook" :class="{'link-active': isWindow('guestbook')}">
                   {{ $t('header.guestbook') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/newsletter">
+                <nuxt-link to="/newsletter" :class="{'link-active': isWindow('newsletter')}">
                   {{ $t('header.newsletter') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/contact">
+                <nuxt-link to="/contact" :class="{'link-active': isWindow('contact')}">
                   {{ $t('header.contact') }}
                 </nuxt-link>
               </div>
@@ -137,10 +137,18 @@ export default defineComponent({
       }
     }, 'hiring_message')
 
+    const store = useStore<State>()
+    const route = computed(() => store.state.route)
+    const isWindow = (loc: string) => {
+      if (loc === '') return route.value === "/"
+      else return route.value.includes(loc)
+    }
+
     return {
       getDate,
       isDarkMode,
-      hiring_message
+      hiring_message,
+      isWindow
     }
   }
 })
@@ -171,7 +179,15 @@ export default defineComponent({
   }
 
   .link a {
-    @apply duration-300 hover:font-bold hover:transform hover:translate-x-4
+    @apply duration-500 border-b-2 border-transparent;
+
+    &.link-active {
+      @apply text-indigo-600;
+    }
+
+    &:hover {
+      @apply border-indigo-600
+    }
   }
 }
 </style>
