@@ -44,7 +44,7 @@ export default defineComponent({
         document.getElementById(new_color.name)!.classList.toggle(new_color.color)
         setTimeout(() => document.getElementById(color.name)!.classList.toggle(color.color), 0)
         CURRENT === COLORS.length - 1 ? CURRENT = 0 : CURRENT++
-      }, 3000)
+      }, 2000)
     })
 
     onUnmounted(() => clearInterval(task))
