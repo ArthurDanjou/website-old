@@ -1,7 +1,7 @@
 <template>
   <div
     class="xl:hidden fixed z-50 top-auto bottom-0 w-full md:w-2/3 md:left-1/2 p-4 transition-all duration-500 transform md:-translate-x-1/2"
-    :class="{'-translate-y-8 translate-x-9/12 sm:translate-x-1/2 xl:translate-x-0': opened}"
+    :class="{'-translate-y-8 translate-x-10/12 sm:translate-x-1/2 xl:translate-x-0': opened}"
   >
     <nav class="flex justify-evenly py-4 bg-gray-200 dark:bg-gray-700 rounded-3xl dark:text-white text-sm overflow-hidden">
       <nuxt-link to="/" class="relative font-medium">
@@ -16,7 +16,7 @@
       <nuxt-link to="/projects" class="relative font-medium">
         <LightbulbIcon :active="isWindow('/projects')"/>
       </nuxt-link>
-      <button @click.prevent='toggleMenu' class="font-medium cursor-pointer">
+      <button @click='toggleMenu' class="font-medium cursor-pointer">
         <CrossIcon v-if="opened" />
         <MenuIcon v-else :type="getMenuIconType"/>
       </button>

@@ -1,16 +1,16 @@
 <template>
-  <div class="relative">
+  <div>
     <SideMenu />
-    <div class="relative w-full overflow-hidden xl:overflow-visible">
+    <div class="w-full overflow-hidden xl:overflow-visible">
       <div
         id="slider"
-        class="relative xl:static shadow-2xl transform transition-all duration-500 overflow-hidden xl:overflow-visible"
-        :class="{'rounded-lg xl:rounded-none scale-95 md:scale-70 lg:scale-60 xl:scale-100 translate-x-9/12 sm:translate-x-4/12 lg:translate-x-3/12 xl:translate-x-0': opened}"
-        :style="opened ? `max-height: ${height}px` : 'max-height: none'"
+        class="xl:static shadow-2xl transition-all duration-500 overflow-hidden xl:overflow-visible"
+        :class="{'transform scale-90 md:scale-70 lg:scale-60 xl:scale-100 rounded-lg xl:rounded-none translate-x-10/12 sm:translate-x-4/12 lg:translate-x-3/12 xl:translate-x-0': opened}"
+        :style="`max-height: ${height}px`"
         :tabindex="opened ? -1 : 0"
       >
         <div
-          @click.prevent="closeMenu"
+          @click="closeMenu"
           class="min-h-screen relative z-50 bg-white dark:bg-black w-full min-w-screen pb-20 xl:pb-0 duration-300"
           :class="{'cursor-pointer': opened}"
         >
@@ -45,7 +45,7 @@ export default {
 
     const height = ref(0)
     onMounted(() => {
-      height.value = window.innerHeight
+      height.value = window.screen.height
     })
 
     return {
