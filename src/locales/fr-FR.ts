@@ -112,6 +112,7 @@ const translations = {
       1: "Je suis un jeune développeur créatif qui aime bricoler et toucher à tout ! Je m'intéresse beaucoup aux nouvelles technologies, au développement et à l'informatique.",
       2: "J'adore partager mes connaissances et aider les autres à travers des lives sur Twitchs, des articles techniques sur mon blog, des projets open-sources ou encore en relisant du code de la communauté. Tant que je partage mes passions, je continuerai à faire ça.",
       3: "Je suis capable d'apprendre rapidement des nouvelles technologies pour répondre aux besoins des différents projets. J\'identifie souvent le besoin de nouveaux systèmes ou outils pour améliorer l'efficacité du flux de travail. Je suis toujours motivé par un défi et j'aime être bien organisé pour produire des résultats cohérents.",
+      4: 'En parallèle du développement, je suis étudiant en Mathématiques et en Physique dans la faculté des Sciences Paris-Saclay. De plus, je suis un grand fan de moto.'
     },
     title: {
       skills: 'Compétences',
