@@ -169,5 +169,9 @@ export default defineComponent({
       @apply transform hover:scale-120
     }
   }
+
+  .link a {
+    @apply duration-300 hover:font-bold hover:transform hover:translate-x-4
+  }
 }
 </style>
