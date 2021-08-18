@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col justify-center items-center py-8">
     <div>
-      <img class="logo-img rounded-full my-5" src="~/assets/images/memojies/Hey.png" alt="A picture of myself" />
+      <img class="rounded-full my-5" src="~/assets/images/memojies/Hey.png" alt="A picture of myself" />
     </div>
     <div class="text-lg leading-6 text-justify dark:text-gray-400 text-gray-700">
       <p>{{ $t('about.banner.hello') }} <span class="text-indigo-600 font-bold">Arthur DANJOU</span> 👋.</p> <br/>
@@ -17,9 +17,3 @@ export default {
   name: "SkillsAbout"
 }
 </script>
-
-<style scoped lang="scss">
-.logo-img {
-  height: 25rem;
-}
-</style>
