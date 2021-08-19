@@ -7,7 +7,8 @@
       <p>{{ $t('about.banner.hello') }} <span class="text-indigo-600 font-bold">Arthur DANJOU</span> 👋.</p> <br/>
       <p>{{ $t('about.banner.1')}}</p> <br/>
       <p>{{ $t('about.banner.2') }}</p> <br/>
-      <p>{{ $t('about.banner.3') }}</p>
+      <p>{{ $t('about.banner.3') }}</p> <br />
+      <p>{{ $t('about.banner.4') }}</p>
     </div>
   </section>
 </template>
