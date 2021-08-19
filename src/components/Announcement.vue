@@ -23,7 +23,7 @@ import {Announce} from "~/types/types";
 export default {
   name: "Announcement",
   setup() {
-    const {$axios, $sentry} = useContext()
+    const {$axios, $sentry, app} = useContext()
 
     const announce = useAsync(async () => {
       const response = await $axios.get('/api/announces', {
@@ -35,6 +35,7 @@ export default {
         return response.data.announce
       } else {
         $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
       }
     }, 'announce')
 
