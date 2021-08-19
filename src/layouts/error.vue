@@ -48,7 +48,8 @@ export default defineComponent({
     title: 'Error - Arthur Danjou'
   },
   setup() {
-    const back = () => useRouter().back()
+    const $router = useRouter()
+    const back = () => $router.back()
     return {
       back
     }
