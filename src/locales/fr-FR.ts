@@ -8,7 +8,6 @@ const translations = {
     contact: 'Contact',
     projects: 'Projets',
     env: 'Outils',
-    guestbook: "Livre d'or",
     newsletter: 'Newsletter',
     services: 'Services'
   },
@@ -17,23 +16,34 @@ const translations = {
     close: 'Fermer le menu'
   },
 
-  services: {
-    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
-    1: {
-      title: "Développement d'application",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
-    }
-  },
-
   part: {
     about: 'A propos',
     contact: 'Me contacter',
     projects: 'Mes projets',
     blog: 'Mon blog',
     env: 'Mon environnement',
-    guestbook: "Mon livre d'or",
     newsletter: 'Ma newsletter',
     services: 'Mes services'
+  },
+
+  services: {
+    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
+    1: {
+      title: "Développement d'application",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    2: {
+      title: "Installation d'infrastructure",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    3: {
+      title: "Conseil dans l'informatique",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    4: {
+      title: "Revue de vos applications",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
   },
 
   footer: {
@@ -63,13 +73,6 @@ const translations = {
       student: {
         main: 'Mais également',
         strong: 'étudiant'
-      },
-      contact: {
-        follow: 'Vous pouvez me suivre sur',
-        and: 'et',
-        spacer: 'ou tout simplement en me',
-        contact: 'Contactant',
-        me: '.'
       },
       color: {
         develop: 'Développer.',
@@ -204,30 +207,7 @@ const translations = {
     why: {
       title: 'Pourquoi me contacter ? 📩',
       description: "N'hésitez pas à me contacter si vous avez des questions, pensez que nous pourrions travailler ensemble ou si vous souhaitez simplement discuter ✌️"
-    },
-    available: {
-      title: 'Suis-je disponible ? 🚩',
-      description: 'Ce status sera mis à jour en temps réel pour vous indiquer si je suis disponible pour du travail.',
-      start: 'Je suis actuellement',
-      end: 'pour du travail'
-    },
-    services: {
-      title: 'Voici la liste de services proposés 🛍'
     }
-
-  },
-
-  guestbook: {
-    description: "Laissez un commentaire ci-dessous. Cela peut être tout et n'importe quoi - une appréciation, un message, une blague, etc...",
-    signin: "Signer le livre d'or",
-    share: 'Partagez un message aux futurs visiteurs de ce site.',
-    login: 'Connexion',
-    infos: 'Vos informations ne sont utilisées que pour afficher votre nom et répondre par e-mail.',
-    placeholder: 'Votre message...',
-    sign: 'Signer',
-    error: "Erreur lors de l'envoi de votre message ❌",
-    success: 'Merci pour votre message 😉',
-    at: 'à'
   },
 
   newsletter: {
@@ -263,46 +243,6 @@ const translations = {
     10: 'Octobre',
     11: 'Novembre',
     12: 'Décembre',
-  },
-
-  hiring: {
-    status: {
-      not_available: 'non disponible',
-      available: 'disponible'
-    }
-  },
-
-  tags: {
-    life: 'Vie',
-    dev: 'Dev',
-    tech: 'Tech',
-    software: 'Logiciel',
-    web: 'Web',
-    api: 'API',
-    mc: 'Minecraft',
-    opensource: 'Open-Source'
-  },
-
-  experiences: {
-    erisium: 'Développeur Junior',
-    freelance: 'Développement FullStack Web & Logiciel',
-    idemia: 'Découverte du secteur IT & du data-center',
-    lsam: 'Nettoyage de la salle – Serveur – Prise de commandes – Accueil des clients'
-  },
-
-  formations: {
-    freelance: {
-      title: 'Auto-apprentissage',
-      description: 'Java, TypeScript, Go, etc...'
-    },
-    dnb: {
-      title: 'Diplôme National du Brevet',
-      description: 'Obtention du Brevet mention Très Bien'
-    },
-    bac: {
-      title: 'Baccalauréat',
-      description: 'Baccalauréat Général Physique/Chimie & Mathématiques'
-    }
   },
 
   works: {

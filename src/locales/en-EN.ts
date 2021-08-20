@@ -8,7 +8,6 @@ const translations = {
     contact: 'Contact',
     projects: 'Projects',
     env: 'Tools',
-    guestbook: 'Guestbook',
     newsletter: 'Newsletter',
     services: 'Services'
   },
@@ -23,15 +22,36 @@ const translations = {
     projects: 'My projects',
     contact: 'Contact me',
     env: 'My environment',
-    guestbook: 'My guestbook',
-    newsletter: 'My newsletter'
+    newsletter: 'My newsletter',
+    services: 'My services'
+  },
+
+  services: {
+    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
+    1: {
+      title: "Développement d'application",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    2: {
+      title: "Installation d'infrastructure",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    3: {
+      title: "Conseil dans l'informatique",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
+    4: {
+      title: "Revue de vos applications",
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    },
   },
 
   footer: {
-    credits: 'Developed and designed with ❤️ using',
-    credits_separator: 'by',
-    credits_separator_and: 'and',
-    copyrights: '© Copyright {date} - All rights reserved'
+    description: 'Développeur Web et Logiciel, mais également étudiant en Mathématiques et en Physique. Je développe des sites internet',
+    links: 'Quick links',
+    credits: 'Developed with',
+    credits_separator: 'and',
+    copyrights: '© {date} Arthur Danjou - All rights reserved'
   },
 
   error: {
@@ -53,13 +73,6 @@ const translations = {
       student: {
         main: 'but also',
         strong: 'student'
-      },
-      contact: {
-        follow: 'You can follow me on',
-        and: 'and',
-        spacer: 'or simply by',
-        contact: 'Contacting',
-        me: 'me.'
       },
       color: {
         develop: 'Develop.',
@@ -102,6 +115,7 @@ const translations = {
       1: 'I am a young creative developer who loves to tinker and touch everything! I am very interested in new technologies, development and IT.',
       2: 'I love sharing my knowledge and helping others through lives on Twitchs, technical articles on my blog, open-source projects or by reviewing community code. As long as I share my passions, I will continue to do this.',
       3: 'I am able to quickly learn new technologies to meet the needs of different projects. I often identify the need for new systems or tools to improve workflow efficiency. I am always motivated by a challenge and like to be well organized to produce consistent results.',
+      4: 'En parallèle du développement, je suis étudiant en Mathématiques et en Physique dans la faculté des Sciences Paris-Saclay. De plus, je suis un grand fan de moto.'
     },
     title: {
       skills: 'Skills',
@@ -193,26 +207,7 @@ const translations = {
     why: {
       title: 'Why contact me ? 📩',
       description: "Please don't hesitate to contact me if you have any questions, think we could work together or if you just want to chat ✌️"
-    },
-    available: {
-      title: 'Am I available? 🚩',
-      description: 'This status will be updated in real time to let you know if I am available for projects.',
-      start: 'I am currently',
-      end: 'for projects'
     }
-  },
-
-  guestbook: {
-    description: "Leave a comment below. It can be anything and everything - an appreciation, a message, a joke, etc.",
-    signin: "Sign the guestbook",
-    share: 'Share a message to future visitors to this site.',
-    login: 'Login',
-    infos: 'Your information is only used to display your name and reply by email.',
-    placeholder: 'Your message...',
-    sign: 'Sign',
-    error: 'Error while sending your message ❌',
-    success: 'Thank you for your message 😉',
-    at: 'at'
   },
 
   newsletter: {
@@ -248,46 +243,6 @@ const translations = {
     10: 'October',
     11: 'November',
     12: 'December',
-  },
-
-  hiring: {
-    status: {
-      not_available: 'not available',
-      available: 'available'
-    }
-  },
-
-  tags: {
-    life: 'Life',
-    dev: 'Dev',
-    tech: 'Tech',
-    software: 'Software',
-    web: 'Web',
-    api: 'API',
-    mc: 'Minecraft',
-    opensource: 'Open-Source'
-  },
-
-  experiences: {
-    erisium: 'Junior Developer',
-    freelance: 'FullStack Software & Web Development',
-    idemia: 'Discovery of the IT sector & the data-center',
-    lsam: 'Room cleaning - Waiter - Taking orders - Welcoming customers'
-  },
-
-  formations: {
-    freelance: {
-      title: 'Self-learning',
-      description: 'Java, TypeScript, Go, etc...'
-    },
-    dnb: {
-      title: 'Diplôme National du Brevet',
-      description: 'Obtention du Brevet mention Très Bien'
-    },
-    bac: {
-      title: 'Baccalauréat',
-      description: 'General Baccalaureate Physics / Chemistry & Mathematics'
-    }
   },
 
   works: {

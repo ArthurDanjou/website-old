@@ -61,10 +61,6 @@ interface Project {
   tags: Array<Tag>,
 }
 
-interface GuestbookForm {
-  message: string
-}
-
 interface NewsletterForm {
   email: string
 }
@@ -77,7 +73,8 @@ interface Translation {
 
 interface State {
   opened: boolean,
-  route: string
+  route: string,
+  email: string
 }
 
 interface Announce {
@@ -87,4 +84,4 @@ interface Announce {
   file: null
 }
 
-export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, GuestbookForm, NewsletterForm, Translation, State, Announce }
+export { Form, InfoData, Skill, Experience, Formation, Post, Tag, Project, NewsletterForm, Translation, State, Announce }

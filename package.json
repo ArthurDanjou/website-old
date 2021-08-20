@@ -10,7 +10,7 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/composition-api": "0.26.0",
+    "@nuxtjs/composition-api": "^0.26.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/i18n": "^7.0.2",
     "@nuxtjs/proxy": "^2.1.0",
@@ -23,8 +23,7 @@
     "core-js": "^3.16.1",
     "nuxt": "^2.15.8",
     "prism-themes": "^1.8.0",
-    "sass": "^1.37.5",
-    "windicss": "^3.1.7"
+    "sass": "^1.37.5"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",

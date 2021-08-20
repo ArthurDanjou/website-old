@@ -1,7 +1,7 @@
 <template>
   <footer class="footer w-full mt-20">
     <div class="p-8 pb-0">
-      <div class="lg:flex justify-evenly">
+      <div class="lg:flex justify-evenly items-center">
         <div class="lg:w-1/3">
           <div class="flex">
             <Logo />
@@ -41,7 +41,8 @@
           <h1 class="font-bold mb-4 text-lg underline">
               {{ $t('footer.links') }}
             </h1>
-          <div class="flex flex-col mb-8 space-y-2 lg:space-y-4 font-medium">
+          <div class="flex flex-col lg:flex-row mb-8 font-medium">
+            <div class="space-y-2 lg:space-y-4 mr-16">
               <div class="link">
                 <nuxt-link to="/" :class="{'link-active': isWindow('')}">
                   {{ $t('header.home') }}
@@ -62,6 +63,8 @@
                   {{ $t('header.projects') }}
                 </nuxt-link>
               </div>
+            </div>
+            <div class="space-y-2 lg:space-y-4 ">
               <div class="link">
                 <nuxt-link to="/services" :class="{'link-active': isWindow('services')}">
                   {{ $t('header.services') }}
@@ -70,11 +73,6 @@
               <div class="link">
                 <nuxt-link to="/env" :class="{'link-active': isWindow('env')}">
                   {{ $t('header.env') }}
-                </nuxt-link>
-              </div>
-              <div class="link">
-                <nuxt-link to="/guestbook" :class="{'link-active': isWindow('guestbook')}">
-                  {{ $t('header.guestbook') }}
                 </nuxt-link>
               </div>
               <div class="link">
@@ -88,6 +86,7 @@
                 </nuxt-link>
               </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="text-center border-t-2 border-gray-200 dark:border-gray-800 py-8 lg:flex lg:flex-row-reverse justify-between">

@@ -6,7 +6,7 @@
     </h3>
     <div v-if="experiences" v-for="experience in experiences">
       <Experience
-        :title="experience.title"
+        :title="experience.title.code"
         :company="experience.company"
         :location="experience.location"
         :begin="experience.begin_date"
@@ -22,16 +22,21 @@ import {Experience} from "~/types/types";
 export default defineComponent({
   name: "ExperiencesAbout",
   setup() {
-    const {$content, $sentry} = useContext()
+    const {$axios, $sentry, app} = useContext()
 
-    const experiences = useAsync(() => {
-      return $content('experiences')
-        .sortBy('end_date', 'desc')
-        .fetch<Experience>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
-    })
+    const experiences = useAsync(async () => {
+      const response = await $axios.get('/api/experiences', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.experiences
+      } else {
+        app.error({statusCode: 500})
+        $sentry.captureEvent(response.data)
+      }
+    }, 'experiences')
 
     return {
       experiences

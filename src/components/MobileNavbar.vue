@@ -33,7 +33,7 @@ const PAGE_TYPE = {
   services: 2,
   env: 3,
   about: 4,
-  guestbook: 5
+  newsletter: 5
 }
 
 export default defineComponent({

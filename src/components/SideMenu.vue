@@ -65,11 +65,6 @@
                 {{ $t('header.env') }}
               </nuxt-link>
             </div>
-            <div class="nav-link" :class="{ 'link-active': isWindow('guestbook') }">
-              <nuxt-link to="/guestbook">
-                {{ $t('header.guestbook') }}
-              </nuxt-link>
-            </div>
             <div class="nav-link" :class="{ 'link-active': isWindow('newsletter') }">
               <nuxt-link to="/newsletter">
                 {{ $t('header.newsletter') }}

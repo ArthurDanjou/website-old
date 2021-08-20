@@ -2,8 +2,5 @@
 export default [
   {
     src: '~/plugins/i18n.ts'
-  },
-  {
-    src: '~/plugins/main.ts',
   }
 ]
