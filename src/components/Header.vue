@@ -23,7 +23,7 @@
         <ul class="flex items-center">
           <li @click="changeLanguage()"
               class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-400">
-            <TranslateIcon/>
+            <TranslateIcon :french="isFrench"/>
           </li>
           <li @click="changeColorMode()"
               class="mx-1 h-9 w-9 cursor-pointer flex items-center p-1.5 rounded-xl hover:bg-gray-300 dark:hover:bg-dark-400 duration-200">
@@ -83,6 +83,7 @@ export default defineComponent({
         window.location.reload()
       }
     })
+    const isFrench = computed(() => i18n.locale === 'fr')
 
     const store = useStore<State>()
     const route = computed(() => store.state.route)
@@ -97,7 +98,8 @@ export default defineComponent({
       changeColorMode,
       updateScroll,
       changeLanguage,
-      isWindow
+      isWindow,
+      isFrench
     }
   }
 })

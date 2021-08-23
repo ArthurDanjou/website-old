@@ -17,7 +17,7 @@
               <ul class="flex items-center">
                 <li @click="changeLanguage()"
                     class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-400">
-                  <TranslateIcon/>
+                  <TranslateIcon :french="isFrench" />
                 </li>
                 <li @click="changeColorMode()"
                     class="mx-1 h-9 w-9 cursor-pointer flex items-center p-1.5 rounded-xl hover:bg-gray-300 dark:hover:bg-dark-400 duration-200">
@@ -90,7 +90,7 @@
           <a target="_blank" href="https://www.twitch.tv/arthurdanjou" rel="noopener noreferrer">
             <TwitchIcon />
           </a>
-          <a target="_blank" href="https://discord.gg/RQhjE5UkxD" rel="noopener noreferrer">
+          <a target="_blank" href="https://discord.gg/ENG6cFQhPS" rel="noopener noreferrer">
             <DiscordIcon />
           </a>
           <a target="_blank" href="mailto:contact@arthurdanjou.fr" rel="noopener noreferrer">
@@ -130,13 +130,15 @@ export default defineComponent({
       }
     })
 
+    const isFrench = computed(() => i18n.locale === 'fr')
+
     const store = useStore<State>()
     const closeMenu = () => {
       store.commit('TOGGLE_OPENED', false)
       document.getElementById('nav')!.classList.remove('z-50')
       setTimeout(() => {
         document.getElementById('slider')!.style.maxHeight = 'none'
-      }, 100)
+      }, 500)
     }
 
     const route = computed(() => store.state.route)
@@ -150,7 +152,8 @@ export default defineComponent({
       changeLanguage,
       closeMenu,
       opened: computed(() => store.state.opened),
-      isWindow
+      isWindow,
+      isFrench
     }
   }
 })

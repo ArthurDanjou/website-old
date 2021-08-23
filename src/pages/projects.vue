@@ -5,12 +5,12 @@
     <div v-else class="flex flex-col justify-around items-center py-10 w-full">
       <h1 class="text-gray-700 dark:text-gray-400 text-xl mt-4">{{ $t('projects.description') }}</h1>
       <div class="flex flex-col items-center md:items-start md:flex-row flex-wrap w-full space-y-3 md:space-y-0">
-        <div class="flex py-4 w-full flex-wrap justify-center">
-          <div class="md:mx-4 my-4 w-full lg:w-auto" v-for="project in projects">
+        <div class="lg:flex py-4 w-full flex-wrap justify-center">
+          <div class="m-4" v-for="project in projects">
             <Project
-              :title="project.title"
-              :cover="project.cover"
-              :description="project.description"
+              :title="project.name"
+              :cover="project.cover.file_name"
+              :description="project.description.code"
               :tags="project.tags"
               :url="project.url"
             />
@@ -33,14 +33,20 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $content, $sentry } = useContext()
+    const { $axios, app, $sentry } = useContext()
 
-    const projects = useAsync(() => {
-      return $content('projects')
-        .fetch<Project>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
+    const projects = useAsync(async () => {
+      const response = await $axios.get('/api/projects', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.projects
+      } else {
+        $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
+      }
     }, 'projects')
 
     return {

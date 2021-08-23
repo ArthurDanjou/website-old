@@ -6,7 +6,6 @@
         id="slider"
         class="xl:static shadow-2xl transition-all duration-500 overflow-hidden xl:overflow-visible"
         :class="{'transform scale-90 md:scale-70 lg:scale-60 xl:scale-100 rounded-lg xl:rounded-none translate-x-10/12 sm:translate-x-4/12 lg:translate-x-3/12 xl:translate-x-0': opened}"
-        :style="`max-height: ${height}px`"
         :tabindex="opened ? -1 : 0"
       >
         <div
@@ -41,17 +40,14 @@ export default {
     const closeMenu = () => {
       store.commit('TOGGLE_OPENED', false)
       document.getElementById('nav')!.classList.remove('z-50')
+      setTimeout(() => {
+        document.getElementById('slider')!.style.maxHeight = 'none'
+      }, 500)
     }
-
-    const height = ref(0)
-    onMounted(() => {
-      height.value = window.screen.height
-    })
 
     return {
       opened: computed(() => store.state.opened),
       closeMenu,
-      height,
     }
   }
 }

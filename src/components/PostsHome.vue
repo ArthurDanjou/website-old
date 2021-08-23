@@ -12,9 +12,9 @@
       <div class="my-8 lg:flex w-full lg:space-x-6">
         <div v-for="post in posts">
           <Post
-            :title="post.title"
-            :cover="post.cover"
-            :description="post.description"
+            :title="post.title.code"
+            :cover="post.cover.file_name"
+            :description="post.description.code"
             :date="post.date"
             :slug="post.slug"
             :tags="post.tags"
@@ -36,17 +36,21 @@ import {Post} from "~/types/types";
 export default defineComponent({
   name: "PostsHome",
   setup() {
-    const { $content, i18n, $sentry } = useContext()
+    const { $axios, app, $sentry } = useContext()
 
-    const posts = useAsync(() => {
-      return $content(`articles/${i18n.locale}`)
-        .sortBy('date', 'asc')
-        .limit(3)
-        .fetch<Post>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
-    }, 'posts')
+    const posts = useAsync(async () => {
+      const response = await $axios.get('/api/posts', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.posts
+      } else {
+        app.error({statusCode: 500})
+        $sentry.captureEvent(response.data)
+      }
+    }, 'posts_home')
 
     return {
       posts

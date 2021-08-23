@@ -1414,17 +1414,17 @@
     defu "^5.0.0"
     lodash.template "^4.5.0"
 
-"@nuxtjs/composition-api@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.26.0.tgz#0fbda4fc942ca1e346b7c6d55a1fb331ff931a2a"
-  integrity sha512-+4L9YDEN5h/vBY6xbBKPMIhgxbPv7psE4IVgKlF+QIekou6oN8m0T+QR2JLE0dHKwzicUbZLCr1v2Qw5T7L48A==
+"@nuxtjs/composition-api@^0.27.0":
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.27.0.tgz#cbe4df6a7306e4a34770fbad5b1ad79717f8fdb7"
+  integrity sha512-YtQ1KX+ls13zbukII8/vhKskoI1FrngDxegGVW31576qlaiEQUQGpOATF0cGrZ1W7Wgmz3rsAz1CNdSd5FFXOA==
   dependencies:
-    "@vue/composition-api" "^1.0.4"
+    "@vue/composition-api" "^1.1.1"
     defu "^5.0.0"
     estree-walker "^2.0.2"
     fs-extra "^9.1.0"
     magic-string "^0.25.7"
-    ufo "^0.7.7"
+    ufo "^0.7.9"
     upath "^2.0.1"
 
 "@nuxtjs/dotenv@^1.4.1":
@@ -1470,17 +1470,17 @@
   resolved "https://registry.yarnpkg.com/@nuxtjs/robots/-/robots-2.5.0.tgz#a42b25e3bc58181cb2a8fbd30d6b0fee6c36bc60"
   integrity sha512-z1F3HXb05NiZga8Cuq6k5bbowfJOScPtbSOakip0nege+1aI9pGoajzap8eR5s1qwLXAk9Ts+NcgetoUn5lwrQ==
 
-"@nuxtjs/sentry@^5.1.0":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sentry/-/sentry-5.1.1.tgz#329606bf93f804d18769cf26befd6786b86e0480"
-  integrity sha512-tJq4I0r3M46WMO8oPIRVZ05VjXJrzuWCPYNRmhg2q2jcKgHaetK60RnJwGcnsDz6x92MLFVhdzA5kiJEIe9/7Q==
+"@nuxtjs/sentry@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sentry/-/sentry-5.1.2.tgz#ba856e4b35676f5be9adfbe73cfa5b785fb0051c"
+  integrity sha512-WdEa22ynTkFr2FQo3FZEEr5derBu2ckBvAYE5897kJvYp5dI65PK0dKRilPbHikrfb0hUWaPp2dH6Ke1VvGElw==
   dependencies:
     "@sentry/browser" "^6.11.0"
     "@sentry/integrations" "^6.11.0"
     "@sentry/node" "^6.11.0"
     "@sentry/webpack-plugin" "^1.17.1"
     consola "^2.15.3"
-    lodash.merge "^4.6.2"
+    lodash.mergewith "^4.6.2"
 
 "@nuxtjs/sitemap@^2.4.0":
   version "2.4.0"
@@ -2106,10 +2106,10 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.4":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.1.0.tgz#484e7e3bbc516ad6a9b0a9967d316325c239539e"
-  integrity sha512-9TMJliVFByhfEJjqM+Ymu9ImVrUnrT/Y2S7Fz8EsQ1MbggbE0o8Ohvk9XqK2UIOp8w68f7goVX+6h6O78iRsJQ==
+"@vue/composition-api@^1.1.1":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.1.3.tgz#8fa528c5f68fec47363340fdae7c7fe047ba5e10"
+  integrity sha512-gFcLkHD7SkaoE+i4OhMtv6c/gQeSYxEDDGk4yzF4tZ8h8+7oFNBX8lPUWf9McHGBTcztZNzsIZuwkDVmc0WZlQ==
   dependencies:
     tslib "^2.3.0"
 
@@ -3392,10 +3392,10 @@ core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.16.1:
-  version "3.16.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.1.tgz#f4485ce5c9f3c6a7cb18fa80488e08d362097249"
-  integrity sha512-AAkP8i35EbefU+JddyWi12AWE9f2N/qr/pwnDtWz4nyUIBGMJPX99ANFFRSw6FefM374lDujdtLDyhN2A/btHw==
+core-js@^3.16.2:
+  version "3.16.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.2.tgz#3f485822889c7fc48ef463e35be5cc2a4a01a1f4"
+  integrity sha512-P0KPukO6OjMpjBtHSceAZEWlDD1M2Cpzpg6dBbrjFqFhBHe/BwhxaP820xKOjRn/lZRQirrCusIpLS/n2sgXLQ==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -5772,6 +5772,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash.mergewith@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
 lodash.template@^4.5.0:
   version "4.5.0"
@@ -8275,10 +8280,10 @@ sass-loader@10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.37.5:
-  version "1.37.5"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.37.5.tgz#f6838351f7cc814c4fcfe1d9a20e0cabbd1e7b3c"
-  integrity sha512-Cx3ewxz9QB/ErnVIiWg2cH0kiYZ0FPvheDTVC6BsiEGBTZKKZJ1Gq5Kq6jy3PKtL6+EJ8NIoaBW/RSd2R6cZOA==
+sass@^1.38.0:
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.38.0.tgz#2f3e60a1efdcdc910586fa79dc89d3399a145b4f"
+  integrity sha512-WBccZeMigAGKoI+NgD7Adh0ab1HUq+6BmyBUEaGxtErbUtWUevEbdgo5EZiJQofLUGcKtlNaO2IdN73AHEua5g==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
@@ -9177,6 +9182,11 @@ ufo@^0.7.4, ufo@^0.7.5, ufo@^0.7.7:
   version "0.7.7"
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.7.tgz#0062f9e5e790819b0fb23ca24d7c63a4011c036a"
   integrity sha512-N25aY3HBkJBnahm+2l4JRBBrX5I+JPakF/tDHYDTjd3wUR7iFLdyiPhj8mBwBz21v728BKwM9L9tgBfCntgdlw==
+
+ufo@^0.7.9:
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.9.tgz#0268e3734b413c9ed6f3510201f42372821b875c"
+  integrity sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==
 
 uglify-js@^3.5.1:
   version "3.14.1"

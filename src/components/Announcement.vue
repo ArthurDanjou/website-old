@@ -26,7 +26,7 @@ export default {
     const {$axios, $sentry, app} = useContext()
 
     const announce = useAsync(async () => {
-      const response = await $axios.get('/api/announces', {
+      const response = await $axios.get('/api/announce', {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }

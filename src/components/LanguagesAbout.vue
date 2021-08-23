@@ -2,7 +2,7 @@
   <section class="w-full mb-10">
     <h3 class="font-bold text-2xl md:text-4xl">
       {{ $t('about.title.languages') }}
-      <TranslateIcon />
+      <LanguageIcon />
     </h3>
     <div>
       <table class="text-base text-xl text-gray-700 dark:text-gray-400">
@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: "LanguagesAbout"
+  name: "LanguagesAbout",
 }
 </script>

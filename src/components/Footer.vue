@@ -29,7 +29,7 @@
             <a target="_blank" href="https://www.twitch.tv/arthurdanjou" rel="noopener noreferrer">
               <TwitchIcon />
             </a>
-            <a target="_blank" href="https://discord.gg/RQhjE5UkxD" rel="noopener noreferrer">
+            <a target="_blank" href="https://discord.gg/ENG6cFQhPS" rel="noopener noreferrer">
               <DiscordIcon />
             </a>
             <a target="_blank" href="mailto:contact@arthurdanjou.fr" rel="noopener noreferrer">

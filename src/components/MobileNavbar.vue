@@ -51,22 +51,22 @@ export default defineComponent({
     const toggleMenu = () => {
       store.commit('TOGGLE_OPENED', !store.state.opened)
       if (store.state.opened) {
+        document.getElementById('slider')!.style.maxHeight = window.screen.height + 'px'
         setTimeout(() => document.getElementById('nav')!.classList.add('z-50'), 300)
       } else {
         document.getElementById('nav')!.classList.remove('z-50')
         setTimeout(() => {
           document.getElementById('slider')!.style.maxHeight = 'none'
-        }, 100)
+        }, 500)
       }
     }
 
     const $router = useRouter()
     $router.afterEach(() => {
       store.commit('TOGGLE_OPENED', false)
-      document.getElementById('nav')!.classList.remove('z-50')
       setTimeout(() => {
         document.getElementById('slider')!.style.maxHeight = 'none'
-      }, 100)
+      }, 600)
     })
 
     return {

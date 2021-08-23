@@ -47,7 +47,7 @@ const translations = {
   },
 
   footer: {
-    description: 'Développeur Web et Logiciel, mais également étudiant en Mathématiques et en Physique. Je développe des sites internet',
+    description: "Développeur Web et Logiciel, mais aussi étudiant en Mathématiques et Physique 🎓. J'habite à Paris 🇫🇷. J'adore créer des applications et des logiciels plus ou moins utiles 🛍. J'utilise les technologies modernes pour obtenir le meilleur résultat possible ✨ J'adore également contribuer à tous types de projets Open-Source 🧪",
     links: 'Liens rapides',
     credits: 'Développé avec',
     credits_separator: 'et',
@@ -252,7 +252,14 @@ const translations = {
     linkyjs: "LinkyJS est mon raccourcisseur d'url personnalisé et Open-Source."
   },
 
-  loading: 'Chargement...'
+  loading: 'Chargement...',
+
+  maintenance: {
+    back_soon: "Nous serons de retour bientôt...",
+    title: 'Site en maintenance !',
+    progress: "Pour suivre l'avancée : ",
+    separator: 'ou'
+  }
 }
 
 export default async function () {

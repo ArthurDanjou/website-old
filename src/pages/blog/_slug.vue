@@ -1,6 +1,7 @@
 <template>
-  <main v-if="post" class="blog flex flex-col items-center px-4 xl:px-72 mb-16 md:mb-32">
+  <main v-if="post && postData" class="blog flex flex-col items-center px-4 xl:px-72 mb-16 md:mb-32">
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
+      {{ slug }}
       <div>
         <div class="mb-4 flex">
           <nuxt-link to="/blog" class="back-arrow flex">
@@ -14,10 +15,10 @@
         </div>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold">
-        {{ post.title }}
+        {{ $t(postData.title.code) }}
       </h1>
       <h3 class="text-xl text-gray-800 dark:text-gray-300 my-4 md:mt-8">
-        {{ post.description }}
+        {{ $t(postData.description.code) }}
       </h3>
       <div class="flex flex-row justify-between w-full md:w-2/3 mb-12">
         <div>
@@ -26,16 +27,16 @@
         </div>
         <div>
           <p class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">{{ $t('blog.read.time') }}</p>
-          <p>{{ post.reading_time }} min</p>
+          <p>{{ postData.reading_time }} min</p>
         </div>
         <div>
-          <p :class="post.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">Tags</p>
+          <p :class="postData.tags.length === 0 ? 'opacity-0': 'opacity-100'" class="uppercase text-sm font-bold text-gray-800 dark:text-gray-400">Tags</p>
           <p>{{ formatTags }}</p>
         </div>
       </div>
       <div class="w-full">
         <div class="flex justify-center w-full">
-          <img class="w-full" :src="require(`@/assets/images/posts/${post.cover}`)" alt="Cover Img" />
+          <img class="w-full" :src="`https://athena.arthurdanjou.fr/files/${postData.cover.file_name}`" alt="Cover Img" />
         </div>
       </div>
       <nuxt-content
@@ -55,7 +56,7 @@
             :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
           >
             <div class="mr-2 lining-nums leading-3">
-              {{ likes }}
+              {{ getLikes }}
             </div>
             <div class="inline leading-6" :class="{'animate-pulse heartbeat': liked}">
               <HeartIcon :liked="liked"/>
@@ -63,7 +64,7 @@
           </div>
           <a
             target="_blank"
-            :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + this.post.slug + '&text=' + $t('blog.tweet') + ' ' + post.title"
+            :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + postData.slug + '&text=' + $t('blog.tweet') + ' ' + $i18n.t('title')"
             class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
           >
             <TwitterBlogIcon />
@@ -119,7 +120,7 @@ export default defineComponent({
     const slug = computed(() => route.value.params.slug)
 
     const post = useStatic((slug) => {
-      return $content(`articles/${i18n.locale}`, slug)
+      return $content(i18n.locale, slug)
         .fetch<Post>()
         .catch((error) => {
           app.error({statusCode: 404, message: "Post not found"})
@@ -127,31 +128,34 @@ export default defineComponent({
         }) as Promise<Post>
     }, slug, 'post')
 
-    title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
-
-    watch(post, () => {
-      title.value = post.value?.title ? `Blog - Arthur Danjou - ${post.value!.title}` : 'Loading title...'
-    })
-
     const liked = ref($storage.getCookie(`${slug.value}`) !== undefined)
+    const likes = ref(0)
+    const getLikes = computed(() => likes.value)
 
-    const likes = useAsync(async () => {
-      const response = await $axios.get(`/api/posts/${slug.value}`, {
+    const postData = useAsync(async () => {
+      const response = await $axios.get(`/api/posts/${slug.value}/data`, {
         headers: {
           'Authorization': `Bearer ${process.env.API_TOKEN}`
         }
       })
       if (response.status === 200) {
-        return response.data.likes
+        likes.value = response.data.post.likes
+        title.value = `Blog - Arthur Danjou - ${i18n.t(response.data.post.title.code)}`
+        return response.data.post
       } else {
         $sentry.captureEvent(response.data)
         app.error({statusCode: 500})
       }
-    }, 'likes')
+    }, 'postData')
+
+    watch(postData, () => {
+      title.value = `Blog - Arthur Danjou - ${i18n.t(postData.value.title.code)}`
+      likes.value = postData.value.likes
+    })
 
     const handleLike = async () => {
       if (liked.value) {
-        const response = await $axios.post(`/api/posts/${post.value?.slug}/unlike`, {}, {
+        const response = await $axios.post(`/api/posts/${postData.value.slug}/unlike`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
@@ -165,7 +169,7 @@ export default defineComponent({
           app.error({statusCode: 500})
         }
       } else {
-        const response = await $axios.post(`/api/posts/${post.value?.slug}/like`, {}, {
+        const response = await $axios.post(`/api/posts/${postData.value.slug}/like`, {}, {
           headers: {
             'Authorization': `Bearer ${process.env.API_TOKEN}`
           }
@@ -185,7 +189,7 @@ export default defineComponent({
 
     const isCopied = ref(false)
     const copyToClipboard = () => {
-      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + post.value?.slug)
+      navigator.clipboard.writeText('https://arthurdanjou.fr/blog/' + postData.value.slug)
       isCopied.value = true
       setTimeout(() => {
         isCopied.value = false
@@ -200,13 +204,13 @@ export default defineComponent({
     }
 
     const formatDate = computed(() => {
-      const [first, second, third]: any = post.value?.date.split('-')
+      const [first, second, third]: any = postData.value.date.split('-')
       return `${first} ${i18n.t(`month.${second}`)} ${third}`
     })
 
     const formatTags = computed(() => {
       let tags = ""
-      post.value?.tags.map(tag => {
+      postData.value.tags.map(tag => {
         tags += i18n.t(String(tag)) + ", "
       })
       return tags.substring(0, tags.length - 2)
@@ -214,14 +218,16 @@ export default defineComponent({
 
     return {
       post,
-      likes,
+      getLikes,
       liked,
       handleLike,
       isCopied,
       copyToClipboard,
       scrollToTop,
       formatDate,
-      formatTags
+      formatTags,
+      postData,
+      slug
     }
   }
 })

@@ -47,7 +47,7 @@ const translations = {
   },
 
   footer: {
-    description: 'Développeur Web et Logiciel, mais également étudiant en Mathématiques et en Physique. Je développe des sites internet',
+    description: "Web and Software Developer, but also student in Mathematics and Physics 🎓. I live in Paris 🇫🇷. I love to create more or less useful applications and software 🛍. I use modern technologies to get the best possible result ✨ I also adore contributing to all types of Open-Source projects 🧪",
     links: 'Quick links',
     credits: 'Developed with',
     credits_separator: 'and',
@@ -115,7 +115,7 @@ const translations = {
       1: 'I am a young creative developer who loves to tinker and touch everything! I am very interested in new technologies, development and IT.',
       2: 'I love sharing my knowledge and helping others through lives on Twitchs, technical articles on my blog, open-source projects or by reviewing community code. As long as I share my passions, I will continue to do this.',
       3: 'I am able to quickly learn new technologies to meet the needs of different projects. I often identify the need for new systems or tools to improve workflow efficiency. I am always motivated by a challenge and like to be well organized to produce consistent results.',
-      4: 'En parallèle du développement, je suis étudiant en Mathématiques et en Physique dans la faculté des Sciences Paris-Saclay. De plus, je suis un grand fan de moto.'
+      4: 'In parallel with the development, I am a student in Mathematics and Physics in the Paris-Saclay Faculty of Sciences. In addition, I am a big fan of motorcycles.'
     },
     title: {
       skills: 'Skills',
@@ -252,7 +252,14 @@ const translations = {
     linkyjs: 'LinkyJS is my custom and Open-Source url shortener'
   },
 
-  loading: 'Loading...'
+  loading: 'Loading...',
+
+  maintenance: {
+    back_soon: "We'll be back soon...",
+    title: 'Website under maintenance !',
+    progress: "To follow the progress: ",
+    separator: 'or'
+  }
 }
 
 export default async function () {

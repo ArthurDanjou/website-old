@@ -41,4 +41,8 @@ const proxy = {
   }
 }
 
-export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr, proxy }
+const router = {
+  middleware: 'maintenance'
+}
+
+export default { router, srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr, proxy }

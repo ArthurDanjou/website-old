@@ -31,7 +31,9 @@ export default defineComponent({
         }
       })
       if (response.status === 200) {
-        return response.data.experiences
+        return response.data.experiences.sort((a, b) => {
+          return a.end_date === 'Today' ? -1 : a.end_date.split('-')[1] > b.end_date.split('-')[1] ? -1 : a.end_date.split('-')[0] > b.end_date.split('-')[0] ? 0 : 1
+        })
       } else {
         app.error({statusCode: 500})
         $sentry.captureEvent(response.data)
