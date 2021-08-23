@@ -21,12 +21,11 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {InfoData} from "~/types/types";
 
 export default defineComponent({
   name: "AboutHome",
   setup() {
-    const {$axios, $sentry} = useContext()
+    const {$axios, $sentry, app} = useContext()
     const age = useAsync(async () => {
       const response = await $axios.get('/api/informations', {
         headers: {
@@ -37,6 +36,7 @@ export default defineComponent({
         return response.data.informations.age
       } else {
         $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
       }
     }, 'infos')
 

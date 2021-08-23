@@ -17,8 +17,7 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Announce} from "~/types/types";
+import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
 
 export default {
   name: "Announcement",
@@ -63,7 +62,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
