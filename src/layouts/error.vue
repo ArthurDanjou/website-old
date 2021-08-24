@@ -2,11 +2,11 @@
   <main class="error w-full px-5 xl:px-64">
     <div class="mt-24 w-full h-full flex items-center justify-center">
       <div class="flex flex-col items-center md:mb-20">
-        <div class="flex">
+        <div class="flex items-center">
           <div class="h-16 w-16 mr-4">
             <ErrorIcon class="w-full h-full"/>
           </div>
-          <div class="mb-12 lining-nums">
+          <div class="lining-nums">
             <div class="mb-2">
               <p v-if="error.statusCode === 404" class="text-3xl md:text-6xl dark:text-white font-bold">
                 {{ $t('error.error').toUpperCase() }} 404
@@ -25,9 +25,9 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="home-btn" @click="next">
-            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:bg-indigo-600 duration-500 rounded">
+        <div class="mt-12 mb-4 w-full text-center">
+          <div class="home-btn" @click="back">
+            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:(bg-indigo-600 text-white) duration-500 rounded">
               <BackSpaceIcon class="arrow-img text-xl"/>
               {{ $t('error.back') }}
             </div>
@@ -48,10 +48,11 @@ export default defineComponent({
     title: 'Error - Arthur Danjou'
   },
   setup() {
-    const router = useRouter()
-    const next = () => router.back()
-
-    return {next}
+    const $router = useRouter()
+    const back = () => $router.back()
+    return {
+      back
+    }
   }
 })
 </script>
@@ -59,8 +60,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .error {
   .arrow-img {
-    transform: translate(0, -2px);
-    transition: .4s;
+    transform: translate(0, -1.5px);
   }
 }
 </style>

@@ -1,5 +1,4 @@
 const publicRuntimeConfig = {
-
 }
 
 const privateRuntimeConfig = {

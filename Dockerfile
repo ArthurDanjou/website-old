@@ -1,18 +1,15 @@
-FROM node:15.8.0-alpine3.10
+FROM node:16-alpine3.11
 
-RUN mkdir -p /usr/src/artsite
-WORKDIR /usr/src/artsite
+RUN mkdir -p /usr/src/ares
 
-COPY . /usr/src/artsite
+WORKDIR /usr/src/ares
 
-RUN yarn install
+COPY . /usr/src/ares
+
+RUN yarn install --production
 
 RUN yarn build
 
-RUN cp .env build
-
 EXPOSE 3333
-
-COPY . .
 
 CMD ["yarn", "start"]

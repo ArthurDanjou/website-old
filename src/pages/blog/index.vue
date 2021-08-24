@@ -1,5 +1,5 @@
 <template>
-  <main v-if="posts" class="blog flex flex-col items-center w-full px-5 xl:px-16">
+  <main v-if="posts" class="blog flex flex-col items-center w-full px-4 xl:px-16">
     <PageTitle title="part.blog" />
     <p class="text-gray-700 dark:text-gray-400 text-xl mt-4">
       {{ $t('blog.description') }}
@@ -9,9 +9,9 @@
       <div class="flex py-8 w-full flex-wrap">
         <div class="md:mx-8 my-4 w-full lg:w-auto" v-for="post in posts">
           <Post
-            :title="post.title"
-            :cover="post.cover"
-            :description="post.description"
+            :title="post.title.code"
+            :cover="post.cover.file_name"
+            :description="post.description.code"
             :date="post.date"
             :slug="post.slug"
             :tags="post.tags"
@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Post} from "../../../types/types";
+import {Post} from "~/types/types";
 
 export default defineComponent({
   name: "blog",
@@ -41,20 +41,25 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $content, i18n, $sentry } = useContext()
+    const { $sentry, $axios, app } = useContext()
 
-    const posts = useAsync(() => {
-      return $content(`articles/${i18n.locale}`)
-        .sortBy('date', 'asc')
-        .limit(10)
-        .fetch<Post>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
-    })
+    const posts = useAsync(async () => {
+      const response = await $axios.get('/api/posts', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        console.log(response.data.posts)
+        return response.data.posts
+      } else {
+        app.error({statusCode: 500})
+        $sentry.captureEvent(response.data)
+      }
+    }, 'posts')
 
     return {
-      posts,
+      posts
     }
   }
 })

@@ -9,12 +9,12 @@
           {{ $t('projects.description') }}
         </p>
       </div>
-      <div class="my-8 lg:flex w-full lg:space-x-8 flex flex-wrap justify-center">
-        <div v-for="project in projects">
+      <div class="my-8 w-full lg:space-x-8 lg:flex justify-center">
+        <div v-for="project in projects" class="mb-4">
           <Project
-            :title="project.title"
-            :cover="project.cover"
-            :description="project.description"
+            :title="project.name"
+            :cover="project.cover.file_name"
+            :description="project.description.code"
             :tags="project.tags"
             :url="project.url"
           />
@@ -29,21 +29,25 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Project} from "~/types/types";
 
 export default defineComponent({
   name: "ProjectsHome",
   setup() {
-    const { $content, $sentry } = useContext()
+    const { $axios, app, $sentry } = useContext()
 
-    const projects = useAsync(() => {
-      return $content(`projects`)
-        .limit(3)
-        .fetch<Project>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
-        })
-    }, 'projects')
+    const projects = useAsync(async () => {
+      const response = await $axios.get('/api/projects', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.projects.slice(0, 3)
+      } else {
+        $sentry.captureEvent(response.data)
+        app.error({statusCode: 500})
+      }
+    }, 'projects_home')
 
     return {
       projects

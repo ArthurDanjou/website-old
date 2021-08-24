@@ -1,8 +1,9 @@
 import {NuxtOptionsModule} from "@nuxt/types/config/module";
 
 const axios = {
+  proxy: true,
   credentials: true,
-  baseURL: 'https://api.arthurdanjou.fr'
+  proxyHeaders: true
 }
 
 const i18n = {
@@ -31,7 +32,6 @@ const i18n = {
 }
 
 const content = {
-  apiPrefix: 'api',
   nestedProperties: ['skills.slug'],
   markdown: {
     prism: {
@@ -49,7 +49,7 @@ const content = {
 
 const storage = {
   cookie: {
-    prefix: 'artsite/',
+    prefix: 'arthurdanjou.fr/',
     options: {
       path: '/'
     }
@@ -71,9 +71,7 @@ const robots = {
 }
 
 const redirect = [
-  { from: '/source', to: 'https://github.com/arthurdanjou/artsite' },
-  { from: '/twitter', to: 'https://twitter.com/arthurdanj' },
-  { from: '/github', to: 'https://github.com/arthurdanjou/' },
+  { from: '/source', to: 'https://github.com/arthurdanjou/ares' },
   { from: '/shelf', to: '/blog' },
   { from: '/posts', to: '/blog' },
   { from: '/resume', to: '/cv' }
@@ -84,15 +82,12 @@ const env = {
 }
 
 const sentry = {
-  dsn: process.env.SENTRY_DSN,
-  config: {
-
-  }
+  dsn: process.env.SENTRY_DSN
 }
 
 export default [
   ['@nuxtjs/axios', axios],
-  ['nuxt-i18n', i18n],
+  ['@nuxtjs/i18n', i18n],
   ['@nuxt/content', content],
   ['@nuxtjs/universal-storage', storage],
   ['@nuxtjs/robots', robots],

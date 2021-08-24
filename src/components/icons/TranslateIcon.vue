@@ -1,14 +1,40 @@
 <template>
-  <svg class="inline" width="1em" height="1em" viewBox="0 0 24 24" focusable="false">
+  <svg v-if="french" class="inline" width="1.5em" height="1.5em" viewBox="0 0 36 36" focusable="false">
     <path
-      d="M12.87 15.07l-2.54-2.51l.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11l.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"
-      fill="currentColor"
-    />
+      fill="#00247D"
+      d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z" />
+    <path
+      fill="#CF1B2B"
+      d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z" />
+    <path
+      fill="#EEE"
+      d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z" />
+    <path
+      fill="#CF1B2B"
+      d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z" />
+  </svg>
+  <svg v-else class="inline" width="1.5em" height="1.5em" viewBox="0 0 36 36" focusable="false">
+    <path
+      fill="#ED2939"
+      d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z" />
+    <path
+      fill="#002495"
+      d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z" />
+    <path
+      fill="#EEE"
+      d="M12 5h12v26H12z" />
   </svg>
 </template>
 
 <script>
 export default {
-  name: "TranslateIcon"
+  name: "TranslateIcon",
+  props: {
+    french: {
+      type: Boolean,
+      default: true
+    }
+  }
 }
 </script>
+

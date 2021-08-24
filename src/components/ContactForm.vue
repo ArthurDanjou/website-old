@@ -1,9 +1,9 @@
 <template>
-  <section class="w-full flex items-center justify-center flex-col">
-    <h2 class="text-center mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
+  <section class="w-full flex justify-center flex-col">
+    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
       {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
     </h2>
-    <form class="w-full lg:w-1/2">
+    <form class="w-full">
       <div class="w-full lg:flex justify-center mb-8 lg:mb-12">
         <div class="form-div lg:w-1/2 mb-8 lg:mb-0 lg:mr-4">
           <input
@@ -11,7 +11,6 @@
             v-model="form.name"
             required
             type="text"
-            placeholder=" "
             class="first-input w-full"
           />
           <label for="name" class="form-label">{{ $t('contact.form.name') }}</label>
@@ -22,7 +21,6 @@
             v-model="form.email"
             required
             type="email"
-            placeholder=" "
             class="second-input w-full"
           />
           <label for="email" class="form-label">{{ $t('contact.form.email') }}</label>
@@ -34,7 +32,6 @@
           v-model="form.subject"
           required
           type="text"
-          placeholder=" "
           class="form-input w-full"
         />
         <label for="subject" class="form-label">{{ $t('contact.form.subject') }}</label>
@@ -44,7 +41,6 @@
             id="content"
             v-model="form.content"
             required
-            placeholder=" "
             class="form-input w-full"
             minlength="30"
             rows="4"
@@ -52,14 +48,19 @@
         <label for="content" class="form-label">{{ $t('contact.form.content') }}</label>
       </div>
     </form>
-    <div v-if="error" class="mt-4 px-3 py-1 rounded-full bg-red-300 font-bold text-black">
+    <div v-if="error" class="mt-2 py-1 text-red-400 text-sm">
       {{ $t('contact.form.error') }}
     </div>
-    <div v-if="success" class="mt-4 px-3 py-1 rounded-full bg-green-300 font-bold text-black">
+    <div v-if="success" class="mt-2 py-1 text-green-400 text-sm">
       {{ $t('contact.form.success') }}
     </div>
-    <div class="my-12">
-      <button :disabled="!isSendable" :class="{'disabled': !isSendable}" @click.prevent="handleForm" class="font-bold px-6 py-3 border-2 rounded-full border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer">
+    <div class="my-12 flex justify-center">
+      <button
+        :disabled="!isSendable"
+        :class="{'disabled': !isSendable}"
+        @click.prevent="handleForm"
+        class="font-bold px-8 py-4 border-2 rounded-xl border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer"
+      >
         {{ $t('contact.form.submit') }}
       </button>
     </div>
@@ -79,7 +80,7 @@ export default defineComponent({
     const {$axios, $sentry} = useContext()
     const form = ref<Form>({} as Form)
     const handleForm = async () => {
-      const response = await $axios.post('form',
+      const response = await $axios.post('/api/form',
         {
           email: form.value.email,
           name: form.value.name,
@@ -155,7 +156,7 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .email {
-  @apply duration-300 border-b-2 border-gray-200 dark:border-gray-800 hover:(border-black dark:border-white)
+  @apply duration-300 border-b-3 border-gray-200 dark:border-gray-800 hover:border-indigo-600
 }
 
 .disabled {

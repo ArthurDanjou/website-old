@@ -1,8 +1,8 @@
 <template>
-  <nuxt-link :to="`/blog/${slug}`" rel="noreferrer noopener">
-    <div class="rounded-lg shadow-xl h-116 w-full lg:w-100 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
+  <nuxt-link :to="`/blog/${slug}`">
+    <div class="rounded-lg dark:shadow-white shadow-xl h-116 w-full lg:w-100 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
       <div class="h-2/5 post rounded-t-lg"
-           :style="{ backgroundImage: `url(${getCover})` }">
+           :style="{ backgroundImage: `url(https://athena.arthurdanjou.fr/files/${cover})` }">
       </div>
       <div class="h-3/5 p-4 flex flex-col justify-between">
         <div>
@@ -11,8 +11,8 @@
               <Tag :content="tag" :pill="true"/>
             </div>
           </div>
-          <h1 class="text-2xl font-bold">{{ title }}</h1>
-          <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ description }}</p>
+          <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
+          <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
         </div>
         <div class="flex justify-between">
           <h5 class="text-base text-gray-700 dark:text-gray-400">{{ formatDate }}</h5>
@@ -69,8 +69,6 @@ export default defineComponent({
     }
   },
   setup(props: PostProps) {
-    const getCover = computed(() => require(`~/assets/images/posts/${props.cover}`))
-
     const { i18n } = useContext()
     const formatDate = computed(() => {
       const [first, second, third]: any = props.date.split('-')
@@ -78,7 +76,6 @@ export default defineComponent({
     })
 
     return {
-      getCover,
       formatDate
     }
   }

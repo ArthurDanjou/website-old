@@ -37,6 +37,6 @@
 
 <script lang="ts">
 export default {
-  name: "AdPreview"
+  name: "AdHome"
 }
 </script>

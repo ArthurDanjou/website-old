@@ -6,8 +6,8 @@
     </h3>
     <div v-if="formations" v-for="formation in formations">
       <Formation
-        :title="formation.title"
-        :description="formation.description"
+        :title="formation.title.code"
+        :description="formation.description.code"
         :location="formation.location"
         :begin="formation.begin_date"
         :end="formation.end_date" />
@@ -17,21 +17,27 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Formation} from "~/types/types";
 
 export default defineComponent({
   name: "FormationsHome",
   setup() {
-    const {$content, $sentry} = useContext()
+    const {$axios, $sentry, app} = useContext()
 
-    const formations = useAsync(() => {
-      return $content('formations')
-        .sortBy('end_date', 'desc')
-        .fetch<Formation>()
-        .catch((error) => {
-          $sentry.captureEvent(error)
+    const formations = useAsync(async () => {
+      const response = await $axios.get('/api/formations', {
+        headers: {
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        }
+      })
+      if (response.status === 200) {
+        return response.data.formations.sort((a, b) => {
+          return a.end_date === 'Today' ? -1 : a.end_date.split('-')[1] > b.end_date.split('-')[1] ? -1 : a.end_date.split('-')[0] > b.end_date.split('-')[0] ? 0 : 1
         })
-    })
+      } else {
+        app.error({statusCode: 500})
+        $sentry.captureEvent(response.data)
+      }
+    }, 'formations')
 
     return {
       formations

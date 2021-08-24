@@ -1,5 +1,5 @@
 <template>
-  <svg class="inline" width="1em" height="1 em" viewBox="0 0 24 24" focusable="false">
+  <svg class="inline" width="1em" height="1em" viewBox="0 0 24 24" focusable="false">
     <g
       fill="none"
       stroke="currentColor"

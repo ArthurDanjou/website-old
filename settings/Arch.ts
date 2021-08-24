@@ -34,4 +34,15 @@ const buildDir = 'build'
 
 const ssr = true
 
-export default { srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr }
+const proxy = {
+  '/api': {
+    target: 'https://athena.arthurdanjou.fr',
+    pathRewrite: { "^/api": "" }
+  }
+}
+
+const router = {
+  middleware: 'maintenance'
+}
+
+export default { router, srcDir, dir, build, pageTransition, target, server, buildDir, components, ssr, proxy }
