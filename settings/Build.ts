@@ -5,4 +5,11 @@ export default {
       ['@babel/plugin-proposal-private-methods', { loose: true }]
     ],
   },
+  postcss: {
+    preset: {
+      features: {
+        "focus-within-pseudo-class": false
+      }
+    }
+  }
 }

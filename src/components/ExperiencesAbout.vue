@@ -17,7 +17,6 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Experience} from "~/types/types";
 
 export default defineComponent({
   name: "ExperiencesAbout",

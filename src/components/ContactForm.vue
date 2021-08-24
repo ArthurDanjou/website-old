@@ -11,7 +11,6 @@
             v-model="form.name"
             required
             type="text"
-            placeholder=" "
             class="first-input w-full"
           />
           <label for="name" class="form-label">{{ $t('contact.form.name') }}</label>
@@ -22,7 +21,6 @@
             v-model="form.email"
             required
             type="email"
-            placeholder=" "
             class="second-input w-full"
           />
           <label for="email" class="form-label">{{ $t('contact.form.email') }}</label>
@@ -34,7 +32,6 @@
           v-model="form.subject"
           required
           type="text"
-          placeholder=" "
           class="form-input w-full"
         />
         <label for="subject" class="form-label">{{ $t('contact.form.subject') }}</label>
@@ -44,7 +41,6 @@
             id="content"
             v-model="form.content"
             required
-            placeholder=" "
             class="form-input w-full"
             minlength="30"
             rows="4"
