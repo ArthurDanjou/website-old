@@ -6,7 +6,7 @@ WORKDIR /usr/src/ares
 
 COPY . /usr/src/ares
 
-RUN yarn install --production
+RUN yarn install
 
 RUN yarn build
 
