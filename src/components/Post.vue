@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
-    <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:-translate-y-2 duration-300">
+    <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300">
       <div class="max-w-full">
         <img class="max-w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Post Cover" />
       </div>
