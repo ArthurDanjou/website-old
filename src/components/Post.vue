@@ -1,10 +1,10 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
-    <div class="rounded-lg dark:shadow-white shadow-xl h-116 w-full lg:w-100 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
-      <div class="h-2/5 post rounded-t-lg"
-           :style="{ backgroundImage: `url(https://athena.arthurdanjou.fr/files/${cover})` }">
+    <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:-translate-y-2 duration-300">
+      <div class="max-w-full">
+        <img class="max-w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Post Cover" />
       </div>
-      <div class="h-3/5 p-4 flex flex-col justify-between">
+      <div class="px-8 py-4 flex flex-col justify-between">
         <div>
           <div class="flex space-x-2 mb-2">
             <div v-for="tag in tags">
@@ -81,11 +81,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped lang="scss">
-.post {
-  background-position: center;
-  background-size: cover;
-  @apply bg-opacity-50;
-}
-</style>

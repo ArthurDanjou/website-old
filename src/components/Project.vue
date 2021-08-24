@@ -1,10 +1,10 @@
 <template>
   <a :href="url" target="_blank">
-    <div class="rounded-lg dark:shadow-white shadow-xl lg:h-92 w-full lg:w-84 text-left bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300 mb-8 lg:mb-0">
-      <div class="h-64 lg:h-1/2 w-full project rounded-t-lg"
-           :style="{ backgroundImage: `url(https://athena.arthurdanjou.fr/files/${cover})` }">
+    <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300">
+      <div class="max-w-full">
+        <img class="w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Project Cover" />
       </div>
-      <div class="lg:h-1/2 py-8 px-4 lg:p-4 flex flex-col justify-between">
+      <div class="py-8 px-4 lg:p-4 flex flex-col justify-between">
         <div>
           <div class="flex space-x-2 mb-2">
             <div v-for="tag in tags">
@@ -48,11 +48,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped lang="scss">
-.project {
-  background-position: center;
-  background-size: cover;
-  @apply bg-opacity-50;
-}
-</style>

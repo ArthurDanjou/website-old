@@ -5,20 +5,19 @@
         <h2 class="font-bold text-3xl">
           {{ $t('projects.latest') }}
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4 mb-8">
           {{ $t('projects.description') }}
         </p>
       </div>
-      <div class="my-8 w-full lg:space-x-8 lg:flex justify-center">
-        <div v-for="project in projects" class="mb-4">
-          <Project
-            :title="project.name"
-            :cover="project.cover.file_name"
-            :description="project.description.code"
-            :tags="project.tags"
-            :url="project.url"
-          />
-        </div>
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3 text-left">
+        <Project
+          v-for="project in projects"
+          :title="project.name"
+          :cover="project.cover.file_name"
+          :description="project.description.code"
+          :tags="project.tags"
+          :url="project.url"
+        />
       </div>
       <div class="flex">
         <Button content="projects.see_more" link="projects"/>

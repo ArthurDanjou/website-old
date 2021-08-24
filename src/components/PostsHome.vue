@@ -5,22 +5,21 @@
         <h2 class="font-bold text-3xl">
           {{ $t('blog.latest') }}
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4">
+        <p class="text-gray-700 dark:text-gray-400 text-xl lg:w-2/3 mt-4 mb-8">
           {{ $t('blog.description') }}
         </p>
       </div>
-      <div class="my-8 lg:flex w-full lg:space-x-6">
-        <div v-for="post in posts">
-          <Post
-            :title="post.title.code"
-            :cover="post.cover.file_name"
-            :description="post.description.code"
-            :date="post.date"
-            :slug="post.slug"
-            :tags="post.tags"
-            :reading_time="post.reading_time"
-          />
-        </div>
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3 text-left">
+        <Post
+          v-for="post in posts"
+          :title="post.title.code"
+          :cover="post.cover.file_name"
+          :description="post.description.code"
+          :date="post.date"
+          :slug="post.slug"
+          :tags="post.tags"
+          :reading_time="post.reading_time"
+        />
       </div>
       <div class="flex">
         <Button content="blog.see_more" link="blog"/>
