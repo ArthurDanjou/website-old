@@ -1,7 +1,6 @@
 <template>
   <main v-if="post && postData" class="blog flex flex-col items-center px-4 xl:px-72 mb-16 md:mb-32">
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
-      {{ slug }}
       <div>
         <div class="mb-4 flex">
           <nuxt-link to="/blog" class="back-arrow flex">
@@ -106,7 +105,9 @@ import {
   ref, useAsync,
   useContext,
   useMeta,
-  useRoute, useStatic, watch
+  useRoute,
+  useStatic,
+  watch
 } from "@nuxtjs/composition-api";
 import {Post} from "~/types/types";
 
@@ -226,8 +227,7 @@ export default defineComponent({
       scrollToTop,
       formatDate,
       formatTags,
-      postData,
-      slug
+      postData
     }
   }
 })
