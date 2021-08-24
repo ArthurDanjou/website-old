@@ -10,6 +10,7 @@
             id="name"
             v-model="form.name"
             required
+            placeholder=" "
             type="text"
             class="first-input w-full"
           />
@@ -20,6 +21,7 @@
             id="email"
             v-model="form.email"
             required
+            placeholder=" "
             type="email"
             class="second-input w-full"
           />
@@ -31,6 +33,7 @@
           id="subject"
           v-model="form.subject"
           required
+          placeholder=" "
           type="text"
           class="form-input w-full"
         />
@@ -41,6 +44,7 @@
             id="content"
             v-model="form.content"
             required
+            placeholder=" "
             class="form-input w-full"
             minlength="30"
             rows="4"
