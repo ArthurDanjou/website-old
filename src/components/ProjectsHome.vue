@@ -12,6 +12,7 @@
       <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3 text-left">
         <Project
           v-for="project in projects"
+          :key="project.name"
           :title="project.name"
           :cover="project.cover.file_name"
           :description="project.description.code"
