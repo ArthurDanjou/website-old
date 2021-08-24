@@ -17,10 +17,10 @@
 </template>
 
 <script lang="ts">
-import {computed, useAsync, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 
-export default {
-  name: "Announcement",
+export default defineComponent({
+  name: "Announce",
   setup() {
     const {$axios, $sentry, app} = useContext()
 
@@ -60,5 +60,5 @@ export default {
       getHoverColor,
     }
   }
-}
+})
 </script>

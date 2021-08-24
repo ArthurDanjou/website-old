@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import {computed, onMounted, ref, useRouter, useStore} from "@nuxtjs/composition-api";
+import {computed, useRouter, useStore} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
 
 export default {
