@@ -23,7 +23,7 @@
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  name: "About",
+  name: "AboutHome",
   setup() {
     const {$axios, $sentry, app} = useContext()
 

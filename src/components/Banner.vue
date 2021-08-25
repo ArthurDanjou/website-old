@@ -58,7 +58,7 @@ export default defineComponent({
 }
 
 .color {
-  @apply duration-500 text-white dark:text-black font-color;
+  @apply duration-500 text-white dark:text-black font-black font-color;
 
   &.red {
     @apply select-text bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-rose-300

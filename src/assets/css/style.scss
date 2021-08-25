@@ -14,10 +14,6 @@ body {
   @apply dark:bg-black dark:text-white
 }
 
-* {
-  font-family: 'Raleway', sans-serif;
-}
-
 .nuxt-content-editor {
   @apply dark:(bg-dark-800 text-white) border dark:border-white border-black border-solid;
 }

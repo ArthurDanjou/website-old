@@ -13,7 +13,7 @@
           class="min-h-screen relative z-50 bg-white dark:bg-black w-full min-w-screen pb-20 xl:pb-0 duration-300"
           :class="{'cursor-pointer': opened}"
         >
-          <Announcement />
+          <Announce />
           <Header />
           <Nuxt class="z-10 pt-16 content"/>
           <Footer />

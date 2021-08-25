@@ -331,7 +331,7 @@ module.exports = defineConfig({
         '"Courier New"',
         'monospace',
       ],
-      color: ['Roboto', 'serif']
+      color: ['Roboto',  'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

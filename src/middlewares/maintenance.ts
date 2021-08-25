@@ -8,7 +8,8 @@ export default async function ({redirect, route, $axios}: Context) {
     }
   })
   if (response.status === 200) {
-    isMaintenance = response.data.maintenance.active === 1
+    //isMaintenance = response.data.maintenance.active === 1 todo remove
+    isMaintenance = false
   }
   if(isMaintenance){
     return redirect('/maintenance')
