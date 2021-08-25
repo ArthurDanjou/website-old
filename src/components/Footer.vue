@@ -16,26 +16,7 @@
               </nuxt-link>
             </div>
           </div>
-          <div class="social-links flex space-x-4 mb-8">
-            <a target="_blank" href="https://twitter.com/ArthurDanj" rel="noopener noreferrer">
-              <TwitterIcon />
-            </a>
-            <a target="_blank" href="https://github.com/ArthurDanjou" rel="noopener noreferrer">
-              <GithubIcon />
-            </a>
-            <a target="_blank" href="https://www.polywork.com/arthurdanjou" rel="noopener noreferrer">
-              <PolyworkIcon />
-            </a>
-            <a target="_blank" href="https://www.twitch.tv/arthurdanjou" rel="noopener noreferrer">
-              <TwitchIcon />
-            </a>
-            <a target="_blank" href="https://discord.gg/ENG6cFQhPS" rel="noopener noreferrer">
-              <DiscordIcon />
-            </a>
-            <a target="_blank" href="mailto:contact@arthurdanjou.fr" rel="noopener noreferrer">
-              <MailIcon />
-            </a>
-          </div>
+          <SocialList class="flex space-x-4 mb-8" />
         </div>
         <div class="lg:ml-32 lg:w-1/3">
           <h1 class="font-bold mb-4 text-lg underline">
@@ -109,7 +90,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, ref, useAsync, useContext, useRouter, useStore} from "@nuxtjs/composition-api";
+import {computed, defineComponent, ref, useAsync, useContext, useStore} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
 
 export default defineComponent({
@@ -165,16 +146,6 @@ export default defineComponent({
   }
   .link-active a {
     @apply text-indigo-600;
-  }
-
-  .social-links a {
-    svg {
-      @apply h-6 w-6 duration-300
-    }
-
-    &:hover svg {
-      @apply transform hover:scale-120
-    }
   }
 
   .link a {
