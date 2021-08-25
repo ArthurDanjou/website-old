@@ -59,7 +59,7 @@ Je suis disponible pour toutes vos questions supplémentaires !
 Voici différents liens de serveurs discord de développement avec une communauté active :
 - [ItsAlexousd](https://discord.gg/HE4UeBGvGA)
 - [La Meute](https://discord.gg/TzJJ4KVGDd)
-- [ArtDanjProduction](https://discord.gg/rEzmnWSp3V) (Serveur tout neuf)
+- [ArtDanjProduction](https://go.arthurdanjou.fr/discord) (Serveur tout neuf)
 
 De plus, je tiens énormément à remercier **\_RealAlpha\_** et **Freeze** (et tous les autres) qui ont su répondre à toutes mes questions et avec qui je partage une tres grande passion ! 
 J'ai commencé efficacement le Web grace a Freeze, merci à toi 😉
