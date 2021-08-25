@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, ref, useRouter, useStore, watch} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useRouter, useStore} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
 
 const PAGE_TYPE = {
@@ -51,7 +51,7 @@ export default defineComponent({
     const toggleMenu = () => {
       store.commit('TOGGLE_OPENED', !store.state.opened)
       if (store.state.opened) {
-        document.getElementById('slider')!.style.maxHeight = window.screen.height + 'px'
+        document.getElementById('slider')!.style.maxHeight = window.innerHeight + 'px'
         setTimeout(() => document.getElementById('nav')!.classList.add('z-50'), 300)
       } else {
         document.getElementById('nav')!.classList.remove('z-50')
