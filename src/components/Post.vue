@@ -1,10 +1,10 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
     <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300">
-      <div class="max-w-full">
+      <div class="max-w-full rounded-t-lg border-l-2 border-r-2 border-t-2 border-transparent dark:border-gray-900">
         <img class="max-w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Post Cover" />
       </div>
-      <div class="px-8 py-4 flex flex-col justify-between">
+      <div class="px-8 py-4 flex flex-col justify-between text-justify">
         <div>
           <div class="flex space-x-2 mb-2">
             <div v-for="tag in tags">
@@ -12,11 +12,11 @@
             </div>
           </div>
           <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
-          <p class="text-base mt-3 text-gray-700 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
+          <p class="text-base mt-3 text-gray-600 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
         </div>
         <div class="flex justify-between">
-          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ formatDate }}</h5>
-          <h5 class="text-base text-gray-700 dark:text-gray-400">{{ reading_time }} min.</h5>
+          <h5 class="text-base text-gray-800 dark:text-gray-500">{{ formatDate }}</h5>
+          <h5 class="text-base text-gray-800 dark:text-gray-500">{{ reading_time }} min.</h5>
         </div>
       </div>
     </div>

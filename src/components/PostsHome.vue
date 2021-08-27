@@ -1,5 +1,5 @@
 <template>
-  <section v-if="posts" class="w-full flex items-center justify-center my-20">
+  <section v-if="posts" class="w-full flex items-center justify-center my-12">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
@@ -9,7 +9,7 @@
           {{ $t('blog.description') }}
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3 text-left">
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-8 sm:mb-20 md:grid-cols-3 text-left">
         <Post
           v-for="post in posts"
           :key="post.slug"
@@ -31,7 +31,6 @@
 
 <script lang="ts">
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
-import {Post} from "~/types/types";
 
 export default defineComponent({
   name: "PostsHome",

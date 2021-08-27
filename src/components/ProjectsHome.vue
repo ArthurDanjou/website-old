@@ -1,5 +1,5 @@
 <template>
-  <section v-if="projects" class="w-full flex items-center justify-center my-20">
+  <section v-if="projects" class="w-full flex items-center justify-center my-12">
     <div class="flex flex-col items-center text-center">
       <div class="flex flex-col items-center">
         <h2 class="font-bold text-3xl">
@@ -9,7 +9,7 @@
           {{ $t('projects.description') }}
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3 text-left">
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-8 sm:mb-20 sm:grid-cols-3 text-left">
         <Project
           v-for="project in projects"
           :key="project.name"
