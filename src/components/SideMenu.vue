@@ -99,7 +99,7 @@ export default defineComponent({
     const $router = useRouter()
     const changeLanguage = () => useAsync(() => {
       i18n.setLocale(i18n.locale === 'fr' ? 'en' : 'fr')
-      if ($router.currentRoute.fullPath.includes('blog') || $router.currentRoute.fullPath === '/') {
+      if ($router.currentRoute.fullPath.includes('blog')) {
         window.location.reload()
       }
     })
