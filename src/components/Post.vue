@@ -21,7 +21,7 @@ interface PostProps {
   slug: string,
   tags: Array<string>,
   reading_time: number,
-  id: number
+  color: string
 }
 
 export default defineComponent({
@@ -55,9 +55,9 @@ export default defineComponent({
       type: Number,
       default: 0
     },
-    id: {
-      type: Number,
-      default: 0
+    color: {
+      type: String,
+      default: 'blue'
     }
   },
   setup(props: PostProps) {
@@ -68,13 +68,17 @@ export default defineComponent({
     })
 
     const getHoverColor = computed(() => {
-      switch (props.id) {
-        case 0:
+      switch (props.color) {
+        case 'blue':
           return 'group-hover:text-blue-400'
-        case 1:
+        case 'red':
           return 'group-hover:text-red-400'
-        case 2:
+        case 'green':
           return 'group-hover:text-green-400'
+        case 'yellow':
+          return 'group-hover:text-yellow-400'
+        case 'purple':
+          return 'group-hover:text-purple-400'
         default:
           return 'group-hover:text-blue-400'
       }

@@ -8,9 +8,9 @@
     <div class="flex justify-center" v-else>
       <div class="w-full lg:w-1/2 mt-20 grid grid-cols-1 gap-y-24 mb-8 sm:mb-24 text-left">
         <Post
-          v-for="(post, index) in posts"
+          v-for="post in posts"
           :key="post.slug"
-          :id="index"
+          :color="post.color.name"
           :title="post.title.code"
           :cover="post.cover.file_name"
           :description="post.description.code"
