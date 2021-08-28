@@ -2,21 +2,43 @@
   <main class="flex flex-col items-center px-4 xl:px-32">
     <PageTitle title="part.services" />
     <p class="text-justify text-gray-700 dark:text-gray-400 text-xl my-8">{{ $t('services.description') }}</p>
-    <div class="flex flex-col justify-around items-center py-10 w-full">
-      <div class="flex flex-col lg:(flex-row justify-around mb-16) w-full">
-        <ServicePart title="services.1.title" content="services.1.content" >
-          <CodeIcon />
+    <div class="flex flex-col lg:(flex-row) justify-around items-center pt-10 w-full">
+      <div class="grid grid-cols-1 gap-x-12 mb-20 sm:grid-cols-3 w-full">
+        <ServicePart title="services.1.title">
+          <template v-slot:icon>
+            <CompassIcon />
+          </template>
+          <template v-slot:content>
+            <div class="flex flex-col space-y-4">
+              <p>Développement</p>
+              <p>Architecture</p>
+              <p>Test</p>
+            </div>
+          </template>
         </ServicePart>
-        <ServicePart title="services.2.title" content="services.2.content">
-          <NetworkIcon />
+        <ServicePart title="services.2.title">
+          <template v-slot:icon>
+            <DesignIcon />
+          </template>
+          <template v-slot:content>
+            <div class="flex flex-col space-y-4">
+              <p>Développement</p>
+              <p>Architecture</p>
+              <p>Test</p>
+              <p>Test</p>
+            </div>
+          </template>
         </ServicePart>
-      </div>
-      <div class="flex flex-col lg:(flex-row justify-around) w-full">
-        <ServicePart title="services.3.title" content="services.3.content">
-          <SupportIcon />
-        </ServicePart>
-        <ServicePart title="services.4.title" content="services.4.content">
-          <GlassIcon />
+        <ServicePart title="services.3.title">
+          <template v-slot:icon>
+            <CodeIcon />
+          </template>
+          <template v-slot:content>
+            <div class="flex flex-col space-y-4">
+              <p>Développement</p>
+              <p>Architecture</p>
+            </div>
+          </template>
         </ServicePart>
       </div>
     </div>

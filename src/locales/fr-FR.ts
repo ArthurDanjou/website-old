@@ -29,21 +29,14 @@ const translations = {
   services: {
     description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
     1: {
-      title: "Développement d'application",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+      title: "Stratégie",
     },
     2: {
-      title: "Installation d'infrastructure",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+      title: "Illustration",
     },
     3: {
-      title: "Conseil dans l'informatique",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
-    },
-    4: {
-      title: "Revue de vos applications",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
-    },
+      title: "Développement",
+    }
   },
 
   footer: {
