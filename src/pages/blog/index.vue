@@ -5,11 +5,12 @@
       {{ $t('blog.description') }}
     </p>
     <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog.no_posts') }}</h1>
-    <div class="w-full" v-else>
-      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-20 sm:grid-cols-3">
+    <div class="flex justify-center" v-else>
+      <div class="w-full lg:w-1/2 mt-20 grid grid-cols-1 gap-y-24 mb-8 sm:mb-24 text-left">
         <Post
-          v-for="post in posts"
+          v-for="(post, index) in posts"
           :key="post.slug"
+          :id="index"
           :title="post.title.code"
           :cover="post.cover.file_name"
           :description="post.description.code"

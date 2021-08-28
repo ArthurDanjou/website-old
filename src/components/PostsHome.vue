@@ -9,10 +9,11 @@
           {{ $t('blog.description') }}
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-x-4 gap-y-8 mb-8 sm:mb-20 md:grid-cols-3 text-left">
+      <div class="w-full lg:w-1/2 mt-20 grid grid-cols-1 gap-y-24 mb-8 sm:mb-24 text-left">
         <Post
-          v-for="post in posts"
+          v-for="(post, index) in posts"
           :key="post.slug"
+          :id="index"
           :title="post.title.code"
           :cover="post.cover.file_name"
           :description="post.description.code"

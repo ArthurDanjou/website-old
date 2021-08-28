@@ -1,23 +1,10 @@
 <template>
   <nuxt-link :to="`/blog/${slug}`">
-    <div class="h-full rounded-lg dark:shadow-white shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300">
-      <div class="max-w-full rounded-t-lg border-l-2 border-r-2 border-t-2 border-transparent dark:border-gray-900">
-        <img class="max-w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Post Cover" />
-      </div>
-      <div class="px-8 py-4 flex flex-col justify-between text-justify">
-        <div>
-          <div class="flex space-x-2 mb-2">
-            <div v-for="tag in tags">
-              <Tag :content="tag" :pill="true"/>
-            </div>
-          </div>
-          <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
-          <p class="text-base mt-3 text-gray-600 dark:text-gray-400 text-justify">{{ $t(description) }}</p>
-        </div>
-        <div class="flex justify-between">
-          <h5 class="text-base text-gray-800 dark:text-gray-500">{{ formatDate }}</h5>
-          <h5 class="text-base text-gray-800 dark:text-gray-500">{{ reading_time }} min.</h5>
-        </div>
+    <div class="group post w-full text-justify">
+      <h1 class="font-black text-3xl duration-300" :class="getHoverColor">{{ $t(title) }}</h1>
+      <h3 class="my-4 text-2xl text-gray-600">{{ $t(description) }}</h3>
+      <div class="text-gray-400">
+        <span>{{ formatDate }}</span>  |  <span>{{ reading_time }}</span> min.
       </div>
     </div>
   </nuxt-link>
@@ -33,7 +20,8 @@ interface PostProps {
   cover: string,
   slug: string,
   tags: Array<string>,
-  reading_time: number
+  reading_time: number,
+  id: number
 }
 
 export default defineComponent({
@@ -66,6 +54,10 @@ export default defineComponent({
     reading_time: {
       type: Number,
       default: 0
+    },
+    id: {
+      type: Number,
+      default: 0
     }
   },
   setup(props: PostProps) {
@@ -75,8 +67,22 @@ export default defineComponent({
       return `${first} ${i18n.t(`month.${second}`)} ${third}`
     })
 
+    const getHoverColor = computed(() => {
+      switch (props.id) {
+        case 0:
+          return 'group-hover:text-blue-400'
+        case 1:
+          return 'group-hover:text-red-400'
+        case 2:
+          return 'group-hover:text-green-400'
+        default:
+          return 'group-hover:text-blue-400'
+      }
+    })
+
     return {
-      formatDate
+      formatDate,
+      getHoverColor
     }
   }
 })
