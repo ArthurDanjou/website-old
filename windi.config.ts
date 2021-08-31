@@ -74,6 +74,12 @@ module.exports = defineConfig({
               h4: {
                 color: theme('colors.white'),
               },
+              h5: {
+                color: theme('colors.white'),
+              },
+              h6: {
+                color: theme('colors.white'),
+              },
               'figure figcaption': {
                 color: theme('colors.dark.700'),
               },
@@ -817,6 +823,6 @@ module.exports = defineConfig({
     },
   },
   plugins: [
-    require('windicss/plugin/typography')
+    require('windicss/plugin/typography')()
   ],
 })
