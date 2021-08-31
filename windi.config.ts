@@ -1,6 +1,6 @@
-import {defineConfig} from "windicss/helpers";
-
-const colors = require('windicss/colors')
+import {defineConfig} from 'windicss/helpers'
+import defaultTheme from 'windicss/defaultTheme'
+import colors from 'windicss/colors'
 
 module.exports = defineConfig({
   presets: [],
@@ -309,6 +309,7 @@ module.exports = defineConfig({
       DEFAULT: '1',
     },
     fontFamily: {
+      ...defaultTheme.fontFamily,
       sans: [
         'Raleway',
         'ui-sans-serif',
