@@ -36,6 +36,10 @@ const translations = {
     },
     3: {
       title: "Développement",
+    },
+    ad: {
+      title: 'Quand commence-t-on ?',
+      description: 'Mes services et ma manière de travailler vous satisfont ? Planifier un rendez-vous pour me détailler votre prochain projet. Nous discuterons de la meilleure façon de remplir vos objectifs.'
     }
   },
 
