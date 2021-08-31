@@ -2,7 +2,7 @@
   <section class="w-full h-full my-12">
     <div class="w-full grid grid-cols-1 gap-x-20 gap-y-8 sm:grid-cols-2 h-full">
       <nuxt-link to="/env">
-        <Ad color="rose" class="w-full flex flex-col justify-between items-center">
+        <Ad color="red" class="w-full flex flex-col justify-between items-center">
           <div>
             <img class="h-64" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
           </div>
