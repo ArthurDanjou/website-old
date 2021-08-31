@@ -1,12 +1,12 @@
 <template>
   <section class="my-16 w-full flex items-center justify-center">
     <div class="text-center flex flex-col items-center">
-      <h1 class="text-6xl font-bold text-gray-700 dark:text-gray-400">
+      <h1 class="text-6xl font-bold text-gray-600 dark:text-gray-400">
         {{ $t('home.banner.hello') }} <span class="text-black dark:text-white">Arthur Danjou</span> 👋,
       </h1>
       <h2 class="my-6 text-4xl text-black dark:text-white">
         <strong>{{ $t('home.banner.role') }}</strong>. <br />
-        {{ $t('home.banner.student.main') }} <strong>{{ $t('home.banner.student.strong') }}</strong>.
+        <span class="text-gray-600 dark:text-gray-400">{{ $t('home.banner.student.main') }}</span> <strong>{{ $t('home.banner.student.strong') }}</strong>.
       </h2>
       <div class="select-none mt-4 text-5xl text-gray-800 mb-10 dark:text-gray-300">
         <span id="develop" class="color blue">{{ $t('home.banner.color.develop') }}</span>
