@@ -17,19 +17,49 @@ const translations = {
   },
 
   services: {
-    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
+    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait, votre application ou votre futur projet',
     1: {
       title: "Stratégie",
+      1: 'Communication',
+      2: 'Conseils',
+      3: 'Recherche',
+      4: 'Amélioration',
+      5: 'Conception de produit',
+      6: 'Tests',
     },
     2: {
-      title: "Design",
+      title: "Conception",
+      1: "Conception UX",
+      2: "Conception DX",
+      3: "Conception UI",
+      4: 'Tableau de bord',
+      5: 'Web panel',
+      6: 'Conception mobile',
+      7: 'Prototypes',
     },
     3: {
       title: "Développement",
+      1: 'Portfolio',
+      2: 'Application Web',
+      3: 'Application Mobile',
+      4: 'Application Bureautique',
+      5: 'API',
+      6: 'Infrastructure',
+      7: 'Logiciels',
+      8: 'DevSecOps',
+    },
+    workflow: {
+      title: 'Mon Workflow',
+      1: 'Planification',
+      2: 'Conception',
+      3: 'Développement',
+      4: 'Essai',
+      5: 'Publication',
+      6: 'Maintenance',
     },
     ad: {
       title: 'Quand commence-t-on ?',
-      description: 'Mes services et ma manière de travailler vous satisfont ? Planifier un rendez-vous pour me détailler votre prochain projet. Nous discuterons de la meilleure façon de remplir vos objectifs.'
+      description: 'Mes services et la manière de travailler vous satisfont ? Planifier un rendez-vous pour me détailler votre prochain projet. Nous discuterons de la meilleure façon de remplir vos objectifs.'
     }
   },
 
@@ -178,7 +208,6 @@ const translations = {
   },
 
   contact: {
-    description: 'Cette page est dédiée ',
     form: {
       title: {
         main: 'Remplissez le formulaire ou',
@@ -231,13 +260,6 @@ const translations = {
     10: 'Octobre',
     11: 'Novembre',
     12: 'Décembre',
-  },
-
-  works: {
-    athena: 'Athena est mon API personnelle connectée à mes diverses instances.',
-    ares: 'Ares est mon site personnel créant un point de contact unique.',
-    erisium: 'Erisium est un serveur minecraft francophone de mini-jeux.',
-    linkyjs: "LinkyJS est mon raccourcisseur d'url personnalisé et Open-Source."
   },
 
   loading: 'Chargement...',

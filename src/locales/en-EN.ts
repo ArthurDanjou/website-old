@@ -16,34 +16,51 @@ const translations = {
     close: 'Close the menu'
   },
 
-  part: {
-    about: 'About me',
-    blog: 'My blog',
-    projects: 'My projects',
-    contact: 'Contact me',
-    env: 'My environment',
-    newsletter: 'My newsletter',
-    services: 'My services'
-  },
-
   services: {
-    description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
+    description: 'I provide everything you need to create your perfect website, app or future project',
     1: {
-      title: "Développement d'application",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+      title: "Strategy",
+      1: 'Communication',
+      2: 'Advices',
+      3: 'Research',
+      4: 'Improvements',
+      5: 'Product design',
+      6: 'Tests',
     },
     2: {
-      title: "Installation d'infrastructure",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+      title: "Design",
+      1: "UX Design",
+      2: "DX Design",
+      3: "UI Design",
+      4: 'Dashboard',
+      5: 'Web panel',
+      6: 'Responsive Design',
+      7: 'Prototypes',
     },
     3: {
-      title: "Conseil dans l'informatique",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+      title: "Developing",
+      1: 'Portfolio',
+      2: 'Web Application',
+      3: 'Mobile Application',
+      4: 'Desktop Application',
+      5: 'API',
+      6: 'Infrastructure',
+      7: 'Softwares',
+      8: 'DevSecOps',
     },
-    4: {
-      title: "Revue de vos applications",
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate quam vel maximus pulvinar. Aliquam vitae risus at sem varius pulvinar. Vivamus pulvinar tortor sit amet condimentum aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse finibus, metus eu dictum aliquet, tellus libero aliquam libero, eu lacinia dui mauris congue dolor. Nunc a lacinia ligula. Mauris bibendum orci eget pretium consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus porttitor finibus odio.'
+    workflow: {
+      title: 'My Workflow',
+      1: 'Planning',
+      2: 'Designing',
+      3: 'Developing',
+      4: 'Testing',
+      5: 'Publishing',
+      6: 'Maintaining',
     },
+    ad: {
+      title: 'When do we start?',
+      description: 'Are you satisfied with my services and the way I work? Schedule an appointment to tell me about your next project. We will discuss the best way to meet your goals.'
+    }
   },
 
   footer: {
@@ -243,13 +260,6 @@ const translations = {
     10: 'October',
     11: 'November',
     12: 'December',
-  },
-
-  works: {
-    athena: 'Athena is my personal API connected to my various instances',
-    ares: 'Ares is my personal website creating a single point of contact',
-    erisium: 'Erisium is a french minecraft mini-game server.',
-    linkyjs: 'LinkyJS is my custom and Open-Source url shortener'
   },
 
   loading: 'Loading...',
