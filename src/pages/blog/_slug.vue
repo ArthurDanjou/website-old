@@ -102,7 +102,8 @@
 import {
   computed,
   defineComponent,
-  ref, useAsync,
+  ref,
+  useAsync,
   useContext,
   useMeta,
   useRoute,
@@ -212,7 +213,7 @@ export default defineComponent({
     const formatTags = computed(() => {
       let tags = ""
       postData.value.tags.map(tag => {
-        tags += i18n.t(String(tag)) + ", "
+        tags += i18n.t(String(tag.label.code)) + ", "
       })
       return tags.substring(0, tags.length - 2)
     })
