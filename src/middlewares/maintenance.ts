@@ -10,10 +10,10 @@ export default async function ({redirect, route, $axios}: Context) {
   if (response.status === 200) {
     isMaintenance = response.data.maintenance.active === 1
   }
-  if(isMaintenance){
+  if (isMaintenance) {
     return redirect('/maintenance')
   }
-  if(!isMaintenance && route.path === '/maintenance'){
+  if (!isMaintenance && route.path === '/maintenance') {
     return redirect('/')
   }
 }
