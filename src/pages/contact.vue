@@ -1,7 +1,8 @@
 <template>
   <main class="contact flex flex-col items-center px-4 xl:px-64">
-    <PageTitle class="self-center" title="part.contact" />
-    <p class="text-justify text-gray-700 dark:text-gray-400 text-xl mb-8 mt-4">{{ $t('contact.description') }}</p>
+    <p class="text-gray-700 dark:text-gray-400 text-xl mt-4 mb-8 text-justify">
+      {{ $t('contact.description') }}
+    </p>
     <section class="w-full mb-8 text-justify">
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400 text-center">
         {{ $t('contact.why.title') }}

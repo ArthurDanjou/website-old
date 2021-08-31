@@ -1,7 +1,6 @@
 <template>
   <main v-if="posts" class="blog flex flex-col items-center w-full px-4 xl:px-16">
-    <PageTitle title="part.blog" />
-    <p class="text-gray-700 dark:text-gray-400 text-xl mt-4 mb-8">
+    <p class="text-gray-700 dark:text-gray-400 text-xl mt-4 mb-8 text-justify">
       {{ $t('blog.description') }}
     </p>
     <h1 v-if="posts.length === 0" class="text-xl font-bold text-center my-8 w-full">{{ $t('blog.no_posts') }}</h1>

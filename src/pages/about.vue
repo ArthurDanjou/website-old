@@ -1,6 +1,5 @@
 <template>
   <main class="flex flex-col items-center mb-8 px-4 xl:px-64">
-    <PageTitle title="part.about"/>
     <PresentationAbout />
     <SkillsAbout />
     <InterestsAbout />

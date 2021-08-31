@@ -1,8 +1,7 @@
 <template>
   <main class="flex flex-col mb-12 px-4 xl:px-64">
-    <PageTitle class="self-center" title="part.newsletter"/>
     <section class="flex flex-col 2xl:flex-row items-center py-8">
-      <div class="ml-2 text-lg leading-6 text-justify dark:text-gray-400 text-gray-700">
+      <div class="text-gray-700 dark:text-gray-400 text-xl mt-4 mb-8 text-justify">
         <p>{{ $t('newsletter.description') }}</p>
       </div>
     </section>

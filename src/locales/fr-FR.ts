@@ -16,16 +16,6 @@ const translations = {
     close: 'Fermer le menu'
   },
 
-  part: {
-    about: 'A propos',
-    contact: 'Me contacter',
-    projects: 'Mes projets',
-    blog: 'Mon blog',
-    env: 'Mon environnement',
-    newsletter: 'Ma newsletter',
-    services: 'Mes services'
-  },
-
   services: {
     description: 'Je fourni tout ce dont vous avez besoin pour créer votre site internet parfait',
     1: {
