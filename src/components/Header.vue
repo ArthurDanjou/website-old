@@ -107,7 +107,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .nav-link {
-  @apply font-medium cursor-pointer duration-500 mx-4 border-b-2 border-transparent hover:(border-indigo-600);
+  @apply font-medium cursor-pointer duration-500 mx-4 border-b-2 border-transparent hover:(border-red-500 dark:border-amber-400);
 }
 
 .navbar-bottom-items li {
@@ -115,6 +115,6 @@ export default defineComponent({
 }
 
 .link-active {
-  @apply text-indigo-600
+  @apply text-red-500 dark:text-amber-400
 }
 </style>

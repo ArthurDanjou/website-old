@@ -1,4 +1,5 @@
 import {defineConfig} from "windicss/helpers";
+
 const colors = require('windicss/colors')
 
 module.exports = defineConfig({
@@ -11,7 +12,7 @@ module.exports = defineConfig({
           css: [
             {
               a: {
-                color: theme('colors.indigo.600'),
+                color: theme('colors.red.500'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
                 borderBottomColor: theme('colors.gray.200'),
@@ -20,7 +21,7 @@ module.exports = defineConfig({
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.indigo.600'),
+                  borderBottomColor: theme('colors.red.500'),
                 }
               }
             }
@@ -34,7 +35,7 @@ module.exports = defineConfig({
                 color: theme('colors.gray.400'),
               },
               a: {
-                color: theme('colors.indigo.600'),
+                color: theme('colors.amber.400'),
                 transitionDuration: '300ms',
                 cursor: 'pointer',
                 borderBottomColor: theme('colors.gray.700'),
@@ -42,7 +43,7 @@ module.exports = defineConfig({
                 borderBottomStyle: 'solid',
                 textDecoration: 'none',
                 '&:hover': {
-                  borderBottomColor: theme('colors.indigo.600'),
+                  borderBottomColor: theme('colors.amber.400'),
                 }
               },
               strong: {

@@ -7,7 +7,7 @@
     <FormationsAbout />
     <ExperiencesAbout />
     <a href="/resume.pdf" target="_blank" class="duration-150 transform hover:scale-105">
-      <div class="text-lg cursor-pointer px-8 py-4 rounded-xl border-2 border-indigo-600 hover:(bg-indigo-600 text-white) dark:hover:text-black text-indigo-600 duration-300">
+      <div class="text-lg cursor-pointer px-8 py-4 rounded-xl border-2 border-red-500 dark:border-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) dark:hover:text-black text-red-500 dark:text-amber-400 duration-300">
         {{ $t('about.cv') }}
       </div>
     </a>

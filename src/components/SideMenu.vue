@@ -142,11 +142,11 @@ export default defineComponent({
   @apply duration-300 border-b-2 border-transparent;
 
   &:hover {
-    @apply border-indigo-600;
+    @apply border-red-500 dark:border-amber-400
   }
 }
 
 .link-active a {
-  @apply text-indigo-600;
+  @apply text-red-500 dark:text-amber-400
 }
 </style>

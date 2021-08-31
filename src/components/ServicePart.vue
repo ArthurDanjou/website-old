@@ -4,7 +4,7 @@
       <slot name="icon" />
     </div>
     <div class="sm:mt-8">
-      <h1 class="font-bold text-3xl mb-4">
+      <h1 class="font-bold tracking-wider text-3xl mb-4">
         {{ $t(title) }}
       </h1>
       <slot name="content"/>

@@ -27,7 +27,7 @@
         </div>
         <div class="mt-12 mb-4 w-full text-center">
           <div class="home-btn" @click="back">
-            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:(bg-indigo-600 text-white) duration-500 rounded">
+            <div class="cursor-pointer w-full py-4 px-4 md:py-4 md:px-4 font-bold hover:(bg-red-500 text-white dark:bg-amber-400 dark:text-black) duration-500 rounded">
               <BackSpaceIcon class="arrow-img text-xl"/>
               {{ $t('error.back') }}
             </div>

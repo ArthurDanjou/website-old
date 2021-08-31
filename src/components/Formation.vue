@@ -3,11 +3,11 @@
     <div class="self-center flex h-3 w-3 mr-3 relative">
       <span
         class="relative inline h-3 w-3 rounded-full opacity-75"
-        :class="end === 'Today' ? 'animate-ping bg-indigo-600' : 'bg-gray-400'"
+        :class="end === 'Today' ? 'animate-ping bg-red-500 dark:bg-amber-400' : 'bg-gray-400'"
       />
       <span
         class="inline absolute rounded-full h-3 w-3"
-        :class="end === 'Today' ? 'bg-indigo-800' : 'bg-gray-500'"
+        :class="end === 'Today' ? 'bg-red-500 dark:bg-amber-400' : 'bg-gray-500'"
       />
     </div>
     <div class="leading-7">

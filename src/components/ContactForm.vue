@@ -63,7 +63,7 @@
         :disabled="!isSendable"
         :class="{'disabled': !isSendable}"
         @click.prevent="handleForm"
-        class="font-bold px-8 py-4 border-2 rounded-xl border-indigo-600 text-indigo-600 hover:(bg-indigo-600 text-white) hover:dark:text-black duration-300 cursor-pointer"
+        class="font-bold px-8 py-4 border-2 rounded-xl border-red-500 dark:border-amber-400 text-red-500 dark:text-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) hover:dark:text-black duration-300 cursor-pointer"
       >
         {{ $t('contact.form.submit') }}
       </button>
@@ -160,7 +160,7 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .email {
-  @apply duration-300 border-b-3 border-gray-200 dark:border-gray-800 hover:border-indigo-600
+  @apply duration-300 border-b-3 border-gray-200 dark:border-gray-800 hover:border-red-500 hover:dark:border-amber-400
 }
 
 .disabled {

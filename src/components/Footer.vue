@@ -141,22 +141,22 @@ export default defineComponent({
       @apply border-b-2 border-gray-200 dark:border-gray-700 duration-300;
     }
     &:hover span {
-      @apply border-indigo-600
+      @apply border-red-500 dark:border-amber-400
     }
   }
   .link-active a {
-    @apply text-indigo-600;
+    @apply text-red-500 dark:text-amber-400;
   }
 
   .link a {
     @apply duration-500 border-b-2 border-transparent;
 
     &.link-active {
-      @apply text-indigo-600;
+      @apply text-red-500 dark:text-amber-400;
     }
 
     &:hover {
-      @apply border-indigo-600
+      @apply border-red-500 dark:border-amber-400
     }
   }
 }

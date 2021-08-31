@@ -63,7 +63,7 @@
     </section>
     <section class="mb-24 w-full">
       <div class="flex justify-center md:justify-end mb-8">
-        <h1 class="text-3xl md:text-4xl py-4 px-8 bg-indigo-500 rounded-lg text-white dark:(text-black bg-indigo-600) transform md:rotate-10">
+        <h1 class="text-3xl md:text-4xl py-4 px-8 bg-red-500 dark:bg-amber-400 rounded-lg text-white dark:text-black transform md:rotate-10">
           {{ $t('services.workflow.title') }}
         </h1>
       </div>
@@ -139,14 +139,14 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .service-item {
-  @apply text-xl text-gray-500;
+  @apply text-xl text-gray-600 dark:text-gray-400;
 }
 
 .workflow-item {
-  @apply text-3xl
+  @apply text-3xl font-bold tracking-wider
 }
 
 .number {
-  @apply block text-indigo-500 mb-2
+  @apply block text-red-500 dark:text-amber-400 mb-2 font-thin
 }
 </style>
