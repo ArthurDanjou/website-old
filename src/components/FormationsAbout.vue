@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mb-10">
+  <section class="w-full mb-10">
     <h3 class="font-bold text-2xl md:text-4xl mb-3">
       {{ $t('about.title.formations') }}
       <DegreeHatIcon />
@@ -12,7 +12,7 @@
         :begin="formation.begin_date"
         :end="formation.end_date" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
