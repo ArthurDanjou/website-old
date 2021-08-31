@@ -1,7 +1,8 @@
 <template>
   <main class="flex flex-col items-center px-4 xl:px-32">
-    <PageTitle title="part.services" />
-    <p class="text-justify text-gray-700 dark:text-gray-400 text-xl my-8">{{ $t('services.description') }}</p>
+    <p class="text-gray-700 dark:text-gray-400 text-xl mt-4 mb-8 text-justify">
+      {{ $t('services.description') }}
+    </p>
     <section class="flex flex-col lg:(flex-row) justify-around items-center pt-10 w-full mb-20">
       <div class="grid grid-cols-1 md:gap-x-12 md:mb-20 md:grid-cols-3 w-full">
         <div class="flex justify-start mb-8 md:justify-center">
@@ -60,8 +61,48 @@
         </div>
       </div>
     </section>
-    <section class="mb-20">
-      Workflow
+    <section class="mb-24 w-full">
+      <div class="flex justify-center md:justify-end mb-8">
+        <h1 class="text-3xl md:text-4xl py-4 px-8 bg-indigo-500 rounded-lg text-white dark:(text-black bg-indigo-600) transform md:rotate-10">
+          Mon Workflow
+        </h1>
+      </div>
+      <div class="flex flex-col items-center w-full">
+        <div class="grid grid-cols-1 md:gap-x-12 md:mb-12 md:grid-cols-3 w-full">
+          <div class="flex justify-start md:justify-center">
+            <div class="workflow-item">
+              <span class="number">01</span> Planning
+            </div>
+          </div>
+          <div class="flex justify-center md:justify-center">
+            <div class="workflow-item mt-8">
+              <span class="number">02</span> Designing
+            </div>
+          </div>
+          <div class="flex justify-end md:justify-center">
+            <div class="workflow-item mt-16">
+              <span class="number">03</span> Developing
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:gap-x-12 md:mb-20 md:grid-cols-3 w-full">
+          <div class="flex justify-start md:justify-center">
+            <div class="workflow-item">
+              <span class="number">04</span> Testing
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="workflow-item mt-8">
+              <span class="number">05</span> Publishing
+            </div>
+          </div>
+          <div class="flex justify-end md:justify-center">
+            <div class="workflow-item mt-16">
+              <span class="number">06</span> Maintaining
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="w-full lg:w-4/5">
       <nuxt-link to="/contact">
@@ -99,5 +140,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .service-item {
   @apply text-xl text-gray-500;
+}
+
+.workflow-item {
+  @apply text-3xl
+}
+
+.number {
+  @apply block text-indigo-500 mb-4
 }
 </style>
