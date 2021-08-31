@@ -1,6 +1,6 @@
 <template>
-  <div v-if="maintenance" class="w-screen h-screen flex items-center">
-    <div class="absolute right-4 top-4">
+  <main v-if="maintenance" class="w-screen h-screen flex items-center">
+    <section class="absolute right-4 top-4">
       <ul class="flex items-center">
         <li @click="changeLanguage()"
             class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-400">
@@ -16,8 +16,8 @@
           </div>
         </li>
       </ul>
-    </div>
-    <div class="w-full flex flex-col items-center">
+    </section>
+    <section class="w-full flex flex-col items-center">
       <div class="self-center">
         <div class="flex justify-center mb-8">
           <img class="w-full lg:w-3/4 xl:w-1/3" src="@/assets/images/maintenance.png" alt="Maintenance Image" />
@@ -46,8 +46,8 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script lang="ts">
