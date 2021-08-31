@@ -2,9 +2,9 @@
   <main class="flex flex-col items-center px-4 xl:px-32">
     <PageTitle title="part.services" />
     <p class="text-justify text-gray-700 dark:text-gray-400 text-xl my-8">{{ $t('services.description') }}</p>
-    <div class="flex flex-col lg:(flex-row) justify-around items-center pt-10 w-full">
-      <div class="grid grid-cols-1 gap-x-12 mb-20 sm:grid-cols-3 w-full">
-        <div class="flex justify-center">
+    <section class="flex flex-col lg:(flex-row) justify-around items-center pt-10 w-full mb-20">
+      <div class="grid grid-cols-1 md:gap-x-12 md:mb-20 md:grid-cols-3 w-full">
+        <div class="flex justify-start mb-8 md:justify-center">
           <ServicePart title="services.1.title">
             <template v-slot:icon>
               <CompassIcon />
@@ -21,7 +21,7 @@
             </template>
           </ServicePart>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mb-8">
           <ServicePart title="services.2.title">
             <template v-slot:icon>
               <DesignIcon />
@@ -39,7 +39,7 @@
             </template>
           </ServicePart>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-end md:justify-center">
           <ServicePart title="services.3.title">
             <template v-slot:icon>
               <CodeIcon />
@@ -59,15 +59,27 @@
           </ServicePart>
         </div>
       </div>
-    </div>
-    <div>
+    </section>
+    <section class="mb-20">
       Workflow
-    </div>
-    <div>
-      <Ad color="green">
-        GOTO Contact
-      </Ad>
-    </div>
+    </section>
+    <section class="w-full lg:w-4/5">
+      <nuxt-link to="/contact">
+        <Ad color="green" class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 flex justify-center">
+            <img class="h-48 lg:h-64" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
+          </div>
+          <div class="group flex flex-col items-center justify-center lg:w-3/4 p-4 text-justify">
+            <h1 class="font-bold text-black text-2xl lg:text-4xl mb-4">
+              {{ $t('services.ad.title') }}
+            </h1>
+            <p class="text-lg lg:text-xl text-gray-700">
+              {{ $t('services.ad.description') }}
+            </p>
+          </div>
+        </Ad>
+      </nuxt-link>
+    </section>
   </main>
 </template>
 

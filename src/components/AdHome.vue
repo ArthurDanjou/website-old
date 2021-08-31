@@ -19,7 +19,7 @@
       <nuxt-link to="/contact">
         <Ad color="blue" class="w-full flex flex-col justify-between items-center">
           <div>
-            <img class="h-64" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
+            <img class="h-64" src="~/assets/images/memojies/HandUp.png" alt="HandUp Memoji" />
           </div>
           <div>
             <h1 class="font-bold text-black text-4xl">
