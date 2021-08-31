@@ -4,7 +4,7 @@
       <h1 class="font-black text-3xl duration-300" :class="getHoverColor">{{ $t(title) }}</h1>
       <h3 class="my-4 text-2xl text-gray-600">{{ $t(description) }}</h3>
       <div class="text-gray-400">
-        <span>{{ formatDate }}</span>  |  <span>{{ reading_time }}</span> min.
+        <span>{{ formatDate }}</span>, <span>{{ reading_time }}</span> min.
       </div>
     </div>
   </nuxt-link>
@@ -39,17 +39,9 @@ export default defineComponent({
       type: String,
       default: "Date"
     },
-    cover: {
-      type: String,
-      default: "string"
-    },
     slug: {
       type: String,
       default: "slug"
-    },
-    tags: {
-      type: Array,
-      default: () => ["Tag1", "Tag2", "Tag3"],
     },
     reading_time: {
       type: Number,

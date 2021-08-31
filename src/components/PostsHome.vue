@@ -15,11 +15,9 @@
           :key="post.slug"
           :color="post.color.name"
           :title="post.title.code"
-          :cover="post.cover.file_name"
           :description="post.description.code"
           :date="post.date"
           :slug="post.slug"
-          :tags="post.tags"
           :reading_time="post.reading_time"
         />
       </div>
