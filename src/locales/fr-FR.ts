@@ -32,7 +32,7 @@ const translations = {
       title: "Stratégie",
     },
     2: {
-      title: "Illustration",
+      title: "Design",
     },
     3: {
       title: "Développement",
@@ -184,6 +184,7 @@ const translations = {
   },
 
   contact: {
+    description: 'Cette page est dédiée ',
     form: {
       title: {
         main: 'Remplissez le formulaire ou',
