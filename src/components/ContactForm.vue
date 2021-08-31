@@ -1,6 +1,6 @@
 <template>
   <section class="w-full flex justify-center flex-col">
-    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400">
+    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400 text-center">
       {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
     </h2>
     <form class="w-full">
