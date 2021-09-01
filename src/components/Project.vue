@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" target="_blank">
+  <a :href="url" target="_blank" rel="noreferrer noopener">
     <div class="h-full rounded-lg shadow-xl w-full bg-gray-100 dark:bg-gray-800 transform hover:scale-103 duration-300">
       <div class="max-w-full rounded-t-lg border-l-2 border-r-2 border-t-2 border-transparent dark:border-gray-900">
         <img class="w-full rounded-t-lg" :src="`https://athena.arthurdanjou.fr/files/${cover}`" alt="Project Cover" />

@@ -10,9 +10,9 @@
             <h1 class="font-bold text-black text-4xl">
               {{ $t('home.ad.env.title') }}
             </h1>
-            <h3 class="px-4 text-xl text-gray-700">
+            <h2 class="px-4 text-xl text-gray-700">
               {{ $t('home.ad.env.description') }}
-            </h3>
+            </h2>
           </div>
         </Ad>
       </nuxt-link>
@@ -25,9 +25,9 @@
             <h1 class="font-bold text-black text-4xl">
               {{ $t('home.ad.contact.title') }}
             </h1>
-            <h3 class="px-4 text-lg text-gray-700">
+            <h2 class="px-4 text-lg text-gray-700">
               {{ $t('home.ad.contact.description') }}
-            </h3>
+            </h2>
           </div>
         </Ad>
       </nuxt-link>

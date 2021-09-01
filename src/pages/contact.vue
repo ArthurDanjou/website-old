@@ -4,9 +4,9 @@
       <h1 class="font-bold text-gray-700 text-xl md:text-3xl my-4 dark:text-gray-400 text-center">
         {{ $t('contact.why.title') }}
       </h1>
-      <h3 class="text-lg">
+      <h2 class="text-lg">
         {{ $t('contact.why.description') }}
-      </h3>
+      </h2>
     </section>
     <ContactForm class="w-full"/>
   </main>
