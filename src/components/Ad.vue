@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-3xl p-2 lg:p-8 text-center h-full block" :class="getColor">
+  <div class="rounded-3xl p-2 lg:p-8 text-center h-full block duration-500" :class="getColor">
     <slot />
   </div>
 </template>
@@ -23,11 +23,11 @@ export default defineComponent({
     const getColor = computed(() => {
       switch (props.color) {
         case 'red':
-          return 'bg-red-300'
+          return 'bg-red-400'
         case 'blue':
-          return 'bg-blue-300'
+          return 'bg-blue-400'
         case 'green':
-          return 'bg-green-300'
+          return 'bg-green-400'
       }
     })
 

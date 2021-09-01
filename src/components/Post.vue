@@ -2,8 +2,8 @@
   <nuxt-link :to="`/blog/${slug}`">
     <div class="group post w-full text-justify">
       <h1 class="font-black text-3xl duration-300" :class="getHoverColor">{{ $t(title) }}</h1>
-      <h2 class="my-4 text-2xl text-gray-600">{{ $t(description) }}</h2>
-      <div class="text-gray-400">
+      <h2 class="my-4 text-2xl text-gray-600 dark:text-gray-400">{{ $t(description) }}</h2>
+      <div class="text-gray-700 dark:text-gray-300">
         <span>{{ formatDate }}</span>, <span>{{ reading_time }}</span> min.
       </div>
     </div>

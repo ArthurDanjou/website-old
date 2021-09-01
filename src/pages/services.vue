@@ -106,11 +106,11 @@
     </section>
     <section class="w-full lg:w-4/5">
       <nuxt-link to="/contact">
-        <Ad color="green" class="flex flex-col lg:flex-row">
+        <Ad color="green" class="group flex flex-col lg:flex-row">
           <div class="lg:w-1/2 flex justify-center">
-            <img class="h-48 lg:h-64" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
+            <img class="h-48 lg:h-64 group-hover:scale-105 transform duration-500" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />
           </div>
-          <div class="group flex flex-col items-center justify-center lg:w-3/4 p-4 text-justify">
+          <div class="flex flex-col items-center justify-center lg:w-3/4 p-4 text-justify">
             <h1 class="font-bold text-black text-2xl lg:text-4xl mb-4">
               {{ $t('services.ad.title') }}
             </h1>

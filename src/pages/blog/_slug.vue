@@ -51,7 +51,7 @@
         <div class="flex items-center mb-2 md:mb-0">
           <div
             @click="handleLike"
-            class="icon-hover flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-1 border-solid border mr-2"
+            class="flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-2 border-solid border mr-2"
             :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
           >
             <div class="mr-2 lining-nums leading-3">
@@ -64,13 +64,13 @@
           <a
             target="_blank"
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + postData.slug + '&text=' + $t('blog.tweet') + ' ' + $i18n.t('title')"
-            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
+            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
           >
             <TwitterBlogIcon />
           </a>
           <div
             @click="scrollToTop"
-            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <ArrowUpIcon />
           </div>
@@ -78,13 +78,13 @@
         <div class="flex items-center">
           <nuxt-link
             to="/contact"
-            class="mr-2 icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <BookmarkIcon />
           </nuxt-link>
           <div
             @click="copyToClipboard"
-            class="icon-hover cursor-pointer duration-300 text-2xl p-1 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
           >
             <CopyIcon />
           </div>
@@ -242,14 +242,6 @@ export default defineComponent({
 
   .arrow {
     transform: translate(3px, -1px);
-  }
-
-  .icon-hover svg {
-    @apply duration-300
-  }
-
-  .icon-hover:hover svg {
-    transform: scale(1.05);
   }
 }
 </style>
