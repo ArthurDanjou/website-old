@@ -37,5 +37,10 @@ export default {
     { name: 'msapplication-TileColor', content: params.color },
     { name: 'theme-color', content: params.color },
   ],
-  link: [{ rel: 'icon', type: params.favicon.type, href: params.favicon.href }],
+  link: [
+    { rel: 'icon', type: params.favicon.type, href: params.favicon.href },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossOrigin: 'true' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@900&display=swap' }
+  ],
 } as NuxtOptionsHead
