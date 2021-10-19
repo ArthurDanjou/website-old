@@ -45,7 +45,7 @@
                 </nuxt-link>
               </div>
             </div>
-            <div class="space-y-2 lg:space-y-4 ">
+            <div class="mt-2 lg:mt-0 space-y-2 lg:space-y-4">
               <div class="link">
                 <nuxt-link to="/services" :class="{'link-active': isWindow('services')}">
                   {{ $t('header.services') }}
