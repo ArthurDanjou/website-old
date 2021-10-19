@@ -96,10 +96,7 @@ import {State} from "~/types/types";
 export default defineComponent({
   name: "Footer",
   setup() {
-    const {$colorMode, $axios, $sentry, app} = useContext()
-    const isDarkMode = computed(() => {
-      return $colorMode.preference === 'dark'
-    })
+    const {$axios, $sentry, app} = useContext()
 
     const getDate = ref(new Date().getFullYear())
 
@@ -126,7 +123,6 @@ export default defineComponent({
 
     return {
       getDate,
-      isDarkMode,
       hiring_message,
       isWindow
     }
