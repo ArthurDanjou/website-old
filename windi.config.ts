@@ -1,10 +1,11 @@
 import {defineConfig} from 'windicss/helpers'
 import defaultTheme from 'windicss/defaultTheme'
+import typography from 'windicss/plugin/typography'
 import colors from 'windicss/colors'
 
 module.exports = defineConfig({
-  presets: [],
   darkMode: 'class',
+  attributify: true,
   theme: {
     extend: {
       typography: (theme) => ({
@@ -824,6 +825,6 @@ module.exports = defineConfig({
     },
   },
   plugins: [
-    require('windicss/plugin/typography')()
+    typography()
   ],
 })
