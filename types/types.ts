@@ -5,6 +5,12 @@ interface Form {
   subject: string
 }
 
+interface Translation {
+  code: string
+  french: string
+  english: string
+}
+
 interface Tag {
   slug: string
 }
@@ -29,4 +35,4 @@ interface State {
   email: string
 }
 
-export { Form, Post, Tag, NewsletterForm, State }
+export { Form, Translation, Post, Tag, NewsletterForm, State }

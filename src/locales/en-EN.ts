@@ -1,4 +1,5 @@
 import axios from "axios";
+import {Translation} from "~/types/types";
 
 const translations = {
   header: {
@@ -274,12 +275,12 @@ const translations = {
 
 export default async function () {
   let informations = {}
-  const response = await axios.get('https://athena.arthurdanjou.fr/translations', {
+  const response = await axios.get<{ translations: Translation[] }>('https://athena.arthurdanjou.fr/translations', {
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`
     }
   })
-  response.data.translations.map(({ code, english }: any) => {
+  response.data.translations.map(({ code, english }: Translation) => {
     informations = { ...informations, [code]: english }
   })
 
