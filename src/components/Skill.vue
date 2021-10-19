@@ -49,8 +49,8 @@ export default defineComponent({
           return 'hover:bg-purple-400'
         case 'orange':
           return 'hover:bg-orange-400'
-        case 'lightBlue':
-          return 'hover:bg-lightBlue-400'
+        case 'sky':
+          return 'hover:bg-sky-400'
         case 'lime':
           return 'hover:bg-lime-400'
         case 'teal':
