@@ -20,7 +20,7 @@
     "@nuxtjs/sentry": "^5.1.4",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.9",
-    "axios": "^0.23.0",
+    "axios": "^0.21.4",
     "core-js": "^3.18.3",
     "nuxt": "^2.15.8",
     "prism-themes": "^1.9.0",
