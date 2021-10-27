@@ -64,6 +64,7 @@ export default defineComponent({
     const $router = useRouter()
     $router.afterEach(() => {
       store.commit('TOGGLE_OPENED', false)
+      document.getElementById('nav')!.classList.remove('z-50')
       setTimeout(() => {
         document.getElementById('slider')!.style.maxHeight = 'none'
       }, 600)
