@@ -30,7 +30,7 @@ const components = [
   'components/icons'
 ]
 
-const buildDir = 'build'
+const buildDir = '.nuxt'
 
 const ssr = true
 

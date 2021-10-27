@@ -10,12 +10,11 @@
       >
         <div
           @click="closeMenu"
-          class="min-h-screen relative z-50 bg-white dark:bg-black w-full min-w-screen pb-20 xl:pb-0 duration-300"
-          :class="{'cursor-pointer': opened}"
+          class="min-h-screen relative bg-white dark:bg-black w-full min-w-screen pb-20 xl:pb-0 duration-300"
         >
           <Announce />
           <Header />
-          <Nuxt class="z-10 pt-16 content"/>
+          <Nuxt class="pt-16 content"/>
           <Footer />
         </div>
       </div>
@@ -27,6 +26,7 @@
 <script lang="ts">
 import {computed, useRouter, useStore} from "@nuxtjs/composition-api";
 import {State} from "~/types/types";
+import {options, useBlobity} from "@/plugins/Blobity";
 
 export default {
   setup() {
@@ -44,6 +44,8 @@ export default {
         document.getElementById('slider')!.style.maxHeight = 'none'
       }, 500)
     }
+
+    const blobity = useBlobity(options)
 
     return {
       opened: computed(() => store.state.opened),

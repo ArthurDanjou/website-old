@@ -1,12 +1,12 @@
 <template>
   <section class="my-16 w-full flex items-center justify-center">
     <div class="text-center flex flex-col items-center">
-      <h1 class="text-6xl font-bold text-gray-600 dark:text-gray-400">
-        {{ $t('home.banner.hello') }} <span class="text-black dark:text-white">Arthur Danjou</span> 👋,
+      <h1 class="text-6xl flex font-bold text-gray-600 dark:text-gray-400">
+        {{ $t('home.banner.hello') }} <span class="flex z-index-3 text-black dark:text-white mx-2">Arthur Danjou</span> <span class="hey">👋</span>,
       </h1>
       <h2 class="my-6 text-4xl text-black dark:text-white">
         <strong>{{ $t('home.banner.role') }}</strong>. <br />
-        <span class="text-gray-600 dark:text-gray-400">{{ $t('home.banner.student.main') }}</span> <strong>{{ $t('home.banner.student.strong') }}</strong>.
+        <span class="text-gray-600 dark:text-gray-400">{{ $t('home.banner.student.main') }}</span> <strong>{{ $t('home.banner.student.strong') }} 🎓</strong>.
       </h2>
       <div class="select-none mt-4 text-5xl text-gray-800 mb-10 dark:text-gray-300">
         <span id="develop" class="color blue">{{ $t('home.banner.color.develop') }}</span>
@@ -64,6 +64,37 @@ export default defineComponent({
   }
   &.green {
     @apply select-text bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-lime-500
+  }
+}
+
+.hey {
+  animation: hi 2.5s infinite ease-in-out;
+}
+
+@keyframes hi {
+  0% {
+    transform: rotate(0)
+  }
+  10% {
+    transform: rotate(14deg)
+  }
+  20% {
+    transform: rotate(-8deg)
+  }
+  30% {
+    transform: rotate(14deg)
+  }
+  40% {
+    transform: rotate(-4deg)
+  }
+  50% {
+    transform: rotate(10deg)
+  }
+  60% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(0)
   }
 }
 </style>

@@ -10,8 +10,8 @@
             <p class="text-justify">
               {{ $t('footer.description') }}
             </p>
-            <div class="mt-4">
-              <nuxt-link to="/contact" class="text-red-400 border-b-2 border-gray-200 dark:border-gray-700 hover:border-red-400 duration-300">
+            <div class="mt-4 flex">
+              <nuxt-link data-blobity-magnetic="false" to="/contact" class="z-index-3 text-red-400">
                 {{ $t(hiring_message) }}
               </nuxt-link>
             </div>
@@ -23,46 +23,46 @@
               {{ $t('footer.links') }}
             </h1>
           <div class="flex flex-col lg:flex-row mb-8 font-medium">
-            <div class="space-y-2 lg:space-y-4 mr-16">
+            <div class="space-y-2 lg:space-y-4 mr-16 flex flex-col">
               <div class="link">
-                <nuxt-link to="/" :class="{'link-active': isWindow('')}">
+                <nuxt-link class="z-index-3" to="/" :class="{'link-active': isWindow('')}">
                   {{ $t('header.home') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/about" :class="{'link-active': isWindow('about')}">
+                <nuxt-link class="z-index-3" to="/about" :class="{'link-active': isWindow('about')}">
                   {{ $t('header.about') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/blog" :class="{'link-active': isWindow('blog')}">
+                <nuxt-link class="z-index-3" to="/blog" :class="{'link-active': isWindow('blog')}">
                   {{ $t('header.blog') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/projects" :class="{'link-active': isWindow('projects')}">
+                <nuxt-link class="z-index-3" to="/projects" :class="{'link-active': isWindow('projects')}">
                   {{ $t('header.projects') }}
                 </nuxt-link>
               </div>
             </div>
-            <div class="mt-2 lg:mt-0 space-y-2 lg:space-y-4">
+            <div class="mt-2 lg:mt-0 space-y-2 lg:space-y-4 flex flex-col">
               <div class="link">
-                <nuxt-link to="/services" :class="{'link-active': isWindow('services')}">
+                <nuxt-link class="z-index-3" to="/services" :class="{'link-active': isWindow('services')}">
                   {{ $t('header.services') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/env" :class="{'link-active': isWindow('env')}">
+                <nuxt-link class="z-index-3" to="/env" :class="{'link-active': isWindow('env')}">
                   {{ $t('header.env') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/newsletter" :class="{'link-active': isWindow('newsletter')}">
+                <nuxt-link class="z-index-3" to="/newsletter" :class="{'link-active': isWindow('newsletter')}">
                   {{ $t('header.newsletter') }}
                 </nuxt-link>
               </div>
               <div class="link">
-                <nuxt-link to="/contact" :class="{'link-active': isWindow('contact')}">
+                <nuxt-link class="z-index-3" to="/contact" :class="{'link-active': isWindow('contact')}">
                   {{ $t('header.contact') }}
                 </nuxt-link>
               </div>
@@ -71,14 +71,14 @@
         </div>
       </div>
       <div class="text-center border-t-2 border-gray-200 dark:border-gray-800 py-8 lg:flex lg:flex-row-reverse justify-between">
-        <div>
+        <div class="flex">
           {{ $t('footer.credits') }}
-          <a class="social font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
+          <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
             <NuxtIcon />
             <span>NuxtJS</span>
           </a>
           {{ $t('footer.credits_separator') }}
-          <a class="social font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
+          <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
             <AdonisIcon />
             <span>AdonisJS</span>
           </a>
@@ -132,28 +132,16 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .footer {
-  .social {
-    span {
-      @apply border-b-2 border-gray-200 dark:border-gray-700 duration-300;
-    }
-    &:hover span {
-      @apply border-red-500 dark:border-amber-400
-    }
-  }
   .link-active a {
     @apply text-red-500 dark:text-amber-400;
   }
 
-  .link a {
-    @apply duration-500 border-b-2 border-transparent;
+  .link {
+    @apply z-index-3;
+  }
 
-    &.link-active {
-      @apply text-red-500 dark:text-amber-400;
-    }
-
-    &:hover {
-      @apply border-red-500 dark:border-amber-400
-    }
+  .link-active {
+    @apply text-red-500 dark:text-amber-400
   }
 }
 </style>

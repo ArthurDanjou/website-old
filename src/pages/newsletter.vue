@@ -118,7 +118,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .button {
   position: absolute;
   top: 0.25rem;

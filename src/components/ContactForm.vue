@@ -1,7 +1,9 @@
 <template>
   <section class="w-full flex justify-center flex-col">
-    <h2 class="mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400 text-center">
-      {{ $t('contact.form.title.main') }} <br class="lg:hidden"/><a class="email text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a> 📬
+    <h2 class="z-index-3 mb-10 font-bold text-gray-700 text-2xl md:text-3xl my-4 dark:text-gray-400 text-center">
+      {{ $t('contact.form.title.main') }} <br class="lg:hidden"/>
+      <a data-blobity-magnetic="false" class="text-black dark:text-white" href="mailto:me@arthurdanjou.fr" target="_blank">{{ $t('contact.form.title.email') }}</a>
+      📬
     </h2>
     <form class="w-full">
       <div class="w-full lg:flex justify-center mb-8 lg:mb-12">
@@ -156,11 +158,7 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .form-label {
-  @apply absolute top-0 -z-1 duration-300 text-gray-700 dark:text-gray-400
-}
-
-.email {
-  @apply duration-300 border-b-3 border-gray-200 dark:border-gray-800 hover:border-red-500 hover:dark:border-amber-400
+  @apply absolute top-0 duration-300 text-gray-700 dark:text-gray-400
 }
 
 .disabled {

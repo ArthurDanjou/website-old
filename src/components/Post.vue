@@ -1,5 +1,11 @@
 <template>
-  <nuxt-link :to="`/blog/${slug}`">
+  <nuxt-link
+    class="z-index-3"
+    data-blobity-magnetic="false"
+    data-blobity-offset-x="8"
+    data-blobity-offset-y="8"
+    :to="`/blog/${slug}`"
+  >
     <div class="group post w-full text-justify">
       <h1 class="font-black text-3xl duration-300" :class="getHoverColor">{{ $t(title) }}</h1>
       <h2 class="my-4 text-2xl text-gray-600 dark:text-gray-400">{{ $t(description) }}</h2>

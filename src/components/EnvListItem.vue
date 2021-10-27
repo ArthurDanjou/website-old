@@ -1,8 +1,10 @@
 <template>
   <li>
     {{ $t(title) }}:
-    <a class="duration-300 text-red-500 dark:text-amber-400 font-medium border-b-2 border-opacity-0 hover:border-opacity-100 dark:border-opacity-0 dark:hover:border-opacity-100 border-red-500 dark:border-amber-400 border-solid" v-if="link" :href="link" target="_blank">{{ content }}</a>
-    <span v-else>{{ content }}</span>
+    <div class="z-index-3 inline">
+      <a data-blobity-magnetic="false" class="z-index-3 text-red-500 dark:text-amber-400 font-medium" v-if="link" :href="link" target="_blank">{{ content }}</a>
+      <span v-else>{{ content }}</span>
+    </div>
   </li>
 </template>
 

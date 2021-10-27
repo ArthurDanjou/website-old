@@ -1,7 +1,7 @@
 <template>
   <section class="w-full h-full my-12">
     <div class="w-full grid grid-cols-1 gap-x-20 gap-y-8 sm:grid-cols-2 h-full">
-      <nuxt-link to="/env">
+      <nuxt-link class="z-index-3" data-blobity-magnetic="false" to="/env">
         <Ad color="red" class="group w-full flex flex-col justify-between items-center">
           <div>
             <img class="h-64 group-hover:scale-105 transform duration-500" src="~/assets/images/memojies/Dev.png" alt="Dev Memoji" />
@@ -16,7 +16,7 @@
           </div>
         </Ad>
       </nuxt-link>
-      <nuxt-link to="/contact">
+      <nuxt-link class="z-index-3" data-blobity-magnetic="false" to="/contact">
         <Ad color="blue" class="group w-full flex flex-col justify-between items-center">
           <div>
             <img class="h-64 group-hover:scale-105 transform duration-500" src="~/assets/images/memojies/HandUp.png" alt="HandUp Memoji" />

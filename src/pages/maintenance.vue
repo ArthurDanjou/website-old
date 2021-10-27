@@ -94,7 +94,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .social-links a {
   svg {
     @apply h-6 w-6 duration-300
