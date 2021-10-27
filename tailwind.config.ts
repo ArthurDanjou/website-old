@@ -14,16 +14,6 @@ module.exports = defineConfig({
             {
               a: {
                 color: theme('colors.red.500'),
-                transitionDuration: '300ms',
-                cursor: 'pointer',
-                borderBottomColor: theme('colors.gray.200'),
-                borderOpacity: '0%',
-                borderBottomWidth: '2px',
-                borderBottomStyle: 'solid',
-                textDecoration: 'none',
-                '&:hover': {
-                  borderBottomColor: theme('colors.red.500'),
-                }
               }
             }
           ]
@@ -37,15 +27,6 @@ module.exports = defineConfig({
               },
               a: {
                 color: theme('colors.amber.400'),
-                transitionDuration: '300ms',
-                cursor: 'pointer',
-                borderBottomColor: theme('colors.gray.700'),
-                borderBottomWidth: '2px',
-                borderBottomStyle: 'solid',
-                textDecoration: 'none',
-                '&:hover': {
-                  borderBottomColor: theme('colors.amber.400'),
-                }
               },
               strong: {
                 color: theme('colors.white'),

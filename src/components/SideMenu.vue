@@ -9,18 +9,18 @@
       >
         <div class="mb-8">
           <div class="flex justify-between mb-4">
-            <div @click="closeMenu" class="flex justify-center items-center cursor-pointer cross text-sm">
+            <div @click="closeMenu" class="flex justify-center items-center cross text-sm">
               <CrossIcon class="duration-300" />
               <div class="ml-4">{{ $t('sidebar.close') }}</div>
             </div>
             <div class="ml-6">
               <ul class="flex items-center">
                 <li @click="changeLanguage()"
-                    class="mx-1 h-9 w-9 cursor-pointer flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-400">
+                    class="mx-1 h-9 w-9 flex items-center justify-center p-1.5 rounded-xl hover:bg-gray-300 duration-200 dark:hover:bg-dark-400">
                   <TranslateIcon :french="isFrench" />
                 </li>
                 <li @click="changeColorMode()"
-                    class="mx-1 h-9 w-9 cursor-pointer flex items-center p-1.5 rounded-xl hover:bg-gray-300 dark:hover:bg-dark-400 duration-200">
+                    class="mx-1 h-9 w-9 flex items-center p-1.5 rounded-xl hover:bg-gray-300 dark:hover:bg-dark-400 duration-200">
                   <div v-if="this.$colorMode.preference === 'light'">
                     <MoonIcon/>
                   </div>

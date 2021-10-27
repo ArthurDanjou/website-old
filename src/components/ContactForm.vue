@@ -65,7 +65,7 @@
         :disabled="!isSendable"
         :class="{'disabled': !isSendable}"
         @click.prevent="handleForm"
-        class="font-bold px-8 py-4 border-2 rounded-xl border-red-500 dark:border-amber-400 text-red-500 dark:text-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) hover:dark:text-black duration-300 cursor-pointer"
+        class="font-bold px-8 py-4 border-2 rounded-xl border-red-500 dark:border-amber-400 text-red-500 dark:text-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) hover:dark:text-black duration-300"
       >
         {{ $t('contact.form.submit') }}
       </button>

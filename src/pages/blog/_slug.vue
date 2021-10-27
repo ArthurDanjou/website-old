@@ -3,7 +3,7 @@
     <div class="mt-8 md:mt-32 flex flex-col justify-around py-8 w-full">
       <div>
         <div class="mb-4 flex">
-          <nuxt-link to="/blog" class="back-arrow flex">
+          <nuxt-link to="/blog" data-blobity-magnetic="false" class="z-index-3 flex">
             <div class="duration-300 arrow">
               <BackSpaceIcon />
             </div>
@@ -42,7 +42,7 @@
         :document="post"
         class="my-6 md:my-10 w-full text-justify max-w-none
         prose prose-sm lg:prose-lg lg:max-w-none sm:max-w-none
-        dark:prose-dark dark:max-w-none"
+        dark:prose-dark dark:max-w-none z-index-3"
       />
       <p class="mb-3">
         {{ $t('blog.read.thanks') }}
@@ -50,9 +50,11 @@
       <div class="flex flex-col md:flex-row">
         <div class="flex items-center mb-2 md:mb-0">
           <div
+            data-blobity
+            data-blobity-magnetic="false"
             @click="handleLike"
-            class="flex flex-row justify-center items-center cursor-pointer duration-300 text-lg p-2 border-solid border mr-2"
-            :class="liked ? 'border-red-500 dark:border-red-500 hover:border-gray-400 dark:hover:border-dark-200' : 'border-gray-400 dark:border-dark-200 hover:border-red-500 dark:hover:border-red-500'"
+            class="flex flex-row z-index-3 justify-center items-center duration-300 text-lg p-2 border-solid border mr-2 bg-white dark:bg-black"
+            :class="liked ? 'border-red-500 dark:border-red-500' : 'border-gray-400 dark:border-dark-200'"
           >
             <div class="mr-2 lining-nums leading-3">
               {{ getLikes }}
@@ -63,28 +65,35 @@
           </div>
           <a
             target="_blank"
+            data-blobity-magnetic="false"
             :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Farthurdanjou.fr%2Fblog%2F' + postData.slug + '&text=' + $t('blog.tweet') + ' ' + $i18n.t('title')"
-            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-cyan-500 dark:hover:border-cyan-400 flex justify-center items-center"
+            class="z-index-3 mr-2 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 flex justify-center items-center bg-white dark:bg-black"
           >
             <TwitterBlogIcon />
           </a>
           <div
+            data-blobity
+            data-blobity-magnetic="false"
             @click="scrollToTop"
-            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="z-index-3 mr-2 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 flex justify-center items-center bg-white dark:bg-black"
           >
             <ArrowUpIcon />
           </div>
         </div>
         <div class="flex items-center">
           <nuxt-link
+            data-blobity
+            data-blobity-magnetic="false"
             to="/contact"
-            class="mr-2 cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="z-index-3 mr-2 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 flex justify-center items-center bg-white dark:bg-black"
           >
             <BookmarkIcon />
           </nuxt-link>
           <div
+            data-blobity
+            data-blobity-magnetic="false"
             @click="copyToClipboard"
-            class="cursor-pointer duration-300 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 hover:border-dark-800 dark:hover:border-white flex justify-center items-center"
+            class="z-index-3 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 flex justify-center items-center bg-white dark:bg-black"
           >
             <CopyIcon />
           </div>
@@ -233,15 +242,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped lang="scss">
-.blog {
-  .back-arrow:hover .arrow {
-    transform: translate(-8px, -1px);
-  }
-
-  .arrow {
-    transform: translate(3px, -1px);
-  }
-}
-</style>
