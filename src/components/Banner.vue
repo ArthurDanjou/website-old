@@ -9,7 +9,7 @@
         <span class="text-gray-600 dark:text-gray-400">{{ $t('home.banner.student.main') }}</span> <strong>{{ $t('home.banner.student.strong') }} 🎓</strong>.
       </h2>
       <div class="flex flex-col md:flex-row select-none mt-4 text-4xl md:text-5xl text-gray-800 mb-10 dark:text-gray-300">
-        <span id="develop" class="color blue">{{ $t('home.banner.color.develop') }}</span>
+        <span id="develop" class="z-index-3 color blue">{{ $t('home.banner.color.develop') }}</span>
         <span id="publish" class="color">{{ $t('home.banner.color.publish') }}</span>
         <span id="improve" class="color">{{ $t('home.banner.color.improve') }}</span>
       </div>
@@ -42,7 +42,9 @@ export default defineComponent({
         const color = COLORS[CURRENT]
         const new_color = COLORS[CURRENT === COLORS.length -1 ? 0 : CURRENT + 1]
         document.getElementById(new_color.name)!.classList.toggle(new_color.color)
+        document.getElementById(new_color.name)!.classList.toggle('z-index-3')
         setTimeout(() => document.getElementById(color.name)!.classList.toggle(color.color), 0)
+        setTimeout(() => document.getElementById(color.name)!.classList.toggle('z-index-3'), 0)
         CURRENT === COLORS.length - 1 ? CURRENT = 0 : CURRENT++
       }, 2000)
     })

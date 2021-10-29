@@ -1,11 +1,14 @@
 <template>
-  <div class="mb-3 mr-2 p-1 md:p-2 h-32 w-32 border-gray-900 dark:border-dark-200 border-2 duration-300 rounded-3xl hover:bg-opacity-25" :class="getColor">
-    <div class="w-full h-full flex flex-col justify-center items-center">
-      <div>
-        <img class="rounded-sm" :alt="`Skill ${name} Image`" :src="`https://athena.arthurdanjou.fr/files/${cover}`" />
-      </div>
-      <h1 class="md:text-lg text-md font-bold text-center text-gray-700 dark:text-gray-400">{{ name }}</h1>
-    </div>
+  <div
+    :id="name.toLowerCase()"
+    class="p-1 flex items-center group group"
+  >
+    <img
+      class="rounded-sm h-8 mr-2"
+      :alt="`Skill ${name} Image`"
+      :src="`https://athena.arthurdanjou.fr/files/${cover}`"
+    />
+    <h1 :class="getColor" class="duration-300 md:font-lg font-md font-bold text-center text-gray-700 dark:text-gray-400">{{ name }}</h1>
   </div>
 </template>
 
@@ -38,31 +41,31 @@ export default defineComponent({
     const getColor = computed(() => {
       switch (props.color) {
         case 'blueGray':
-          return 'hover:bg-blueGray-400'
+          return 'group-hover:text-blueGray-400'
         case 'cyan':
-          return 'hover:bg-cyan-400'
+          return 'group-hover:text-cyan-400'
         case 'yellow':
-          return 'hover:bg-yellow-400'
+          return 'group-hover:text-yellow-400'
         case 'emerald':
-          return 'hover:bg-emerald-400'
+          return 'group-hover:text-emerald-400'
         case 'purple':
-          return 'hover:bg-purple-400'
+          return 'group-hover:text-purple-400'
         case 'orange':
-          return 'hover:bg-orange-400'
+          return 'group-hover:text-orange-700'
         case 'sky':
-          return 'hover:bg-sky-400'
+          return 'group-hover:text-sky-400'
         case 'lime':
-          return 'hover:bg-lime-400'
+          return 'group-hover:text-lime-400'
         case 'teal':
-          return 'hover:bg-teal-400'
+          return 'group-hover:text-teal-400'
         case 'blue':
-          return 'hover:bg-blue-400'
+          return 'group-hover:text-blue-400'
         case 'red':
-          return 'hover:bg-red-400'
+          return 'group-hover:text-red-400'
         case 'rose':
-          return 'hover:bg-rose-400'
+          return 'group-hover:text-rose-400'
         case 'amber':
-          return 'hover:bg-amber-400'
+          return 'group-hover:text-amber-400'
       }
     })
 

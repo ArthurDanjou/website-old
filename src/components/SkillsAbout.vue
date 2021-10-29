@@ -1,11 +1,11 @@
 <template>
-  <section class="w-full mb-10 mt-4">
+  <section class="w-full mb-10 mt-4 flex flex-col">
     <h3 class="font-bold text-2xl md:text-4xl mb-3">
       {{ $t('about.title.skills') }}
       <CubeIcon />
     </h3>
-    <div class="flex flex-row w-full overflow-x-auto md:overflow-x-hidden lg:flex-wrap space-x-4 lg:space-x-0 lg:justify-center">
-      <div v-if="skills" v-for="skill in skills">
+    <div class="mt-4 grid gap-4 grid-cols-2 sm:grid-cols-4 md:grid-cols-4">
+      <div v-if="skills" v-for="skill in skills" class="z-index-3">
         <Skill
           :name="skill.name"
           :color="skill.color"
