@@ -4,7 +4,7 @@
       <div>
         <div class="mb-4 flex">
           <nuxt-link to="/blog" data-blobity-magnetic="false" class="z-index-3 flex">
-            <div class="duration-300 arrow">
+            <div class="duration-300">
               <BackSpaceIcon />
             </div>
             <div class="ml-2">
@@ -77,7 +77,7 @@
             @click="scrollToTop"
             class="z-index-3 mr-2 text-2xl p-2 border-solid border border-gray-300 dark:border-dark-200 flex justify-center items-center bg-white dark:bg-black"
           >
-            <ArrowUpIcon />
+            <ArrowBlogIcon />
           </div>
         </div>
         <div class="flex items-center">
