@@ -107,7 +107,7 @@
     <section
       class="z-index-3 w-full lg:w-4/5"
     >
-      <nuxt-link to="/contact" data-blobity-offset-x="8" data-blobity-offset-y="8">
+      <nuxt-link to="/contact" data-blobity-offset-x="8" data-blobity-offset-y="8" data-blobity-radius="25">
         <Ad color="green" class="group flex flex-col lg:flex-row">
           <div class="lg:w-1/2 flex justify-center">
             <img class="h-48 lg:h-64 group-hover:scale-105 transform duration-500" src="~/assets/images/memojies/Fiesta.png" alt="Fiesta Memoji" />

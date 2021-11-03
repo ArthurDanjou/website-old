@@ -25,6 +25,7 @@
             class="mx-2 h-8 w-8 flex items-center justify-center p-1"
             data-blobity
             data-blobity-magnetic="false"
+            data-blobity-radius="20"
           >
             <TranslateIcon class="z-index-3" :french="isFrench"/>
           </li>
@@ -33,6 +34,7 @@
             class="mx-2 h-8 w-8 flex items-center justify-center p-1"
             data-blobity
             data-blobity-magnetic="false"
+            data-blobity-radius="20"
           >
             <div class="z-index-3" v-if="this.$colorMode.preference === 'light'">
               <MoonIcon/>
@@ -51,9 +53,6 @@
 import {
   computed,
   defineComponent,
-  onMounted,
-  onUnmounted,
-  ref,
   useAsync,
   useContext,
   useRouter,

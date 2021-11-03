@@ -6,8 +6,8 @@
     <LanguagesAbout />
     <FormationsAbout />
     <ExperiencesAbout />
-    <a href="/resume.pdf" target="_blank" class="z-index-3 duration-150 transform hover:scale-105">
-      <div class="text-lg px-8 py-4 rounded-xl border-2 border-red-500 dark:border-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) dark:hover:text-black text-red-500 dark:text-amber-400 duration-300">
+    <a href="/resume.pdf" data-blobity-radius="16" target="_blank" class="z-index-3 duration-150 transform hover:scale-105">
+      <div class="text-lg px-8 py-4 rounded-xl border-2 border-red-500 dark:border-amber-400 text-red-500 dark:text-amber-400 bg-white dark:bg-black">
         {{ $t('about.cv') }}
       </div>
     </a>
