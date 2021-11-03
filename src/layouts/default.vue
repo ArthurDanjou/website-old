@@ -14,6 +14,7 @@
         >
           <Announce />
           <Header />
+          <Scroller />
           <Nuxt class="pt-16 content"/>
           <Footer />
         </div>
@@ -45,7 +46,7 @@ export default {
       }, 500)
     }
 
-    const blobity = useBlobity(options)
+    useBlobity(options)
 
     return {
       opened: computed(() => store.state.opened),
