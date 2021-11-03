@@ -11,7 +11,7 @@
               {{ $t('footer.description') }}
             </p>
             <div class="mt-4 flex">
-              <nuxt-link data-blobity-magnetic="false" to="/contact" class="z-index-3 text-red-400">
+              <nuxt-link data-blobity-magnetic="false" data-blobity-radius="16" to="/contact" class="z-index-3 text-red-500">
                 {{ $t(hiring_message) }}
               </nuxt-link>
             </div>
@@ -70,18 +70,20 @@
           </div>
         </div>
       </div>
-      <div class="text-center border-t-2 border-gray-200 dark:border-gray-800 py-8 lg:flex lg:flex-row-reverse justify-between">
-        <div class="flex">
+      <div class="lg:mx-20 text-center border-t-2 border-gray-200 dark:border-gray-800 py-8 lg:flex lg:flex-row-reverse justify-between">
+        <div class="flex flex-col lg:flex-row">
           {{ $t('footer.credits') }}
-          <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
-            <NuxtIcon />
-            <span>NuxtJS</span>
-          </a>
-          {{ $t('footer.credits_separator') }}
-          <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
-            <AdonisIcon />
-            <span>AdonisJS</span>
-          </a>
+          <div class="flex justify-center">
+            <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://nuxtjs.org" rel="noopener noreferrer">
+              <NuxtIcon />
+              <span>NuxtJS</span>
+            </a>
+            {{ $t('footer.credits_separator') }}
+            <a data-blobity-magnetic="false" class="z-index-3 mx-2 social font-semibold" target="_blank" href="https://adonisjs.com" rel="noopener noreferrer">
+              <AdonisIcon />
+              <span>AdonisJS</span>
+            </a>
+          </div>
         </div>
         <p class="mt-4 lg:mt-0">{{ $t('footer.copyrights', { date: getDate }) }}</p>
       </div>
