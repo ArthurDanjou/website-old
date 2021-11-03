@@ -3,7 +3,7 @@ import {Options} from "blobity/lib/Blobity";
 import {onMounted, ref} from "@nuxtjs/composition-api";
 
 export const options: Partial<Options> = {
-  color: 'rgb(180, 180, 180)',
+  color: 'rgb(125, 125, 125)',
   mode: 'normal',
   zIndex: 1,
   opacity: 1,
@@ -15,13 +15,13 @@ export const options: Partial<Options> = {
 }
 
 export const useBlobity = (options: Partial<Options>) => {
-  const instance = ref<Blobity | null>(null)
+  const instance = ref<Blobity>()
   onMounted(() => {
     if (!instance.value) {
       instance.value = new Blobity(options);
     }
   })
 
-  return instance.value!
+  return instance.value
 }
 
