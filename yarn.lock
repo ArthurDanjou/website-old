@@ -1092,10 +1092,10 @@
     std-env "^2.3.0"
     ufo "^0.7.4"
 
-"@nuxt/content@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-1.14.0.tgz#5775b596d2db1ae65c41d461c0a6734fc276cb82"
-  integrity sha512-MYx+dTu2ZRUHWGp9EgVtFfXJHFeCKrzazaM4a9785OCipItp6zmm1hTlbfdCYenwa0HgaOXCxYAiN0h6tjyUZw==
+"@nuxt/content@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-1.15.0.tgz#5e15d5d0012e95be60e1904f25cbe909b29404f6"
+  integrity sha512-F3znlZUOSKPse6G+qR6eGEIU3vzfXzfc5WnWwA94kfM5+dz7IkP6Hwyj8FTUyW7HfmvQIf6Nc2sNm5obKgNgtA==
   dependencies:
     "@lokidb/full-text-search" "^2.1.0"
     "@lokidb/loki" "^2.1.0"
@@ -1115,6 +1115,7 @@
     hookable "^4.4.1"
     html-tags "^3.1.0"
     js-yaml "4.0.0"
+    json5 "^2.2.0"
     mdast-util-to-hast "^10.2.0"
     mkdirp "^1.0.4"
     node-req "^2.1.2"
@@ -2601,12 +2602,19 @@ axios-retry@^3.1.9:
     "@babel/runtime" "^7.15.4"
     is-retry-allowed "^2.2.0"
 
-axios@^0.21.1, axios@^0.21.4:
+axios@^0.21.1:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
   dependencies:
     follow-redirects "^1.14.0"
+
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
 
 babel-loader@^8.2.2:
   version "8.2.2"
@@ -3487,10 +3495,10 @@ core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.18.3:
-  version "3.18.3"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.18.3.tgz#86a0bba2d8ec3df860fefcc07a8d119779f01509"
-  integrity sha512-tReEhtMReZaPFVw7dajMx0vlsz3oOb8ajgPoHVYGxr8ErnZ6PcYEvvmjGmXlfpnxpkYSdOQttjB+MvVbCGfvLw==
+core-js@^3.19.1:
+  version "3.19.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.1.tgz#f6f173cae23e73a7d88fa23b6e9da329276c6641"
+  integrity sha512-Tnc7E9iKd/b/ff7GFbhwPVzJzPztGrChB8X8GLqoYGdEOG8IpLnK1xPyo3ZoO3HsK6TodJS58VGPOxA+hLHQMg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -4522,10 +4530,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.0:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
-  integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.4:
+  version "1.14.5"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
+  integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -5813,7 +5821,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.1, json5@^2.1.2:
+json5@^2.1.1, json5@^2.1.2, json5@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
   integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
@@ -6825,10 +6833,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-windicss@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-2.0.3.tgz#6218066070f1162a3c0175e710aca0006e6380d2"
-  integrity sha512-xwh1/PPRvuG75gC3SJn1QG+aQaqW978FbYOBucVC1dMzdU0TQvShPdQZY0pCCMbo8LHYZDtHMxlt0T85o1koaw==
+nuxt-windicss@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-2.0.11.tgz#4328e84eb89aad3930968cfaf681857be64d25d7"
+  integrity sha512-/vAEmKLq1Iomuj4lz751dsoXdlGVAoiEGSh3JVxuZJMkqc/yrHTQrNhtMaOQzx5heuVsQ+E2bIF+Q/tfxicOFQ==
   dependencies:
     "@nuxt/kit" "npm:@nuxt/kit-edge@latest"
     defu "^5.0.0"
@@ -6838,9 +6846,9 @@ nuxt-windicss@^2.0.3:
     read-cache "^1.0.0"
     sirv "^1.0.17"
     vite-plugin-windicss "^1.4.11"
-    windicss "^3.1.9"
+    windicss "^3.2.0"
     windicss-analysis "^0.3.4"
-    windicss-webpack-plugin "^1.4.9"
+    windicss-webpack-plugin "^1.5.5"
 
 nuxt@^2.15.8:
   version "2.15.8"
@@ -8576,10 +8584,10 @@ sass-loader@^10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.43.2:
-  version "1.43.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.43.2.tgz#c02501520c624ad6622529a8b3724eb08da82d65"
-  integrity sha512-DncYhjl3wBaPMMJR0kIUaH3sF536rVrOcqqVGmTZHQRRzj7LQlyGV7Mb8aCKFyILMr5VsPHwRYtyKpnKYlmQSQ==
+sass@^1.43.4:
+  version "1.43.4"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.43.4.tgz#68c7d6a1b004bef49af0d9caf750e9b252105d1f"
+  integrity sha512-/ptG7KE9lxpGSYiXn7Ar+lKOv37xfWsZRtFYal2QHNigyVQDx685VFT/h7ejVr+R8w7H4tmUgtulsKl5YpveOg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
@@ -10106,10 +10114,10 @@ windicss-analysis@^0.3.4:
     fs-extra "^10.0.0"
     sirv "^1.0.12"
 
-windicss-webpack-plugin@^1.4.9:
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/windicss-webpack-plugin/-/windicss-webpack-plugin-1.4.10.tgz#fc42a3ad4fb5a9321b4ca2a0986a0e6ec7f50fb8"
-  integrity sha512-amx4ovN7mNr8V6NX/VxjbCam9iAx9Ll9tkGw6gTCZ7BoPxhMmHQ6B+qtdhClmS33NfxZY/xI5YOb695yKRZ4BQ==
+windicss-webpack-plugin@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/windicss-webpack-plugin/-/windicss-webpack-plugin-1.5.5.tgz#476d309f63f53a0d1053cf84b1af7da4a60c736b"
+  integrity sha512-ZAVZSmxtfeAYVBQR+QnhfGh44s4WGNcexNjPBX1PaObzR562JlGnbuT6z7r12kO2bDqz37qSnH50o73UjMNFFw==
   dependencies:
     "@windicss/plugin-utils" "^1.4.12"
     debug "^4.3.2"
@@ -10118,12 +10126,17 @@ windicss-webpack-plugin@^1.4.9:
     magic-string "^0.25.7"
     upath "^2.0.1"
     webpack-virtual-modules "^0.4.3"
-    windicss "^3.1.9"
+    windicss "^3.2.0"
 
 windicss@^3.1.9:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/windicss/-/windicss-3.1.9.tgz#e43d924168422efa743c8223607c3af47d2d0291"
   integrity sha512-5YoKvXeCQXIdwc91BoOgpKbIImr2JS8I14rPMa/5dKDDPA4ot3NgICWKELkml39R/8rn4Q0BVUUTqN+w+hjDSA==
+
+windicss@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-3.2.1.tgz#bd0f7b9ebabba04ea8dfedcbb0263c2ef9591db4"
+  integrity sha512-LusrIrryBFHAPQ/OOTbS4EWWuzI6eGeJglI9nQ3kDBr1cqH69NWt8Z8q59f9kTkgptXroejmWfksWwqgHs8EVw==
 
 worker-farm@^1.7.0:
   version "1.7.0"
