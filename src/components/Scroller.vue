@@ -13,35 +13,25 @@
   </transition>
 </template>
 
-<script lang="ts">
-import {defineComponent, onMounted, onUnmounted, ref, useRouter} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {onMounted, onUnmounted, ref} from "vue";
 
-export default defineComponent({
-  name: "Scroller",
-  setup() {
-    const scrollPosition = ref(0)
+const scrollPosition = ref(0)
 
-    const scrollToTop = () => {
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    }
+const scrollToTop = () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
-    const updateScroll = () => {
-      scrollPosition.value = window.scrollY
-    }
+const updateScroll = () => {
+  scrollPosition.value = window.scrollY
+}
 
-    onMounted(() => {
-      window.addEventListener('scroll', updateScroll);
-    })
+onMounted(() => {
+  window.addEventListener('scroll', updateScroll);
+})
 
-    onUnmounted(() => {
-      window.removeEventListener('scroll', updateScroll)
-    })
-
-    return {
-      scrollPosition,
-      scrollToTop
-    }
-  }
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateScroll)
 })
 </script>
 

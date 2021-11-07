@@ -4,36 +4,23 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import { computed } from 'vue'
 
-interface AdProps {
-  color: string
-}
-
-export default defineComponent({
-  name: "Ad",
-  props: {
-    color: {
-      type: String,
-      default: 'red'
-    }
-  },
-  setup(props: AdProps) {
-    const getColor = computed(() => {
-      switch (props.color) {
-        case 'red':
-          return 'bg-red-400'
-        case 'blue':
-          return 'bg-blue-400'
-        case 'green':
-          return 'bg-green-400'
-      }
-    })
-
-    return {
-      getColor
-    }
+const props = defineProps({
+  color: {
+    type: String,
+    default: 'red'
+  }
+})
+const getColor = computed(() => {
+  switch (props.color) {
+    case 'red':
+      return 'bg-red-400'
+    case 'blue':
+      return 'bg-blue-400'
+    case 'green':
+      return 'bg-green-400'
   }
 })
 </script>

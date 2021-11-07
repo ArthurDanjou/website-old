@@ -91,45 +91,34 @@
   </footer>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, ref, useAsync, useContext, useStore} from "@nuxtjs/composition-api";
-import {State} from "~/types/types";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
+import {computed, ref} from "vue";
 
-export default defineComponent({
-  name: "Footer",
-  setup() {
-    const {$axios, $sentry, app} = useContext()
+const {$axios, $sentry, app} = useNuxtApp()
 
-    const getDate = ref(new Date().getFullYear())
+const getDate = ref(new Date().getFullYear())
 
-    const hiring_message = useAsync(async () => {
-      const request = await $axios.get('/api/informations', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (request.status === 200) {
-        return request.data.informations.translation.code
-      } else {
-        app.error({statusCode: 500})
-        $sentry.captureEvent(request.data)
-      }
-    }, 'hiring_message')
-
-    const store = useStore<State>()
-    const route = computed(() => store.state.route)
-    const isWindow = (loc: string) => {
-      if (loc === '') return route.value === "/"
-      else return route.value.includes(loc)
+const hiring_message = useAsyncData('hiring_message', async () => {
+  const request = await $axios.get('/api/informations', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
-
-    return {
-      getDate,
-      hiring_message,
-      isWindow
-    }
+  })
+  if (request.status === 200) {
+    return request.data.informations.translation.code
+  } else {
+    app.error({statusCode: 500})
+    $sentry.captureEvent(request.data)
   }
 })
+
+const { $store } = useNuxtApp()
+const route = computed(() => $store.state.route)
+const isWindow = (loc: string) => {
+  if (loc === '') return route.value === "/"
+  else return route.value.includes(loc)
+}
 </script>
 
 <style scoped lang="scss">

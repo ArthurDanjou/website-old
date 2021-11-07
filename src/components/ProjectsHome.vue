@@ -27,31 +27,21 @@
   </section>
 </template>
 
-<script lang="ts">
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
 
-export default defineComponent({
-  name: "ProjectsHome",
-  setup() {
-    const { $axios, app, $sentry } = useContext()
-
-    const projects = useAsync(async () => {
-      const response = await $axios.get('/api/projects', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (response.status === 200) {
-        return response.data.projects.slice(0, 3)
-      } else {
-        $sentry.captureEvent(response.data)
-        app.error({statusCode: 500})
-      }
-    }, 'projects_home')
-
-    return {
-      projects
+const { $axios, app, $sentry } = useNuxtApp()
+const projects = await useAsyncData('projects_home', async () => {
+  const response = await $axios.get('/api/projects', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
+  })
+  if (response.status === 200) {
+    return response.data.projects.slice(0, 3)
+  } else {
+    $sentry.captureEvent(response.data)
+    app.error({statusCode: 500})
   }
 })
 </script>

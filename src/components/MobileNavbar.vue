@@ -24,9 +24,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, useRouter, useStore} from "@nuxtjs/composition-api";
-import {State} from "~/types/types";
+<script setup lang="ts">
+import {useNuxtApp, useRouter} from "nuxt3";
+import {computed} from "vue";
 
 const PAGE_TYPE = {
   projects: 1,
@@ -36,46 +36,36 @@ const PAGE_TYPE = {
   newsletter: 5
 }
 
-export default defineComponent({
-  name: "MobileNavbar",
-  setup () {
-    const store = useStore<State>()
-    const route = computed(() => store.state.route)
-    const isWindow = (loc: string) => {
-      if (loc === '') return route.value === "/"
-      else return route.value.includes(loc)
-    }
+const { $store } = useNuxtApp()
+const route = computed(() => $store.state.route)
+const isWindow = (loc: string) => {
+  if (loc === '') return route.value === "/"
+  else return route.value.includes(loc)
+}
 
-    const getMenuIconType = computed(() => PAGE_TYPE[route.value.split('/')[1]] || 0)
+const getMenuIconType = computed(() => PAGE_TYPE[route.value.split('/')[1]] || 0)
 
-    const toggleMenu = () => {
-      store.commit('TOGGLE_OPENED', !store.state.opened)
-      if (store.state.opened) {
-        document.getElementById('slider')!.style.maxHeight = window.innerHeight + 'px'
-        setTimeout(() => document.getElementById('nav')!.classList.add('z-50'), 300)
-      } else {
-        document.getElementById('nav')!.classList.remove('z-50')
-        setTimeout(() => {
-          document.getElementById('slider')!.style.maxHeight = 'none'
-        }, 500)
-      }
-    }
-
-    const $router = useRouter()
-    $router.afterEach(() => {
-      store.commit('TOGGLE_OPENED', false)
-      document.getElementById('nav')!.classList.remove('z-50')
-      setTimeout(() => {
-        document.getElementById('slider')!.style.maxHeight = 'none'
-      }, 600)
-    })
-
-    return {
-      isWindow,
-      toggleMenu,
-      opened: computed(() => store.state.opened),
-      getMenuIconType
-    }
+const toggleMenu = () => {
+  $store.commit('TOGGLE_OPENED', !$store.state.opened)
+  if ($store.state.opened) {
+    document.getElementById('slider')!.style.maxHeight = window.innerHeight + 'px'
+    setTimeout(() => document.getElementById('nav')!.classList.add('z-50'), 300)
+  } else {
+    document.getElementById('nav')!.classList.remove('z-50')
+    setTimeout(() => {
+      document.getElementById('slider')!.style.maxHeight = 'none'
+    }, 500)
   }
+}
+
+const $router = useRouter()
+$router.afterEach(() => {
+  $store.commit('TOGGLE_OPENED', false)
+  document.getElementById('nav')!.classList.remove('z-50')
+  setTimeout(() => {
+    document.getElementById('slider')!.style.maxHeight = 'none'
+  }, 600)
 })
+
+const opened = computed(() => $store.state.opened)
 </script>

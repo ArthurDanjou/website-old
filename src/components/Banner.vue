@@ -17,9 +17,8 @@
   </section>
 </template>
 
-<script lang="ts">
-import {defineComponent, onMounted, onUnmounted} from "@nuxtjs/composition-api";
-
+<script setup lang="ts">
+import { onMounted, onUnmounted } from 'vue'
 interface Color {
   name: string,
   color: string
@@ -31,27 +30,22 @@ const COLORS: Color[] = [
   { name: 'improve', color: 'green' }
 ]
 
-export default defineComponent({
-  name: "Banner",
-  setup() {
-    let task
+let task
 
-    onMounted(() => {
-      let CURRENT = 0
-      task = setInterval(() => {
-        const color = COLORS[CURRENT]
-        const new_color = COLORS[CURRENT === COLORS.length -1 ? 0 : CURRENT + 1]
-        document.getElementById(new_color.name)!.classList.toggle(new_color.color)
-        document.getElementById(new_color.name)!.classList.toggle('z-index-3')
-        setTimeout(() => document.getElementById(color.name)!.classList.toggle(color.color), 0)
-        setTimeout(() => document.getElementById(color.name)!.classList.toggle('z-index-3'), 0)
-        CURRENT === COLORS.length - 1 ? CURRENT = 0 : CURRENT++
-      }, 2000)
-    })
-
-    onUnmounted(() => clearInterval(task))
-  }
+onMounted(() => {
+  let CURRENT = 0
+  task = setInterval(() => {
+    const color = COLORS[CURRENT]
+    const new_color = COLORS[CURRENT === COLORS.length -1 ? 0 : CURRENT + 1]
+    document.getElementById(new_color.name)!.classList.toggle(new_color.color)
+    document.getElementById(new_color.name)!.classList.toggle('z-index-3')
+    setTimeout(() => document.getElementById(color.name)!.classList.toggle(color.color), 0)
+    setTimeout(() => document.getElementById(color.name)!.classList.toggle('z-index-3'), 0)
+    CURRENT === COLORS.length - 1 ? CURRENT = 0 : CURRENT++
+  }, 2000)
 })
+
+onUnmounted(() => clearInterval(task))
 </script>
 
 <style scoped lang="scss">

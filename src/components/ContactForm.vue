@@ -73,63 +73,51 @@
   </section>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, ref, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {ref, computed} from 'vue'
 import {Form} from "~/types/types";
+import {useNuxtApp} from "nuxt3";
 
-export default defineComponent({
-  name: "ContactForm",
-  setup() {
-    const error = ref(false)
-    const success = ref(false)
+const error = ref(false)
+const success = ref(false)
 
-    const {$axios, $sentry} = useContext()
-    const form = ref<Form>({} as Form)
-    const handleForm = async () => {
-      const response = await $axios.post('/api/form',
-        {
-          email: form.value.email,
-          name: form.value.name,
-          content: form.value.content,
-          subject: form.value.subject
-        }, {
-          headers: {
-            'Authorization': `Bearer ${process.env.API_TOKEN}`
-          }
-        })
-      if (response.status === 200) {
-        success.value = true
-        setTimeout(() => {
-          success.value = false
-          form.value = {} as Form
-        }, 5000)
-      } else {
-        $sentry.captureEvent(response.data)
-        error.value = true
-        setTimeout(() => {
-          error.value = false
-        }, 5000)
+const {$axios, $sentry} = useNuxtApp()
+const form = ref<Form>({} as Form)
+const handleForm = async () => {
+  const response = await $axios.post('/api/form',
+    {
+      email: form.value.email,
+      name: form.value.name,
+      content: form.value.content,
+      subject: form.value.subject
+    }, {
+      headers: {
+        'Authorization': `Bearer ${process.env.API_TOKEN}`
       }
-    }
-
-    const isSendable = computed(() => {
-      const {email, name, content, subject} = form.value
-      return isNotEmpty(email) && isNotEmpty(name) && isNotEmpty(content) && isNotEmpty(subject)
     })
-
-    const isNotEmpty = (object: string | undefined) => {
-      return object !== undefined && object.length > 0 && object !== "" && object !== ''
-    }
-
-    return {
-      error,
-      success,
-      isSendable,
-      form,
-      handleForm
-    }
+  if (response.status === 200) {
+    success.value = true
+    setTimeout(() => {
+      success.value = false
+      form.value = {} as Form
+    }, 5000)
+  } else {
+    $sentry.captureEvent(response.data)
+    error.value = true
+    setTimeout(() => {
+      error.value = false
+    }, 5000)
   }
+}
+
+const isSendable = computed(() => {
+  const {email, name, content, subject} = form.value
+  return isNotEmpty(email) && isNotEmpty(name) && isNotEmpty(content) && isNotEmpty(subject)
 })
+
+const isNotEmpty = (object: string | undefined) => {
+  return object !== undefined && object.length > 0 && object !== "" && object !== ''
+}
 </script>
 
 <style scoped lang="scss">

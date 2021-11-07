@@ -25,13 +25,12 @@
 </template>
 
 <script lang="ts">
-import {computed, useRouter, useStore} from "@nuxtjs/composition-api";
-import {State} from "~/types/types";
+import {computed, useRouter, useStore} from "@nuxt/bridge/dist/runtime/capi.legacy";
 import {options, useBlobity} from "@/plugins/Blobity";
 
 export default {
   setup() {
-    const store = useStore<State>()
+    const store = useStore()
     const $router = useRouter()
 
     $router.afterEach(() => {

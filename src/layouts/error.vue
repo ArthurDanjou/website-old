@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, useRouter} from "@nuxtjs/composition-api";
+import {defineComponent, useRouter} from "@nuxt/bridge/dist/runtime/capi.legacy";
 
 export default defineComponent({
   name: "error",

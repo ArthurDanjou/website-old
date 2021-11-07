@@ -83,54 +83,42 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, useAsync, useContext, useRouter, useStore} from "@nuxtjs/composition-api";
-import {State} from "~/types/types";
+<script setup lang="ts">
+import {useNuxtApp, useRouter} from "nuxt3";
+import {computed} from "vue";
 
-export default defineComponent({
-  name: "SideMenu",
-  setup() {
-    const {$colorMode} = useContext()
-    const changeColorMode = () => {
-      $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
-    }
+const {$colorMode} = useNuxtApp()
+const changeColorMode = () => {
+  $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
+}
 
-    const {i18n} = useContext()
-    const $router = useRouter()
-    const changeLanguage = () => useAsync(() => {
-      i18n.setLocale(i18n.locale === 'fr' ? 'en' : 'fr')
-      if ($router.currentRoute.fullPath.includes('blog')) {
-        window.location.reload()
-      }
-    })
-
-    const isFrench = computed(() => i18n.locale === 'fr')
-
-    const store = useStore<State>()
-    const closeMenu = () => {
-      store.commit('TOGGLE_OPENED', false)
-      document.getElementById('nav')!.classList.remove('z-50')
-      setTimeout(() => {
-        document.getElementById('slider')!.style.maxHeight = 'none'
-      }, 500)
-    }
-
-    const route = computed(() => store.state.route)
-    const isWindow = (loc: string) => {
-      if (loc === '') return route.value === "/"
-      else return route.value.includes(loc)
-    }
-
-    return {
-      changeColorMode,
-      changeLanguage,
-      closeMenu,
-      opened: computed(() => store.state.opened),
-      isWindow,
-      isFrench
-    }
+const {i18n} = useNuxtApp()
+const $router = useRouter()
+const changeLanguage = () => useAsync(() => {
+  i18n.setLocale(i18n.locale === 'fr' ? 'en' : 'fr')
+  if ($router.currentRoute.fullPath.includes('blog')) {
+    window.location.reload()
   }
 })
+
+const isFrench = computed(() => i18n.locale === 'fr')
+
+const { $store } = useNuxtApp()
+const closeMenu = () => {
+  $store.commit('TOGGLE_OPENED', false)
+  document.getElementById('nav')!.classList.remove('z-50')
+  setTimeout(() => {
+    document.getElementById('slider')!.style.maxHeight = 'none'
+  }, 500)
+}
+
+const opened = computed(() => $store.state.opened)
+
+const route = computed(() => $store.state.route)
+const isWindow = (loc: string) => {
+  if (loc === '') return route.value === "/"
+  else return route.value.includes(loc)
+}
 </script>
 
 <style scoped lang="scss">

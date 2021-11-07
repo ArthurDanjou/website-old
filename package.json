@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .nuxt/server/index.mjs",
     "analyse": "windicss-analysis"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.0",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/composition-api": "^0.29.3",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/i18n": "^7.1.0",
     "@nuxtjs/proxy": "^2.1.0",
@@ -23,13 +21,12 @@
     "axios": "^0.24.0",
     "blobity": "^0.1.7",
     "core-js": "^3.19.1",
-    "nuxt": "^2.15.8",
+    "nuxt3": "latest",
     "prism-themes": "^1.9.0",
     "sass": "^1.43.4"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.1.1",
     "markdown-it-prism": "^2.2.1",
     "nuxt-windicss": "^2.0.11",

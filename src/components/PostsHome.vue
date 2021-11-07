@@ -28,31 +28,21 @@
   </section>
 </template>
 
-<script lang="ts">
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
 
-export default defineComponent({
-  name: "PostsHome",
-  setup() {
-    const { $axios, app, $sentry } = useContext()
-
-    const posts = useAsync(async () => {
-      const response = await $axios.get('/api/posts', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (response.status === 200) {
-        return response.data.posts
-      } else {
-        app.error({statusCode: 500})
-        $sentry.captureEvent(response.data)
-      }
-    }, 'posts_home')
-
-    return {
-      posts
+const { $axios, app, $sentry } = useNuxtApp()
+const posts = await useAsyncData('posts_home', async () => {
+  const response = await $axios.get('/api/posts', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
+  })
+  if (response.status === 200) {
+    return response.data.posts
+  } else {
+    app.error({statusCode: 500})
+    $sentry.captureEvent(response.data)
   }
 })
 </script>

@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, ref, useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, ref, useAsync, useContext} from "@nuxt/bridge/dist/runtime/capi.legacy";
 import {NewsletterForm} from "~/types/types";
 
 export default defineComponent({

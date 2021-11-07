@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useAsync, useContext} from "@nuxt/bridge/dist/runtime/capi.legacy";
 
 export default defineComponent({
   name: "maintenance",

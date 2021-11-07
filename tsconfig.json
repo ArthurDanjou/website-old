@@ -1,4 +1,5 @@
 {
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
@@ -58,11 +59,9 @@
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
     "types": [
       "@types/node",
-      "@nuxt/content",
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxtjs/sentry",
-      "@nuxtjs/composition-api",
       "@nuxtjs/i18n",
       "@nuxtjs/color-mode",
       "@nuxtjs/universal-storage"

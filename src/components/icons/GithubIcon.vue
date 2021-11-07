@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, useContext} from "@nuxtjs/composition-api";
+import {computed, defineComponent, useContext} from "@nuxt/bridge/dist/runtime/capi.legacy";
 
 export default defineComponent({
   name: "GithubIcon",

@@ -16,31 +16,21 @@
   </section>
 </template>
 
-<script lang="ts">
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
 
-export default defineComponent({
-  name: "SkillsAbout",
-  setup() {
-    const {$axios, $sentry, app} = useContext()
-
-    const skills = useAsync(async () => {
-      const response = await $axios.get('/api/skills', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (response.status === 200) {
-        return response.data.skills
-      } else {
-        app.error({statusCode: 500})
-        $sentry.captureEvent(response.data)
-      }
-    }, 'skills')
-
-    return {
-      skills
+const {$axios, $sentry, app} = useNuxtApp()
+const skills = await useAsyncData('skills', async () => {
+  const response = await $axios.get('/api/skills', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
+  })
+  if (response.status === 200) {
+    return response.data.skills
+  } else {
+    app.error({statusCode: 500})
+    $sentry.captureEvent(response.data)
   }
 })
 </script>

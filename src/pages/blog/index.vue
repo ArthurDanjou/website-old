@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxt/bridge/dist/runtime/capi.legacy";
 
 export default defineComponent({
   name: "blog",

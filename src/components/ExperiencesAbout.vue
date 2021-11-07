@@ -15,33 +15,23 @@
   </section>
 </template>
 
-<script lang="ts">
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
 
-export default defineComponent({
-  name: "ExperiencesAbout",
-  setup() {
-    const {$axios, $sentry, app} = useContext()
-
-    const experiences = useAsync(async () => {
-      const response = await $axios.get('/api/experiences', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (response.status === 200) {
-        return response.data.experiences.sort((a, b) => {
-          return a.end_date === 'Today' ? -1 : a.end_date.split('-')[1] > b.end_date.split('-')[1] ? -1 : a.end_date.split('-')[0] > b.end_date.split('-')[0] ? 0 : 1
-        })
-      } else {
-        app.error({statusCode: 500})
-        $sentry.captureEvent(response.data)
-      }
-    }, 'experiences')
-
-    return {
-      experiences
+const {$axios, $sentry, app} = useNuxtApp()
+const experiences = await useAsyncData('experiences', async () => {
+  const response = await $axios.get('/api/experiences', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
     }
+  })
+  if (response.status === 200) {
+    return response.data.experiences.sort((a, b) => {
+      return a.end_date === 'Today' ? -1 : a.end_date.split('-')[1] > b.end_date.split('-')[1] ? -1 : a.end_date.split('-')[0] > b.end_date.split('-')[0] ? 0 : 1
+    })
+  } else {
+    app.error({statusCode: 500})
+    $sentry.captureEvent(response.data)
   }
 })
 </script>

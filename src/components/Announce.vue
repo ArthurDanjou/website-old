@@ -16,48 +16,37 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+import {useAsyncData, useNuxtApp} from "nuxt3";
+import {computed} from "vue";
 
-export default defineComponent({
-  name: "Announce",
-  setup() {
-    const {$axios, $sentry, app} = useContext()
+const {$axios, $sentry, app} = useNuxtApp()
+const announce = await useAsyncData('announce', async () => {
+  const response = await $axios.get('/api/announce', {
+    headers: {
+      'Authorization': `Bearer ${process.env.API_TOKEN}`
+    }
+  })
+  if (response.status === 200) {
+    return response.data.announce
+  } else {
+    $sentry.captureEvent(response.data)
+    app.error({statusCode: 500})
+  }
+})
 
-    const announce = useAsync(async () => {
-      const response = await $axios.get('/api/announce', {
-        headers: {
-          'Authorization': `Bearer ${process.env.API_TOKEN}`
-        }
-      })
-      if (response.status === 200) {
-        return response.data.announce
-      } else {
-        $sentry.captureEvent(response.data)
-        app.error({statusCode: 500})
-      }
-    }, 'announce')
+const getBackgroundColor = computed(() => {
+  switch (announce.data.value.color) {
+    case 'black': {
+      return 'bg-black text-white dark:(bg-white text-black)'
+    }
+  }
+})
 
-    const getBackgroundColor = computed(() => {
-      switch (announce.value.color) {
-        case 'black': {
-          return 'bg-black text-white dark:(bg-white text-black)'
-        }
-      }
-    })
-
-    const getHoverColor = computed(() => {
-      switch (announce.value.hover_color) {
-        case 'gray': {
-          return 'hover:bg-gray-800 dark:hover:bg-gray-300'
-        }
-      }
-    })
-
-    return {
-      announce,
-      getBackgroundColor,
-      getHoverColor,
+const getHoverColor = computed(() => {
+  switch (announce.data.value.hover_color) {
+    case 'gray': {
+      return 'hover:bg-gray-800 dark:hover:bg-gray-300'
     }
   }
 })

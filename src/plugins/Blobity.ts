@@ -1,6 +1,6 @@
 import Blobity from "blobity";
 import {Options} from "blobity/lib/Blobity";
-import {onMounted, ref} from "@nuxtjs/composition-api";
+import {onMounted, ref} from "@nuxt/bridge/dist/runtime/capi.legacy";
 
 export const options: Partial<Options> = {
   color: 'rgb(125, 125, 125)',

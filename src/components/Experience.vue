@@ -19,8 +19,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, defineComponent, useContext} from "@nuxtjs/composition-api";
+<script setup lang="ts">
+
+import {useNuxtApp} from "nuxt3";
+import {computed} from "vue";
 
 interface ExperienceProps {
   title: string,
@@ -30,50 +32,40 @@ interface ExperienceProps {
   end: string
 }
 
-export default defineComponent({
-  name: "Experience",
-  props: {
-    title: {
-      type: String,
-      default: "Title"
-    },
-    company: {
-      type: String,
-      default: "ArtDanjProduction"
-    },
-    location: {
-      type: String,
-      default: "France"
-    },
-    begin: {
-      type: String,
-      default: "Now"
-    },
-    end: {
-      type: String,
-      default: "Never"
-    }
+const props = defineProps({
+  title: {
+    type: String,
+    default: "Title"
   },
-  setup(props: ExperienceProps) {
-    const {i18n} = useContext()
-    const getBeginDate = computed(() => {
-      const dateFormat = props.begin.split('-')
-      return i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
-    })
-    const getEndDate = computed(() => {
-      const dateFormat = props.end.split('-')
-      return props.end === 'Today' ? i18n.t('date.today') : i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
-    })
-
-    const isSameDate = () => {
-      return props.begin === props.end
-    }
-
-    return {
-      getBeginDate,
-      getEndDate,
-      isSameDate
-    }
+  company: {
+    type: String,
+    default: "ArtDanjProduction"
+  },
+  location: {
+    type: String,
+    default: "France"
+  },
+  begin: {
+    type: String,
+    default: "Now"
+  },
+  end: {
+    type: String,
+    default: "Never"
   }
 })
+
+const {i18n} = useNuxtApp()
+const getBeginDate = computed(() => {
+  const dateFormat = props.begin.split('-')
+  return i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
+})
+const getEndDate = computed(() => {
+  const dateFormat = props.end.split('-')
+  return props.end === 'Today' ? i18n.t('date.today') : i18n.t('month.' + dateFormat[0]) + " " + dateFormat[1]
+})
+
+const isSameDate = () => {
+  return props.begin === props.end
+}
 </script>
