@@ -32,7 +32,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.1.1",
     "markdown-it-prism": "^2.2.1",
-    "nuxt-windicss": "^2.0.11",
+    "nuxt-windicss": "^2.0.12",
     "sass-loader": "^10.1.1",
     "windicss-analysis": "^0.3.4"
   }
