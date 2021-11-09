@@ -275,7 +275,7 @@ const translations = {
 
 export default async function () {
   let informations = {}
-  const response = await axios.get<{ translations: Translation[] }>('https://athena.arthurdanjou.fr/translations', {
+  const response = await axios.get<{ translations: Translation[] }>('https://api.arthurdanjou.fr/translations', {
     headers: {
       authorization: `Bearer ${process.env.API_TOKEN}`
     }
