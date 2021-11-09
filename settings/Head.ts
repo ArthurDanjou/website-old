@@ -2,16 +2,16 @@
 import {NuxtOptionsHead} from "@nuxt/types/config/head";
 
 const params = {
-  title: 'arthurdanjou.fr - Web & Software Developer',
+  title: 'Arthur Danjou • Software Engineer',
   color: '#00a0ff',
-  image: '/images/memojies/Hey.png',
+  image: 'assets/images/memojies/Hey.png',
   url: 'https://arthurdanjou.fr',
   favicon: {
     type: 'image/jpg',
     href: '/favicon.png',
   },
   description:
-    'Web & Software Developer from Paris, France.',
+    '👋 • Software Engineer passionate about networking, infrastructure and cloud • 18 yo • Paris, France',
 }
 
 export default {
@@ -33,6 +33,7 @@ export default {
     { hid: 'og:site_name', name: 'og:site_name', content: params.title },
     { hid: 'og:locale', name: 'og:locale', content: 'fr' },
     { hid: 'og:image', name: 'og:image', content: params.image },
+    { hid: 'og:description', name: 'og:description', content: params.description },
 
     { name: 'msapplication-TileColor', content: params.color },
     { name: 'theme-color', content: params.color },
