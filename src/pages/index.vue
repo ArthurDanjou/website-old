@@ -14,7 +14,7 @@ import Vue from 'vue'
 export default Vue.extend({
   head() {
     return {
-      title: 'Arthur Danjou - FullStack Web & Software Developer'
+      title: 'Arthur Danjou - Software Engineer'
     }
   }
 })

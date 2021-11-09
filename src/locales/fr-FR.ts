@@ -65,7 +65,7 @@ const translations = {
   },
 
   footer: {
-    description: "Développeur Web et Logiciel, mais aussi étudiant en Mathématiques et Physique 🎓. J'habite à Paris 🇫🇷. J'adore créer des applications et des logiciels plus ou moins utiles 🛍. J'utilise les technologies modernes pour obtenir le meilleur résultat possible ✨ J'adore également contribuer à tous types de projets Open-Source 🧪",
+    description: "Ingénieur Logiciel, mais aussi étudiant en Mathématiques et Physique 🎓. J'habite à Paris 🇫🇷. J'adore créer des applications et des logiciels plus ou moins utiles 🛍. J'utilise les technologies modernes pour obtenir le meilleur résultat possible ✨ J'adore également contribuer à tous types de projets Open-Source 🧪",
     links: 'Liens rapides',
     credits: 'Développé avec',
     credits_separator: 'et',
@@ -86,7 +86,7 @@ const translations = {
       description: "Je suis un jeune développeur autodidacte de {age} ans. J'habite à Paris 🇫🇷. J'adore créer des applications et des logiciels plus ou moins utiles. J'utilise des technologies modernes pour obtenir le meilleur résultat possible ✨",
     },
     banner: {
-      role: 'Développeur Web et Logiciel',
+      role: 'Ingénieur Logiciel',
       hello: 'Bonjour, je suis',
       student: {
         main: 'Mais également',

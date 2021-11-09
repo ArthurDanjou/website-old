@@ -65,7 +65,7 @@ const translations = {
   },
 
   footer: {
-    description: "Web and Software Developer, but also student in Mathematics and Physics 🎓. I live in Paris 🇫🇷. I love to create more or less useful applications and software 🛍. I use modern technologies to get the best possible result ✨ I also adore contributing to all types of Open-Source projects 🧪",
+    description: "Software Engineer, but also student in Mathematics and Physics 🎓. I live in Paris 🇫🇷. I love to create more or less useful applications and software 🛍. I use modern technologies to get the best possible result ✨ I also adore contributing to all types of Open-Source projects 🧪",
     links: 'Quick links',
     credits: 'Developed with',
     credits_separator: 'and',
@@ -86,7 +86,7 @@ const translations = {
       description: 'I am a {age} year old self-taught developer. I live in Paris 🇫🇷. I love to create more or less useful applications and software. I use modern technologies to get the best possible result ✨',
     },
     banner: {
-      role: 'Web and Software Developer',
+      role: 'Software Engineer',
       hello: 'Hello, I am',
       student: {
         main: 'but also',
