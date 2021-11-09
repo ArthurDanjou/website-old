@@ -36,7 +36,7 @@ const ssr = true
 
 const proxy = {
   '/api': {
-    target: 'https://athena.arthurdanjou.fr',
+    target: 'https://api.arthurdanjou.fr',
     pathRewrite: { "^/api": "" }
   }
 }
