@@ -6,7 +6,7 @@ export const options: Partial<Options> = {
   color: 'rgb(125, 125, 125)',
   mode: 'normal',
   zIndex: 1,
-  opacity: 1,
+  opacity: 0.3,
   magnetic: true,
   dotColor: 'rgb(255, 70, 12)',
   size: 30,
