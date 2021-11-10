@@ -6,7 +6,7 @@
     <img
       class="rounded-sm h-8 mr-2"
       :alt="`Skill ${name} Image`"
-      :src="`https://athena.arthurdanjou.fr/files/${cover}`"
+      :src="`https://api.arthurdanjou.fr/files/${cover}`"
     />
     <h1 :class="getColor" class="duration-300 md:font-lg font-md font-bold text-center text-gray-700 dark:text-gray-400">{{ name }}</h1>
   </div>

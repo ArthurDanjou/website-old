@@ -35,7 +35,7 @@
       </div>
       <div class="w-full">
         <div class="flex justify-center w-full">
-          <img class="w-full" :src="`https://athena.arthurdanjou.fr/files/${postData.cover.file_name}`" alt="Cover Img" />
+          <img class="w-full" :src="`https://api.arthurdanjou.fr/files/${postData.cover.file_name}`" alt="Cover Img" />
         </div>
       </div>
       <nuxt-content

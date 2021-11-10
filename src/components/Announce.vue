@@ -7,7 +7,7 @@
     {{ $t(announce.message.code) }}
     <img
       v-if="announce.file"
-      :src="`https://athena.arthurdanjou.fr/files/${announce.file}`"
+      :src="`https://api.arthurdanjou.fr/files/${announce.file}`"
       alt="Announce Cover File"
     >
   </div>
