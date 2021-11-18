@@ -5,7 +5,7 @@
         <p>{{ $t('newsletter.description') }}</p>
       </div>
     </section>
-    <section class="p-6 border border-red-500 dark:border-amber-400 rounded-lg text-justify">
+    <section class="p-6 border border-red-500 dark:border-purple-400 rounded-lg text-justify">
       <h1 class="text-black font-bold dark:text-white text-2xl">{{ $t('newsletter.title') }}</h1>
       <h3 class="text-gray-500 dark:text-gray-400">{{ $t('newsletter.subtitle') }}</h3>
       <div class="my-3">

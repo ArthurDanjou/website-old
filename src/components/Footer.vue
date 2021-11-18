@@ -11,7 +11,7 @@
               {{ $t('footer.description') }}
             </p>
             <div class="mt-4 flex">
-              <nuxt-link data-blobity-magnetic="false" data-blobity-radius="16" to="/contact" class="z-index-3 text-red-500">
+              <nuxt-link data-blobity-magnetic="false" data-blobity-radius="16" to="/contact" class="z-index-3 text-red-500 dark:text-purple-400">
                 {{ $t(hiring_message) }}
               </nuxt-link>
             </div>
@@ -135,7 +135,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .footer {
   .link-active a {
-    @apply text-red-500 dark:text-amber-400;
+    @apply text-red-500 dark:text-purple-400;
   }
 
   .link {
@@ -143,7 +143,7 @@ export default defineComponent({
   }
 
   .link-active {
-    @apply text-red-500 dark:text-amber-400
+    @apply text-red-500 dark:text-purple-400;
   }
 }
 </style>

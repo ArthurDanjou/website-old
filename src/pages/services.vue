@@ -63,7 +63,7 @@
     </section>
     <section class="mb-24 w-full">
       <div class="flex justify-center md:justify-end mb-8">
-        <h1 class="text-3xl md:text-4xl py-4 px-8 bg-red-500 dark:bg-amber-400 rounded-lg text-white dark:text-black transform md:rotate-10">
+        <h1 class="text-3xl md:text-4xl py-4 px-8 bg-red-500 dark:bg-purple-400 rounded-lg text-white dark:text-black transform md:rotate-10">
           {{ $t('services.workflow.title') }}
         </h1>
       </div>
@@ -145,10 +145,10 @@ export default defineComponent({
 }
 
 .workflow-item {
-  @apply text-3xl font-bold tracking-wider
+  @apply text-3xl font-bold tracking-wider;
 }
 
 .number {
-  @apply block text-red-500 dark:text-amber-400 mb-2 font-thin
+  @apply block text-red-500 dark:text-purple-400 mb-2 font-thin;
 }
 </style>

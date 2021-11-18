@@ -26,7 +26,7 @@ module.exports = defineConfig({
                 color: theme('colors.gray.400'),
               },
               a: {
-                color: theme('colors.amber.400'),
+                color: theme('colors.purple.400'),
               },
               strong: {
                 color: theme('colors.white'),

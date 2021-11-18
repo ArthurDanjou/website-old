@@ -106,6 +106,6 @@ export default defineComponent({
 }
 
 .link-active {
-  @apply text-red-500 dark:text-amber-400
+  @apply text-red-500 dark:text-purple-400;
 }
 </style>

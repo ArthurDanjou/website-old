@@ -65,7 +65,10 @@
         :disabled="!isSendable"
         :class="{'disabled': !isSendable}"
         @click.prevent="handleForm"
-        class="font-bold px-8 py-4 border-2 rounded-xl border-red-500 dark:border-amber-400 text-red-500 dark:text-amber-400 hover:(bg-red-500 dark:bg-amber-400 text-white) hover:dark:text-black duration-300"
+        data-blobity-magnetic="false"
+        data-blobity-offset-x="4"
+        data-blobity-offset-y="4"
+        class="z-index-3 font-bold px-8 py-4 border-2 bg-white rounded-xl border-red-500 dark:(border-purple-400 bg-black text-purple-400) text-red-500 duration-300"
       >
         {{ $t('contact.form.submit') }}
       </button>
@@ -150,18 +153,18 @@ textarea:focus-within ~ label, textarea:not(:placeholder-shown) ~ label {
 }
 
 .form-div {
-  @apply relative border-b border-gray-200 dark:border-gray-800 focus-within:border-black dark:focus-within:border-white
+  @apply relative border-b border-gray-200 dark:border-gray-800 focus-within:border-black dark:focus-within:border-white;
 }
 
 .second-input, .first-input, .form-input {
-  @apply block w-full appearance-none focus:outline-none bg-transparent
+  @apply block w-full appearance-none focus:outline-none bg-transparent;
 }
 
 .form-label {
-  @apply absolute top-0 duration-300 text-gray-700 dark:text-gray-400
+  @apply absolute top-0 duration-300 text-gray-700 dark:text-gray-400;
 }
 
 .disabled {
-  @apply bg-gray-300 cursor-not-allowed border-gray-300 hover:text-black text-black
+  @apply cursor-not-allowed border-gray-300 dark:border-gray-700 text-gray-300 dark:text-gray-700;
 }
 </style>
