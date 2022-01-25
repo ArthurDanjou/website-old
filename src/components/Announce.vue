@@ -52,7 +52,7 @@ export default defineComponent({
         case 'gray':
           return 'hover:bg-gray-800 dark:hover:bg-gray-300'
         case 'red':
-          return 'bg-red-800 text-white'
+          return 'hover:bg-red-800'
       }
     })
 
