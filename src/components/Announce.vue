@@ -40,17 +40,19 @@ export default defineComponent({
 
     const getBackgroundColor = computed(() => {
       switch (announce.value.color) {
-        case 'black': {
+        case 'black':
           return 'bg-black text-white dark:(bg-white text-black)'
-        }
+        case 'red':
+          return 'bg-red-600 text-white'
       }
     })
 
     const getHoverColor = computed(() => {
       switch (announce.value.hover_color) {
-        case 'gray': {
+        case 'gray':
           return 'hover:bg-gray-800 dark:hover:bg-gray-300'
-        }
+        case 'red':
+          return 'bg-red-800 text-white'
       }
     })
 
