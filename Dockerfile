@@ -1,10 +1,10 @@
 FROM node:16-alpine3.11
 
-RUN mkdir -p /usr/src/ares
+RUN mkdir -p /usr/src/website
 
-WORKDIR /usr/src/ares
+WORKDIR /usr/src/website
 
-COPY . /usr/src/ares
+COPY . /usr/src/website
 
 RUN yarn install
 
