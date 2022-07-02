@@ -71,7 +71,7 @@ const robots = {
 }
 
 const redirect = [
-  { from: '/source', to: 'https://github.com/arthurdanjou/ares' },
+  { from: '/source', to: 'https://github.com/arthurdanjou/artdanj-website' },
   { from: '/shelf', to: '/blog' },
   { from: '/posts', to: '/blog' },
   { from: '/resume', to: '/cv' }
