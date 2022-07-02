@@ -33,7 +33,7 @@
     "@nuxtjs/color-mode": "^2.1.1",
     "markdown-it-prism": "^2.2.4",
     "nuxt-windicss": "^2.4.2",
-    "sass-loader": "^10.3.0",
+    "sass-loader": "^13.0.2",
     "windicss-analysis": "^0.3.5"
   }
 }
