@@ -112,7 +112,7 @@ module.exports = defineConfig({
       amber: colors.amber,
       orange: colors.orange,
       red: colors.red,
-      warmGray: colors.warmGray,
+      stone: colors.stone,
       trueGray: colors.trueGray,
       gray: colors.gray,
       coolGray: colors.coolGray,
