@@ -22,7 +22,7 @@
     "@nuxtjs/universal-storage": "^0.5.9",
     "axios": "^0.27.2",
     "blobity": "^0.1.7",
-    "core-js": "^3.23.3",
+    "core-js": "^3.25.0",
     "nuxt": "^2.15.8",
     "prism-themes": "^1.9.0",
     "sass": "^1.53.0"
