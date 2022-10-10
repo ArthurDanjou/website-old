@@ -30,7 +30,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/color-mode": "^3.1.8",
     "markdown-it-prism": "^2.2.4",
     "nuxt-windicss": "^2.4.2",
     "sass-loader": "^10.3.0",
