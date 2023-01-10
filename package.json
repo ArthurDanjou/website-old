@@ -17,7 +17,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/robots": "^2.5.0",
-    "@nuxtjs/sentry": "^5.1.7",
+    "@nuxtjs/sentry": "^7.0.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/universal-storage": "^0.5.9",
     "axios": "^0.27.2",
